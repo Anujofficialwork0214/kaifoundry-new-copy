@@ -20,7 +20,7 @@ export default function HeroSection() {
     <div className=" bg-white text-gray-800 pt-16 px-12 w-full  ">
       {/* Main Content */}
       <div
-        className={`flex flex-col md:flex-row items-center xl:mx-14 transition-opacity duration-1000 ${
+        className={`flex flex-col md:flex-row items-center xl:mx-10 transition-opacity duration-1000 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
@@ -54,7 +54,7 @@ export default function HeroSection() {
             }`}
           >
             <div
-              className="absolute inset-y-0 left-0 right-0 bg-[#D444F1]  rounded-full  w-[calc(60%-10px)] lg:w-[calc(48%-10px)] xl:w-80 "
+              className="absolute inset-y-0 left-0 right-0 bg-[#D444F1]  rounded-full  w-[calc(80%-10px)] lg:w-[calc(60%-10px)]  xl:w-80 "
               // style={{ width: "calc(48% - 10px)" }}
             ></div>
             <Link href="/HowWeHelpScreen">
@@ -85,7 +85,7 @@ export default function HeroSection() {
           </div>
         </div>
         <div className="md:w-1/2 mt-8 md:mt-5 relative">
-          <div className="absolute top-0 right-0 w-full h-[572px] lg:h-185 bg-gradient-to-r from-[#A5C0EE] to-[#FBC5EC] rounded-lg z-0 -mt-20 lg:-mt-42">
+          <div className="absolute top-0 right-0 w-full h-[650px] lg:h-[680px] xl:h-185 bg-gradient-to-r from-[#A5C0EE] to-[#FBC5EC] rounded-lg z-0 -mt-20 lg:-mt-42">
             {" "}
           </div>
           <Image
@@ -101,13 +101,13 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative flex flex-col items-center justify-center  ">
+      <div className="relative flex flex-col items-center justify-center ">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           // className="bg-white shadow-lg lg:left-12 2xl:left-10  xl:ml-[520px] 2xl:ml-[610px] rounded-2xl items-center  p-4 relative z-10 overflow-hidden hidden md:flex -mt-16  -space-y-2 md:mr-10 lg:mr-0"
-          className="bg-white shadow-lg rounded-2xl items-center p-2 lg:p-4 relative z-10 overflow-hidden hidden md:flex  -mt-10  lg:-mt-16   -space-y-2 transform left-[49%] lg:left-[43%] 2xl:left-[40%]   -translate-x-1/2"
+          className="bg-white shadow-lg rounded-2xl items-center p-2 xl:p-4 relative z-10 overflow-hidden hidden md:flex  -mt-10  lg:-mt-16   -space-y-2 transform left-[48.5%] lg:left-[46%] xl:left-[45%] 2xl:left-[40%]   -translate-x-1/2"
           // style={{
           //   background: "linear-gradient(to right, #f8f5ff, #fce7f3)",
           //   borderRadius: "20px",
@@ -119,7 +119,7 @@ export default function HeroSection() {
             // Default margin-left for screens smaller than 2xl
           }}
         >
-          <div className="relative    rounded-[24px] w-[422px] lg:w-lg ">
+          <div className="relative    rounded-[24px] w-[380px] lg:w-[422px] xl:w-lg ">
             <div className="flex items-center bg-white rounded-[18px]  pl-4 py-3  relative overflow-hidden">
               {/* Left Abstract Image */}
               <div className="w-[120px]  h-[80px] overflow-hidden rounded-xl flex-shrink-0">
@@ -157,8 +157,8 @@ export default function HeroSection() {
       </div>
 
       <div className="mt-18 items-center  justify-center flex flex-col md:flex-row px-4 ">
-        <div className="w-full  items-center sm:px-6 sm:py-4">
-          <div className="bg-white rounded-full border border-fuchsia-300 shadow-sm flex items-center justify-around p-3 sm:p-4">
+        <div className=" w-7xl lg:w-full  items-center sm:px-6 sm:py-4">
+          <div className="bg-white rounded-full border border-fuchsia-300 border-r-0 border-l-0 shadow-sm flex items-center justify-around p-3 sm:p-4">
             <div className="flex items-baseline text-center">
               <CountUp
                 end={30}
