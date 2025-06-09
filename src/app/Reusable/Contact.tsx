@@ -1,0 +1,61 @@
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { IoMdPaperPlane } from "react-icons/io";
+import ContactForm from "./ContactForm";
+
+
+const ContactUs = () => {
+    return (
+        <>
+            
+       <h2 className="text-3xl md:text-5xl font-bold text-center mb-10">
+                Let&apos;s Get <span className="text-fuchsia-600">In Touch</span>
+            </h2>
+        <section className=" sm:p-20 p-4 flex justify-center ">
+        
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-20 p-4">
+             
+                <div className="md:row-span-1 flex-col">
+                    <h3 className="text-3xl font-semibold mb-6 sm:mb-10">Where To Find Us</h3>
+                     <iframe
+      className="w-full h-full"
+      src="https://maps.google.com/maps?q=Ludhiana&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      loading="lazy"
+    ></iframe>
+                </div>
+           
+                <div className="md:col-start-2 row-span-2 flex-col">
+                    <h3 className="text-4xl font-semibold mb-6 sm:mb-10">Leave A Message</h3>
+                    <ContactForm />
+                </div>
+                
+                
+                <div className="md:row-span-1 flex-col">
+                <div className="mt-10">
+                    <div className="text-black">
+      <h3 className="font-semibold text-3xl mb-4">Contact Details</h3>
+      <div className="grid grid-cols-2 gap-4">
+        <p>Akshya Nagar 1st Block 1st Cross, Rammurthy Nagar, Bangalore-560016</p>
+        <div>
+          <p>Ph No: +1234567890</p>
+          <p>E-Mail: sodnn@gmail.com</p>
+        </div>
+      </div>
+    </div>
+                    </div>
+                    <div className="mt-10"> 
+                    <div className="hidden sm:flex space-x-4">
+                       <FaInstagram className="text-black text-2xl" />
+                       <IoMdPaperPlane className="text-black text-2xl" />
+                       <FaLinkedinIn className="text-black text-2xl" />
+                     </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+           
+        </>
+    );
+};
+
+export default ContactUs;

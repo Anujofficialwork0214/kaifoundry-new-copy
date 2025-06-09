@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.background-gif {
+    position: fixed; /* Fixes the background */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Sends the background behind other content */
+    background: url('path/to/your.gif') no-repeat center center fixed; /* Set the GIF */
+    background-size: cover; /* Ensures it covers the entire area */
+}
+
+.content {
+    position: relative; /* In case you want to manage z-index further */
+    z-index: 1; /* Keeps the content above the background */
+    padding: 20px; /* Add some space around the content */
+    color: white; /* Change text color for visibility */
+}

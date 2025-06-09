@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Blockchain Development",
+    "description": "Solutions tailored to your needs.",
+    "icon": "/assets/icons/blockchain.png",
+    "link": "/../BlockChainService"
+  },
+  {
+    "title": "Game Development",
+    "description": "Experiences that drive players.",
+    "icon": "/assets/icons/game.png",
+    "link": "/../GameDevelopment"
+  },
+  {
+    "title": "AI Services",
+    "description": "Unlock the power of AI.",
+    "icon": "/assets/icons/ai.png",
+    "link": "/../AIServices"
+  }
+]

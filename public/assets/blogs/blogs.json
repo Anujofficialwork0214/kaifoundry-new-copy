@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "image": "/assets/blogs/img1.png",
+    "category": "Web3 Solutions",
+    "title": "Make a better website solution for your product",
+    "author": "Author Name",
+    "date": "Date",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    "subheadings": [
+      {
+        "title": "Subheading",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      },
+      {
+        "title": "Another Section",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      }
+    ],
+    "link": "/BlogScreen/BlogPost"
+  },
+  {
+    "id": 2,
+    "image": "/assets/blogs/img2.png",
+    "category": "Blockchain Solution",
+    "title": "Let's develop blockchain solutions tailored to your needs",
+    "author": "Author Name",
+    "date": "Date",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    "subheadings": [
+      {
+        "title": "Subheading",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      },
+      {
+        "title": "Another Section",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      }
+    ],
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "image": "/assets/blogs/img3.png",
+    "category": "UI Interface",
+    "title": "The Science of Color Contrast - An Expert Designer's Guide",
+    "author": "Author Name",
+    "date": "Date",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    "subheadings": [
+      {
+        "title": "Subheading",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      },
+      {
+        "title": "Another Section",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      }
+    ],
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "image": "/assets/blogs/img4.png",
+    "category": "AI Innovation",
+    "title": "Harnessing AI to Improve User Experience",
+    "author": "Author Name",
+    "date": "Date",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    "subheadings": [
+      {
+        "title": "Subheading",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      },
+      {
+        "title": "Another Section",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      }
+    ],
+    "link": "#"
+  },
+  {
+    "id": 5,
+    "image": "/assets/blogs/img5.png",
+    "category": "Cybersecurity",
+    "title": "How to Secure Your Digital Products in 2025",
+    "author": "Author Name",
+    "date": "Date",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    "subheadings": [
+      {
+        "title": "Subheading",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      },
+      {
+        "title": "Another Section",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      }
+    ],
+    "link": "#"
+  },
+  {
+    "id": 6,
+    "image": "/assets/blogs/img6.png",
+    "category": "Gaming",
+    "title": "How to Secure Your Digital Products in 2025",
+    "author": "Author Name",
+    "date": "Date",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    "subheadings": [
+      {
+        "title": "Subheading",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      },
+      {
+        "title": "Another Section",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      }
+    ],
+    "link": "#"
+  },
+  {
+    "id": 7,
+    "image": "/assets/blogs/img2.png",
+    "category": "Blockchain",
+    "title": "How to Secure Your Digital Products in 2025",
+    "author": "Author Name",
+    "date": "Date",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    "subheadings": [
+      {
+        "title": "Subheading",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      },
+      {
+        "title": "Another Section",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+      }
+    ],
+    "link": "#"
+  }
+]

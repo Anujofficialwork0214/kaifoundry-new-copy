@@ -1,0 +1,200 @@
+"use client";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import CountUp from "react-countup";
+
+export default function HeroSection() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className=" bg-white text-gray-800 pt-16 px-12 w-full  ">
+      {/* Main Content */}
+      <div
+        className={`flex flex-col md:flex-row items-center xl:mx-14 transition-opacity duration-1000 ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
+      >
+        <div className="md:w-1/2 text-center md:text-left mt-20 ">
+          <h1
+            className={` lg:text-5xl xl:text-6xl md:text-3xl font-bold transition-transform duration-1000 py-10 leading-[1.3]`}
+          >
+            Building Your{""}
+            <span className="bg-gradient-to-r from-[#821890] to-[#D444F1] bg-clip-text text-transparent flex ">
+              BUSINESSES
+            </span>
+            & Powering
+            <span className="bg-gradient-to-r pr-5  from-[#821890] to-[#D444F1] bg-clip-text text-transparent italic">
+              WEB3
+            </span>
+          </h1>
+          <p
+            className={`text-gray-600 mt-3 md:text-[14px] xl:text-[28px] lg:text-[21px] transition-opacity duration-1000 ${
+              isVisible ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            We help businesses grow with smart strategies
+            <br />
+            and the latest Web3 technology, making
+            <br />
+            success easier to achieve.
+          </p>
+          <div
+            className={`flex items-center relative top-6 md:flex transition-opacity duration-1000 mt-8 ${
+              isVisible ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <div
+              className="absolute inset-y-0 left-0 right-0 bg-[#D444F1]  rounded-full  w-[calc(60%-10px)] lg:w-[calc(48%-10px)] xl:w-80 "
+              // style={{ width: "calc(48% - 10px)" }}
+            ></div>
+            <Link href="/HowWeHelpScreen">
+              <button
+                className={`relative z-10 flex items-center px-8 py-3 text-white text-[18px] text-lg transition-transform duration-1000 transform ${
+                  isVisible
+                    ? "translate-x-0 bg-[#D444F1]"
+                    : "translate-x-10 bg-[#D444F1]"
+                } rounded-l-full rounded-r-none`}
+              >
+                HOW WE HELP
+                <span className="ml-2 w-7 h-7 flex items-center justify-center border-2 border-white rounded-full font-light">
+                  ➜
+                </span>
+              </button>
+            </Link>
+            <Link href="/ContactUs">
+              <button
+                className={`relative z-10 ml-[-10px] px-6 py-3 rounded-full border border-purple-500 bg-white text-black text-lg transition-transform duration-1000 transform cursor-pointer ${
+                  isVisible
+                    ? "translate-x-0 bg-[#D444F1]"
+                    : "translate-x-10 bg-[#D444F1]"
+                }`}
+              >
+                Contact Us
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div className="md:w-1/2 mt-8 md:mt-5 relative">
+          <div className="absolute top-0 right-0 w-full h-[572px] lg:h-185 bg-gradient-to-r from-[#A5C0EE] to-[#FBC5EC] rounded-lg z-0 -mt-20 lg:-mt-42">
+            {" "}
+          </div>
+          <Image
+            src="/assets/cube1.png"
+            alt="Web3 Cube"
+            width={400}
+            height={400}
+            draggable="false"
+            className={`mx-auto z-10 hidden md:block transition-transform duration-1000 md:h-auto ${
+              isVisible ? "translate-y-0" : "translate-y-60"
+            } -mt-20`} // Animate from bottom to top
+          />
+        </div>
+      </div>
+
+      <div className="relative flex flex-col items-center justify-center  ">
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          // className="bg-white shadow-lg lg:left-12 2xl:left-10  xl:ml-[520px] 2xl:ml-[610px] rounded-2xl items-center  p-4 relative z-10 overflow-hidden hidden md:flex -mt-16  -space-y-2 md:mr-10 lg:mr-0"
+          className="bg-white shadow-lg rounded-2xl items-center p-2 lg:p-4 relative z-10 overflow-hidden hidden md:flex  -mt-10  lg:-mt-16   -space-y-2 transform left-[49%] lg:left-[43%] 2xl:left-[40%]   -translate-x-1/2"
+          // style={{
+          //   background: "linear-gradient(to right, #f8f5ff, #fce7f3)",
+          //   borderRadius: "20px",
+          //   marginLeft: "710px",
+          // }}
+          style={{
+            background: "linear-gradient(to right, #f8f5ff, #fce7f3)",
+            borderRadius: "20px",
+            // Default margin-left for screens smaller than 2xl
+          }}
+        >
+          <div className="relative    rounded-[24px] w-[422px] lg:w-lg ">
+            <div className="flex items-center bg-white rounded-[18px]  pl-4 py-3  relative overflow-hidden">
+              {/* Left Abstract Image */}
+              <div className="w-[120px]  h-[80px] overflow-hidden rounded-xl flex-shrink-0">
+                <Image
+                  src="/assets/abstract.png"
+                  alt="Abstract Design"
+                  width={120}
+                  height={80}
+                  className="object-cover w-full h-full"
+                  draggable="false"
+                />
+              </div>
+
+              {/* Center Text */}
+              <div className="flex-1 px-4">
+                <h2 className="font-semibold text-lg">Uncover our identity</h2>
+                <p className="text-gray-600 text-sm">
+                  We are a creative hub shaping the future of digital design and
+                  technology.
+                </p>
+              </div>
+              <Link href="/WhoAreWe">
+                <div className="relative w-[75px] translate-x-[12px] h-full flex items-center justify-center">
+                  <div className="absolute  h-[65px] w-[68px] bg-[#fce7f3] rounded-tl-[18px]  rounded-bl-[-5px] -top-70" />
+
+                  {/* Arrow circle */}
+                  <div className="relative z-10 w-14 h-14 bg-white rounded-full shadow-md  border-[6px]  border-[#fce7f3]  flex items-center justify-center   top-7 ml-1">
+                    <span className="text-purple-600 text-xl">→</span>
+                  </div>
+                </div>
+              </Link>
+            </div>{" "}
+          </div>
+        </motion.div>
+      </div>
+
+      <div className="mt-18 items-center  justify-center flex flex-col md:flex-row px-4 ">
+        <div className="w-full  items-center sm:px-6 sm:py-4">
+          <div className="bg-white rounded-full border border-fuchsia-300 shadow-sm flex items-center justify-around p-3 sm:p-4">
+            <div className="flex items-baseline text-center">
+              <CountUp
+                end={30}
+                duration={2}
+                className="text-2xl sm:text-3xl font-semibold text-gray-800"
+              />
+              <span className="text-2xl font-bold">+</span>
+              <span className="text-sm sm:text-base text-gray-600 whitespace-nowrap">
+                &nbsp;Projects
+              </span>
+            </div>
+            <div className="flex items-baseline text-center">
+              <CountUp
+                end={40}
+                duration={2}
+                className="text-2xl sm:text-3xl font-semibold text-gray-800"
+              />
+              <span className="text-2xl font-bold">+</span>
+              <span className="text-sm sm:text-base text-gray-600 whitespace-nowrap">
+                &nbsp;Developers
+              </span>
+            </div>
+            <div className="flex items-baseline text-center">
+              <CountUp
+                end={10}
+                duration={2}
+                className="text-2xl sm:text-3xl font-semibold text-gray-800"
+              />
+              <span className="text-2xl font-bold">+</span>
+              <span className="text-sm sm:text-base text-gray-600 whitespace-nowrap">
+                &nbsp;Ecosystems
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
