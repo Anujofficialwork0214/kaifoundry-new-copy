@@ -74,7 +74,7 @@ useEffect(() => {
       </motion.p>
 
   {/* Steps Section */}
-  <div className="flex flex-col lg:flex-row items-center justify-between mt-12 relative">
+  <div className="flex flex-col lg:flex-row items-center justify-between mt-6 relative">
     {steps.map((step, index) => (
       <motion.div
         key={index}
@@ -89,7 +89,7 @@ useEffect(() => {
            <div className={`
             absolute 
             ${index % 2 === 0 ? 'top-[0px]' : 
-              screenSize === 'lg-1024-1280' ? 'bottom-[250px]' :
+              screenSize === 'lg-1024-1280' ? 'bottom-[270px]' :
               screenSize === 'lg-md' ? 'bottom-[210px]' :  
               screenSize === 'lg-xl' ? 'bottom-[160px]' : ''}
             ${
@@ -110,7 +110,7 @@ useEffect(() => {
         )}
 
         {/* Icon with Background */}
-        <div className="bg-gradient-to-r from-[#E95DFF] to-[#D680FF] p-4 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl shadow-lg relative">
+        <div className="bg-gradient-to-r from-[#E95DFF] to-[#D680FF] p-4 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mt-4 lg:mt-0 shadow-lg relative">
           <Image src={step.icon} alt={step.title} width={60} height={60} draggable="false"/>
         </div>
 
@@ -128,7 +128,7 @@ useEffect(() => {
               alt="Arrow"
               width={50}
               height={30} 
-              className={`block lg:hidden mt-8`}
+              className={`block lg:hidden mt-12 `}
               draggable="false"
             />)}
             <p className="text-[#808080] text-[12px] lg:text-[16px] mt-4">{step.description}</p>
