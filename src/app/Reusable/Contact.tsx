@@ -7,7 +7,7 @@ const ContactUs = () => {
     return (
         <>
             
-       <h2 className="text-3xl md:text-5xl font-bold text-center mb-10">
+       <h2 className="text-3xl md:text-5xl font-semibold text-center mb-10 font-inter text-[#333333]">
                 Let&apos;s Get <span className="text-fuchsia-600">In Touch</span>
             </h2>
         <section className=" sm:p-20 p-4 flex justify-center ">

@@ -19,6 +19,14 @@ interface ServiceCardProps {
 }
 
 const services: Service[] = [
+    {
+    id: 2,
+    title: "GAME DEVELOPMENT",
+    description:
+      "We specialize in engaging game experiences, leveraging cutting-edge tech for captivating gameplay and stunning visuals.",
+    image: "/svg/img2.svg",
+    link: "/GameDevelopment",
+  },
   {
     id: 1,
     title: "BLOCKCHAIN DEVELOPMENT",
@@ -27,14 +35,7 @@ const services: Service[] = [
     image: "/svg/img3.svg",
     link: "/BlockChainService",
   },
-  {
-    id: 2,
-    title: "GAME DEVELOPMENT",
-    description:
-      "We specialize in engaging game experiences, leveraging cutting-edge tech for captivating gameplay and stunning visuals.",
-    image: "/svg/img2.svg",
-    link: "/GameDevelopment",
-  },
+
   {
     id: 3,
     title: "AI SERVICES",
@@ -140,54 +141,107 @@ const WhatWeProvide = () => {
   const displayServices = isMobile ? services : [...services, ...services];
 
   return (
-    <section ref={ref} className="py-20 md:py-40 bg-gray-50 overflow-hidden ">
-      <div className="container mx-auto flex flex-col md:flex-row px-4 md:px-12 items-center md:items-start">
-        <motion.div
-          className="w-full md:w-1/3 mb-10 md:mb-0 md:pr-10 text-center md:text-left"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-            WHAT <br />
-            WE <span className="text-[#D444F1]">PROVIDE</span>
-          </h2>
-          <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-600 mt-4">
-            Services That Drive Your Success
-          </p>
-        </motion.div>
-        <div className="relative w-full md:w-2/3  py-4">
-          {isMobile ? (
-            <div className="flex flex-col gap-6">
-              {services.map((service) => (
-                <ServiceCard
-                  key={service.id}
-                  service={service}
-                  isMobile={isMobile}
-                />
-              ))}
-            </div>
-          ) : (
-            <div className="slider-container w-full overflow-hidden">
-              <motion.div
-                className="flex"
-                animate={controls}
-                initial={{ x: 0 }}
-              >
-                {displayServices.map((service, index) => (
-                  <ServiceCard
-                    key={`${service.id}-${index}`}
-                    service={service}
-                    isMobile={isMobile}
-                  />
-                ))}
-              </motion.div>
-            </div>
-          )}
+    // <section ref={ref} className="py-20 md:py-40 bg-gray-50 overflow-hidden ">
+    //   <div className="container mx-auto flex flex-col md:flex-row px-4 md:px-12 items-center md:items-start">
+    //     <motion.div
+    //       className="w-full md:w-1/3 mb-10 md:mb-0 md:pr-10 text-center md:text-left"
+    //       initial={{ opacity: 0, x: -50 }}
+    //       whileInView={{ opacity: 1, x: 0 }}
+    //       viewport={{ once: true, amount: 0.3 }}
+    //       transition={{ duration: 0.6, ease: "easeOut" }}
+    //     >
+    //       <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+    //         WHAT <br />
+    //         WE <span className="text-[#D444F1]">PROVIDE</span>
+    //       </h2>
+    //       <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-600 mt-4">
+    //         Services That Drive Your Success
+    //       </p>
+    //     </motion.div>
+    //     <div className="relative w-full md:w-2/3  py-4">
+    //       {isMobile ? (
+    //         <div className="flex flex-col gap-6">
+    //           {services.map((service) => (
+    //             <ServiceCard
+    //               key={service.id}
+    //               service={service}
+    //               isMobile={isMobile}
+    //             />
+    //           ))}
+    //         </div>
+    //       ) : (
+    //         <div className="slider-container w-full overflow-hidden">
+    //           <motion.div
+    //             className="flex"
+    //             animate={controls}
+    //             initial={{ x: 0 }}
+    //           >
+    //             {displayServices.map((service, index) => (
+    //               <ServiceCard
+    //                 key={`${service.id}-${index}`}
+    //                 service={service}
+    //                 isMobile={isMobile}
+    //               />
+    //             ))}
+    //           </motion.div>
+    //         </div>
+    //       )}
+    //     </div>
+    //   </div>
+    // </section>
+<section ref={ref} className="py-20 md:py-40 bg-gray-50 overflow-hidden">
+  <div className="container mx-auto flex flex-col md:flex-row px-4 md:px-12 items-center md:items-start">
+<motion.div
+  className="w-full md:w-1/3 mt-10 md:mt-0 mb-10 md:mb-0 md:pr-10 text-center md:text-left"
+  initial={{ opacity: 0, x: -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+>
+  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+    WHAT <br />
+    WE <span className="text-[#D444F1]">PROVIDE</span>
+  </h2>
+  <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-semibold text-gray-600 mt-4">
+    Services That Drive Your Success
+  </p>
+</motion.div>
+
+
+
+    <div className="relative w-full md:w-2/3 py-4">
+      {isMobile ? (
+        <div className="flex flex-col gap-6 items-center justify-center">
+          {services.map((service) => (
+            <ServiceCard
+              key={service.id}
+              service={service}
+              isMobile={isMobile}
+            />
+          ))}
         </div>
-      </div>
-    </section>
+      ) : (
+        <div className="slider-container w-full overflow-hidden">
+          <motion.div
+            className="flex"
+            animate={controls}
+            initial={{ x: 0 }}
+          >
+            {displayServices.map((service, index) => (
+              <ServiceCard
+                key={`${service.id}-${index}`}
+                service={service}
+                isMobile={isMobile}
+              />
+            ))}
+          </motion.div>
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
+
   );
 };
 
