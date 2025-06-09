@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import { UploadCloud } from "lucide-react";
+// import { UploadCloud } from "lucide-react";
+import Image from "next/image";
 
 const JobApplicationForm = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -58,22 +59,22 @@ const JobApplicationForm = () => {
 };
 
   return (
-    <div className="w-fullmx-auto p-6 ">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">Application Form</h1>
+    <div className="w-fullmx-auto p-6 lg:px-12 ">
+      <h1 className="text-[16px] lg:text-[30px] font-[600] text-[#333333] mb-6">Application Form</h1>
 
       <form className="space-y-6 w-full" onSubmit={handleSubmit}>
         {/* Name & Email Fields */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-gray-700 font-medium">
-              Name <span className="text-green-500">*</span>
+            <label className="block text-[#333333] font-[500] text-[14px] lg:text-[22px]">
+              Name <span className="text-[#155EEF]">*</span>
             </label>
             <input
               type="text"
                 onKeyDown={preventSpace}
               name="name"
               placeholder="Enter your Name"
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D444F1]"
+              className="w-full p-3 border rounded-lg border-[#999999] focus:outline-none mt-2 focus:ring-2 focus:ring-[#D444F1] placeholder:text-[#697586] placeholder:text-[14px] lg:placeholder:text-[18px] text-[14px] lg:text-[18px] placeholder:font-[400] font-[400]"
               required
               value={formData.name}
               onChange={handleInputChange}
@@ -83,15 +84,15 @@ const JobApplicationForm = () => {
           </div>
 
           <div>
-            <label className="block text-gray-700 font-medium">
-              Email <span className="text-green-500">*</span>
+            <label className="block text-[#333333] font-[500] text-[14px] lg:text-[22px]">
+              Email <span className="text-[#155EEF]">*</span>
             </label>
             <input
               type="email"
                 onKeyDown={preventSpace}
               name="email"
               placeholder="Enter your E-mail"
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D444F1]"
+              className="w-full p-3 border border-[#999999] rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-[#D444F1] placeholder:text-[#697586] placeholder:text-[14px] lg:placeholder:text-[18px] text-[14px] lg:text-[18px] placeholder:font-[400] font-[400]"
               required
               value={formData.email}
               onChange={handleInputChange}
@@ -103,15 +104,15 @@ const JobApplicationForm = () => {
 
         {/* Phone Number Field */}
         <div>
-          <label className="block text-gray-700 font-medium">
-            Phone Number <span className="text-green-500">*</span>
+          <label className="block text-[#333333] font-[500] text-[14px] lg:text-[22px]">
+            Phone Number <span className="text-[#155EEF]">*</span>
           </label>
           <input
             type="tel"
               onKeyDown={preventSpace}
             name="phone"
             placeholder="Enter your Contact Number"
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D444F1]"
+            className="w-full p-3 border border-[#999999] rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-[#D444F1] placeholder:text-[#697586] placeholder:text-[14px] lg:placeholder:text-[18px] text-[14px] lg:text-[18px] placeholder:font-[400] font-[400]"
             required
             value={formData.phone}
             onChange={handleInputChange}
@@ -122,10 +123,10 @@ const JobApplicationForm = () => {
 
         {/* Resume Upload */}
         <div>
-          <label className="block text-gray-700 font-medium">
-            Resume upload <span className="text-green-500">*</span>
+          <label className="block text-[#333333] font-[500] text-[14px] lg:text-[22px]">
+            Resume upload <span className="text-[#155EEF]">*</span>
           </label>
-          <div className="border-dashed border-2 border-gray-300 rounded-lg p-6 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-100">
+          <div className=" border border-[#999999] h-[150px] lg:h-[200px] rounded-lg mt-2 p-6 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-100">
             <input
               type="file"
               className="hidden"
@@ -134,7 +135,14 @@ const JobApplicationForm = () => {
               id="resume-upload"
             />
             <label htmlFor="resume-upload" className="flex flex-col items-center cursor-pointer">
-              <UploadCloud className="text-gray-500 h-32" size={32} />
+              {/* <UploadCloud className="text-gray-500 h-32" size={32} /> */}
+              <Image
+              src="/assets/Download.png"
+              alt="Background GIF"
+              width={30}
+              height={30}
+              draggable={false}
+              />
               <p className="text-gray-600 mt-2">
                 {file ? file.name : "Upload Your Resume Here"}
               </p>
@@ -153,13 +161,13 @@ const JobApplicationForm = () => {
 
         {/* Why Join Field */}
         <div>
-          <label className="block text-gray-700 font-medium">
-            Why do you want to join? <span className="text-green-500">*</span>
+          <label className="block text-[#333333] font-[500] text-[14px] lg:text-[22px]">
+            Why do you want to join? <span className="text-[#155EEF]">*</span>
           </label>
           <textarea
             name="whyJoin"
             placeholder="Write your answer here."
-            className="w-full p-3 border rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-[#D444F1]"
+            className="w-full p-3 rounded-lg border-[#999999] mt-2 border h-32 focus:outline-none focus:ring-2 focus:ring-[#D444F1] placeholder:text-[#697586] placeholder:text-[14px] lg:placeholder:text-[18px] text-[14px] lg:text-[18px] placeholder:font-[400] font-[400]"
             required
             value={formData.whyJoin}
             onChange={handleInputChange}
@@ -172,7 +180,7 @@ const JobApplicationForm = () => {
         <div className="flex justify-center">
           <button
             type="submit"
-            className=" bg-[#D444F1] text-white py-3 px-8 text-[16px] rounded-full font-semibold hover:bg-[#821890] transition"
+            className=" bg-[#D444F1] text-white py-2 cursor-pointer px-6 text-[16px] rounded-full font-semibold hover:bg-[#821890] transition"
           >
             Submit
           </button>

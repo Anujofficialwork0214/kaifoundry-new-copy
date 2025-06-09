@@ -35,17 +35,17 @@ const HowWeHelp = () => {
      
       {/* Text Section */}
       <div className="w-full  md:w-2/3 mt-10 md:mt-20 z-10">
-        <h2 className=" lg:text-[62px] font-bold hidden lg:block">
+        <h2 className=" lg:text-[62px] font-bold hidden lg:block leading-[1.1]">
           {/* How We Help <br /> */}
    
   <span className="text-black">Ho</span>
   <span className="text-black opacity-70">w We Help <br /></span>
 
 
-          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#E95DFF]">Businesses Grow</span> <br />
+          <span className="bg-clip-text text-transparent bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF]">Businesses Grow</span> <br />
           <span className="text-black">Wi</span>
   <span className="text-black opacity-70">th</span>
-          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#E95DFF] italic">Blockchain</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF] italic">Blockchain</span>
         </h2>
         <h2 className="text-[24px]  font-bold block lg:hidden ">
           {/* How We Help <br /> */}
@@ -67,7 +67,7 @@ const HowWeHelp = () => {
         </p>
         <Link href="/ContactUs">
           <button
-                          className="bg-[#D444F1] mt-12 text-white hover:bg-[#B33BC1] rounded-full py-3 px-4 w-40 transition duration-300">
+                          className="bg-[#D444F1] mt-12 text-white hover:bg-[#B33BC1] rounded-full w-26 py-2 px-2 lg:py-3 lg:px-3 lg:w-34 transition duration-300">
             Contact Us
           </button>
         </Link>
