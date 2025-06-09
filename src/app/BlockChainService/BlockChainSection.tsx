@@ -14,14 +14,15 @@ const features = [
     name: "Security & Trust",
     icon: "/security.png",
   },
+    {
+    name: "Decentralization",
+    icon: "/people.png",
+  },
   {
     name: "Innovation",
     icon: "/2.png",
   },
-  {
-    name: "Decentralization",
-    icon: "/people.png",
-  },
+
   {
     name: "Automation",
     icon: "/3.png",
