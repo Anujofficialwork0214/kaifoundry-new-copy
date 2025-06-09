@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 const solutions = [
   {
     title: "Custom Exchange",
-    description: "Tailored solutions to meet your specific trading needs."
+    description: "A fully tailored trading platform designed to meet your specific business needs."
   },
   {
     title: "White Label Exchange",
-    description: "Launch your own exchange with our white label solutions."
+    description: " A ready-made, customizable exhange solution for quick market entry."
   },
   {
     title: "Margin Trading Exchange",
@@ -17,7 +17,7 @@ const solutions = [
   },
   {
     title: "Decentralized Exchange",
-    description: "Trade directly from your wallet with our DEX solutions."
+    description: "A trustless, peer-to-peer trading platform with enhanced security."
   },
   {
     title: "Arbitrage Bots",
@@ -48,10 +48,10 @@ const SolutionsSection = () => {
   return (
     <div className="py-12 w-full">
       {/* Title */}
-      <h2 className="text-4xl md:text-6xl font-semibold text-black text-center px-4 md:px-10">
+      <h2 className="text-[24px] lg:text-[62px] font-semibold text-black text-center px-4 md:px-10">
       <span style={{ color: '#BA24D5' }}>Solutions  </span>  Built For <span style={{ color: '#BA24D5' }}>The Future</span>
       </h2>
-      <p className="text-[#333333] mt-2 text-center px-4 md:px-70  text-base md:text-[22px] font-[400]">
+      <p className="text-[#666666] lg:text-[#333333]  mt-2 text-center px-4 md:px-70  text-[14px] lg:text-[22px] font-[400]">
         Blockchain solutions designed to power your business with security, <br /> efficiency, and scalability.
       </p>
 
@@ -79,12 +79,12 @@ const SolutionsSection = () => {
                 }} // Light background color for hover effect
               />
               
-              <span className="relative z-10 block w-full">
+              <span className="relative z-10 text-[18px] lg:text-[24px] font-[600] text-[#BA24D5] block w-full">
                 {index + 1}. {solution.title}
               </span>
 
               {/* Always Visible Bottom Border Line */}
-              <div className="absolute bottom-0 h-0.5" style={{ backgroundColor: '#BA24D5', width: '100%' }} /> {/* Line at the bottom */}
+             
             </div>
 
             {/* Description Section (Smooth Slide Down) */}
@@ -102,6 +102,7 @@ const SolutionsSection = () => {
                 </p>
               </div>
             </motion.div>
+            <div className="absolute bottom-0 h-[1px]" style={{ backgroundColor: '#BA24D5', width: '100%' }} /> {/* Line at the bottom */}
           </div>
         ))}
       </div> 

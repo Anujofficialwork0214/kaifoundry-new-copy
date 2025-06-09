@@ -35,7 +35,7 @@ const WhyWorkWithUs = () => {
       <div className="container mx-auto px-6">
         {/* Title */}
         <motion.h2 
-          className="text-6xl md:text-6xl lg:text-6xl font-bold text-gray-900"
+          className="text-[62px] font-[700] text-[#333333]"
           initial={{ opacity: 0, y: 50 }} 
           whileInView={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.6 }}
@@ -55,10 +55,10 @@ const WhyWorkWithUs = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="w-1 h-full mr-3" style={{ height: 'calc(100% + 30px)', backgroundColor: '#D444F1' }}></div>
+              <div className="w-1  mr-3" style={{ height: 'calc(100% + 10px)', backgroundColor: '#D444F1' }}></div>
               <div>
-                <h3 className="text-xl md:text-2xl font-semibold text-gray-900">{benefit.title}</h3>
-                <p className="text-lg md:text-base text-gray-600">{benefit.description}</p>
+                <h3 className="text-[25px] font-[600] text-[#333333]">{benefit.title}</h3>
+                <p className="text-[18px] font-[400] text-[#333333] mt-4">{benefit.description}</p>
               </div>
             </motion.div>
           ))}
