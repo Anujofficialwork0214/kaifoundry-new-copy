@@ -37,7 +37,7 @@ const JobApplication = () => {
 
       <h1 className="text-[24px] lg:text-[62px] font-[600] text-[#333333] mb-10 text-center">Job Application</h1>
 
-      <h2 className="text-[20px] lg:text-[30px] font-[600] text-[#333333] mb-8">About The Job</h2>
+      <h2 className="text-[20px] lg:text-[30px] font-[600] text-[#333333] mb-8 ml-2 lg:ml-0">About The Job</h2>
       <p className="text-[#4D4D4D] mb-8 text-[12px] px-2 lg:px-0 sm:px-4 block lg:hidden ">
       Ullamcorper sit. Aliquam sed senectus varius nulla risus aliquet. Nunc sit scelerisque mauris sit scelerisque donec aliquam. Commodo eros leo et quisque integer. Vitae luctus non habitant in at sed. Sapien suspendisse tristique tortor adipiscing eget. Elit pretium eu at nibh ac tristique est.
 Ut non nam eget praesent malesuada faucibus mauris viverra. Eget phasellus in cras vitae dignissim in. Nisl bibendum ipsum vitae sed facilisis quis sit nunc. Tellus maecenas quis adipiscing habitasse lacus. Vitae feugiat tellus scelerisque quis nulla quam eget mauris ornare. Volutpat feugiat turpis nulla lacus et donec nibh mauris. Viverra duis id vitae integer tincidunt dolor. Morbi fames venenatis egestas imperdiet elit. Malesuada aliquam ornare ut eu in vel neque rhoncus. Neque dictum vitae sit nibh.

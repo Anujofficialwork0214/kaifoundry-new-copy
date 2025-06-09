@@ -180,7 +180,7 @@ const JobApplicationForm = () => {
         <div className="flex justify-center">
           <button
             type="submit"
-            className=" bg-[#D444F1] text-white py-3 px-8 text-[16px] rounded-full font-semibold hover:bg-[#821890] transition"
+            className=" bg-[#D444F1] text-white py-2 cursor-pointer px-6 text-[16px] rounded-full font-semibold hover:bg-[#821890] transition"
           >
             Submit
           </button>
