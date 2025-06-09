@@ -34,8 +34,8 @@ const HowWeHelp = () => {
       </div>
      
       {/* Text Section */}
-      <div className="w-full md:w-2/3 mt-10 md:mt-20 z-10">
-        <h2 className="text-[24px] md:text-[62px] font-bold ">
+      <div className="w-full  md:w-2/3 mt-10 md:mt-20 z-10">
+        <h2 className=" lg:text-[62px] font-bold hidden lg:block">
           {/* How We Help <br /> */}
    
   <span className="text-black">Ho</span>
@@ -43,6 +43,19 @@ const HowWeHelp = () => {
 
 
           <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#E95DFF]">Businesses Grow</span> <br />
+          <span className="text-black">Wi</span>
+  <span className="text-black opacity-70">th</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#E95DFF] italic">Blockchain</span>
+        </h2>
+        <h2 className="text-[24px]  font-bold block lg:hidden ">
+          {/* How We Help <br /> */}
+   
+  <span className="text-black">Ho</span>
+  <span className="text-black opacity-70">w We Help </span>
+
+
+          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#E95DFF]">Businesses</span><br />
+          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#E95DFF]">Grow {" "}</span> 
           <span className="text-black">Wi</span>
   <span className="text-black opacity-70">th</span>
           <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#E95DFF] italic">Blockchain</span>
