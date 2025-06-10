@@ -73,7 +73,7 @@ const ContactUs = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-20 p-4">
              
                 <div className="md:row-span-1 flex-col">
-                    <h3 className="text-xl md:text-3xl lg:text-3xl font-semibold mb-6 sm:mb-10">Where To Find Us</h3>
+                    <h3 className="text-xl md:text-3xl lg:text-3xl font-semibold mb-6 sm:mb-10 text-[#333333]">Where To Find Us</h3>
                      <iframe
       className="w-full h-full"
       src="https://maps.google.com/maps?q=Ludhiana&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -82,7 +82,7 @@ const ContactUs = () => {
                 </div>
            
                 <div className="md:col-start-2 row-span-2 flex-col">
-                    <h3 className="text-xl md:text-3xl lg:text-3xlfont-semibold mb-6 sm:mb-10">Leave A Message</h3>
+                    <h3 className="text-xl md:text-3xl lg:text-3xl font-semibold mb-6 sm:mb-10 text-[#333333]">Leave A Message</h3>
                     <ContactForm />
                 </div>
                 

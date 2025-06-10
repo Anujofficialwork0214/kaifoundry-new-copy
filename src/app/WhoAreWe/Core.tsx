@@ -5,6 +5,7 @@ import { useInView } from "react-intersection-observer";
 import img1 from "./../../../public/assets/WhoAreWe/CoreImg1.svg";
 import img2 from "./../../../public/assets/WhoAreWe/CoreImg2.svg";
 import img3 from "./../../../public/assets/WhoAreWe/CoreImg3.svg";
+import { manrope } from "../Fonts/fonts";
 
 const coreValues = [
   {
@@ -39,8 +40,8 @@ const CoreValuesSection = () => {
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-[28px] lg:text-6xl font-bold text-center mb-12"
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="text-[28px] lg:text-[62px] font-[600] text-center mb-12"
         >
           Our{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#9C27B0] to-[#EA83FF]">
@@ -57,11 +58,11 @@ const CoreValuesSection = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{
-                duration: 0.6,
-                delay: inView ? index * 0.3 + 0.5 : 0,
+                duration: 0.4,
+                delay: inView ? index * 0.2 + 0.3 : 0,
                 ease: "easeOut",
               }}
-              className={`bg-white shadow-lg rounded-2xl p-4 lg:p-8 flex ${index %2 === 0 ? 'flex-row':'flex-row-reverse'}  lg:flex-col items-center text-center max-w-sm`}
+              className={`bg-white shadow-lg rounded-2xl p-4 lg:p-6 flex ${index %2 === 0 ? 'flex-row':'flex-row-reverse'}  lg:flex-col items-center text-center max-w-sm lg:w-[484px]`}
             >
               <Image
                 src={value.img}
@@ -71,8 +72,8 @@ const CoreValuesSection = () => {
                 className="mb-6 w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] object-cover"
               />
               <div className="flex flex-col">
-              <h3 className="text-[14px] text-[#333333] lg:text-2xl font-semibold mb-2 lg:mb-4 text-left lg:text-center">{value.title}</h3>
-              <p className="text-[#666666] text-[12px] lg:text-[20px] text-left lg:text-center">{value.description}</p>
+              <h3 className={`text-[14px] lg:text-[28.09px] text-[#333333] lg:text-2xl font-semibold mb-2 lg:mb-4 text-left lg:text-center ${manrope.className}`}>{value.title}</h3>
+              <p className={`text-[#333333] text-[12px] lg:text-[18.73px] ${manrope.className} text-left lg:text-center`}>{value.description}</p>
               </div>
               
             </motion.div>

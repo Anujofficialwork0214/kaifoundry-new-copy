@@ -8,17 +8,41 @@ import ServicesPopup from "./NavbarPoup"; // Adjust the import path as necessary
 import { IoIosArrowDown } from "react-icons/io";
 import { MdDone } from "react-icons/md";
 import { Inter } from "next/font/google";
+import { useRouter } from "next/navigation";
 
 const inter = Inter({
   subsets: ["latin"],
 });
 const Navbar: React.FC = () => {
+  const router = useRouter();
+  useEffect(() => {
+    router.prefetch("/BlockChainService");
+    router.prefetch("/GameDevelopment");
+    router.prefetch("/AIServices");
+  }, []);
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const pathname = usePathname();
   const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const prefetchRoutes = async () => {
+      await Promise.all([
+        router.prefetch('/HowWeHelpScreen'),
+        router.prefetch('/WhoAreWe'),
+        router.prefetch('/CareersScreen'),
+        router.prefetch('/BlockChainService'),
+        router.prefetch('/GameDevelopment'),
+        router.prefetch('/AIServices'),
+        router.prefetch('/blog'),
+        router.prefetch('/ContactUs')
+      ]);
+    };
+    
+    prefetchRoutes();
+  }, []);
 
   useEffect(() => {
     const handleOutsideClick = (e: MouseEvent) => {
@@ -141,12 +165,19 @@ const Navbar: React.FC = () => {
                     ? "text-[#821890]"
                     : "text-gray-700"
                 }`}
+                prefetch={true}
               >
                 How We Help
               </Link>
             </li>
             <li>
-              <Link href="/WhoAreWe">Who We Are</Link>
+              <Link href="/WhoAreWe" className={`${
+                  isActive("/WhoAreWe")
+                    ? "text-[#821890]"
+                    : "text-gray-700"
+                }`}
+                prefetch={true}
+                >Who We Are</Link>
             </li>
             <li>
               <Link
@@ -156,6 +187,7 @@ const Navbar: React.FC = () => {
                     ? "text-[#821890]"
                     : "text-gray-700"
                 }`}
+                prefetch={true}
               >
                 Careers
               </Link>
@@ -182,6 +214,7 @@ const Navbar: React.FC = () => {
                 className={`${
                   isActive("/blog") ? "text-[#821890]" : "text-gray-700"
                 }`}
+                prefetch={true}
               >
                 Blogs
               </Link>
@@ -234,6 +267,8 @@ const Navbar: React.FC = () => {
                 ? "text-[#BA24D5] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent font-[400]"
             }  cursor-pointer text-[14px] px-6 py-3 w-full `}
+            onClick={closeMenu}
+            prefetch={true}
           >
             Home
           </Link>
@@ -244,6 +279,8 @@ const Navbar: React.FC = () => {
                 ? "text-[#BA24D5] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent font-[400]"
             }  cursor-pointer text-[14px] px-6 py-3 w-full `}
+            onClick={closeMenu}
+            prefetch={true}
           >
             How We Help
           </Link>
@@ -254,6 +291,8 @@ const Navbar: React.FC = () => {
                 ? "text-[#BA24D5] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent font-[400]"
             }  cursor-pointer text-[14px] px-6 py-3 w-full`}
+            onClick={closeMenu}
+            prefetch={true}
           >
             Who We Are
           </Link>
@@ -264,6 +303,8 @@ const Navbar: React.FC = () => {
                 ? "text-[#821890] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent "
             }  cursor-pointer text-[14px] px-6 py-3 w-full`}
+            prefetch={true}
+            onClick={closeMenu}
           >
             Careers
           </Link>
@@ -275,6 +316,8 @@ const Navbar: React.FC = () => {
                 ? "text-[#BA24D5] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent font-[400]"
             }  cursor-pointer text-[14px] px-6 py-3 w-full`}
+            prefetch={true}
+            onClick={closeMenu}
           >
             Blogs
           </Link>
@@ -324,7 +367,7 @@ const Navbar: React.FC = () => {
               <li
                 className={`text-[#414141] cursor-pointer text-[14px] font-[400] flex gap-4 items-center w-full`}
               >
-                <Link href="/BlockChainService" passHref>
+                <Link href="/BlockChainService" passHref prefetch={true} onClick={closeMenu}>
                   Blockchain Development
                 </Link>
                 {isActive("/BlockChainService") && (
@@ -334,7 +377,7 @@ const Navbar: React.FC = () => {
               <li
                 className={`text-[#414141] cursor-pointer text-[14px] font-[400] flex justify-between items-center w-full`}
               >
-                <Link href="/GameDevelopment" passHref>
+                <Link href="/GameDevelopment" passHref prefetch={true} onClick={closeMenu}>
                   Gaming
                 </Link>
                 {isActive("/GameDevelopment") && (
@@ -345,7 +388,7 @@ const Navbar: React.FC = () => {
                 className={`
               text-[#414141]  cursor-pointer text-[14px] font-[400] flex justify-between items-center w-full`}
               >
-                <Link href="/AIServices" passHref>
+                <Link href="/AIServices" passHref prefetch={true} onClick={closeMenu}>
                   AI Services
                 </Link>
                 {isActive("/AIServices") && (
