@@ -87,9 +87,9 @@ export default function AIServicesSection() {
               className="text-center md:text-left"
             >
               <h2 className="text-xl sm:text-2xl md:text-[38px] lg:text-[40px] font-bold text-gray-800 leading-tight">
-            Smarter Solutions with <span>AI</span>
+            Smarter <span className="text-[#BA24D5]">Solutions</span> with <span><span className="text-[#BA24D5]">AI</span></span>
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-[12px] md:text-lg lg:text-lg sm:text-[12px] text-gray-600">
             Harness the power of Artificial Intelligence to automate, optimize, and innovate—making your business faster, smarter, and more efficient.
           </p>
             </motion.div>
@@ -104,8 +104,8 @@ export default function AIServicesSection() {
                   className="flex items-center space-x-3"
                 >
                   {/* <feature.icon className="h-7 w-7 text-[#BA24D5]" /> */}
-                    <img src={feature.icon} alt={feature.name} className="w-8 h-8 object-contain" />
-                  <span className="text-lg lg:text-lg sm:text-sm font-medium text-gray-900 whitespace-nowrap">{feature.name}</span>
+                    <img src={feature.icon} alt={feature.name} className="w-6 h-6 md:w-8 ms:w-8 lg:w-8 lg-w-8 object-contain" />
+                  <span className="text-sm lg:text-lg sm:text-xs font-medium text-gray-900 whitespace-nowrap">{feature.name}</span>
                 </motion.div>
               ))}
             </div>

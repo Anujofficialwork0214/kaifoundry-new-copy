@@ -14,6 +14,7 @@ import CoolStuff from './HeroSection/CoolStuff';
 import CoolStuffMob from "./HeroSection/CoolStuffMob"
 import FaqHome from './HeroSection/FaqHome';
 import Contact from './Reusable/Contact'
+import EcosystemMobile from './Reusable/EcoSystemMobile';
 const page = () => {
     const [isMobile, setIsMobile] = useState(false);
 
@@ -36,7 +37,8 @@ const page = () => {
       <WhatWeProvide />
       <WhatWeOffer />
       <WhyChooseHero />
-      <EcosystemSection />
+      {isMobile ?<EcosystemMobile/> : <EcosystemSection/>}
+   
       {isMobile ? <AnimatedSectionMob /> : <AnimatedSection />}
             {isMobile ? <CoolStuffMob /> : <CoolStuff />}
       <FaqHome />

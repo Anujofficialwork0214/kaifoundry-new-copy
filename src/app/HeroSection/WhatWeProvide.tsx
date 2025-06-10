@@ -20,14 +20,6 @@ interface ServiceCardProps {
 
 const services: Service[] = [
   {
-    id: 1,
-    title: "BLOCKCHAIN DEVELOPMENT",
-    description:
-      "We create blockchain solutions that help businesses grow whether it’s smart contracts, digital tokens, or decentralized apps.",
-    image: "/svg/img3.svg",
-    link: "/BlockChainService",
-  },
-  {
     id: 2,
     title: "GAME DEVELOPMENT",
     description:
@@ -35,6 +27,15 @@ const services: Service[] = [
     image: "/svg/img2.svg",
     link: "/GameDevelopment",
   },
+  {
+    id: 1,
+    title: "BLOCKCHAIN DEVELOPMENT",
+    description:
+      "We create blockchain solutions that help businesses grow whether it’s smart contracts, digital tokens, or decentralized apps.",
+    image: "/svg/img3.svg",
+    link: "/BlockChainService",
+  },
+
   {
     id: 3,
     title: "AI SERVICES",

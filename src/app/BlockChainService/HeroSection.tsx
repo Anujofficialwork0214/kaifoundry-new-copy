@@ -6,7 +6,7 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
 
-    <section className="relative flex items-center py-40 w-full overflow-hidden px-6 md:px-6 ">
+    <section className="relative flex items-center py-40 w-full overflow-hidden px-2 md:px-6 ">
       {/* Background GIF */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -20,12 +20,7 @@ const HeroSection = () => {
         />
       </div>
     
-      {/* <motion.div
-        initial={{ x: '-100%' }}
-        animate={{ x: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="absolute inset-y-0 left-0 w-1/2 bg-white/50 backdrop-blur-md z-10"
-      ></motion.div> */}
+   
     <motion.div
   initial={{ x: '-100%' }}
   animate={{ x: 0 }}
@@ -43,7 +38,7 @@ const HeroSection = () => {
        
 <h2 className="font-bold text-gray-900">
   {/* Small  */}
-  <span className="block md:hidden text-2xl sm:text-2xl ">
+  <span className="block md:hidden text-xl sm:text-xl ">
     Empowering Innovation with <span className="text-[#E95DFF] italic">Blockchain</span> Solutions
   </span>
 
@@ -55,24 +50,37 @@ const HeroSection = () => {
   </span>
 </h2>
 
-          {/* <p className="text-gray-600 text-[18px] md:text-lg mt-4">
-          Secure, scalable, and customized blockchain <br /> development for the digital future.
-          </p> */}
-          <p className="text-gray-600 text-[18px] md:text-lg mt-4">
+          
+          <p className="text-gray-600 text-[12px] md:text-lg mt-4">
   Secure, scalable, and customized blockchain
   <br className="hidden md:inline" />
   development for the digital future.
 </p>
 
-          <Link href="/ContactUs">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-     className="bg-[#D444F1] mt-12 text-white cursor-pointer hover:bg-[#B33BC1] rounded-full py-3 px-4 w-40 transition duration-300">
-            
-              Contact Us
-            </motion.button>
-          </Link>
+{/* large */}
+<Link href="/ContactUs">
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="hidden sm:block bg-[#D444F1] mt-12 text-white cursor-pointer hover:bg-[#B33BC1] rounded-full py-3 px-4 w-40 transition duration-300"
+  >
+    Contact Us
+  </motion.button>
+</Link>
+
+{/* Small */}
+<Link href="/ContactUs">
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="block sm:hidden bg-[#D444F1] mt-6 text-sm text-white cursor-pointer hover:bg-[#B33BC1] rounded-full py-2 px-3 w-24 transition duration-300"
+  >
+    Contact Us
+  </motion.button>
+</Link>
+
+
+
         </motion.div>
       </div>
     </section>

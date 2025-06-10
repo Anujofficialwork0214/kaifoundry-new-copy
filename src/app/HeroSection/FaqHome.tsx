@@ -4,8 +4,8 @@ import FaqItem from "../Reusable/FaqItem";
 const FaqHome = () => {
   const faqs = [
     { question: "What is Kai Foundry?", answer: "As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design." },
-    { question: "How does Kai Foundry differentiate itself from other blockchain companies?", answer: "As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design." },
-    { question: "How can I get in touch with Kai Foundry?", answer: "As a creative agency we work with you to develop solutions to address your brand needs. That includes various aspects of brand planning and strategy, marketing and design." },
+    { question: "How does Kai Foundry differentiate itself from other blockchain companies?", answer: "Kai Foundry don’t just build solutions—we craft scalable, high-performance ecosystems tailored to real-world business needs." },
+    { question: "How can I get in touch with Kai Foundry?", answer: "You can reach out to us through our website, email, or telegram. Whether you have a project in mind or just want to explore possibilities, our team is ready to connect and collaborate." },
     { question: "How does pricing work for Kai Foundry’s services?", answer: "Our pricing is based on..." },
   ];
 
