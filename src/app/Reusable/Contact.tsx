@@ -13,7 +13,7 @@ const ContactUs = () => {
         <section className=" sm:p-20 p-4 flex justify-center ">
         
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-20 p-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-30 p-4">
              
                 <div className="md:row-span-1 flex-col">
                     <h3 className="text-3xl font-semibold mb-6 sm:mb-10">Where To Find Us</h3>
@@ -35,7 +35,7 @@ const ContactUs = () => {
                     <div className="text-black">
       <h3 className="font-semibold text-3xl mb-4">Contact Details</h3>
       <div className="grid grid-cols-2 gap-4">
-        <p>Akshya Nagar 1st Block 1st Cross, Rammurthy Nagar, Bangalore-560016</p>
+        <p>Akshya Nagar 1st Block 1st <br /> Cross, Rammurthy Nagar,<br /> Bangalore-560016</p>
         <div>
           <p>Ph No: +1234567890</p>
           <p>E-Mail: sodnn@gmail.com</p>
