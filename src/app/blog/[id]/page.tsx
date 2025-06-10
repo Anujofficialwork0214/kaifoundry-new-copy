@@ -3,6 +3,7 @@ import { useRouter, useParams } from "next/navigation";
 import { IoMdArrowBack } from 'react-icons/io';
 import { FaArrowUp, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { useEffect, useState } from "react";
+import { ImArrowUp } from "react-icons/im";
 import Image from "next/image";
 
 interface Post {
@@ -44,15 +45,17 @@ export default function BlogPost() {
         // <div className="w-full p-5 flex flex-col items-center bg-cover bg-fill mt-10  lg:mt-0" style={{ backgroundImage: "url('/assets/blogs/background.png')" }}>
         <div 
     className="w-full p-5 flex flex-col items-center bg-left-left bg-no-repeat mt-10 lg:mt-0" 
-    style={{ backgroundImage: "url('/assets/blogs/background.png')" }}
+    style={{  backgroundImage: "url('/assets/background/bg3.gif')",
+        backgroundSize: "100% auto",
+        backgroundPosition: "right", }}
 >
             <div className="flex w-full md:px-5 mb-10">
                 <button
                     onClick={() => router.back()}
-                    className="flex items-center space-x-2 mx-auto text-gray-600  px-4 py-2 rounded-lg absolute top-25 transition duration-300 ease-in-out"
+                    className="flex items-center space-x-2 mx-auto cursor-pointer text-gray-600  px-4 py-2 rounded-lg absolute top-25 transition duration-300 ease-in-out"
                 >
 
-                    <span className="text-lg  flex justify-between items-center"><IoMdArrowBack size={20}  /> Back</span>
+                    <span className="text-lg  flex justify-between items-center "><IoMdArrowBack size={20}  /> Back</span>
                 </button>
 
             </div>
@@ -86,9 +89,9 @@ export default function BlogPost() {
 
             <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="fixed bottom-6 right-6 bg-purple-600 text-white p-3 rounded-full shadow -md hover:bg-purple-700 transition"
+                className="fixed bottom-6 right-6 bg-[#D444F1] cursor-pointer text-white p-3 rounded-full shadow-md  transition"
             >
-                <FaArrowUp />
+                <ImArrowUp />
             </button>
 
             <div className="w-full max-w-4xl px-4 sm:px-10 mt-10">
