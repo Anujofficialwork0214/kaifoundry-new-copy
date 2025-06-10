@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 // Define the type for services
 type Service = {
@@ -14,23 +14,23 @@ type ServicesProps = {
   heading?: string;
   subheading?: string;
 
-  suffixText?: string; 
-     breakHeading?: string; 
+  suffixText?: string;
+  breakHeading?: string;
 };
 
 const Services: React.FC<ServicesProps> = ({
   services,
-  heading = '',
-  subheading = '',
+  heading = "",
+  subheading = "",
 
-  suffixText = "", 
-   breakHeading="",
+  suffixText = "",
+  breakHeading = "",
 }) => {
   return (
     <section
       className="py-20 bg-white relative"
       style={{
-       backgroundImage: `url('/assets/background/bg2.gif')`,
+        backgroundImage: `url('/assets/background/bg2.gif')`,
         backgroundSize: "cover",
         backgroundPosition: "left",
         backgroundRepeat: "no-repeat",
@@ -39,20 +39,15 @@ const Services: React.FC<ServicesProps> = ({
       <div className="mx-auto px-6 md:px-12 text-center">
         {/* Heading */}
         <motion.h2
-          className="text-2xl md:text-5xl text-[#333333] font-semibold font-roboto mb-20"
+          className="text-2xl md:text-5xl text-[#333333] font-semibold font-roboto  mb-20 md:mb-40"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
-           {suffixText}{" "}
-          <span className="text-[#BA24D5]">{heading} </span> 
-            {subheading}
+          {suffixText} <span className="text-[#BA24D5]">{heading} </span>
+          {subheading}
           <br />
-        
           {breakHeading}
- 
-
-
         </motion.h2>
 
         {/* Grid */}
