@@ -7,9 +7,9 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import ServicesPopup from "./NavbarPoup"; // Adjust the import path as necessary
 import { IoIosArrowDown } from "react-icons/io";
 import { MdDone } from "react-icons/md";
-import { Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 
-const geist = Geist({
+const inter = Inter({
   subsets: ["latin"],
 });
 const Navbar: React.FC = () => {
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
     <>
       <header
         className={`fixed  ${
-          geist.className
+          inter.className
         } etop-0 left-0 right-0 w-full pt-5 z-50 transition-transform  px-4 duration-500 ease-in-out ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
