@@ -156,8 +156,8 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      <div className="mt-18 items-center  justify-center flex flex-col md:flex-row px-4 ">
-        <div className=" w-7xl lg:w-full  items-center sm:px-6 sm:py-4">
+      <div className="mt-18 items-center  justify-center flex flex-col md:flex-row  ">
+        <div className=" w-7xl lg:w-full  items-center ">
           <div className="bg-white rounded-full border border-fuchsia-300 border-r-0 border-l-0 shadow-sm flex items-center justify-around p-3 sm:p-4">
             <div className="flex items-baseline text-center">
               <CountUp

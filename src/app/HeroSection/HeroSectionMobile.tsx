@@ -82,7 +82,7 @@ export default function HeroSectionMob() {
             </Link>
           </div>
         </div> */}
-        <div className="lg:w-1/2 w-full mt-8 md:mt-5 relative h-full mx-auto lg:h-auto">
+        <div className="lg:w-1/2 w-full mt-8 md:mt-5 relative  mx-auto lg:h-auto">
           <div className="absolute top-0 right-0 w-full h-200 lg:h-175  bg-gradient-to-b lg:bg-gradient-to-r from-[#A5C0EE] to-[#FBC5EC] rounded-lg z-0 flex lg:block justify-center items-center"></div>
           <Image
             src="/assets/cube.png"

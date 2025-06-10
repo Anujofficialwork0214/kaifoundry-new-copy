@@ -141,15 +141,15 @@ const WhatWeProvide = () => {
 
   return (
     <section ref={ref} className="py-20 md:py-40 bg-gray-50 overflow-hidden ">
-      <div className="container mx-auto flex flex-col md:flex-row px-4 md:px-12 items-center md:items-start">
+      <div className="container mx-auto flex flex-col md:flex-row px-4 md:px-0 items-center md:items-start">
         <motion.div
-          className="w-full md:w-1/3 mb-10 md:mb-0 md:pr-10 text-center md:text-left"
+          className="w-full mt-96 md:mt-0   mb-10 md:mb-0 md:pr-10 text-center md:text-left"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+          <h2 className=" text-3xl md:text-4xl  lg:text-6xl font-bold text-gray-900 leading-tight">
             WHAT <br />
             WE <span className="text-[#D444F1]">PROVIDE</span>
           </h2>
