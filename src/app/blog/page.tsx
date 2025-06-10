@@ -460,34 +460,48 @@ export default function BlogCarousel() {
                 >
                   {blogs.map((blog, index) => (
                   
-                      <div key={blog.id} className="flex-shrink-0 w-full md:w-[426px]">
-                      <div className="bg-white shadow-lg flex flex-col h-[470px] overflow-hidden transition-transform duration-300 hover:scale-105">
-                   
-                          <div className="relative w-full h-[246px] bg-gray-100">
-                            {!loadedImages[blog.id] && (
-                                <Skeleton className="absolute inset-0" />
-                            )}
-                            <Image
-                                src={blog.image}
-                                alt={blog.title}
-                                fill
-                                className="object-cover"
-                                loading={index < visibleCards ? 'eager' : 'lazy'}
-                                onLoadingComplete={() => handleImageLoad(blog.id)}
-                                quality={75}
-                                sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                draggable={false}
-                            />
-                          </div>
-                          <div className="pt-5 pb-10 px-5 grid grid-rows-[20%_50%_30%] gap-5">
-                            <p className="text-[14px] font-[600] text-[#333333]">{blog.category}</p>
-                            <h3 className="text-[18px] font-[600] text-[#333333]">{blog.title}</h3>
-                            <Link href={`/blog/${blog.id}`} className="text-[#333333] text-[16px] font-[500] underline underline-offset-2 hover:text-purple-600">
-                              Read Blog
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
+                     
+                    <div key={blog.id} className="flex-shrink-0 w-full md:w-[426px]">
+  
+  <div className="bg-white shadow-md  flex flex-col h-[470px] overflow-hidden transition-transform duration-300 hover:scale-105">
+    
+    
+    <div className="relative w-full h-[246px] bg-gray-100">
+      {!loadedImages[blog.id] && (
+          <Skeleton className="absolute inset-0" />
+      )}
+      <Image
+          src={blog.image}
+          alt={blog.title}
+          fill
+          className="object-cover"
+          loading={index < visibleCards ? 'eager' : 'lazy'}
+          onLoadingComplete={() => handleImageLoad(blog.id)}
+          quality={75}
+          sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          draggable={false}
+      />
+    </div>
+
+    
+    <div className="p-6 flex flex-col flex-grow">
+      
+      <p className="text-sm font-medium text-gray-600">
+        {blog.category}
+      </p>
+
+     
+      <h3 className="mt-2 text-xl font-bold text-gray-900 leading-tight">
+        {blog.title}
+      </h3>
+
+    
+      <Link href={`/blog/${blog.id}`} className="mt-auto text-base font-medium text-gray-900 underline underline-offset-2 hover:text-purple-600">
+        Read Blog
+      </Link>
+    </div>
+  </div>
+</div>
                   ))}
                 </div>
               </div>
