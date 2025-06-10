@@ -54,21 +54,21 @@ const ServicesPopup: React.FC<ServicesPopupProps> = ({ onClose }) => {
           </div>
 
           <div className="grid md:grid-cols-2 grid-cols-1 gap-6 w-full md:w-1/2">
-            <Link href="/BlockChainService" passHref>
+            <Link href="/BlockChainService" passHref prefetch={true}>
               <ServiceItem
                 icon={<SiBlockchaindotcom className="text-purple-600 text-4xl" />}
                 title="Blockchain Development"
                 description="Solutions tailored to your needs."
               />
             </Link>
-            <Link href="/AIServices" passHref>
+            <Link href="/AIServices" passHref prefetch={true}>
               <ServiceItem
                 icon={<FaRobot className="text-purple-600 text-4xl" />}
                 title="AI Services"
                 description="Unlock the power of AI."
               />
             </Link>
-            <Link href="/GameDevelopment" passHref>
+            <Link href="/GameDevelopment" passHref prefetch={true}>
               <ServiceItem
                 icon={<FaGamepad className="text-purple-600 text-4xl" />}
                 title="Game Development"
