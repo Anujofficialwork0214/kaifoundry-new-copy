@@ -72,7 +72,10 @@ const Services: React.FC<ServicesProps> = ({
               transition={{ duration: 0.2, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-[18px] md:text-2xl  font-semibold text-left text-[#0E0E0E]">
+              <h3
+                // className="text-[18px] md:text-2xl  font-semibold text-left text-[#0E0E0E]"
+               className={ `text-[18px] md:text-2xl  font-semibold text-left text-[#0E0E0E] ${manrope.className}`}
+              >
                 {service.title}
               </h3>
               <p className={`text-[#575656] mt-3 text-left text-sm md:text-base ${manrope.className}` } >

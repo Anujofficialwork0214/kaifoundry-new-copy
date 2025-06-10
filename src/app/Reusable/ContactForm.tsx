@@ -338,7 +338,7 @@ const ContactForm = () => {
         placeholder="Write your message here."
         value={formData.message}
         onChange={handleChange}
-        // Removed preventSpace from message to allow spaces
+   onKeyDown={preventSpace}
         textarea
       />
 
