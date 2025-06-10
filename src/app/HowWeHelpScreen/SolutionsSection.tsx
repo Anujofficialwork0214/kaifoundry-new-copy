@@ -66,18 +66,34 @@ const SolutionsSection = () => {
               onMouseLeave={() => setHoverIndex(null)}
               onClick={() => setSelectedSolution(selectedSolution === index ? null : index)} // Toggle selection
             >
-              {/* Background Hover Effect (Expands from both sides) */}
-              <motion.div
-                initial={{ width: 0, left: "50%" }}
-                animate={hoverIndex === index ? { width: "100%", left: "0%" } : { width: 0, left: "50%" }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="absolute top-0 h-full"
-                style={{
-                  backgroundColor: '#F6D0FE',
-                  opacity: 0.25,
-                  backdropFilter: 'blur(80px)', // Adjust the blur value as needed
-                }} // Light background color for hover effect
-              />
+              {selectedSolution === index && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute top-0 left-0 w-full h-full z-0"
+                  style={{
+                    background: 'linear-gradient(90deg, #F6D0FE 0%, #D7CDFF 100%)',
+                  }}
+                />
+              )}
+
+              {/* Background for hover state (only shows if not selected) */}
+              {hoverIndex === index && selectedSolution !== index && (
+                <motion.div
+                  initial={{ opacity: 0, scaleY: 0 }}
+                  animate={{ opacity: 1, scaleY: 1 }}
+                  transition={{ duration: 0.4, ease: "easeOut" }}
+                  className="absolute top-0 left-0  origin-top z-0 "
+                  style={{
+                    backgroundImage: `url('/assets/background/bg3.gif')`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                />
+              )}
+
               
               <span className="relative z-10 text-[18px] lg:text-[24px] font-[600] text-[#BA24D5] block w-full">
                 {index + 1}. {solution.title}
@@ -102,7 +118,7 @@ const SolutionsSection = () => {
                 </p>
               </div>
             </motion.div>
-            <div className="absolute bottom-0 h-[1px]" style={{ backgroundColor: '#BA24D5', width: '100%' }} /> {/* Line at the bottom */}
+            <div className="absolute bottom-0 h-[1px]" style={{ background: 'linear-gradient(90deg, #F6D0FE 0%, #D7CDFF 100%)', width: '100%' }} /> {/* Line at the bottom */}
           </div>
         ))}
       </div> 
