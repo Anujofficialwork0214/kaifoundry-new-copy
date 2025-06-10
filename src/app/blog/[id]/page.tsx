@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 
 interface Post {
-    id: number; // Change to number to match your JSON data
+    id: number; 
     image: string;
     title: string;
     author: string;
@@ -27,8 +27,8 @@ export default function BlogPost() {
                 if (!response.ok) {
                     throw new Error("Failed to load blogs.");
                 }
-                const data: Post[] = await response.json(); 
-                const foundPost = data.find((blog) => blog.id === Number(id)); 
+                const data: Post[] = await response.json();
+                const foundPost = data.find((blog) => blog.id === Number(id));
                 setPost(foundPost || null);
             } catch (error) {
                 console.error("Error fetching blog post:", error);
@@ -41,7 +41,11 @@ export default function BlogPost() {
     if (!post) return <div className="text-center text-gray-600 text-lg mt-10">Loading...</div>;
 
     return (
-        <div className="w-full p-5 flex flex-col items-center bg-cover bg-fill mt-10  lg:mt-0" style={{ backgroundImage: "url('/assets/blogs/background.gif')" }}>
+        // <div className="w-full p-5 flex flex-col items-center bg-cover bg-fill mt-10  lg:mt-0" style={{ backgroundImage: "url('/assets/blogs/background.png')" }}>
+        <div 
+    className="w-full p-5 flex flex-col items-center bg-left-left bg-no-repeat mt-10 lg:mt-0" 
+    style={{ backgroundImage: "url('/assets/blogs/background.png')" }}
+>
             <div className="flex w-full md:px-5 mb-10">
                 <button
                     onClick={() => router.back()}
@@ -63,7 +67,7 @@ export default function BlogPost() {
             />
 
             <div className="w-full max-w-[80%] px-4 sm:px-10 ">
-                <h1 className="text-[24px] text-[#2D3748] md:text-4xl lg:text-6xl font-bold">{post.title}</h1>
+                <h1 className="text-[18px] text-[#2D3748] md:text-3xl lg:text-4xl font-bold">{post.title}</h1>
                 <p className="text-[27px] text-[#2D3748] mt-2">
                     <strong>Written by {post.author}</strong> &nbsp; | &nbsp; {post.date}
                 </p>
@@ -102,3 +106,4 @@ export default function BlogPost() {
         </div>
     );
 }
+
