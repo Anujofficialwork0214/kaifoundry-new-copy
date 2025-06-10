@@ -63,7 +63,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.6, ease: "easeInOut", delay: 0.9 }}
-            className="bg-[#D444F1] mt-12 ml-2 text-white hover:bg-[#B33BC1] rounded-full py-2 lg:py-3 px-2 lg:px-4 w-36 lg:w-40 transition duration-300"
+            className="bg-[#D444F1] mt-12 ml-2 text-white hover:bg-[#B33BC1] rounded-full py-2 lg:py-3 px-1 lg:px-4 w-30  text-sm lg:w-40 transition duration-300"
             >
               Contact Us
             </motion.button>
