@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 const images = [
   {
     src: "/assets/careers/img1.png",
@@ -29,21 +31,42 @@ const images = [
 ];
 
 const CareersSection = () => {
+  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 });
   return (
-    <section className="py-20 bg-white text-center">
+    <section className="py-20 bg-white text-center" ref={ref}>
       <div className="container mx-auto px-6">
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+        <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            className="text-[24px] lg:text-[62px] font-[600] text-gray-900"
+         >
           Careers
-        </h2>
-        <p className="text-[#808080] text-[14px] md:text-xl font-[400] mt-2">
+        </motion.h2>
+        <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, ease: "easeInOut", delay: 1.0 }} 
+            className="text-[#808080] text-[14px] md:text-xl font-[500] mt-2"
+          >
           Join A Team That Turns Ideas Into Impact
-        </p>
-        <p className="text-[#808080] text-[14px] md:text-xl font-[500] ">
+          </motion.p>
+          
+        
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, ease: "easeInOut", delay: 1.0 }} 
+            className="text-[#808080] text-[14px] md:text-xl font-[500] ">
           One Block At A Time!
-        </p>
-
-        <div className="flex flex-col gap-2 mt-10 mx-auto max-w-xs block lg:hidden">
+        </motion.p>
+        <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        >
+        <div className="flex flex-col gap-4 mt-10 mx-auto max-w-xs lg:hidden">
 
 {/* First Row with First Image and Second/Third Images */}
 <div className="flex gap-2">
@@ -57,12 +80,12 @@ const CareersSection = () => {
                   draggable="false"
     />
   </div>
-  <div className="flex flex-col gap-2">
+  <div className="flex flex-col gap-4">
     <div className="flex-1">
       <Image
         src={images[1].src}
         alt={images[1].alt}
-        width={160}
+        width={150}
         height={200}
                   className=" object-cover"
                     draggable="false"
@@ -72,7 +95,7 @@ const CareersSection = () => {
       <Image
         src={images[2].src}
         alt={images[2].alt}
-        width={160}
+        width={146}
         height={100}
                   className=" object-cover"
                     draggable="false"
@@ -82,23 +105,23 @@ const CareersSection = () => {
 </div>
 
 {/* Second Row */}
-<div className="flex gap-2">
+<div className="flex gap-4">
   <div className="flex-1">
     <Image
       src={images[3].src}
       alt={images[3].alt}
-      width={750}
-      height={150}
+      width={650}
+      height={250}
                 className=" object-cover"
                   draggable="false"
     />
   </div>
-  <div className="flex flex-col gap-2">
+  <div className="flex flex-col gap-4">
     <div className="flex-1">
       <Image
         src={images[5].src}
         alt={images[5].alt}
-        width={125}
+        width={120}
         height={120}
                   className=" object-cover"
                     draggable="false"
@@ -108,7 +131,7 @@ const CareersSection = () => {
       <Image
         src={images[4].src}
         alt={images[4].alt}
-        width={130}
+        width={120}
         height={20}
                   className=" object-cover"
                     draggable="false"
@@ -116,8 +139,9 @@ const CareersSection = () => {
     </div>
   </div>
 </div>
-</div>
 
+</div>
+</motion.div>
       </div>
     </section>
     
