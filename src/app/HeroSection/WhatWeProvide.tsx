@@ -144,10 +144,10 @@ const WhatWeProvide = () => {
   const displayServices = isMobile ? services : [...services, ...services];
 
   return (
-    <section ref={ref} className="py-20 md:py-40 bg-gray-50 overflow-hidden ">
+    <section ref={ref} className="py-10 md:py-30 lg:px-10 px-0 bg-gray-50 overflow-hidden ">
       <div className="container mx-auto flex flex-col md:flex-row px-4 md:px-0 items-center md:items-start">
         <motion.div
-          className="w-full mt-96 md:mt-0   mb-10 md:mb-0 md:pr-10 text-center md:text-left"
+          className="w-full   mb-10 md:mb-0 md:pr-10 text-center md:text-left"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
