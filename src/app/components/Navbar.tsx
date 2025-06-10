@@ -1,5 +1,3 @@
-
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState, useEffect, useRef } from "react";
@@ -9,7 +7,11 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 import ServicesPopup from "./NavbarPoup"; // Adjust the import path as necessary
 import { IoIosArrowDown } from "react-icons/io";
 import { MdDone } from "react-icons/md";
+import { Inter } from "next/font/google";
 
+const inter = Inter({
+  subsets: ["latin"],
+});
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -17,6 +19,7 @@ const Navbar: React.FC = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const pathname = usePathname();
   const lastScrollY = useRef(0);
+
   useEffect(() => {
     const handleOutsideClick = (e: MouseEvent) => {
       const sidebar = document.getElementById("mobile-sidebar");
@@ -24,33 +27,32 @@ const Navbar: React.FC = () => {
         setIsOpen(false);
       }
     };
-  
+
     const handleScrollClose = () => {
       if (isOpen) {
         setIsOpen(false);
       }
     };
-  
+
     document.addEventListener("mousedown", handleOutsideClick);
     window.addEventListener("scroll", handleScrollClose);
-  
+
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
       window.removeEventListener("scroll", handleScrollClose);
     };
   }, [isOpen]);
-  
 
   useEffect(() => {
     const handleScroll = () => {
       setIsVisible(window.scrollY < lastScrollY.current);
       lastScrollY.current = window.scrollY;
     };
-  
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
   const isActive = (path: string) => pathname === path;
@@ -58,13 +60,13 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-     
-             <header
-         className={`fixed top-0 left-0 right-0 w-full pt-5 z-50 transition-transform  px-4 duration-500 ease-in-out ${
-           isVisible ? "translate-y-0" : "-translate-y-full"
-         }`}
-       >
-    
+      <header
+        className={`fixed  ${
+          inter.className
+        } etop-0 left-0 right-0 w-full pt-5 z-50 transition-transform  px-4 duration-500 ease-in-out ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
         <nav className="container mx-auto py-2 px-4 md:px-5 lg:px-5 flex items-center justify-between md:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out ">
           <button
             onClick={toggleMenu}
@@ -170,12 +172,11 @@ const Navbar: React.FC = () => {
         }`}
       > */}
       <div
-  id="mobile-sidebar"
-  className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-500 ease-in-out ${
-    isOpen ? "translate-x-0" : "-translate-x-full"
-  }`}
->
-
+        id="mobile-sidebar"
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-500 ease-in-out ${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
         <button
           onClick={closeMenu}
           className="absolute top-4 right-4 text-gray-700 text-2xl"
@@ -185,7 +186,7 @@ const Navbar: React.FC = () => {
         <nav className="flex flex-col items-start  text-gray-700">
           <Link href="/" className="px-6 pt-6 pb-2 w-full flex flex-col  gap-5">
             <Image src="/svg/Group.svg" alt="Logo" width={20} height={20} />
-            <div className ="text-[20px] font-[500]">Kai Foundary</div>
+            <div className="text-[20px] font-[500]">Kai Foundary</div>
           </Link>
           <Link
             href="/"
@@ -207,80 +208,113 @@ const Navbar: React.FC = () => {
           >
             How We Help
           </Link>
-          <Link href="/WhoAreWe" className={`${
+          <Link
+            href="/WhoAreWe"
+            className={`${
               isActive("/WhoAreWe")
                 ? "text-[#BA24D5] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent font-[400]"
-            }  cursor-pointer text-[14px] px-6 py-3 w-full`}>
+            }  cursor-pointer text-[14px] px-6 py-3 w-full`}
+          >
             Who We Are
           </Link>
           <Link
             href="/CareersScreen"
             className={`${
-              isActive("/CareersScreen") ? "text-[#821890] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]" : "text-[#4D4D4D] bg-transparent "
+              isActive("/CareersScreen")
+                ? "text-[#821890] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
+                : "text-[#4D4D4D] bg-transparent "
             }  cursor-pointer text-[14px] px-6 py-3 w-full`}
           >
             Careers
           </Link>
-          
+
           <Link
             href="/blog"
             className={`${
-              isActive("/blog") ? "text-[#BA24D5] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]": "text-[#4D4D4D] bg-transparent font-[400]"
+              isActive("/blog")
+                ? "text-[#BA24D5] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
+                : "text-[#4D4D4D] bg-transparent font-[400]"
             }  cursor-pointer text-[14px] px-6 py-3 w-full`}
           >
             Blogs
           </Link>
           <button
-            onClick={(e) =>{ e.preventDefault(); setIsOpenMenu(!isOpenMenu)}}
+            onClick={(e) => {
+              e.preventDefault();
+              setIsOpenMenu(!isOpenMenu);
+            }}
             className={`text-gray-700 focus:outline-none flex justify-between w-full items-center px-6 py-4 ${
-              ["/BlockChainService", "/GameDevelopment", "/AIServices"].some(path => isActive(path)) 
-                ? "bg-gradient-to-r from-white to-[#F6D0FE]": "bg-transparent"
+              ["/BlockChainService", "/GameDevelopment", "/AIServices"].some(
+                (path) => isActive(path)
+              )
+                ? "bg-gradient-to-r from-white to-[#F6D0FE]"
+                : "bg-transparent"
             }`}
           >
-            <div className={`${
-              ["/BlockChainService", "/GameDevelopment", "/AIServices"].some(path => isActive(path)) 
-                ? "text-[#BA24D5] ": "text-[#4D4D4D] bg-transparent font-[400]"
-            }  cursor-pointer text-[14px]`}>
-             {isActive("/BlockChainService")
-              ? "Blockchain Development"
-              : isActive("/GameDevelopment")
-              ? "Gaming"
-              : isActive("/AIServices")
-              ? "AI Services"
-              : "Services"}
+            <div
+              className={`${
+                ["/BlockChainService", "/GameDevelopment", "/AIServices"].some(
+                  (path) => isActive(path)
+                )
+                  ? "text-[#BA24D5] "
+                  : "text-[#4D4D4D] bg-transparent font-[400]"
+              }  cursor-pointer text-[14px]`}
+            >
+              {isActive("/BlockChainService")
+                ? "Blockchain Development"
+                : isActive("/GameDevelopment")
+                ? "Gaming"
+                : isActive("/AIServices")
+                ? "AI Services"
+                : "Services"}
             </div>
 
-            
-            <IoIosArrowDown className={`transition-transform duration-300 ${isOpenMenu ? "rotate-180" : ""} cursor-pointer`}/>
+            <IoIosArrowDown
+              className={`transition-transform duration-300 ${
+                isOpenMenu ? "rotate-180" : ""
+              } cursor-pointer`}
+            />
           </button>
           <div
-              className={`overflow-hidden transition-all px-6  duration-500 ease-in-out p-0 ${
-                isOpenMenu ? "max-h-60 opacity-100" : "max-h-0 opacity-0 hidden"
-              }`}
-            >
-              <ul className="bg-white mt-2  px-2 space-y-4 text-sm font-medium text-gray-700">
-                <li className={`text-[#414141] cursor-pointer text-[14px] font-[400] flex gap-4 items-center w-full`}>
-                  <Link href="/BlockChainService" passHref>
+            className={`overflow-hidden transition-all px-6  duration-500 ease-in-out p-0 ${
+              isOpenMenu ? "max-h-60 opacity-100" : "max-h-0 opacity-0 hidden"
+            }`}
+          >
+            <ul className="bg-white mt-2  px-2 space-y-4 text-sm font-medium text-gray-700">
+              <li
+                className={`text-[#414141] cursor-pointer text-[14px] font-[400] flex gap-4 items-center w-full`}
+              >
+                <Link href="/BlockChainService" passHref>
                   Blockchain Development
-                  </Link>
-                  {isActive("/BlockChainService") && <MdDone className="text-[#D444F1]"/>}
-                </li>
-                <li className={`text-[#414141] cursor-pointer text-[14px] font-[400] flex justify-between items-center w-full`}>
-                  <Link href="/GameDevelopment" passHref>
-                    Gaming
-                  </Link>
-                  {isActive("/GameDevelopment") && <MdDone className="text-[#D444F1]"/>}
-                  </li>
-                <li className={`
-              text-[#414141]  cursor-pointer text-[14px] font-[400] flex justify-between items-center w-full`}>
-                  <Link href="/AIServices" passHref>
-                    AI Services
-                  </Link>
-                  {isActive("/AIServices") && <MdDone className="text-[#D444F1]"/>}
-                  </li>
-              </ul>
-            </div>
+                </Link>
+                {isActive("/BlockChainService") && (
+                  <MdDone className="text-[#D444F1]" />
+                )}
+              </li>
+              <li
+                className={`text-[#414141] cursor-pointer text-[14px] font-[400] flex justify-between items-center w-full`}
+              >
+                <Link href="/GameDevelopment" passHref>
+                  Gaming
+                </Link>
+                {isActive("/GameDevelopment") && (
+                  <MdDone className="text-[#D444F1]" />
+                )}
+              </li>
+              <li
+                className={`
+              text-[#414141]  cursor-pointer text-[14px] font-[400] flex justify-between items-center w-full`}
+              >
+                <Link href="/AIServices" passHref>
+                  AI Services
+                </Link>
+                {isActive("/AIServices") && (
+                  <MdDone className="text-[#D444F1]" />
+                )}
+              </li>
+            </ul>
+          </div>
           {/* <Link href="/ContactUs" className="px-6">
           <button className="bg-[#D444F1]   text-white px-4 py-2 rounded-full hover:bg-pink-600 mt-4 w-full transition-all  cursor-pointer duration-500 ease-in-out">
             Contact Us

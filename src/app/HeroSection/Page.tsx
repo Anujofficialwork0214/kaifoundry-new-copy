@@ -107,7 +107,7 @@ export default function HeroSection() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           // className="bg-white shadow-lg lg:left-12 2xl:left-10  xl:ml-[520px] 2xl:ml-[610px] rounded-2xl items-center  p-4 relative z-10 overflow-hidden hidden md:flex -mt-16  -space-y-2 md:mr-10 lg:mr-0"
-          className="bg-white shadow-lg rounded-2xl items-center p-2 xl:p-4 relative z-10 overflow-hidden hidden md:flex  -mt-10  lg:-mt-16   -space-y-2 transform left-[48.5%] lg:left-[46%] xl:left-[45%] 2xl:left-[40%]   -translate-x-1/2"
+          className="bg-white shadow-lg rounded-2xl items-center p-2 xl:p-4 relative z-10 overflow-hidden hidden md:flex  -mt-10  lg:-mt-16   -space-y-2 transform left-[48.5%] lg:left-[43%] xl:left-[45%] 2xl:left-[40%]   -translate-x-1/2"
           // style={{
           //   background: "linear-gradient(to right, #f8f5ff, #fce7f3)",
           //   borderRadius: "20px",
@@ -156,8 +156,8 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      <div className="mt-18 items-center  justify-center flex flex-col md:flex-row px-4 ">
-        <div className=" w-7xl lg:w-full  items-center sm:px-6 sm:py-4">
+      <div className="mt-18 items-center  justify-center flex flex-col md:flex-row  ">
+        <div className=" w-7xl lg:w-full  items-center ">
           <div className="bg-white rounded-full border border-fuchsia-300 border-r-0 border-l-0 shadow-sm flex items-center justify-around p-3 sm:p-4">
             <div className="flex items-baseline text-center">
               <CountUp
