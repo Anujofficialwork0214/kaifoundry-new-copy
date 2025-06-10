@@ -61,7 +61,7 @@ export default function BlockchainSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="flex items-center space-x-3"
             >
-              <img src={feature.icon} alt={feature.name} className="w-10 h-10 object-contain" />
+              <img src={feature.icon} alt={feature.name} className="w-6 h-6 md:w-8 ms:w-8 lg:w-8 lg-w-8  object-contain" />
               <span className="text-sm lg:text-lg sm:text-xs font-medium text-gray-900 whitespace-nowrap">
                 {feature.name}
               </span>

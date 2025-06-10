@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-
+import { useEffect, useState } from "react";
 import HeroSection from './HeroSection';
 import BlockchainSection from './BlockChainSection';
 
@@ -14,7 +14,20 @@ import WhatWeOfferBlock from "./WhatweOfferBlock"
 
 
 const BlockChainServicePage: React.FC = () => {
+    const [isMobile, setIsMobile] = useState(false);
   
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 768);
+      };
+  
+      handleResize(); 
+      window.addEventListener("resize", handleResize); 
+  
+      return () => {
+        window.removeEventListener("resize", handleResize); 
+      };
+    }, []);
   return (
     <div>
    <HeroSection />

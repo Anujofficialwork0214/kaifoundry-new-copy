@@ -6,7 +6,7 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
 
-<section className="relative flex items-center py-60 w-full overflow-hidden px-6 md:px-6 ">
+<section className="relative flex items-center py-60 w-full overflow-hidden px-2 md:px-6 ">
   {/* Background GIF */}
   <div className="absolute inset-0 z-0">
     <Image
@@ -23,7 +23,7 @@ const HeroSection = () => {
     initial={{ x: '-100%' }}
     animate={{ x: 0 }}
     transition={{ duration: 0.8, ease: "easeOut" }}
-    className="absolute inset-y-0 left-0 w-1/2 bg-white/50 backdrop-blur-md z-10"
+ className="absolute inset-y-0 left-0 w-1/2 bg-transparent md:bg-white/50 md:backdrop-blur-md backdrop-blur-none z-10"
   ></motion.div>
 
   <div className="w-full flex justify-center md:justify-start">
@@ -33,22 +33,44 @@ const HeroSection = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="relative z-20 w-full md:w-2/3 lg:w-1/2 flex flex-col items-center text-center md:items-start md:text-left p-8 rounded-lg"
     >
-      <h2 className="text-4xl md:text-4xl lg:text-6xl font-bold text-gray-900">
+      <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-gray-900">
         Game That Keep <br />
         <span className="text-[#E95DFF]">Players</span> Hooked
       </h2>
-      <p className="text-gray-600 text-base md:text-[20px] mt-4 ">
+      {/* <p className="text-gray-600 text-base md:text-[20px] mt-4 ">
         We create engaging, high-performance games <br /> that players love — seamless, fun, and built for <br /> the future of gaming
-      </p>
+      </p> */}
+{/* Mobile version — Single line */}
+<p className="text-gray-600 text-base md:text-[20px] mt-4 block md:hidden">
+  We create engaging, high-performance games that players love — seamless, fun, and built for the future of gaming
+</p>
+
+{/* Desktop version — With line breaks */}
+<p className="text-gray-600 text-base md:text-[20px] mt-4 hidden md:block">
+  We create engaging, high-performance games <br />
+  that players love — seamless, fun, and built for <br />
+  the future of gaming
+</p>
+
+
          <Link href="/ContactUs">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#D444F1] mt-14 text-white cursor-pointer hover:bg-[#B33BC1] rounded-full py-2 px-4 w-40 transition duration-300"
+                className="hidden sm:block bg-[#D444F1] mt-12 text-white cursor-pointer hover:bg-[#B33BC1] rounded-full py-3 px-4 w-40 transition duration-300"
             >
               Contact Us
             </motion.button>
           </Link>
+          <Link href="/ContactUs">
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="block sm:hidden bg-[#D444F1] mt-6 text-sm text-white cursor-pointer hover:bg-[#B33BC1] rounded-full py-2 px-3 w-24 transition duration-300"
+  >
+    Contact Us
+  </motion.button>
+</Link>
     </motion.div>
   </div>
 </section>

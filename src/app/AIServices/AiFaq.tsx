@@ -12,7 +12,7 @@ const AiFaq = () => {
 
   return (
     <div className="max-w-3xl mx-auto px-6 flex-col py-24">
-      <h2 className="text-3xl font-bold text-center text-gray-900">
+      <h2 className="text-xl md:text-4xl lg:text-4xl  font-bold text-center text-gray-900">
         <span className="text-[#BA24D5]">Frequently</span> Asked Questions
       </h2>
       <div className="mt-6">

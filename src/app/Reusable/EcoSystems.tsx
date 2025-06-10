@@ -39,7 +39,7 @@ const EcoSystems: React.FC<EcosystemsProps> = ({
             className="border border-fuchsia-500 rounded-lg flex flex-col items-center justify-center transition 
               w-full h-[150px] md:h-[150px] p-4"
           >
-            <div className="flex items-center justify-center w-20 h-20">
+            <div className="flex items-center justify-center w-10 h-10 md:w-20 md:h-20 lg:w-20 lg:h-20">
               <Image
                 src={eco.icon}
                 alt={eco.name}
@@ -48,7 +48,7 @@ const EcoSystems: React.FC<EcosystemsProps> = ({
                 draggable="false"
               />
             </div>
-            <p className="mt-1 text-lg text-[#414141] font-semibold">{eco.name}</p>
+            <p className="mt-4 md:mt-2 lg:mt-2 text-sm md:text-lg lg:text-lg text-[#414141] font-semibold">{eco.name}</p>
           </div>
         ))}
       </div>

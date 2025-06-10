@@ -42,8 +42,8 @@ export default function GameDevelopmentSection() {
           transition={{ duration: 0.6, delay: index * 0.1 }}
           className="flex items-center space-x-3"
         >
-          <feature.icon className="h-7 w-7 text-[#BA24D5]" />
-          <span className="text-lg lg:text-lg sm:text-sm font-medium text-gray-900 whitespace-nowrap">{feature.name}</span>
+          <feature.icon className="w-6 h-6 md:w-8 ms:w-8 lg:w-8 lg-w-8  text-[#BA24D5]" />
+          <span className="text-sm lg:text-lg sm:text-xs font-medium text-gray-900 whitespace-nowrap">{feature.name}</span>
         </motion.div>
       ))}
     </div>
