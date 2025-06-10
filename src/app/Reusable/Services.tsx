@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Manrope } from 'next/font/google';
+import React from "react";
+import { motion } from "framer-motion";
+import { Manrope } from "next/font/google";
 
 // Define the type for services
 type Service = {
@@ -15,8 +15,8 @@ type ServicesProps = {
   heading?: string;
   subheading?: string;
 
-  suffixText?: string; 
-     breakHeading?: string; 
+  suffixText?: string;
+  breakHeading?: string;
 };
 const manrope = Manrope({
   subsets: ["latin"],
@@ -24,18 +24,17 @@ const manrope = Manrope({
 
 const Services: React.FC<ServicesProps> = ({
   services,
-  heading = '',
-  subheading = '',
+  heading = "",
+  subheading = "",
 
-  suffixText = "", 
-   breakHeading="",
+  suffixText = "",
+  breakHeading = "",
 }) => {
-
   return (
     <section
       className="py-20 bg-white relative"
       style={{
-       backgroundImage: `url('/assets/background/bg2.gif')`,
+        backgroundImage: `url('/assets/background/bg2.gif')`,
         backgroundSize: "cover",
         backgroundPosition: "left",
         backgroundRepeat: "no-repeat",
@@ -44,20 +43,15 @@ const Services: React.FC<ServicesProps> = ({
       <div className="mx-auto px-6 md:px-12 text-center">
         {/* Heading */}
         <motion.h2
-          className="text-2xl md:text-5xl text-[#333333] font-semibold fonts-roboto mb-20 "
+          className="text-2xl md:text-5xl text-[#333333] font-semibold font-roboto  mb-20 md:mb-40"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
-           {suffixText}{" "}
-          <span className="text-[#BA24D5]">{heading} </span> 
-            {subheading}
+          {suffixText} <span className="text-[#BA24D5]">{heading} </span>
+          {subheading}
           <br />
-        
           {breakHeading}
- 
-
-
         </motion.h2>
 
         {/* Grid */}
@@ -74,11 +68,13 @@ const Services: React.FC<ServicesProps> = ({
             >
               <h3
                 // className="text-[18px] md:text-2xl  font-semibold text-left text-[#0E0E0E]"
-               className={ `text-[18px] md:text-2xl  font-semibold text-left text-[#0E0E0E] ${manrope.className}`}
+                className={`text-[18px] md:text-2xl  font-semibold text-left text-[#0E0E0E] ${manrope.className}`}
               >
                 {service.title}
               </h3>
-              <p className={`text-[#575656] mt-3 text-left text-sm md:text-base ${manrope.className}` } >
+              <p
+                className={`text-[#575656] mt-3 text-left text-sm md:text-base ${manrope.className}`}
+              >
                 {service.description}
               </p>
             </motion.div>

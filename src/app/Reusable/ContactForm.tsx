@@ -1,4 +1,3 @@
-
 // "use client";
 // import { useState, useRef } from "react";
 
@@ -21,7 +20,6 @@
 //   const [error, setError] = useState<string | null>(null);
 //   const [success, setSuccess] = useState<string | null>(null);
 //   const recaptchaRef = useRef<ReCAPTCHA>(null);
-
 
 // const handleChange = (
 //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -90,9 +88,6 @@
 //     }
 //   };
 
-
-
-
 //   if (loading) return <Loader />;
 
 //   return (
@@ -132,7 +127,7 @@
 //         onKeyDown={preventSpace}
 //           onPaste={preventPasteSpaces}
 //         placeholder="Enter your Email"
-        
+
 //       />
 //       <Input
 //         label="Phone Number*"
@@ -182,6 +177,7 @@ import Input from "../Reusable/Input";
 import Loader from "../Reusable/Loader";
 
 import ReCAPTCHA from "react-google-recaptcha";
+import { div } from "framer-motion/client";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -197,17 +193,67 @@ const ContactForm = () => {
   const [success, setSuccess] = useState<string | null>(null);
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
+  // const handleChange = (
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //   let value = e.target.value;
+  //   if (e.target.name === "email") {
+  //     value = value.replace(/\s/g, "");
+  //   }
+  //   setFormData({ ...formData, [e.target.name]: value });
+  //   setError(null);
+  // };
+
+  // const handleChange = (
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //   const { name, value: rawValue } = e.target;
+  //   let processedValue = rawValue; // Start with the original value from the event
+
+  //   // --- Logic for specific fields ---
+
+  //   if (name === "email") {
+  //     // Your existing logic: remove all spaces from email
+  //     processedValue = rawValue.replace(/\s/g, "");
+  //   } else if (name === "message") {
+  //     // New Logic for the 'message' field
+
+  //     // 1. Replace two or more spaces with a single space
+  //     processedValue = rawValue.replace(/ {2,}/g, " ");
+
+  //     // 2. Prevent a space as the very first character
+  //     // Checks if the previous state was empty and the user typed a space
+  //     if (formData.message === "" && processedValue === " ") {
+  //       processedValue = "";
+  //     }
+  //   }
+
+  //   // --- Update state for all fields ---
+
+  //   setFormData({ ...formData, [name]: processedValue });
+  //   setError(null); // Your existing error handling
+  // };
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    let value = e.target.value;
-    if (e.target.name === "email") {
-      value = value.replace(/\s/g, "");
+    const { name, value: rawValue } = e.target;
+    let processedValue = rawValue;
+
+    if (name === "email") {
+      processedValue = rawValue.replace(/\s/g, ""); // Remove spaces from email
+    } else if (name === "message") {
+      processedValue = rawValue.replace(/ {2,}/g, " "); // Remove multiple spaces in the message
+      if (formData.message === "" && processedValue === " ") {
+        processedValue = ""; // Prevent starting message with a space
+      }
+    } else if (name === "phone") {
+      processedValue = rawValue.replace(/[^0-9]/g, ""); // Allow only digits for phone number
     }
-    setFormData({ ...formData, [e.target.name]: value });
+
+    setFormData((prev) => ({ ...prev, [name]: processedValue }));
     setError(null);
   };
-
   const preventSpace = (
     e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -266,10 +312,15 @@ const ContactForm = () => {
     }
   };
 
-  if (loading) return <Loader />;
+  if (loading)
+    return (
+      <div className="mt-20 md:mt-40">
+        <Loader />
+      </div>
+    );
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 w-full  mx-auto">
+    <form onSubmit={handleSubmit} className="space-y-6 w-full lg:w-[600px]">
       {error && <p className="text-red-600 bg-red-100 p-2 rounded">{error}</p>}
       {success && (
         <p className="text-green-600 bg-green-100 p-2 rounded">{success}</p>
@@ -284,8 +335,11 @@ const ContactForm = () => {
           }
           type="text"
           name="name"
+          minLength={2}
+          maxLength={50}
           placeholder="Enter your Name"
           value={formData.name}
+          required
           onChange={handleChange}
           onKeyDown={preventSpace}
         />
@@ -294,6 +348,7 @@ const ContactForm = () => {
           label="Last Name"
           type="text"
           name="lastName"
+          maxLength={50}
           placeholder="Enter your Last Name"
           value={formData.lastName}
           onChange={handleChange}
@@ -309,6 +364,9 @@ const ContactForm = () => {
         type="email"
         name="email"
         value={formData.email}
+        minLength={5}
+        maxLength={200}
+        required
         onChange={handleChange}
         onKeyDown={preventSpace}
         onPaste={preventPasteSpaces}
@@ -322,10 +380,13 @@ const ContactForm = () => {
         }
         type="tel"
         name="phone"
+        minLength={8}
+        maxLength={15}
         placeholder="Enter your Contact Number"
         value={formData.phone}
         onChange={handleChange}
         onKeyDown={preventSpace}
+        required
       />
       <Input
         label={
@@ -335,29 +396,31 @@ const ContactForm = () => {
         }
         type="text"
         name="message"
+        minLength={10}
+        maxLength={500}
         placeholder="Write your message here."
         value={formData.message}
         onChange={handleChange}
-   onKeyDown={preventSpace}
+        required
+        //  onKeyDown={preventSpace}
         textarea
       />
 
-   <div className="flex justify-center">
-  <ReCAPTCHA
-    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
-    onChange={(token) =>
-      setFormData((prev) => ({ ...prev, captchaToken: token || "" }))
-    }
-    ref={recaptchaRef}
-  />
-</div>
-
+      <div className="flex justify-center">
+        <ReCAPTCHA
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+          onChange={(token) =>
+            setFormData((prev) => ({ ...prev, captchaToken: token || "" }))
+          }
+          ref={recaptchaRef}
+        />
+      </div>
 
       <div className="flex justify-center">
         <Button
           type="submit"
           text="Submit"
-          className="bg-[#D444F1] text-white hover:bg-[#B33BC1] rounded-full py-2 px-4 w-40 transition duration-300"
+          className="bg-[#D444F1] text-white hover:bg-[#B33BC1] rounded-full py-2 px-4 w-40 transition duration-300 cursor-pointer"
         />
       </div>
     </form>
