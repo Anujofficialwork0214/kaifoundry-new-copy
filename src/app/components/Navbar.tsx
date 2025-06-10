@@ -72,14 +72,14 @@ const Navbar: React.FC = () => {
           >
             <div className="flex flex-col space-y-1">
             <svg width="21" height="4" viewBox="0 0 21 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19.9297 1.9375L1.06969 1.9375" stroke="black" strokeWidth="2.05" stroke-linecap="round"/>
+<path d="M19.9297 1.9375L1.06969 1.9375" stroke="black" strokeWidth="2.05" strokeLinecap="round"/>
 </svg>
 
 <svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19.9297 1.9375L1.06969 1.9375" stroke="black" strokeWidth="2.05" stroke-linecap="round"/>
+<path d="M19.9297 1.9375L1.06969 1.9375" stroke="black" strokeWidth="2.05" strokeLinecap="round"/>
 </svg>
 <svg width="21" height="4" viewBox="0 0 21 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19.9297 1.9375L1.06969 1.9375" stroke="black" strokeWidth="2.05" stroke-linecap="round"/>
+<path d="M19.9297 1.9375L1.06969 1.9375" stroke="black" strokeWidth="2.05" strokeLinecap="round"/>
 </svg>
 
             </div>
