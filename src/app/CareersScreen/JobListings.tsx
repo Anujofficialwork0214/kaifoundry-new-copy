@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 const jobListings = [
   {
@@ -45,16 +46,13 @@ const JobListings = () => {
 </p>
 
 
-            <a href="CareersScreen/JobApplication">
-            <button
-  className="mt-4 px-10 py-2 text-white font-semibold rounded-full bg-[#D444F1] border-2  hover:bg-purple-700 hover:border-[#D444F1] transition duration-300"
->
-  Apply
-</button>
-
-
-
-            </a>
+            <Link href="CareersScreen/JobApplication" prefetch={true}>
+              <button
+                className="mt-4 px-10 py-2 text-white font-semibold rounded-full bg-[#D444F1] border-2  hover:bg-purple-700 hover:border-[#D444F1] transition duration-300"
+              >
+                Apply
+              </button> 
+            </Link>
           </div>
         ))}
       </div>

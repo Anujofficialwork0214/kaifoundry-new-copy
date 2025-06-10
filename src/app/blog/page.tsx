@@ -496,7 +496,7 @@ export default function BlogCarousel() {
       </h3>
 
     
-      <Link href={`/blog/${blog.id}`} className="mt-auto text-base font-medium text-gray-900 underline underline-offset-2 hover:text-purple-600">
+      <Link href={`/blog/${blog.id}`} prefetch={true} className="mt-auto text-base font-medium text-gray-900 underline underline-offset-2 hover:text-purple-600">
         Read Blog
       </Link>
     </div>

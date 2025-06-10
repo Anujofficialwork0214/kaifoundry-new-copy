@@ -12,12 +12,12 @@ interface FooterColumnProps {
 const FooterColumn: FC<FooterColumnProps> = ({ title, links }) => {
   return (
     <div>
-      <h3 className="font-[500] text-[14px] lg:text-[16.8px] mb-4">{title}</h3>
+      <h3 className="font-[500] text-[14px] lg:text-[16.8px] mb-7 lg:mb-8">{title}</h3>
       <ul className="flex flex-col gap-2">
         {links.map((link, index) => (
 
           <li key={index} className="text-[#FFFFFF] font-light opacity-70 text-[14px] lg:text-[19.02px] hover:underline transition duration-200">
-            <Link href={link.href}>{link.label}</Link>
+            <Link href={link.href} prefetch={true}>{link.label}</Link>
           </li>
         ))}
       </ul>
@@ -57,9 +57,9 @@ interface ContactInfoProps {
 
 const ContactInfo: FC<ContactInfoProps> = ({ phone, email }) => {
   return (
-    <div className="text-gray-300 flex flex-col items-start">
+    <div className="text-gray-300 flex flex-col items-start ">
       {/* Horizontal Separator */}
-      <hr className="border-t border-white sm:border-black block lg:hidden w-20 my-6" />
+      <hr className="border-t border-white lg:border-black block  w-24 my-6  lg:-mt-8" />
       <p>{phone}</p>
       <p>
         <a href={`mailto:${email}`} className="hover:text-white">
@@ -108,7 +108,7 @@ const Footer: FC = () => {
       className="bg-[#821890] text-white p-8"
       style={{ fontFamily: "Inter, sans-serif", minHeight: "500px" }}
     >
-      <div className="mx-auto grid grid-cols-12 lg:grid-cols-12 gap-6 sm:grid-cols-2 sm:gap-4">
+      <div className="mx-auto grid grid-cols-12 lg:grid-cols-12 lg:gap-6 sm:grid-cols-2 gap-8">
         {/* Logo - Start Aligned */}
         <div className="sm:col-span-4 flex justify-start order-1 col-span-6  ">
           <Image width={250} height={250}alt="logo" src="/svg/Logo.svg"  className="h-10"  draggable="false"/>
@@ -137,15 +137,15 @@ const Footer: FC = () => {
 
         <div className="sm:col-span-2 flex sm:order-6 justify-end order-2 col-span-6">
           <Button
-            className="bg-white text-black font-inter cursor-pointer"
+            className="bg-white py-1 lg:py-3 text-[12px] lg:text-[16.8px] text-[#192D53] font-inter font-[500] cursor-pointer"
             text="Get In Touch"
             href="/ContactUs"
           />
         </div>
       </div>
 
-      <div className="mx-auto grid grid-cols-12 mt-30 items-start text-left pt-6">
-        <div className="col-span-12 sm:col-span-6 flex flex-col lg:flex-row items-start  lg:gap-56 2xl:gap-88 gap-4">     
+      <div className="mx-auto grid grid-cols-11 mt-30  items-start text-left pt-6">
+        <div className="lg:col-span-5  col-span-2 flex flex-col justify-between  lg:flex-row items-start  ">     
           <SocialIcons />
           <ContactInfo phone="123-456-7890" email="kaifoundry@gmail.com" />
         </div>
