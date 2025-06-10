@@ -73,17 +73,49 @@ const Navbar: React.FC = () => {
             className="md:hidden focus:outline-none p-3 rounded-md bg-[#FFFFFF4D] "
           >
             <div className="flex flex-col space-y-1">
-            <svg width="21" height="4" viewBox="0 0 21 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19.9297 1.9375L1.06969 1.9375" stroke="black" strokeWidth="2.05" strokeLinecap="round"/>
-</svg>
+              <svg
+                width="21"
+                height="4"
+                viewBox="0 0 21 4"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.9297 1.9375L1.06969 1.9375"
+                  stroke="black"
+                  strokeWidth="2.05"
+                  strokeLinecap="round"
+                />
+              </svg>
 
-<svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19.9297 1.9375L1.06969 1.9375" stroke="black" strokeWidth="2.05" strokeLinecap="round"/>
-</svg>
-<svg width="21" height="4" viewBox="0 0 21 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19.9297 1.9375L1.06969 1.9375" stroke="black" strokeWidth="2.05" strokeLinecap="round"/>
-</svg>
-
+              <svg
+                width="21"
+                height="3"
+                viewBox="0 0 21 3"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.9297 1.9375L1.06969 1.9375"
+                  stroke="black"
+                  strokeWidth="2.05"
+                  strokeLinecap="round"
+                />
+              </svg>
+              <svg
+                width="21"
+                height="4"
+                viewBox="0 0 21 4"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.9297 1.9375L1.06969 1.9375"
+                  stroke="black"
+                  strokeWidth="2.05"
+                  strokeLinecap="round"
+                />
+              </svg>
             </div>
           </button>
 
@@ -131,10 +163,17 @@ const Navbar: React.FC = () => {
             <li>
               <button
                 onClick={togglePopup}
-                className="text-gray-700 flex items-center gap-1 focus:outline-none"
+                className="text-gray-700 flex items-center gap-1 focus:outline-none cursor-pointer"
               >
                 Services{" "}
-                <RiArrowDropDownLine className="w-4 h-4 transition-transform duration-200" />
+                <Image
+                  src="/svg/stat_minus_1.svg"
+                  alt="stat"
+                  width={4}
+                  height={4}
+                  className="w-4 h-4 transition-transform duration-200"
+                />
+                {/* <RiArrowDropDownLine className="w-4 h-4 transition-transform duration-200" /> */}
               </button>
             </li>
             <li>
@@ -150,7 +189,7 @@ const Navbar: React.FC = () => {
           </ul>
 
           <Button
-            className="bg-[#D444F1] text-white"
+            className="bg-[#D444F1] text-white cursor-pointer"
             text="Contact Us"
             href="/ContactUs"
           />

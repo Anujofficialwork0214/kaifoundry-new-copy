@@ -1,8 +1,7 @@
 import React, { FC } from "react";
 import Link from "next/link";
 import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
-import Button from "../Reusable/Button"
-
+import Button from "../Reusable/Button";
 
 interface FooterColumnProps {
   title: string;
@@ -15,7 +14,10 @@ const FooterColumn: FC<FooterColumnProps> = ({ title, links }) => {
       <h3 className="font-bold mb-4">{title}</h3>
       <ul className="flex flex-col gap-2">
         {links.map((link, index) => (
-          <li key={index} className="text-white hover:underline transition duration-200">
+          <li
+            key={index}
+            className="text-white hover:underline transition duration-200"
+          >
             <Link href={link.href}>{link.label}</Link>
           </li>
         ))}
@@ -28,10 +30,20 @@ const FooterColumn: FC<FooterColumnProps> = ({ title, links }) => {
 const SocialIcons: FC = () => {
   return (
     <div className="flex space-x-4 items-center">
-      <Link className="border-fuchsia-200 border-[1px] rounded-full p-3 flex items-center justify-center" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+      <Link
+        className="border-fuchsia-200 border-[1px] rounded-full p-3 flex items-center justify-center"
+        href="https://facebook.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FaFacebookSquare className="text-white text-2xl hover:text-gray-400 transition-colors duration-200 cursor-pointer" />
       </Link>
-      <Link className="border-fuchsia-200 border-[1px] rounded-full p-3 flex items-center justify-center" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+      <Link
+        className="border-fuchsia-200 border-[1px] rounded-full p-3 flex items-center justify-center"
+        href="https://instagram.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <FaInstagram className="text-white text-2xl hover:text-gray-400 transition-colors duration-200 cursor-pointer" />
       </Link>
     </div>
@@ -58,7 +70,6 @@ const ContactInfo: FC<ContactInfoProps> = ({ phone, email }) => {
     </div>
   );
 };
-
 
 // --- Main Footer Component ---
 
@@ -121,12 +132,16 @@ const Footer: FC = () => {
 
         {/* CTA Button */}
         <div className="sm:col-span-3 flex sm:order-6 justify-end order-2 col-span-6">
-          <Button className="bg-white text-black font-inter" text="Get In Touch" href="/ContactUs" />
+          <Button
+            className="bg-white text-black font-inter cursor-pointer"
+            text="Get In Touch"
+            href="/ContactUs"
+          />
         </div>
       </div>
 
       <div className="mx-auto grid grid-cols-12 mt-30 items-start text-left pt-6">
-        <div className="col-span-12 sm:col-span-6 flex flex-col lg:flex-row items-start lg:gap-16 gap-4">
+        <div className="col-span-12 sm:col-span-6 flex flex-col lg:flex-row items-start  lg:gap-56 2xl:gap-88 gap-4">
           <SocialIcons />
           <ContactInfo phone="123-456-7890" email="kaifoundry@gmail.com" />
         </div>
