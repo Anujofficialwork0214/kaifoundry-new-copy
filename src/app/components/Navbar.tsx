@@ -68,12 +68,20 @@ const Navbar: React.FC = () => {
         <nav className="container mx-auto py-2 px-4 md:px-5 lg:px-5 flex items-center justify-between md:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out ">
           <button
             onClick={toggleMenu}
-            className="md:hidden focus:outline-none p-2 rounded-sm"
+            className="md:hidden focus:outline-none p-3 rounded-md bg-[#FFFFFF4D] "
           >
             <div className="flex flex-col space-y-1">
-              <span className="block w-8 h-1 bg-gray-700"></span>
-              <span className="block w-8 h-1 bg-gray-700"></span>
-              <span className="block w-8 h-1 bg-gray-700"></span>
+            <svg width="21" height="4" viewBox="0 0 21 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.9297 1.9375L1.06969 1.9375" stroke="black" strokeWidth="2.05" strokeLinecap="round"/>
+</svg>
+
+<svg width="21" height="3" viewBox="0 0 21 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.9297 1.9375L1.06969 1.9375" stroke="black" strokeWidth="2.05" strokeLinecap="round"/>
+</svg>
+<svg width="21" height="4" viewBox="0 0 21 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.9297 1.9375L1.06969 1.9375" stroke="black" strokeWidth="2.05" strokeLinecap="round"/>
+</svg>
+
             </div>
           </button>
 
