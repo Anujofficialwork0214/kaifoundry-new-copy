@@ -27,7 +27,7 @@ const EcoSystems: React.FC<EcosystemsProps> = ({
 
   return (
     <div className="text-center sm:px-50 p-6">
-      <h2 className="text-2xl sm:text-2xl md:text-5xl font-bold text-[#414141] my-20 ">
+      <h2 className="text-2xl  md:text-5xl font-bold text-[#414141] my-20 ">
         <span className="text-[#BA24D5]">{highlight}</span>{" "}
         {title.replace(highlight, "").trim()}
       </h2>
@@ -48,7 +48,7 @@ const EcoSystems: React.FC<EcosystemsProps> = ({
                 draggable="false"
               />
             </div>
-            <p className="mt-4 md:mt-2 lg:mt-2 text-sm md:text-lg lg:text-lg text-[#414141] font-semibold">
+            <p className="mt-4 md:mt-2 lg:mt-2 text-sm md:text-lg  text-[#414141] font-semibold">
               {eco.name}
             </p>
           </div>
