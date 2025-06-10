@@ -19,11 +19,11 @@ export default function HeroSectionMob() {
     <div className=" bg-white text-black bg-gradient-to-b lg:bg-gradient-to-r from-[#A5C0EE] to-[#FBC5EC]  ">
       {/* Main Content */}
       <div
-        className={`flex flex-col-reverse md:flex-row items-center  justify-between md:px-12 py-16 transition-opacity duration-1000 ${
+        className={`flex flex-col-reverse md:flex-row items-center  justify-between md:px-12 transition-opacity duration-1000 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
-        {/* <div className="md:w-1/2 text-center mt-12 lg:mt-0 md:text-left z-10 px-2">
+        <div className="md:w-1/2 text-center mt-12 lg:mt-0 md:text-left z-10 px-2">
           <h1
             className={` text-[24px] md:text-7xl font-bold transition-transform duration-1000 ${
               isVisible ? "translate-y-0" : "translate-y-10"
@@ -52,8 +52,8 @@ export default function HeroSectionMob() {
             }`}
           >
             <div
-              className="absolute inset-y-0 left-1/2 lg:left-0 right-0  bg-[#D444F1] rounded-full"
-              style={{ width: "calc(42% - 10px)" }}
+              className="absolute inset-y-0 left-1/2 lg:left-0 right-0  bg-[#D444F1] rounded-full w-42"
+              // style={{ width: "calc(46% - 10px)" }}
             ></div>
             <Link href="/HowWeHelp">
               <button
@@ -81,7 +81,7 @@ export default function HeroSectionMob() {
               </button>
             </Link>
           </div>
-        </div> */}
+        </div>
         <div className="lg:w-1/2 w-full mt-8 md:mt-5 relative  mx-auto lg:h-auto">
           <div className="absolute top-0 right-0 w-full h-200 lg:h-175  bg-gradient-to-b lg:bg-gradient-to-r from-[#A5C0EE] to-[#FBC5EC] rounded-lg z-0 flex lg:block justify-center items-center"></div>
           <Image
@@ -95,8 +95,7 @@ export default function HeroSectionMob() {
           />
         </div>
       </div>
-
-      {/* <div className="relative lg:flex lg:flex-col hidden items-center justify-center px-16 md:px-14 pb-0">
+      <div className="relative lg:flex lg:flex-col hidden items-center justify-center px-16 md:px-14 pb-0">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -130,7 +129,7 @@ export default function HeroSectionMob() {
             </div>
           </Link>
         </motion.div>
-      </div> */}
+      </div>
     </div>
   );
 }

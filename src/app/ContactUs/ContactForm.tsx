@@ -25,30 +25,34 @@ const ContactForm = () => {
   //   setFormData({ ...formData, [e.target.name]: e.target.value });
   //   setError(null); // Clear error when user types
   // };
-const handleChange = (
-  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-) => {
-  let value = e.target.value;
-  if (e.target.name === "email") {
-    value = value.replace(/\s/g, "");
-  }
-  setFormData({ ...formData, [e.target.name]: value });
-  setError(null);
-};
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    let value = e.target.value;
+    if (e.target.name === "email") {
+      value = value.replace(/\s/g, "");
+    }
+    setFormData({ ...formData, [e.target.name]: value });
+    setError(null);
+  };
 
-const preventSpace = (e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-  if (e.key === " ") {
-    e.preventDefault();
-  }
-};
-const preventPasteSpaces = (e: React.ClipboardEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-  const paste = e.clipboardData.getData("text");
-  if (paste.includes(" ")) {
-    e.preventDefault();
-  }
-};
+  const preventSpace = (
+    e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    if (e.key === " ") {
+      e.preventDefault();
+    }
+  };
+  const preventPasteSpaces = (
+    e: React.ClipboardEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const paste = e.clipboardData.getData("text");
+    if (paste.includes(" ")) {
+      e.preventDefault();
+    }
+  };
 
-// ... rest of your component unchanged
+  // ... rest of your component unchanged
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -92,28 +96,25 @@ const preventPasteSpaces = (e: React.ClipboardEvent<HTMLInputElement | HTMLTextA
     }
   };
 
-
-
-
   if (loading) return <Loader />;
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 w-full max-w-lg mx-auto">
+    <form onSubmit={handleSubmit} className="space-y-6 w-[400px] xl:w-[600px]">
       {error && <p className="text-red-600 bg-red-100 p-2 rounded">{error}</p>}
       {success && (
         <p className="text-green-600 bg-green-100 p-2 rounded">{success}</p>
       )}
 
       <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
- <Input
-  label="Name*"
-  type="text"
-  name="name"
-  placeholder="Enter your Name"
-  value={formData.name}
-  onChange={handleChange}
-  onKeyDown={preventSpace} 
-/>
+        <Input
+          label="Name*"
+          type="text"
+          name="name"
+          placeholder="Enter your Name"
+          value={formData.name}
+          onChange={handleChange}
+          onKeyDown={preventSpace}
+        />
 
         <Input
           label="Last Name"
@@ -122,19 +123,18 @@ const preventPasteSpaces = (e: React.ClipboardEvent<HTMLInputElement | HTMLTextA
           placeholder="Enter your Last Name"
           value={formData.lastName}
           onChange={handleChange}
-           onKeyDown={preventSpace} 
+          onKeyDown={preventSpace}
         />
       </div>
       <Input
         label="Email*"
         type="email"
         name="email"
-         value={formData.email}
+        value={formData.email}
         onChange={handleChange}
         onKeyDown={preventSpace}
-          onPaste={preventPasteSpaces}
+        onPaste={preventPasteSpaces}
         placeholder="Enter your Email"
-        
       />
       <Input
         label="Phone Number*"
@@ -143,7 +143,7 @@ const preventPasteSpaces = (e: React.ClipboardEvent<HTMLInputElement | HTMLTextA
         placeholder="Enter your Contact Number"
         value={formData.phone}
         onChange={handleChange}
-         onKeyDown={preventSpace} 
+        onKeyDown={preventSpace}
       />
       <Input
         label="Message*"
@@ -152,7 +152,7 @@ const preventPasteSpaces = (e: React.ClipboardEvent<HTMLInputElement | HTMLTextA
         placeholder="Write your message here."
         value={formData.message}
         onChange={handleChange}
-         onKeyDown={preventSpace} 
+        onKeyDown={preventSpace}
         textarea
       />
 
@@ -165,11 +165,11 @@ const preventPasteSpaces = (e: React.ClipboardEvent<HTMLInputElement | HTMLTextA
       />
 
       <div className="flex justify-center">
-      <Button
-  type="submit"
-  text="Submit"
-  className="bg-[#D444F1] text-white hover:bg-[#B33BC1] rounded-full py-2 px-4 w-40 transition duration-300" // Fixed width example
-/>
+        <Button
+          type="submit"
+          text="Submit"
+          className="bg-[#D444F1] text-white hover:bg-[#B33BC1] rounded-full py-2 px-4 w-40 transition duration-300" // Fixed width example
+        />
       </div>
     </form>
   );
