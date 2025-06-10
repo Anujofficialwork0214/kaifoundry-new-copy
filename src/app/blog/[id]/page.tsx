@@ -44,7 +44,7 @@ export default function BlogPost() {
     return (
         // <div className="w-full p-5 flex flex-col items-center bg-cover bg-fill mt-10  lg:mt-0" style={{ backgroundImage: "url('/assets/blogs/background.png')" }}>
         <div 
-    className="w-full p-5 flex flex-col items-center bg-left-left bg-no-repeat mt-10 lg:mt-0" 
+    className="w-full p-2 md:p-5 flex flex-col items-center bg-left-left bg-no-repeat mt-10 lg:mt-0" 
     style={{  backgroundImage: "url('/assets/background/bg3.gif')",
         backgroundSize: "100% auto",
         backgroundPosition: "right", }}
@@ -69,20 +69,20 @@ export default function BlogPost() {
                 draggable={false}
             />
 
-            <div className="w-full max-w-[80%] px-4 sm:px-10 ">
-                <h1 className="text-[18px] text-[#2D3748] md:text-3xl lg:text-4xl font-bold">{post.title}</h1>
-                <p className="text-[27px] text-[#2D3748] mt-2">
+            <div className="w-full md:max-w-[80%] lg:md:max-w-[80%] px-2 sm:px-2 ">
+                <h1 className="text-[18px] text-[#2D3748] md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold">{post.title}</h1>
+                <p className="text-[14px] md:text-[27px] lg:text-[27px] text-[#2D3748] mt-2">
                     <strong>Written by {post.author}</strong> &nbsp; | &nbsp; {post.date}
                 </p>
                 <div className="border-b border-gray-300 my-4"></div>
             </div>
 
-            <div className="mt-6 text-gray-800 space-y-4 leading-relaxed w-full items-center mx-auto px-4 sm:px-10 max-w-[80%] ">
-                <p>{post.content}</p>
+            <div className="mt-6 text-[#2D3748] space-y-4 leading-relaxed w-full items-center mx-auto px-4 sm:px-2 md:max-w-[80%] lg:md:max-w-[80%]">
+                <p className="text-[#718096] text-[16px] md:text-2xl lg:text-2xl ">{post.content}</p>
                 {post.subheadings.map((subheading, index) => (
                     <div key={index}>
-                        <h2 className="text-2xl font-semibold mt-6">{subheading.title}</h2>
-                        <p>{subheading.content}</p>
+                        <h2 className="text-[16px] md:text-2xl lg:text-2xl font-semibold text-[#2D3748]  mt-6">{subheading.title}</h2>
+                        <p className="text-[#718096] text-[16px] md:text-2xl lg:text-2xl  ">{subheading.content}</p>
                     </div>
                 ))}
             </div>
