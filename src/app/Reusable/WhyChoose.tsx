@@ -79,14 +79,22 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
         <img
           src={feature.icon}
           alt={feature.title}
-          className="w-12 h-12 object-contain"
+          className="w-10 h-10 md:w-12 md:h-12 lg:w-12 lg:h-12 object-contain"
           draggable="false"
         />
       </div>
-      <h3 className="text-sm font-semibold text-[#434343] text-center font-roboto">
+      <h3 className="text-sm font-semibold text-[#434343] text-center"
+       style={{
+    fontFamily: window.innerWidth >= 768 ? 'Manrope, sans-serif' : 'Inter, sans-serif',
+  }}
+      >
         {feature.title}
       </h3>
-      <p className="text-[#666666] mt-2 text-xs text-center font-roboto font-normal">
+      <p className="text-[#666666] mt-2 text-xs text-center  font-normal"
+    style={{
+    fontFamily: window.innerWidth >= 768 ? 'Manrope, sans-serif' : 'Inter, sans-serif',
+  }}
+      >
         {feature.description}
       </p>
     </motion.div>

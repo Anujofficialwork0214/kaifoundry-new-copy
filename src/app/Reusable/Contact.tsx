@@ -11,7 +11,7 @@ const ContactUs = () => {
       <section className="  p-4 flex justify-center ">
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 p-4">
           <div className="md:row-span-1 flex-col gap-10 md:gap-0">
-            <h3 className="text-2xl font-semibold mb-6 sm:mb-10 text-center md:text-start">
+            <h3 className="text-2xl font-semibold mb-6 sm:mb-10  text-start">
               Where To Find Us
             </h3>
             <iframe
@@ -22,7 +22,7 @@ const ContactUs = () => {
           </div>
 
           <div className="md:col-start-2 row-span-2 flex-col mt-40 md:mt-0">
-            <h3 className="text-2xl font-semibold mb-6 sm:mb-10 text-center md:text-start">
+            <h3 className="text-2xl font-semibold mb-6 sm:mb-10 text-start">
               Leave A Message
             </h3>
             <ContactForm />
