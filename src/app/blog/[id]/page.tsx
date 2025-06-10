@@ -1,7 +1,7 @@
 "use client";
 import { useRouter, useParams } from "next/navigation";
 import { IoMdArrowBack } from 'react-icons/io';
-import { FaArrowUp, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {  FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { ImArrowUp } from "react-icons/im";
 import Image from "next/image";

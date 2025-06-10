@@ -116,7 +116,7 @@ const Footer: FC = () => {
 
         {/* Offerings */}
        
-          <div className="sm:col-span-2 flex sm:order-2 order-3 col-span-6">
+          <div className="col-span-8 flex sm:order-2 order-3 lg:col-span-2">
             <FooterColumn title={navs[0].title} links={navs[0].links} />
           </div>
 
@@ -135,7 +135,7 @@ const Footer: FC = () => {
 
         {/* CTA Button */}
 
-        <div className="sm:col-span-3 flex sm:order-6 justify-end order-2 col-span-6">
+        <div className="sm:col-span-2 flex sm:order-6 justify-end order-2 col-span-6">
           <Button
             className="bg-white text-black font-inter cursor-pointer"
             text="Get In Touch"
