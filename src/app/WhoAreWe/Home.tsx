@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link"; // Import Link for navigation
 import pic from "../../../public/assets/WhoAreWe/Home.svg";
+import { roboto } from "../Fonts/fonts";
 
 const Home = () => {
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 });
@@ -23,7 +24,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 1.0, ease: "easeInOut" }}
-            className="text-[24px] lg:text-[62px] font-[700] flex justify-center lg:justify-start"
+            className={`text-[24px] lg:text-[62px] font-[700] flex justify-center lg:justify-start ${roboto.className}`}
           >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BA24D5] to-[#EA83FF]">
               Kai Foundry
@@ -36,7 +37,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 1.0, ease: "easeInOut" }}
-            className="text-[24px] lg:text-[62px] font-[700] text-gray-900 lg:-mt-6"
+            className={`text-[24px] lg:text-[62px] font-[700] text-gray-900 lg:-mt-6 ${roboto.className}`}
           >
             <span className="hidden lg:block">This Is</span>
             <span className="block lg:-mt-6">
