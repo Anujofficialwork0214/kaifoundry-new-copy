@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 import Button from "../Reusable/Button"
 
@@ -12,10 +13,10 @@ interface FooterColumnProps {
 const FooterColumn: FC<FooterColumnProps> = ({ title, links }) => {
   return (
     <div>
-      <h3 className="font-bold mb-4">{title}</h3>
+      <h3 className="font-[500] text-[14px] lg:text-[16.8px] mb-4">{title}</h3>
       <ul className="flex flex-col gap-2">
         {links.map((link, index) => (
-          <li key={index} className="text-white hover:underline transition duration-200">
+          <li key={index} className="text-[#FFFFFF] font-light opacity-70 text-[14px] lg:text-[19.02px] hover:underline transition duration-200">
             <Link href={link.href}>{link.label}</Link>
           </li>
         ))}
@@ -98,35 +99,39 @@ const Footer: FC = () => {
       className="bg-[#821890] text-white p-8"
       style={{ fontFamily: "Inter, sans-serif", minHeight: "500px" }}
     >
-      <div className="mx-auto grid grid-cols-12 md:grid-cols-12 gap-6 sm:grid-cols-2 sm:gap-4">
+      <div className="mx-auto grid grid-cols-12 lg:grid-cols-12 gap-6 sm:grid-cols-2 sm:gap-4">
         {/* Logo - Start Aligned */}
-        <div className="sm:col-span-3 flex justify-start order-1 col-span-6">
-          <img src="/svg/Logo.svg" alt="Logo" className="h-10" />
+        <div className="sm:col-span-4 flex justify-start order-1 col-span-6  ">
+          <Image width={250} height={250}alt="logo" src="/svg/Logo.svg"  className="h-10"  draggable="false"/>
         </div>
 
         {/* Offerings */}
-        <div className="sm:col-span-2 flex sm:order-2 order-3 col-span-12">
-          <FooterColumn title={navs[0].title} links={navs[0].links} />
-        </div>
+       
+          <div className="sm:col-span-2 flex sm:order-2 order-3 col-span-6">
+            <FooterColumn title={navs[0].title} links={navs[0].links} />
+          </div>
 
-        {/* Services */}
-        <div className="sm:col-span-2 flex sm:order-3 order-4 col-span-6">
-          <FooterColumn title={navs[1].title} links={navs[1].links} />
-        </div>
+          {/* Services */}
+          <div className="sm:col-span-2 flex sm:order-3 order-4 col-span-6">
+            <FooterColumn title={navs[1].title} links={navs[1].links} />
+          </div>
 
-        {/* About */}
-        <div className="sm:col-span-2 flex sm:order-4 order-5 col-span-6">
-          <FooterColumn title={navs[2].title} links={navs[2].links} />
-        </div>
+          {/* About */}
+          <div className="sm:col-span-2 flex sm:order-4 order-5 col-span-6">
+            <FooterColumn title={navs[2].title} links={navs[2].links} />
+          </div>
+          
+        
+        
 
         {/* CTA Button */}
-        <div className="sm:col-span-3 flex sm:order-6 justify-end order-2 col-span-6">
+        <div className="sm:col-span-2 flex sm:order-6 justify-end order-2 col-span-6 ">
           <Button className="bg-white text-black font-inter" text="Get In Touch" href="/ContactUs" />
         </div>
       </div>
 
-      <div className="mx-auto grid grid-cols-12 mt-30 items-start text-left pt-6">
-        <div className="col-span-12 sm:col-span-6 flex flex-col lg:flex-row items-start lg:gap-16 gap-4">
+      <div className="mx-auto grid grid-cols-22 mt-30 items-start text-left pt-6">
+        <div className="col-span-12 sm:col-span-10 flex flex-col lg:flex-row lg:justify-between  items-start lg:gap-20 gap-4">
           <SocialIcons />
           <ContactInfo phone="123-456-7890" email="kaifoundry@gmail.com" />
         </div>

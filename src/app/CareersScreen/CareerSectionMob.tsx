@@ -48,7 +48,7 @@ const CareersSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, ease: "easeInOut", delay: 1.0 }} 
-            className="text-[#808080] text-[14px] md:text-xl font-[500] mt-2"
+            className="text-[#808080] text-[14px] md:text-xl font-[400] mt-2"
           >
           Join A Team That Turns Ideas Into Impact
           </motion.p>
