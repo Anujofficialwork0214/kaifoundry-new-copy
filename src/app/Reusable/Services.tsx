@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { Manrope } from "next/font/google";
 
 // Define the type for services
 type Service = {
