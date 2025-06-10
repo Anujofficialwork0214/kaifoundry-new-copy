@@ -30,7 +30,7 @@ const FaqItem: React.FC<FAQItemProps> = ({ question, answer }) => {
           animate={{ rotate: isOpen ? 90 : 0 }} // Smooth rotation
           transition={{ duration: 0.5, ease: "easeInOut" }} // Smooth transition
         >
-          <FiChevronRight className="text-xl text-gray-700" />
+          <FiChevronRight className="text-sm font-bold  md:text-xl lg:text-xl text-gray-700" />
         </motion.div>
       </button>
 
@@ -42,7 +42,7 @@ const FaqItem: React.FC<FAQItemProps> = ({ question, answer }) => {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className="overflow-hidden"
       >
-        <p className="text-gray-600 pb-4 text-xl font-inter"> {/* Increased font size to text-xl */}
+        <p className="text-gray-600 pb-4 text-xl md:text-xl lg:text-xl font-inter"> {/* Increased font size to text-xl */}
           {answer}
         </p>
       </motion.div>
