@@ -44,7 +44,9 @@ export default function BlogPost() {
         // <div className="w-full p-5 flex flex-col items-center bg-cover bg-fill mt-10  lg:mt-0" style={{ backgroundImage: "url('/assets/blogs/background.png')" }}>
         <div 
     className="w-full p-5 flex flex-col items-center bg-left-left bg-no-repeat mt-10 lg:mt-0" 
-    style={{ backgroundImage: "url('/assets/blogs/background.png')" }}
+    style={{  backgroundImage: "url('/assets/background/bg3.gif')",
+        backgroundSize: "100% auto",
+        backgroundPosition: "right", }}
 >
             <div className="flex w-full md:px-5 mb-10">
                 <button

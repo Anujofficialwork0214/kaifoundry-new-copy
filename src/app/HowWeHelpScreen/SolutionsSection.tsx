@@ -60,40 +60,33 @@ const SolutionsSection = () => {
         {solutions.map((solution, index) => (
           <div key={index} className="relative w-full px-4 md:px-40 "> {/* Added consistent padding here */}
             <div
-              className="relative overflow-hidden text-2xl md:text-3xl font-semibold" 
-              style={{ color: '#BA24D5', padding: '2rem 0' }} // Set text color and padding
+              className="relative overflow-hidden text-2xl cursor-pointer md:text-3xl font-semibold" 
+              style={{ color: '#BA24D5', padding: '2rem 0' ,
+
+                ...(hoverIndex === index && selectedSolution !== index && {
+                  backgroundImage: "url('/assets/background/bg3.gif')",
+                  backgroundSize: "100% auto",
+                  backgroundPosition: "right",
+                  
+                 
+                }),
+              }} // Set text color and padding
               onMouseEnter={() => setHoverIndex(index)}
               onMouseLeave={() => setHoverIndex(null)}
               onClick={() => setSelectedSolution(selectedSolution === index ? null : index)} // Toggle selection
+             
             >
               {selectedSolution === index && (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
-                  className="absolute top-0 left-0 w-full h-full z-0"
+                  className="absolute top-0 left-0 w-full h-full cursor-pointer z-0"
                   style={{
                     background: 'linear-gradient(90deg, #F6D0FE 0%, #D7CDFF 100%)',
                   }}
                 />
               )}
-
-              {/* Background for hover state (only shows if not selected) */}
-              {hoverIndex === index && selectedSolution !== index && (
-                <motion.div
-                  initial={{ opacity: 0, scaleY: 0 }}
-                  animate={{ opacity: 1, scaleY: 1 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="absolute top-0 left-0  origin-top z-0 "
-                  style={{
-                    backgroundImage: `url('/assets/background/bg3.gif')`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                  }}
-                />
-              )}
-
               
               <span className="relative z-10 text-[18px] lg:text-[24px] font-[600] text-[#BA24D5] block w-full">
                 {index + 1}. {solution.title}
@@ -109,7 +102,8 @@ const SolutionsSection = () => {
               animate={selectedSolution === index ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="overflow-hidden bg-purple-50 rounded-lg" // Removed border
+              className="overflow-hidden  " // Removed border
+              style={{background: 'linear-gradient(90deg, #F6D0FE 0%, #D7CDFF 100%)',}}
             >
               <div className="p-4 text-left"> {/* Added text-left for description */}
                 
@@ -118,7 +112,7 @@ const SolutionsSection = () => {
                 </p>
               </div>
             </motion.div>
-            <div className="absolute bottom-0 h-[1px]" style={{ background: 'linear-gradient(90deg, #F6D0FE 0%, #D7CDFF 100%)', width: '100%' }} /> {/* Line at the bottom */}
+            <div className="absolute bottom-0 h-[1px] w-full lg:w-[79%]" style={{ backgroundColor: '#BA24D5' }} /> {/* Line at the bottom */}
           </div>
         ))}
       </div> 
