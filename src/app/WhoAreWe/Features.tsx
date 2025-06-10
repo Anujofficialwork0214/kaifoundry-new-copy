@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import img1 from "./../../../public/assets/WhoAreWe/FeaturesImg1.svg";
 import img2 from "./../../../public/assets/WhoAreWe/FeaturesImg2.svg";
 import img3 from "./../../../public/assets/WhoAreWe/FeaturesImg3.svg";
+import { roboto } from "../Fonts/fonts";
 
 const features = [
   {
@@ -45,8 +46,8 @@ const FeaturesSection = () => {
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-5xl font-bold text-center lg:text-left lg:w-1/2"
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className={`text-[24px] lg:text-[62px] font-[700] lg:text-[600] text-center lg:text-left lg:w-1/2 ${roboto.className}`}
         >
           What
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BA24D5] to-[#EA83FF]">
@@ -63,8 +64,8 @@ const FeaturesSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{
-                duration: 0.8,
-                delay: inView ? 0.8 + 0.2 * index : 0,
+                duration: 0.4,
+                delay: inView ? 0.4 + 0.2 * index : 0,
               }}
               className="flex flex-col items-center lg:items-start text-center lg:text-left gap-4"
             >
@@ -78,9 +79,9 @@ const FeaturesSection = () => {
                 />
               </div>
 
-              <h3 className="text-2xl font-semibold mt-3">{feature.title}</h3>
+              <h3 className="text-[16px] lg:text-[24px] font-[600] text-[#333333] mt-3">{feature.title}</h3>
 
-              <p className="text-black text-lg mt-2">{feature.description}</p>
+              <p className="text-[12px] lg:text-[20px] font-[400] text-[#333333] mt-2">{feature.description}</p>
             </motion.div>
           ))}
         </div>

@@ -114,7 +114,11 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
             <li>
-              <Link href="/WhoAreWe">Who We Are</Link>
+              <Link href="/WhoAreWe" className={`${
+                  isActive("/WhoAreWe")
+                    ? "text-[#821890]"
+                    : "text-gray-700"
+                }`}>Who We Are</Link>
             </li>
             <li>
               <Link
@@ -131,7 +135,7 @@ const Navbar: React.FC = () => {
             <li>
               <button
                 onClick={togglePopup}
-                className="text-gray-700 flex items-center gap-1 focus:outline-none"
+                className="text-gray-700 flex items-center cursor-pointer gap-1 focus:outline-none"
               >
                 Services{" "}
                 <RiArrowDropDownLine className="w-4 h-4 transition-transform duration-200" />
