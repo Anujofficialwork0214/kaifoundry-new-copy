@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Service {
   id: number;
@@ -78,15 +79,17 @@ const ANIMATION_DURATION_SECONDS = 20;
 const ServiceCard = ({ service, isMobile }: ServiceCardProps) => (
   <Link href={service.link} passHref legacyBehavior>
     <a
-      className="flex-shrink-0 w-full md:w-[350px] bg-white rounded-xl shadow-lg overflow-hidden mx-2 cursor-pointer block"
+      className="flex-shrink-0 w-full md:w-110 md:h-106 bg-white rounded-4xl shadow-xl overflow-hidden mx-2 cursor-pointer block"
       style={{ minWidth: isMobile ? "100%" : "350px" }}
     >
       <div className="overflow-hidden">
-        <img
+        <Image
           src={service.image}
           alt={service.title}
           className="w-full h-64 object-cover"
           draggable="false"
+          width={100}
+          height={64}
         />
       </div>
       <div className="p-4 md:p-6">
@@ -150,15 +153,17 @@ const WhatWeProvide = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className=" text-3xl md:text-4xl  lg:text-6xl font-bold text-gray-900 leading-tight">
-            WHAT <br />
-            WE <span className="text-[#D444F1]">PROVIDE</span>
-          </h2>
-          <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-600 mt-4">
-            Services That Drive Your Success
-          </p>
+          <div className="mt-20">
+            <h2 className=" text-3xl md:text-4xl  lg:text-6xl font-bold text-gray-900 leading-tight">
+              WHAT <br />
+              WE <span className="text-[#D444F1]">PROVIDE</span>
+            </h2>
+            <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-600 mt-4">
+              Services That Drive Your Success
+            </p>
+          </div>
         </motion.div>
-        <div className="relative w-full md:w-2/3  py-4">
+        <div className="relative w-full md:w-2/3  py-4 px-4 md:px-0 ">
           {isMobile ? (
             <div className="flex flex-col gap-6">
               {services.map((service) => (
@@ -170,9 +175,11 @@ const WhatWeProvide = () => {
               ))}
             </div>
           ) : (
-            <div className="slider-container w-full overflow-hidden">
+            <div className="slider-container w-7xl overflow-hidden  flex space-x-0.5   ">
+              {/* <Image src="/svg/Line134.svg" alt="line" width={4} height={4} /> */}
+              <img src="/svg/Line134.svg" alt="line" className="w-10 h-118" />
               <motion.div
-                className="flex"
+                className="flex items-center "
                 animate={controls}
                 initial={{ x: 0 }}
               >
