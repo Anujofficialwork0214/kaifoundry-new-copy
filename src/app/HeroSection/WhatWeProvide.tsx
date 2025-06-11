@@ -144,17 +144,17 @@ const WhatWeProvide = () => {
   const displayServices = isMobile ? services : [...services, ...services];
 
   return (
-    <section ref={ref} className="py-10 md:py-30 lg:px-10 px-0 bg-gray-50 overflow-hidden ">
-      <div className="container mx-auto flex flex-col md:flex-row px-4 md:px-0 items-center md:items-start">
+    <section ref={ref} className="py-10 md:py-30 lg:px-10 px-0 bg-gray-50 overflow-hidden  ">
+      <div className=" mx-auto flex flex-col md:flex-row px-4 md:px-0 items-center lg:items-start">
         <motion.div
-          className="w-full   mb-10 md:mb-0 md:pr-10 text-center md:text-left"
+          className="w-full mb-10 md:mb-0 md:pr-10 text-center md:text-left"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut"}}
         >
           <div className="mt-20">
-            <h2 className=" text-3xl md:text-4xl  lg:text-6xl font-bold text-gray-900 leading-tight">
+            <h2 className=" text-3xl md:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
               WHAT <br />
               WE <span className="text-[#D444F1]">PROVIDE</span>
             </h2>
@@ -163,7 +163,7 @@ const WhatWeProvide = () => {
             </p>
           </div>
         </motion.div>
-        <div className="relative w-full md:w-2/3  py-4 px-4 md:px-0 ">
+        <div className="relative w-full lg:w-2/3  py-4 px-4 md:px-0 ">
           {isMobile ? (
             <div className="flex flex-col gap-6">
               {services.map((service) => (
