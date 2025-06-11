@@ -4,6 +4,8 @@ import Loader from "../Reusable/Loader";
 import Button from "../Reusable/Button";
 import Input from "../Reusable/Input";
 import ReCAPTCHA from "react-google-recaptcha";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -76,6 +78,7 @@ const ContactForm = () => {
 
       if (response.ok) {
         setSuccess("Email sent successfully!");
+        toast.success('Form submitted successfully!');
         setFormData({
           name: "",
           lastName: "",
@@ -87,6 +90,7 @@ const ContactForm = () => {
         recaptchaRef.current?.reset();
       } else {
         setError(data.error || "An unexpected error occurred.");
+        toast.error('Something went wrong!');
       }
     } catch (error) {
       console.error("Submission error:", error);
@@ -100,6 +104,9 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6 w-[400px] xl:w-[600px]">
+     <ToastContainer
+        position="top-center"
+      />  
       {error && <p className="text-red-600 bg-red-100 p-2 rounded">{error}</p>}
       {success && (
         <p className="text-green-600 bg-green-100 p-2 rounded">{success}</p>

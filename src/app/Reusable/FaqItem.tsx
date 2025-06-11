@@ -30,7 +30,7 @@ const FaqItem: React.FC<FAQItemProps> = ({ question, answer }) => {
           animate={{ rotate: isOpen ? 90 : 0 }} // Smooth rotation
           transition={{ duration: 0.5, ease: "easeInOut" }} // Smooth transition
         >
-          <FiChevronRight className="text-[18px] font-bold h-12 w-8  md:text-xl lg:text-xl text-[#414141]" />
+          <FiChevronRight className="text-[18px] font-bold h-12 w-8  md:text-xl lg:text-xl text-[#414141] cursor-pointer" />
         </motion.div>
       </button>
 

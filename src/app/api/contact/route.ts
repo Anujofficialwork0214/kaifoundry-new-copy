@@ -10,7 +10,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    console.log("Validating reCAPTCHA...");
+    console.log("Validating reCAPTCHA... ", process.env.RECAPTCHA_SECRET_KEY, process.env.ZOHO_EMAIL_USER,process.env.ZOHO_EMAIL_PASS);
 
     // Verify reCAPTCHA with Google
     const captchaResponse = await fetch("https://www.google.com/recaptcha/api/siteverify", {
