@@ -33,7 +33,8 @@ const page = () => {
 
   return (
     <>
-      {isMobile ? <HeroSectionMob /> : <HeroSection />}
+      {/* {isMobile ? <HeroSectionMob /> : <HeroSection />} */}
+      <HeroSection />
       <WhatWeProvide />
       <WhatWeOffer />
       <WhyChooseHero />
