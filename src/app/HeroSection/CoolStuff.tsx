@@ -14,7 +14,7 @@ const CoolStuff = () => {
                     <h2 className='text-6xl font-bold mb-4'> {/* Increased font size */}
                         Wanna Build <span className='text-fuchsia-800'>Cool Stuff</span> With Us?
                     </h2>
-                    <p className='text-xl text-gray-700 max-w-md'> {/* Changed to text-xl for larger font size */}
+                    <p className='text-[14px] font-400 text-[#666666] max-w-md'> {/* Changed to text-xl for larger font size */}
                         Be part of something big—innovate, grow, and shape the future with us. Join a team that values creativity, collaboration, and cutting-edge technology to drive meaningful change.
                     </p>
                     <Link href="/ContactUs">{/* Wrap the Button with Link */}

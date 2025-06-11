@@ -108,11 +108,11 @@ export default function AnimatedImageMobile() {
             exit={{ y: -50, opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold">
+            <h2 className="text-[20px] md:text-5xl font-bold px-0 sm-10 ">
               {content[index].title}
             </h2>
             <motion.p
-              className="mt-5 md:mt-10 text-lg text-gray-600"
+              className="mt-5 md:mt-10 text-lg text-[#666666] text-[14px] font-400"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
