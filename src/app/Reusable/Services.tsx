@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Manrope } from "next/font/google";
+import { useEffect, useState } from "react";
 
 // Define the type for services
 type Service = {
@@ -30,6 +31,13 @@ const Services: React.FC<ServicesProps> = ({
   suffixText = "",
   breakHeading = "",
 }) => {
+  const [fontFamily, setFontFamily] = useState("Inter, sans-serif");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setFontFamily(window.innerWidth >= 768 ? "Manrope, sans-serif" : "Inter, sans-serif");
+    }
+  }, [])
   return (
     <section
       className="py-20 bg-white relative"
@@ -79,9 +87,7 @@ const Services: React.FC<ServicesProps> = ({
               </p> */}
               	<p
   className="text-[#575656] mt-3 text-left text-sm md:text-base"
-  style={{
-    fontFamily: window.innerWidth >= 768 ? 'Manrope, sans-serif' : 'Inter, sans-serif',
-  }}
+  style={{ fontFamily }}
 >
   {service.description}
 </p>

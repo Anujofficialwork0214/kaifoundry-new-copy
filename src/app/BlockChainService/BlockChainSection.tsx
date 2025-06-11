@@ -5,28 +5,28 @@ import Image from "next/image";
 const features = [
   {
     name: "Scalability",
-    icon: "/scalable.png",
+    icon: "/svg/scalability.svg",
   },
   {
     name: "Transparency",
-    icon: "/1.png",
+    icon: "/svg/transparancy.svg",
   },
   {
     name: "Security & Trust",
-    icon: "/security.png",
+    icon: "/svg/security.svg",
   },
   {
     name: "Decentralization",
-    icon: "/people.png",
+    icon: "/svg/people.svg",
   },
   {
     name: "Innovation",
-    icon: "/2.png",
+    icon: "/svg/innovation.svg",
   },
 
   {
     name: "Automation",
-    icon: "/3.png",
+    icon: "/svg/tabler_automation.svg",
   },
 ];
 

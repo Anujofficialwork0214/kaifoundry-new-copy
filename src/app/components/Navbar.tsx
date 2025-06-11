@@ -93,7 +93,8 @@ const Navbar: React.FC = () => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <nav className="max-w-[1920px] mx-auto py-2 px-0 md:px-5 lg:px-5 flex items-center justify-between md:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out ">
+   <nav className="max-w-[1920px] mx-auto py-2 px-0 md:px-5 lg:px-5 flex items-center justify-between md:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out ">
+
           <button
             onClick={toggleMenu}
             className="md:hidden focus:outline-none p-3 rounded-md bg-[#FFFFFF4D] "
@@ -240,11 +241,7 @@ const Navbar: React.FC = () => {
       )}
 
       {/* Sidebar Menu */}
-      {/* <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-500 ease-in-out ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      > */}
+    
       <div
         id="mobile-sidebar"
         className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-500 ease-in-out ${

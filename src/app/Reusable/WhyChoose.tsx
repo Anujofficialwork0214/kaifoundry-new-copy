@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 type Feature = {
   icon: string;
@@ -23,6 +24,13 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
   backgroundColor = "bg-[#FBE8FF]",
   suffixText = "Us?", 
 }) => {
+    const [fontFamily, setFontFamily] = useState("Inter, sans-serif");
+  
+    useEffect(() => {
+      if (typeof window !== "undefined") {
+        setFontFamily(window.innerWidth >= 768 ? "Manrope, sans-serif" : "Inter, sans-serif");
+      }
+    }, [])
   return (
     <section className={`py-44 ${backgroundColor}`}>
       <div className="container mx-auto px-6 md:px-12 text-center">
@@ -84,16 +92,12 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
         />
       </div>
       <h3 className="text-sm font-semibold text-[#434343] text-center"
-       style={{
-    fontFamily: window.innerWidth >= 768 ? 'Manrope, sans-serif' : 'Inter, sans-serif',
-  }}
+    style={{ fontFamily }}
       >
         {feature.title}
       </h3>
       <p className="text-[#666666] mt-2 text-xs text-center  font-normal"
-    style={{
-    fontFamily: window.innerWidth >= 768 ? 'Manrope, sans-serif' : 'Inter, sans-serif',
-  }}
+  style={{ fontFamily }}
       >
         {feature.description}
       </p>
