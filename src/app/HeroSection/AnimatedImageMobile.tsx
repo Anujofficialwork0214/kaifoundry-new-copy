@@ -68,7 +68,7 @@ export default function AnimatedImageMobile() {
         <button
           onClick={prevSlide}
           style={{ backgroundColor: '#BA24D5' }} 
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 p-4 rounded-xl text-white text-3xl hover:bg-purple-700 transition z-10"
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 p-4 rounded-xl text-white text-3xl hover:bg-purple-700 transition z-10 cursor-pointer"
         >
           <FaChevronLeft />
         </button>
@@ -94,7 +94,7 @@ export default function AnimatedImageMobile() {
         <button
           onClick={nextSlide}
           style={{ backgroundColor: '#BA24D5' }} 
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 p-4 rounded-xl text-white text-3xl hover:bg-purple-700 transition z-10"
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 p-4 rounded-xl text-white text-3xl hover:bg-purple-700 transition z-10 cursor-pointer"
         >
           <FaChevronRight />
         </button>
