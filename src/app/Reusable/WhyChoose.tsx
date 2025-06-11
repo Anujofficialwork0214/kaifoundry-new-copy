@@ -92,9 +92,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
         />
       </div>
       <h3 className="text-sm font-semibold text-[#434343] text-center"
-       style={{
-    fontFamily: window.innerWidth >= 768 ? 'Manrope, sans-serif' : 'Inter, sans-serif',
-  }}
+    style={{ fontFamily }}
       >
         {feature.title}
       </h3>
