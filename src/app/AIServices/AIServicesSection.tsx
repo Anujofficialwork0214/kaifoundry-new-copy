@@ -21,11 +21,11 @@ const features = [
   },
   {
     name: "Insights",
-    icon: "/insight.png",
+    icon: "/insight5.svg",
   },
   {
     name: "Personalization",
-    icon: "/carbon_scale.png",
+    icon: "/person.svg",
   },
 
   {
@@ -34,47 +34,14 @@ const features = [
   },
   {
     name: "Scalability",
-    icon: "/custom2.png",
+    icon: "/carbon_scale.svg",
   },
 ];
 
 export default function AIServicesSection() {
   return (
-    // <section className="relative bg-gradient-to-b from-white to-[#FBE8FF] py-20 px-8 md:px-16 lg:px-32">
-    //   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
 
-    //     <motion.div
-    //       initial={{ opacity: 0, x: -50 }}
-    //       animate={{ opacity: 1, x: 0 }}
-    //       transition={{ duration: 0.6 }}
-    //       className="text-left"
-    //     >
-    //       <h2 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
-    //         Smarter Solutions with <span className="text-[#BA24D5]">AI</span>
-    //       </h2>
-    //       <p className="mt-4 text-lg text-gray-600">
-    //         Harness the power of Artificial Intelligence to automate, optimize, and innovate—making your business faster, smarter, and more efficient.
-    //       </p>
-    //     </motion.div>
-
-    //     <div className="grid grid-cols-2 gap-6">
-    //       {features.map((feature, index) => (
-    //         <motion.div
-    //           key={index}
-    //           initial={{ opacity: 0, x: 50 }}
-    //           animate={{ opacity: 1, x: 0 }}
-    //           transition={{ duration: 0.6, delay: index * 0.1 }}
-    //           className="flex items-center space-x-3"
-    //         >
-    //           <feature.icon className="h-7 w-7 text-[#BA24D5]" />
-    //           <span className="text-lg font-medium text-gray-900">{feature.name}</span>
-    //         </motion.div>
-    //       ))}
-    //     </div>
-
-    //   </div>
-    // </section>
-    <section className="relative bg-gradient-to-b from-white to-[#FBE8FF] py-20 px-8 md:px-16 lg:px-12 ">
+    <section className="relative bg-gradient-to-b from-white to-[#FBE8FF] py-16 px-8 md:px-16 lg:px-12 md:py-34 ">
       <div className="md:w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -82,7 +49,7 @@ export default function AIServicesSection() {
           transition={{ duration: 0.6 }}
           className="text-center md:text-left"
         >
-          <h2 className="text-xl sm:text-2xl md:text-[38px] lg:text-[40px] font-bold text-gray-800 leading-tight">
+          <h2 className="text-xl sm:text-2xl md:text-[52px] lg:text-[58px] font-bold text-gray-800 leading-tight">
             Smarter <span className="text-[#BA24D5]">Solutions</span> with{" "}
             <span>
               <span className="text-[#BA24D5]">AI</span>
@@ -95,7 +62,7 @@ export default function AIServicesSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-10 pt-4 lg:pt-0">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -108,9 +75,9 @@ export default function AIServicesSection() {
               <img
                 src={feature.icon}
                 alt={feature.name}
-                className="w-6 h-6 md:w-8 ms:w-8 lg:w-8 lg-w-8 object-contain"
+            className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain text-[#BA24D5]"
               />
-              <span className="text-sm lg:text-lg sm:text-xs font-medium text-gray-900 whitespace-nowrap">
+              <span className="text-sm lg:text-xl sm:text-xs font-medium text-gray-900 whitespace-nowrap">
                 {feature.name}
               </span>
             </motion.div>
@@ -120,3 +87,61 @@ export default function AIServicesSection() {
     </section>
   );
 }
+
+
+// "use client";
+// import { motion } from "framer-motion";
+
+// const features = [
+//   { name: "Automation", icon: "/3.png" },
+//   { name: "Security", icon: "/security.png" },
+//   { name: "Insights", icon: "/insight.png" },
+//   { name: "Personalization", icon: "/carbon_scale.png" },
+//   { name: "Innovation", icon: "/2.png" },
+//   { name: "Scalability", icon: "/custom2.png" },
+// ];
+
+// export default function AIServicesSection() {
+//   return (
+//     <section className="relative bg-gradient-to-b from-white to-[#FBE8FF] py-16 px-6 md:px-20 md:py-40">
+//       <div className=" mx-auto grid grid-cols-1 md:grid-cols-[70%_30%] items-center gap-8">
+//         {/* LEFT: Text */}
+//         <motion.div
+//           initial={{ opacity: 0, x: -50 }}
+//           animate={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 0.6 }}
+//           className="text-left"
+//         >
+//           <h2 className="text-3xl md:text-5xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900">
+//             Smarter <span className="text-[#BA24D5]">Solutions</span> with{" "}
+//             <span className="text-[#BA24D5]">AI</span>
+//           </h2>
+//           <p className="mt-4 text-base sm:text-lg text-gray-700 max-w-xl">
+//             Harness the power of Artificial Intelligence to automate, optimize,
+//             and innovate—making your business faster, smarter, and more efficient.
+//           </p>
+//         </motion.div>
+
+//         {/* RIGHT: Features */}
+//         <div className="grid grid-cols-2 gap-y-12 gap-x-4">
+//           {features.map((feature, index) => (
+//             <motion.div
+//               key={index}
+//               initial={{ opacity: 0, x: 50 }}
+//               animate={{ opacity: 1, x: 0 }}
+//               transition={{ duration: 0.6, delay: index * 0.1 }}
+//               className="flex items-center space-x-3"
+//             >
+//               <img
+//                 src={feature.icon}
+//                 alt={feature.name}
+//                 className="w-6 h-6 md:w-10 h-w-10 lg:w-12 lg-w-12 object-contain"
+//               />
+//               <span className="text-base md:text-[22px] font-medium text-gray-900">{feature.name}</span>
+//             </motion.div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
