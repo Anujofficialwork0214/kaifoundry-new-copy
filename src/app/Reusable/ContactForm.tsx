@@ -320,7 +320,7 @@ const ContactForm = () => {
     );
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6 w-full lg:w-[600px]">
+    <form onSubmit={handleSubmit} className="space-y-6 w-full ">
       {error && <p className="text-red-600 bg-red-100 p-2 rounded">{error}</p>}
       {success && (
         <p className="text-green-600 bg-green-100 p-2 rounded">{success}</p>

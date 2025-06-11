@@ -61,7 +61,7 @@ const ContactUs = () => {
       <h2 className="text-3xl md:text-5xl font-semibold text-center mb-10 md:mb-2 font-inter text-[#333333]">
         Let&apos;s Get <span className="text-fuchsia-600">In Touch</span>
       </h2>
-      <section className=" p-4 flex justify-center w-full">
+      <section className=" p-4 flex items-center justify-center w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 md:p-4 w-full">
           <div className="row-span-8 md:row-span-1 flex-col gap-10 md:gap-0">
             <h3 className="text-2xl font-semibold mb-6 sm:mb-10 text-start">
@@ -85,7 +85,7 @@ const ContactUs = () => {
             <div className="mt-10">
               <div className="text-black">
                 <h3 className="font-semibold text-3xl mb-4">Contact Details</h3>
-                <div className="grid grid-cols-2 gap-4 text-[#4D4D4D] text-[10px] md:text-base">
+                <div className="grid grid-cols-2 gap-4 text-[#4D4D4D] text-[10px] lg:text-base">
                   <p>
                     Akshya Nagar 1st Block 1st <br /> Cross, Rammurthy Nagar,
                     <br /> Bangalore-560016
