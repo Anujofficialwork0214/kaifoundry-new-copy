@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { roboto } from "../Fonts/fonts";
+import { GoArrowRight } from "react-icons/go";
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -101,7 +102,7 @@ export default function HeroSection() {
                 isVisible ? "translate-y-0" : "translate-y-60"
               } mt-40 lg:-mt-20`} 
             />
-         <div className="absolute bottom-0 lg:-bottom-44 rounded-lg lg:rounded-2xl left-2/9 lg:left-1/2 p-1 transform lg:-translate-x-1/2 flex flex-col items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_0_20px_5px_rgba(168,85,247,0.4)]">
+         <div className="absolute bottom-0 lg:-bottom-44 rounded-lg lg:rounded-2xl left-2/9 lg:left-1/2 p-1 lg:p-3 transform lg:-translate-x-1/2 flex flex-col items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 ">
          <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -111,8 +112,9 @@ export default function HeroSection() {
           
         >
           <div className="relative  rounded  lg:rounded-[24px] w-[280px] lg:w-[422px] xl:w-lg ">
-            <div className="flex lg:gap-2 items-center bg-white rounded-lg lg:rounded-2xl pl-2 lg:pl-4 py-1 lg:py-1  relative overflow-hidden">
-              {/* Left Abstract Image */}
+            <div className="flex lg:gap-2 items-center bg-white rounded-lg lg:rounded-2xl pl-2 lg:pl-4 py-1 lg:py-1  relative overflow-hidden inverted-radius ">
+              
+              
               <div className="w-[40px] h-[40px] lg:w-[120px]  lg:h-[80px] overflow-hidden rounded-lg lg:rounded-xl flex-shrink-0">
                 <Image
                   src="/assets/abstract.png"
@@ -124,7 +126,7 @@ export default function HeroSection() {
                 />
               </div>
 
-              {/* Center Text */}
+              
               <div className="flex-1 px-2 lg:px-0">
                 <h2 className="font-semibold text-[10.86px] lg:text-lg">Uncover our identity</h2>
                 <p className="text-gray-600 text-[10px] lg:text-sm">
@@ -132,20 +134,18 @@ export default function HeroSection() {
                   technology.
                 </p>
               </div>
-              <Link href="/WhoAreWe">
-                <div className="relative w-[75px] translate-x-[12px] h-full flex items-center justify-center">
-                  <div className="absolute  h-[65px] w-[68px] bg-[#fce7f3] rounded-tr-[18px]  lg:rounded-tl-[18px]  lg:rounded-bl-[-5px] -top-70" />
-
-                  {/* Arrow circle */}
-                  <div className="relative z-10 w-14 h-14 bg-white rounded-full shadow-md  border-[6px]  border-[#fce7f3]  flex items-center justify-center   top-7 ml-1">
-                    <span className="text-purple-600 text-xl">→</span>
-                  </div>
+              
+            </div>
+            <Link href="/WhoAreWe">
+                <div className="absolute -top-[2px] right-[10px] lg:right-[15px] lg:-top-[3px] w-6 h-6 lg:w-9 lg:h-9 bg-white rounded-full shadow-md flex items-center justify-center z-50">
+                  <GoArrowRight className="text-[#6F1877] lg:text-[25px] text-[15px]" />
                 </div>
               </Link>
-            </div>{" "}
           </div>
         </motion.div>
          </div>
+         
+
 
         </div>
 
