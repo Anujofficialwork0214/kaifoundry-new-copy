@@ -9,6 +9,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import { MdDone } from "react-icons/md";
 import { Inter } from "next/font/google";
 import { useRouter } from "next/navigation";
+import { roboto } from "../Fonts/fonts";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -91,7 +93,7 @@ const Navbar: React.FC = () => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <nav className="max-w-[1920px] mx-auto py-2 px-4 md:px-5 lg:px-5 flex items-center justify-between md:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out ">
+        <nav className="max-w-[1920px] mx-auto py-2 px-2 md:px-5 lg:px-5 flex items-center justify-between md:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out ">
           <button
             onClick={toggleMenu}
             className="md:hidden focus:outline-none p-3 rounded-md bg-[#FFFFFF4D] "
@@ -238,11 +240,7 @@ const Navbar: React.FC = () => {
       )}
 
       {/* Sidebar Menu */}
-      {/* <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-500 ease-in-out ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      > */}
+    
       <div
         id="mobile-sidebar"
         className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-500 ease-in-out ${
@@ -251,14 +249,14 @@ const Navbar: React.FC = () => {
       >
         <button
           onClick={closeMenu}
-          className="absolute top-4 right-4 text-gray-700 text-2xl"
+          className="absolute top-4 right-4 cursor-pointer text-gray-700 text-2xl"
         >
           &times;
         </button>
         <nav className="flex flex-col items-start  text-gray-700">
           <Link href="/" className="px-6 pt-6 pb-2 w-full flex flex-col  gap-5">
             <Image src="/svg/Group.svg" alt="Logo" width={20} height={20} />
-            <div className="text-[20px] font-[500]">Kai Foundary</div>
+            <div className={`text-[20px] font-[500] ${roboto.className}`}>Kai Foundary</div>
           </Link>
           <Link
             href="/"

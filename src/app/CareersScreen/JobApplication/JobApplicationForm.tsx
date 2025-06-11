@@ -2,6 +2,8 @@
 import { useState } from "react";
 // import { UploadCloud } from "lucide-react";
 import Image from "next/image";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const JobApplicationForm = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -42,8 +44,8 @@ const JobApplicationForm = () => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    console.log("Form submitted with data:", formData, "and file:", file);
-    alert("Form submitted successfully!");
+
+    toast.success('Form submitted successfully!');
     setFormData({
       name: '',
       email: '',
@@ -59,7 +61,11 @@ const JobApplicationForm = () => {
 };
 
   return (
+  
     <div className="w-fullmx-auto p-6 lg:px-12 ">
+      <ToastContainer
+        position="top-center"
+      />
       <h1 className="text-[16px] lg:text-[30px] font-[600] text-[#333333] mb-6">Application Form</h1>
 
       <form className="space-y-6 w-full" onSubmit={handleSubmit}>

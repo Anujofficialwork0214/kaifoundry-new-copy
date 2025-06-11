@@ -23,7 +23,7 @@ const CoolStuff = () => {
             {/* Wrap the Button with Link */}
             <Button
               text="Join Us"
-              className="hidden sm:inline-block mt-4 px-6 py-2 border border-[#6F1877] text-[#6F1877] rounded-full hover:bg-[#6F1877] hover:text-white transition"
+              className="hidden sm:inline-block mt-4 px-6 py-2 border border-[#6F1877] text-[#6F1877] rounded-full hover:bg-[#6F1877] cursor-pointer hover:text-white transition"
             />
           </Link>
         </div>
@@ -51,7 +51,7 @@ const CoolStuff = () => {
         {/* Wrap the Button with Link for mobile view */}
         <Button
           text="Join Us"
-          className="sm:hidden mt-4 px-6 py-1 border border-[#6F1877] text-[#6F1877] rounded-full hover:bg-[#6F1877] hover:text-white transition justify-center items-center mx-auto block"
+          className="sm:hidden mt-4 px-6 py-1 border cursor-pointer border-[#6F1877] text-[#6F1877] rounded-full hover:bg-[#6F1877] hover:text-white transition justify-center items-center mx-auto block"
         />
       </Link>
     </section>
