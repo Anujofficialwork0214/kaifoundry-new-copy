@@ -79,7 +79,7 @@ const ANIMATION_DURATION_SECONDS = 20;
 const ServiceCard = ({ service, isMobile }: ServiceCardProps) => (
   <Link href={service.link} passHref legacyBehavior>
     <a
-      className="flex-shrink-0  h-100 md:w-110 md:h-106 bg-white rounded-4xl shadow-xl overflow-hidden md:mx-2 cursor-pointer block"
+      className="flex-shrink-0  h-104 md:w-110 md:h-106 bg-white rounded-4xl shadow-xl overflow-hidden md:mx-2 cursor-pointer block"
       style={{ minWidth: isMobile ? "100%" : "350px" }}
     >
       <div className="overflow-hidden">

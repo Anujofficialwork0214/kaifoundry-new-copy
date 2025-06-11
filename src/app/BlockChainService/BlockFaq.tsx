@@ -12,7 +12,10 @@ const BlockFaq = () => {
 
   return (
     <div className="max-w-3xl mx-auto px-6 flex-col py-24 mt-30 ">
-      <h2 className="text-xl lg:text-4xl   md:text-5xl 2xl-text-[62px] sm:text-2xl font-bold text-center text-gray-900 mb-10">
+           <h2 className="text-2xl md:text-4xl lg:text-4xl  font-bold text-center text-gray-900"
+           style={{
+    fontFamily: 'Roboto, sans-serif',
+  }}>
         <span className="text-[#BA24D5]">Frequently</span> Asked Questions
       </h2>
       <div className="mt-6">

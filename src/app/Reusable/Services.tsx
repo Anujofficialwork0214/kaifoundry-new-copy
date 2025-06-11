@@ -72,11 +72,19 @@ const Services: React.FC<ServicesProps> = ({
               >
                 {service.title}
               </h3>
-              <p
+              {/* <p
                 className={`text-[#575656] mt-3 text-left text-sm md:text-base ${manrope.className}`}
               >
                 {service.description}
-              </p>
+              </p> */}
+              	<p
+  className="text-[#575656] mt-3 text-left text-sm md:text-base"
+  style={{
+    fontFamily: window.innerWidth >= 768 ? 'Manrope, sans-serif' : 'Inter, sans-serif',
+  }}
+>
+  {service.description}
+</p>
             </motion.div>
           ))}
         </div>
