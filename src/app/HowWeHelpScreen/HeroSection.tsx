@@ -67,7 +67,7 @@ const HowWeHelp = () => {
         </p>
         <Link href="/ContactUs">
           <button
-                          className="bg-[#D444F1] mt-12 text-white hover:bg-[#B33BC1] rounded-full w-26 py-2 px-2 lg:py-3 lg:px-3 lg:w-34 transition duration-300">
+                          className="bg-[#D444F1] mt-12 text-white hover:bg-[#B33BC1] cursor-pointer rounded-full w-26 py-2 px-2 lg:py-3 lg:px-3 lg:w-34 transition duration-300">
             Contact Us
           </button>
         </Link>

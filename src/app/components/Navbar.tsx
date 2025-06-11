@@ -9,6 +9,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import { MdDone } from "react-icons/md";
 import { Inter } from "next/font/google";
 import { useRouter } from "next/navigation";
+import { roboto } from "../Fonts/fonts";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -251,14 +253,14 @@ const Navbar: React.FC = () => {
       >
         <button
           onClick={closeMenu}
-          className="absolute top-4 right-4 text-gray-700 text-2xl"
+          className="absolute top-4 right-4 cursor-pointer text-gray-700 text-2xl"
         >
           &times;
         </button>
         <nav className="flex flex-col items-start  text-gray-700">
           <Link href="/" className="px-6 pt-6 pb-2 w-full flex flex-col  gap-5">
             <Image src="/svg/Group.svg" alt="Logo" width={20} height={20} />
-            <div className="text-[20px] font-[500]">Kai Foundary</div>
+            <div className={`text-[20px] font-[500] ${roboto.className}`}>Kai Foundary</div>
           </Link>
           <Link
             href="/"
