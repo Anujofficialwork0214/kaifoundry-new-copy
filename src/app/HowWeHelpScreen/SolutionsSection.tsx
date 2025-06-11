@@ -88,7 +88,7 @@ const SolutionsSection = () => {
                 />
               )}
               
-              <span className="relative z-10 text-[18px] px-4 lg:px-0 lg:text-[24px] font-[600] text-[#BA24D5] block w-full">
+              <span className="relative z-10 text-[18px] px-4 lg:px-6 lg:text-[24px] font-[600] text-[#BA24D5] block w-full">
                 {index + 1}. {solution.title}
               </span>
 
@@ -107,7 +107,7 @@ const SolutionsSection = () => {
             >
               <div className="p-4 text-left"> {/* Added text-left for description */}
                 
-                <p className="text-gray-700 mt-2 px-4 lg:px-0 text-base md:text-2xl"> {/* Increased text size */}
+                <p className="text-gray-700 mt-2 px-4 lg:px-6 text-base md:text-2xl"> {/* Increased text size */}
                   {solution.description}
                 </p>
               </div>
