@@ -13,28 +13,28 @@ import { Cog, Shield, LineChart, Users, Lightbulb, Expand } from "lucide-react";
 const features = [
   {
     name: "Automation",
-    icon: "/3.png",
+    icon: "/svg/tabler_automation.svg",
   },
   {
     name: "Security & Trust",
-    icon: "/security.png",
+    icon: "/svg/security.svg",
   },
   {
     name: "Insights",
-    icon: "/insight5.svg",
+    icon: "/svg/insight.svg",
   },
   {
     name: "Personalization",
-    icon: "/person.svg",
-  },
+    icon: "/svg/personalization.svg",
 
+  },
   {
     name: "Innovation",
-    icon: "/2.png",
+    icon: "/svg/innovation.svg",
   },
   {
     name: "Scalability",
-    icon: "/carbon_scale.svg",
+    icon: "/svg/carbon_scale.svg",
   },
 ];
 
