@@ -33,7 +33,7 @@ export default function GameDevelopmentSection() {
       </p>
     </motion.div>
 
-    <div className="grid grid-cols-2 gap-6">
+    <div className="grid grid-cols-2 gap-6 justify-center items-center  md:grid-cols-2 md:gap-12">
       {features.map((feature, index) => (
         <motion.div 
           key={index}
