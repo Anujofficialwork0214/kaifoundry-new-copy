@@ -34,7 +34,7 @@ const ContactUs = () => {
                 <h3 className="font-semibold text-3xl mb-4 ">
                   Contact Details
                 </h3>
-                <div className="grid grid-cols-2 gap-4 text-[#4D4D4D] text-xs md:text-base">
+                <div className="grid grid-cols-2 gap-4 text-[#4D4D4D] text-[10px] md:text-base">
                   <p>
                     Akshya Nagar 1st Block 1st <br /> Cross, Rammurthy Nagar,
                     <br /> Bangalore-560016
