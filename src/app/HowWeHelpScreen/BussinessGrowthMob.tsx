@@ -52,7 +52,7 @@ useEffect(() => {
   return () => window.removeEventListener('resize', handleResize);
 }, []);
   return (
-    <section className="py-20 px-6 md:px-20 text-center">
+    <section className="py-10 lg:py-20 px-6 md:px-20 text-center">
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 50 }}
@@ -118,7 +118,7 @@ useEffect(() => {
         <h3 className="text-[16px] lg:text-[20px] font-[600] lg:font-[500]  text-gray-900 mt-4">{step.title}</h3>
         
         {/* Description */}
-        <div className={`flex ${index % 2 !==0 ? ' flex-row-reverse':'flex-row'}`}>
+        <div className={`flex ${index % 2 !==0 ? ' flex-row-reverse':'flex-row'} `}>
         {index < steps.length - 1 && (
         <Image
               src={
@@ -128,7 +128,7 @@ useEffect(() => {
               alt="Arrow"
               width={50}
               height={30} 
-              className={`block lg:hidden mt-12 `}
+              className={`block lg:hidden mt-12  `}
               draggable="false"
             />)}
             <p className="text-[#808080] text-[12px] lg:text-[16px] mt-4">{step.description}</p>

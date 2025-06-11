@@ -27,7 +27,7 @@ return () => {
     <div>
     <HowWeHelp />
        <BussinessGrowthMob /> 
-   {isMobile ? <FileCoinMob/> : <FileCoin/>}
+    <FileCoin/>
      <SolutionsSection />
     </div>
   );
