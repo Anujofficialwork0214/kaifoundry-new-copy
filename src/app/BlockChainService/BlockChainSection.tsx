@@ -32,7 +32,7 @@ const features = [
 
 export default function BlockchainSection() {
   return (
-    <section className="relative bg-gradient-to-b from-white to-[#FBE8FF] py-20  md:px-16 lg:px-12">
+    <section className="relative bg-gradient-to-b from-white to-[#FBE8FF] py-20  md:px-16 lg:px-12 md:py-38">
       <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-4">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -40,19 +40,19 @@ export default function BlockchainSection() {
           transition={{ duration: 0.6 }}
           className="text-center md:text-left"
         >
-          <h2 className="text-xl  md:text-[30px] lg:text-[42px] font-semibold text-[#333333] leading-tight">
+          <h2 className="text-xl  md:text-[30px] lg:text-[42px] 2xl:text-[54px]  font-semibold text-[#333333] leading-tight">
             Blockchain <span className="text-[#BA24D5]">Development</span>:
             <br />
             <span className="block md:inline">Powering Secure Solutions</span>
           </h2>
-          <p className="mt-4 text-base text-[12px] md:text-[18px] text-[#808080]">
+          <p className="mt-4 text-base text-[12px] md:text-[18px] text-[#808080] px-2 lg:px-0">
             We help businesses use blockchain technology for enhanced{" "}
             <br className="hidden sm:inline" />
             transparency and automation.
           </p>
         </motion.div>
 
-        <div className="md:w-full mx-auto grid grid-cols-2 gap-6 justify-center items-center  md:grid-cols-2 md:gap-12">
+        <div className="md:w-full mx-auto grid grid-cols-2 gap-6 justify-center items-center pt-4 lg:pt-0  md:grid-cols-2 md:gap-12">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -64,11 +64,11 @@ export default function BlockchainSection() {
               <Image
                 src={feature.icon}
                 alt={feature.name}
-                className="w-6 h-6 md:w-8 ms:w-8 lg:w-8 lg-w-8  object-contain"
+                className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain"
                 width={6}
                 height={6}
               />
-              <span className="md:text-sm lg:text-lg text-xs font-medium text-gray-900 whitespace-nowrap">
+              <span className="text-sm lg:text-xl sm:text-xs font-medium text-gray-900 whitespace-nowrap">
                 {feature.name}
               </span>
             </motion.div>

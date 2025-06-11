@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const FileCoinMob = () => {
   return (
-    <section className="relative flex flex-col-reverse gap-4 lg:gap-0 md:flex-row items-center justify-between px-4 md:px-20 py-16 bg-[#FFFFFF] "> 
+    <section className="relative flex flex-col-reverse gap-4 lg:gap-0 md:flex-row items-center justify-between px-4  lg:px-20 py-0 lg:py-16 bg-[#FFFFFF] "> 
       {/* Left Content */}
       <div className="text-center md:text-left max-w-2xl mt-14">
         <motion.h1

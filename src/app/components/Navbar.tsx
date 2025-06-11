@@ -93,7 +93,8 @@ const Navbar: React.FC = () => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <nav className="max-w-[1920px] mx-auto py-2 px-2 md:px-5 lg:px-5 flex items-center justify-between md:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out ">
+   <nav className="max-w-[1920px] mx-auto py-2 px-0 md:px-5 lg:px-5 flex items-center justify-between md:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out ">
+
           <button
             onClick={toggleMenu}
             className="md:hidden focus:outline-none p-3 rounded-md bg-[#FFFFFF4D] "
@@ -363,7 +364,7 @@ const Navbar: React.FC = () => {
           >
             <ul className="bg-white mt-2  px-2 space-y-4 text-sm font-medium text-gray-700">
               <li
-                className={`text-[#414141] cursor-pointer text-[14px] font-[400] flex gap-4 items-center w-full`}
+                className={`text-[#414141] cursor-pointer text-[12px] font-[400] flex gap-4 items-center w-full`}
               >
                 <Link href="/BlockChainService" passHref prefetch={true} onClick={closeMenu}>
                   Blockchain Development
@@ -373,7 +374,7 @@ const Navbar: React.FC = () => {
                 )}
               </li>
               <li
-                className={`text-[#414141] cursor-pointer text-[14px] font-[400] flex justify-between items-center w-full`}
+                className={`text-[#414141] cursor-pointer text-[12px] font-[400] flex justify-between items-center w-full`}
               >
                 <Link href="/GameDevelopment" passHref prefetch={true} onClick={closeMenu}>
                   Gaming
@@ -384,7 +385,7 @@ const Navbar: React.FC = () => {
               </li>
               <li
                 className={`
-              text-[#414141]  cursor-pointer text-[14px] font-[400] flex justify-between items-center w-full`}
+              text-[#414141]  cursor-pointer text-[12px] font-[400] flex justify-between items-center w-full`}
               >
                 <Link href="/AIServices" passHref prefetch={true} onClick={closeMenu}>
                   AI Services

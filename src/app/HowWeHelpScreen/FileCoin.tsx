@@ -4,14 +4,14 @@ import Image from "next/image";
 
 const FileCoin = () => {
   return (
-    <section className="font-inter pt-20 relative flex flex-col md:flex-row items-center justify-between px-4 md:px-20 py-16 bg-[#FFFFFF]"> 
+    <section className="font-inter lg:pt-20 pt-10 relative flex flex-col-reverse lg:flex-row items-center justify-between lg:px-20 py-0 lg:py-16 bg-[#FFFFFF]"> 
       {/* Left Content */}
       <div className="text-center md:text-left max-w-3xl">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-[62px] font-bold text-gray-900 leading-tight" 
+          className="text-[24px] lg:text-[62px] font-bold text-gray-900 leading-tight" 
         >
           Kai Foundry’s <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#EA83FF] to-[#EA83FF]">Filecoin </span><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BA24D5] to-[#BA24D5]">Wallet </span>   for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#EA83FF] to-[#BA24D5]">KaiOS</span> device
         </motion.h1>
@@ -19,33 +19,44 @@ const FileCoin = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-[#414141] text-[22px] mt-4" 
+          className="text-[#666666] text-[14px] lg:text-[22px] mt-4 hidden lg:block" 
         >
           It is specially designed to facilitate the storage, sending, <br /> and receiving of Filecoin (FIL) on devices running the KaiOS <br /> operating system.
         </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-[#666666] text-[14px] lg:text-[22px] px-2 mt-4 block lg:hidden" 
+        >
+          It is specially designed to facilitate the storage, sending,  and receiving of Filecoin (FIL) on devices running the KaiOS  operating system.
+        </motion.p>
 
         {/* Features */}
-        <div className="flex justify-start items-start  mt-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-white  pt-2 bg-gradient-to-r bg-[#f8f7ff] px-4 md:px-10 py-4 rounded-lg" // Adjusted grid for mobile
-          >
-            {/* Feature 1 */}
-            <div className="text-[#808080] text-center  md:border-r-2 border-white pr-4 text-[22px] mt-2 ">
-              Secure <br /> storage
-            </div>
-            {/* Feature 2 */}
-            <div className="text-[#808080] text-center   md:border-r-2 border-white  pr-4 text-[22px] ">
-              Send and <br /> receive FIL <br /> tokens
-            </div>
-            {/* Feature 3 */}
-            <div className="text-[#808080]  text-center text-[22px] border-white  ">
-              Recovery <br /> phrase <br /> protection
-            </div>
-          </motion.div>
+        <div className="w-full h-[200px] lg:w-[600px] lg:h-[300px] rounded-full bg-[radial-gradient(circle,_#D7CDFF80_20%,_#FBE8FF00_50%)] lg:bg-[radial-gradient(circle,_#D7CDFF80_10%,_#FBE8FF00_50%)] relative">
+          <div className="flex justify-start items-start absolute  top-1/4 left-10  lg:top-1/3 lg:left-5  ">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="grid grid-cols-3 md:grid-cols-3 gap-4 border-white border-t-2 border-b-2 lg:border-t-4 lg:border-b-4 py-0 px-4 md:px-10   " // Adjusted grid for mobile
+            >
+              {/* Feature 1 */}
+              <div className=" text-center border-r-2 lg:border-r-4 py-3 lg:py-3 border-white pr-4 text-[12px] lg:text-[22px] mt-0 h-full ">
+                Secure <br /> storage
+              </div>
+              {/* Feature 2 */}
+              <div className=" text-center border-r-2   lg:border-r-4 py-3 lg:py-3 border-white h-full   pr-4 text-[12px] lg:text-[22px] ">
+                Send and <br /> receive FIL <br /> tokens
+              </div>
+              {/* Feature 3 */}
+              <div className="  text-center text-[12px] py-3 lg:py-3 lg:text-[22px] border-white  ">
+                Recovery <br /> phrase <br /> protection
+              </div>
+            </motion.div>
+          </div>
         </div>
+        
       </div>
 
       {/* Right Image */}

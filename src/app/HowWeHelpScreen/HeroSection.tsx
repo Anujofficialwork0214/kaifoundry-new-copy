@@ -4,10 +4,10 @@ import Link from "next/link";
 
 const HowWeHelp = () => {
   return (
-    <section className="flex flex-col md:flex-row-reverse w-full items-center text-center px-6 py-16 md:text-left md:px-20 md:justify-between relative">
+    <section className="flex flex-col md:flex-row-reverse w-full items-center text-center px-6 pt-16 pb-8 lg:py-16 md:text-left md:px-20 md:justify-between relative">
 
       {/* Background GIF Container */}
-      <div className="absolute inset-y-0 right-20 z-0 w-full h-full md:w-1/3 md:h-[1000px] transform -translate-y-50 -translate-x-5"> 
+      <div className="absolute inset-y-0 right-0 lg:right-20 z-0 w-full h-full md:w-1/3 md:h-[1000px] transform -translate-y-40 lg:-translate-y-50 -translate-x-5"> 
       <Image
   src="/assets/HowWeHelp/bg.gif"
   alt="Background GIF"
