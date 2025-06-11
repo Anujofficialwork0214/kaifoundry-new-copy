@@ -58,7 +58,7 @@ const SolutionsSection = () => {
       {/* List of Solutions */}
       <div className="mt-8 w-full flex flex-col space-y-4 ">
         {solutions.map((solution, index) => (
-          <div key={index} className="relative w-full px-4 md:px-40 "> {/* Added consistent padding here */}
+          <div key={index} className="relative w-full px-0 md:px-40 "> {/* Added consistent padding here */}
             <div
               className="relative overflow-hidden text-2xl cursor-pointer md:text-3xl font-semibold" 
               style={{ color: '#BA24D5', padding: '2rem 0' ,
@@ -88,7 +88,7 @@ const SolutionsSection = () => {
                 />
               )}
               
-              <span className="relative z-10 text-[18px] lg:text-[24px] font-[600] text-[#BA24D5] block w-full">
+              <span className="relative z-10 text-[18px] px-4 lg:px-6 lg:text-[24px] font-[600] text-[#BA24D5] block w-full">
                 {index + 1}. {solution.title}
               </span>
 
@@ -107,12 +107,12 @@ const SolutionsSection = () => {
             >
               <div className="p-4 text-left"> {/* Added text-left for description */}
                 
-                <p className="text-gray-700 mt-2 text-base md:text-2xl"> {/* Increased text size */}
+                <p className="text-gray-700 mt-2 px-4 lg:px-6 text-base md:text-2xl"> {/* Increased text size */}
                   {solution.description}
                 </p>
               </div>
             </motion.div>
-            <div className="absolute bottom-0 h-[1px] w-full lg:w-[79%]" style={{ backgroundColor: '#BA24D5' }} /> {/* Line at the bottom */}
+            <div className="absolute bottom-0 h-[0.6px] lg:h-[1px] w-full lg:w-[79%]" style={{ backgroundColor: '#BA24D5' }} /> {/* Line at the bottom */}
           </div>
         ))}
       </div> 

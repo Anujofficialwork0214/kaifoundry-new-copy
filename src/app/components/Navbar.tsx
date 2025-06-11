@@ -93,7 +93,8 @@ const Navbar: React.FC = () => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <nav className="max-w-[1920px] mx-auto py-2 px-2 md:px-5 lg:px-5 flex items-center justify-between md:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out ">
+   <nav className="max-w-[1920px] mx-auto py-2 px-0 md:px-5 lg:px-5 flex items-center justify-between md:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out ">
+
           <button
             onClick={toggleMenu}
             className="md:hidden focus:outline-none p-3 rounded-md bg-[#FFFFFF4D] "

@@ -137,7 +137,7 @@ const Footer: FC = () => {
 
         <div className="sm:col-span-2 flex sm:order-6 justify-end order-2 col-span-6">
           <Button
-            className="bg-white py-1 lg:py-3 text-[12px] lg:text-[16.8px] text-[#192D53] font-inter font-[500] cursor-pointer"
+            className="bg-white py-1 mr-4 lg:mr-0 lg:py-3 text-[12px] lg:text-[16.8px] text-[#192D53] font-inter font-[500] cursor-pointer"
             text="Get In Touch"
             href="/ContactUs"
           />

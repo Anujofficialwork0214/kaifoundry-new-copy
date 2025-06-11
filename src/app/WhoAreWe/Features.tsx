@@ -34,7 +34,7 @@ const FeaturesSection = () => {
   return (
     <section
       ref={ref}
-      className="px-6 lg:px-20 py-16 bg-white w-full flex items-center pt-24 relative z-10"
+      className="px-6 lg:px-20 py-6 lg:py-16 bg-white w-full flex items-center pt-10 lg:pt-24 relative z-10"
       style={{
         backgroundImage: `url('/assets/background/bg3.gif')`,
         backgroundSize: "cover",
