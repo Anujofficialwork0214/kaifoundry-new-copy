@@ -1,22 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
-import {
-  PaintBrushIcon,
-  GlobeAltIcon,
-  UserIcon,
-  DevicePhoneMobileIcon,
-  CubeIcon,
-  ArrowsUpDownIcon,
-} from "@heroicons/react/24/solid";
-import { IoColorPaletteOutline } from "react-icons/io5";
 
 const features = [
-  { name: "Immersive", icon: IoColorPaletteOutline },
-  { name: "Cross-Platform", icon: DevicePhoneMobileIcon },
-  { name: "Web3-Ready", icon: GlobeAltIcon },
-  { name: "Optimized", icon: CubeIcon },
-  { name: "Customizable", icon: UserIcon },
-  { name: "End-to-End", icon: ArrowsUpDownIcon },
+  { name: "Immersive", icon: "/svg/people.svg" },
+  { name: "Cross-Platform", icon: "/svg/crossPlatform.svg" },
+  { name: "Web3-Ready", icon: "/svg/web3.svg" },
+  { name: "Optimized", icon: "/svg/optimized.svg" },
+  { name: "Customizable", icon: "/svg/personalization.svg" },
+  { name: "End-to-End", icon: "/svg/arrowRT.svg" },
 ];
 
 export default function GameDevelopmentSection() {
@@ -49,7 +40,12 @@ export default function GameDevelopmentSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="flex items-center space-x-3"
             >
-              <feature.icon className="w-6 h-6 md:w-8 ms:w-8 lg:w-8 lg-w-8  text-[#BA24D5]" />
+              {/* <feature.icon className="w-6 h-6 md:w-8 ms:w-8 lg:w-8 lg-w-8  text-[#BA24D5]" /> */}
+              <img
+                src={feature.icon}
+                alt={feature.name}
+                className="w-6 h-6 md:w-8 ms:w-8 lg:w-8 lg-w-8 object-contain"
+              />
               <span className="text-sm lg:text-lg sm:text-xs font-medium text-gray-900 whitespace-nowrap">
                 {feature.name}
               </span>
