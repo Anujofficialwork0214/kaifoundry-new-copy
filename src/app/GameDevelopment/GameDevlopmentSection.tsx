@@ -12,7 +12,7 @@ const features = [
 
 export default function GameDevelopmentSection() {
   return (
-    <section className="relative bg-gradient-to-b from-white to-[#FBE8FF] py-20 px-8 md:px-16 lg:px-12 ">
+    <section className="relative bg-gradient-to-b from-white to-[#FBE8FF] py-20 px-8 md:px-16 lg:px-12 md:py-38">
       <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -20,7 +20,7 @@ export default function GameDevelopmentSection() {
           transition={{ duration: 0.6 }}
           className="text-center md:text-left"
         >
-          <h2 className="text-xl sm:text-2xl md:text-[38px] lg:text-[40px] font-bold text-gray-800 leading-tight">
+          <h2 className="text-xl md:text-[30px] lg:text-[44px] 2xl:text-[54px]  font-bold text-gray-800 leading-tight">
             Turning <span className="text-[#BA24D5]">Ideas</span> into{" "}
             <span className="text-[#BA24D5]">Games</span>
             <br /> That <span className="text-[#BA24D5]">People</span> Love
@@ -31,7 +31,7 @@ export default function GameDevelopmentSection() {
           </p>
         </motion.div>
 
-        <div className="md:w-full mx-auto grid grid-cols-2 md:grid-cols-2 items-center gap-8">
+        <div className="md:w-full mx-auto grid grid-cols-2 md:grid-cols-2 items-center gap-8 md:gap-12">
           {features.map((feature, index) => (
             <motion.div
               key={index}
