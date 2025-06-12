@@ -26,7 +26,6 @@ const features = [
   {
     name: "Personalization",
     icon: "/svg/personalization.svg",
-
   },
   {
     name: "Innovation",
@@ -40,7 +39,6 @@ const features = [
 
 export default function AIServicesSection() {
   return (
-
     <section className="relative bg-gradient-to-b from-white to-[#FBE8FF] py-16 px-8 md:px-16 lg:px-12 md:py-34 ">
       <div className="md:w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
         <motion.div
@@ -49,11 +47,14 @@ export default function AIServicesSection() {
           transition={{ duration: 0.6 }}
           className="text-center md:text-left"
         >
-          <h2 className="text-xl sm:text-2xl md:text-[52px] lg:text-[58px] font-bold text-gray-800 leading-tight">
+          {/* <h2 className="text-xl sm:text-2xl md:text-[52px] lg:text-[58px] font-bold text-gray-800 leading-tight">
             Smarter <span className="text-[#BA24D5]">Solutions</span> with{" "}
             <span>
               <span className="text-[#BA24D5]">AI</span>
             </span>
+          </h2> */}
+          <h2 className="text-xl sm:text-2xl md:text-[52px] lg:text-[50px]  font-bold text-gray-800 leading-tight">
+            Smarter Solutions with AI
           </h2>
           <p className="mt-4 text-[12px] md:text-lg lg:text-lg sm:text-[12px] text-gray-600">
             Harness the power of Artificial Intelligence to automate, optimize,
@@ -75,7 +76,7 @@ export default function AIServicesSection() {
               <img
                 src={feature.icon}
                 alt={feature.name}
-            className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain text-[#BA24D5]"
+                className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain text-[#BA24D5]"
               />
               <span className="text-sm lg:text-xl sm:text-xs font-medium text-gray-900 whitespace-nowrap">
                 {feature.name}
@@ -87,7 +88,6 @@ export default function AIServicesSection() {
     </section>
   );
 }
-
 
 // "use client";
 // import { motion } from "framer-motion";
