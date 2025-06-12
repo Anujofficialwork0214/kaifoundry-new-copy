@@ -35,9 +35,11 @@ const Services: React.FC<ServicesProps> = ({
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      setFontFamily(window.innerWidth >= 768 ? "Manrope, sans-serif" : "Inter, sans-serif");
+      setFontFamily(
+        window.innerWidth >= 768 ? "Manrope, sans-serif" : "Inter, sans-serif"
+      );
     }
-  }, [])
+  }, []);
   return (
     <section
       className="py-20 bg-white relative"
@@ -51,7 +53,7 @@ const Services: React.FC<ServicesProps> = ({
       <div className="mx-auto px-6 md:px-12 text-center">
         {/* Heading */}
         <motion.h2
-          className="text-2xl md:text-5xl text-[#333333] font-semibold font-roboto  mb-20 md:mb-40"
+          className="text-2xl md:text-5xl text-[#333333] font-semibold font-roboto  mb-20 "
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
@@ -85,12 +87,12 @@ const Services: React.FC<ServicesProps> = ({
               >
                 {service.description}
               </p> */}
-              	<p
-  className="text-[#575656] mt-3 text-left text-sm md:text-base"
-  style={{ fontFamily }}
->
-  {service.description}
-</p>
+              <p
+                className="text-[#575656] mt-3 text-left text-sm md:text-base"
+                style={{ fontFamily }}
+              >
+                {service.description}
+              </p>
             </motion.div>
           ))}
         </div>
