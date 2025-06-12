@@ -112,10 +112,10 @@ export default function HeroSection() {
           
         >
           <div className="relative  rounded  lg:rounded-[24px] w-[280px] lg:w-[422px] xl:w-lg ">
-            <div className="flex lg:gap-2 items-center bg-white rounded-lg lg:rounded-2xl pl-2 lg:pl-4 py-1 lg:py-1  relative overflow-hidden inverted-radius ">
+            <div className="flex lg:gap-2 items-center bg-white rounded-lg lg:rounded-2xl pl-2 lg:pl-4 py-1 lg:py-1 lg:scale-y-[-1]   relative overflow-hidden inverted-radius ">
               
               
-              <div className="w-[40px] h-[40px] lg:w-[120px]  lg:h-[80px] overflow-hidden rounded-lg lg:rounded-xl flex-shrink-0">
+              <div className="w-[40px] h-[40px] lg:w-[120px] lg:scale-y-[-1]  lg:h-[80px] overflow-hidden rounded-lg lg:rounded-xl flex-shrink-0">
                 <Image
                   src="/assets/abstract.png"
                   alt="Abstract Design"
@@ -127,7 +127,7 @@ export default function HeroSection() {
               </div>
 
               
-              <div className="flex-1 px-2 lg:px-0">
+              <div className="flex-1 px-2 lg:px-0 lg:scale-y-[-1]">
                 <h2 className="font-semibold text-[10.86px] lg:text-lg">Uncover our identity</h2>
                 <p className="text-gray-600 text-[10px] lg:text-sm">
                   We are a creative hub shaping the future of digital design and
@@ -137,7 +137,7 @@ export default function HeroSection() {
               
             </div>
             <Link href="/WhoAreWe">
-                <div className="absolute -top-[2px] right-[10px] lg:right-[15px] lg:-top-[3px] w-6 h-6 lg:w-9 lg:h-9 bg-white rounded-full shadow-md flex items-center justify-center z-50">
+                <div className="absolute -top-[2px] right-[10px] lg:right-[10px] lg:top-[56px] w-6 h-6 lg:w-9 lg:h-9 bg-white rounded-full shadow-md flex items-center justify-center z-50">
                   <GoArrowRight className="text-[#6F1877] lg:text-[25px] text-[15px]" />
                 </div>
               </Link>

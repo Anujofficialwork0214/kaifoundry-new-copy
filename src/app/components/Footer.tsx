@@ -59,7 +59,7 @@ const ContactInfo: FC<ContactInfoProps> = ({ phone, email }) => {
   return (
     <div className="text-gray-300 flex flex-col items-start ">
       {/* Horizontal Separator */}
-      <hr className="border-t border-white lg:border-black block  w-24 my-6  lg:-mt-8" />
+      <hr className="border-t border-white lg:border-[#232841] block  w-24 my-6  lg:-mt-8" />
       <p>{phone}</p>
       <p>
         <a href={`mailto:${email}`} className="hover:text-white">
@@ -108,11 +108,25 @@ const Footer: FC = () => {
       className="bg-[#821890] text-white p-8"
       style={{ fontFamily: "Inter, sans-serif", minHeight: "500px" }}
     >
+      <div className="flex  justify-between  items-center lg:hidden mb-5">
+        <div className="">
+          <Image width={150} height={250}alt="logo" src="/svg/Logo.svg"    draggable="false"/>
+        </div>
+        <div className=" flex  lg:hidden">
+          <Button
+            className="bg-white py-1 mr-4 lg:mr-0 lg:py-3 text-[12px] lg:text-[16.8px] text-[#192D53] font-inter font-[500] cursor-pointer"
+            text="Get In Touch"
+            href="/ContactUs"
+          />
+        </div>
+        </div>
       <div className="mx-auto grid grid-cols-12 lg:grid-cols-12 lg:gap-6 sm:grid-cols-2 gap-8">
         {/* Logo - Start Aligned */}
-        <div className="sm:col-span-4 flex justify-start order-1 col-span-6  ">
-          <Image width={250} height={250}alt="logo" src="/svg/Logo.svg"  className="h-10"  draggable="false"/>
+        
+        <div className="col-span-4 lg:flex justify-start order-1 lg:col-span-4 hidden  ">
+          <Image width={250} height={250}alt="logo" src="/svg/Logo.svg"  className="w-[200px] h-[40px] lg:w-[250px] lg:h-[50px]"  draggable="false"/>
         </div>
+        
 
         {/* Offerings */}
        
@@ -135,7 +149,7 @@ const Footer: FC = () => {
 
         {/* CTA Button */}
 
-        <div className="sm:col-span-2 flex sm:order-6 justify-end order-2 col-span-6">
+        <div className="sm:col-span-2 lg:flex sm:order-6 justify-end order-2 col-span-6 hidden">
           <Button
             className="bg-white py-1 mr-4 lg:mr-0 lg:py-3 text-[12px] lg:text-[16.8px] text-[#192D53] font-inter font-[500] cursor-pointer"
             text="Get In Touch"
