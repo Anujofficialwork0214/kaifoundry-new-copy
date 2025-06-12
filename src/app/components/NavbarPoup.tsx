@@ -36,7 +36,7 @@ const ServicesPopup: React.FC<ServicesPopupProps> = ({ onClose }) => {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <div className="fixed inset-0 flex items-start mt-20 mx-auto z-50 container max-w-[1920px] justify-center bg-black/30 backdrop-blur-sm">
+    <div className="fixed inset-0 flex items-start mt-20 mx-auto z-50 container max-w-[1920px] justify-center">
       <div
         ref={popupRef}
         className="bg-white shadow-lg rounded-b-lg p-6 w-full max-w-8xl opacity-100 relative"

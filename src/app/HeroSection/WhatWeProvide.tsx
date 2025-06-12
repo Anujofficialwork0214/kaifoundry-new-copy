@@ -17,6 +17,7 @@ interface Service {
 interface ServiceCardProps {
   service: Service;
   isMobile: boolean;
+  screenWidth: number;
 }
 
 const services: Service[] = [
@@ -52,31 +53,7 @@ const CARD_MARGIN_PX = 16;
 const TOTAL_CARD_WIDTH_PX = CARD_WIDTH_PX + CARD_MARGIN_PX;
 const ANIMATION_DURATION_SECONDS = 20;
 
-// const ServiceCard = ({ service, isMobile }: ServiceCardProps) => (
-//   <Link href={service.link} passHref legacyBehavior>
-//     <a
-//       className="flex-shrink-0 w-full md:w-[500px] bg-white rounded-xl shadow-lg overflow-hidden mx-2 cursor-pointer block"
-//       style={{ minWidth: isMobile ? "100%" : `${CARD_WIDTH_PX}px` }}
-//     >
-//       <div className="overflow-hidden h-80">
-//         <img
-//           src={service.image}
-//           alt={service.title}
-//           className="w-full h-full object-cover"
-//         />
-//       </div>
-//       <div className="p-4 md:p-6">
-//         <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
-//           {service.title}
-//         </h3>
-//         <p className="text-gray-700 text-sm md:text-base leading-relaxed">
-//           {service.description}
-//         </p>
-//       </div>
-//     </a>
-//   </Link>
-// );
-const ServiceCard = ({ service, isMobile }: ServiceCardProps) => (
+const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
   <Link href={service.link} passHref legacyBehavior>
     <a
       className="flex-shrink-0  h-104 md:w-110 md:h-106 bg-white rounded-4xl shadow-xl overflow-hidden md:mx-2 cursor-pointer block"
@@ -93,10 +70,10 @@ const ServiceCard = ({ service, isMobile }: ServiceCardProps) => (
         />
       </div>
       <div className="p-4 md:p-6">
-        <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
-          {service.title}
+        <h3 className={`${screenWidth < 375 ? 'text-[14px]':''} sm:text-[16px] lg:text-[30.52px] font-bold text-gray-900 mb-2`}>
+          {service.title} 
         </h3>
-        <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+        <p className={`${screenWidth < 375 ? 'text-[12px]':''} text-[#333333] tsm:ext-[14px] lg:text-[21.54px] leading-relaxed`}>
           {service.description}
         </p>
       </div>
@@ -106,15 +83,18 @@ const ServiceCard = ({ service, isMobile }: ServiceCardProps) => (
 
 const WhatWeProvide = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const [screenWidth, setScreenWidth] = useState<number>(0)
   const controls = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: false });
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    const checkMobile = () => {setIsMobile(window.innerWidth < 768);
+      setScreenWidth(window.innerWidth);};
+    
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+  }, [window.innerWidth]);
 
   const singleSetWidth = services.length * TOTAL_CARD_WIDTH_PX;
 
@@ -154,11 +134,11 @@ const WhatWeProvide = () => {
           transition={{ duration: 0.6, ease: "easeOut"}}
         >
           <div className="mt-20">
-            <h2 className=" text-3xl md:text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            <h2 className=" text-[24px] lg:text-[62px] font-bold text-gray-900 leading-tight">
               WHAT <br />
               WE <span className="text-[#D444F1]">PROVIDE</span>
             </h2>
-            <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-600 mt-4">
+            <p className="text-[14px] lg:text-[32px] font-[400] lg:font-semibold text-gray-600 mt-4">
               Services That Drive Your Success
             </p>
           </div>
@@ -171,6 +151,7 @@ const WhatWeProvide = () => {
                   key={service.id}
                   service={service}
                   isMobile={isMobile}
+                  screenWidth={screenWidth}
                 />
               ))}
             </div>
@@ -188,6 +169,7 @@ const WhatWeProvide = () => {
                     key={`${service.id}-${index}`}
                     service={service}
                     isMobile={isMobile}
+                    screenWidth={screenWidth}
                   />
                 ))}
               </motion.div>
