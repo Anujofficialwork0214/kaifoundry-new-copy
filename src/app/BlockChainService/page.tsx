@@ -4,13 +4,12 @@ import React from 'react';
 import { useEffect, useState } from "react";
 import HeroSection from './HeroSection';
 import BlockchainSection from './BlockChainSection';
-
-
 import WhyChooseBlock from "./WhyChooseBlock"
 import EcosystemSection from '../Reusable/EcosystemSection';
 import BlockFaq from './BlockFaq';
 import Contact from "../Reusable/Contact"
 import WhatWeOfferBlock from "./WhatweOfferBlock"
+import EcosystemMobile from '../Reusable/EcoSystemMobile';
 
 
 const BlockChainServicePage: React.FC = () => {
@@ -34,7 +33,7 @@ const BlockChainServicePage: React.FC = () => {
    <BlockchainSection/>
 <WhatWeOfferBlock/>
       <WhyChooseBlock />
-      <EcosystemSection />
+        {isMobile ?<EcosystemMobile/> : <EcosystemSection/>}
       <BlockFaq/>
       <Contact/>
 
