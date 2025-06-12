@@ -22,7 +22,7 @@ const HeroSection = () => {
         initial={{ x: "-100%" }}
         animate={{ x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="absolute inset-y-0 left-0 w-1/2 bg-transparent md:bg-white/50 md:backdrop-blur-md backdrop-blur-none z-10"
+        className="absolute inset-y-0 left-0 w-full md:w-1/2 bg-transparent md:bg-white/50 backdrop-blur-sm md:backdrop-blur-md  z-10"
       />
       <div className="w-full flex justify-center md:justify-start">
         <motion.div
