@@ -45,22 +45,30 @@ const WhyWorkWithUs = () => {
         </motion.h2>
 
         {/* Benefits Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 mt-10 mx-auto max-w-6xl ">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-10 mx-auto max-w-6xl ">
           {benefits.map((benefit, index) => (
             <motion.div
-              key={index}
-              className="flex items-start justify-start text-left  bg-transparent"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-[3px]  h-14 lg:h-16 mr-3" style={{ backgroundColor: '#D444F1' }}></div>
-              <div className="flex flex-col items-start gap-4 justify-start -mt-2">
-                <h3 className="text-[16px] font-[600]  text-[#333333]">{benefit.title}</h3>
-                <p className="text-[12px] font-[400] text-[#808080] ">{benefit.description}</p>
-              </div>
-            </motion.div>
+            key={index}
+            className="flex items-start justify-start text-left bg-transparent"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+          >
+            <div className="relative pl-4">
+  <div className="absolute left-0 top-0 bottom-0 w-[1.5px] h-[60px] bg-[#D444F1] rounded-full" />
+  <div className="flex flex-col gap-2">
+    <h3 className="text-[16px] font-semibold text-[#333333]">
+      {benefit.title}
+    </h3>
+    <p className="text-[12px] font-normal text-[#808080]">
+      {benefit.description}
+    </p>
+  </div>
+</div>
+
+          </motion.div>
+          
           ))}
         </div>
       </div>
