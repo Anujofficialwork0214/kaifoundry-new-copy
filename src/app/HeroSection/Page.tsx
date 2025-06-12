@@ -89,7 +89,7 @@ export default function HeroSection() {
         </div>
         {/* Image */}
         <div className="w-full lg:w-1/2 mt-8 md:mt-5 relative">
-          <div className="absolute top-0 right-0  w-full h-[950px] lg:h-[680px] xl:h-185 bg-gradient-to-b from-[#A5C0EE] to-[#FBC5EC] lg:bg-gradient-to-r from-[#A5C0EE] to-[#FBC5EC] rounded-lg z-0 -mt-20 lg:-mt-42">
+          <div className="absolute top-0 right-0  w-full h-[950px] lg:h-[680px] xl:h-185 bg-gradient-to-b from-[#e0e7fb] to-[#ffeef8] lg:bg-gradient-to-r from-[#A5C0EE] to-[#FBC5EC] rounded-lg z-0 -mt-20 lg:-mt-42">
               {" "}
             </div>
             <Image
@@ -102,7 +102,7 @@ export default function HeroSection() {
                 isVisible ? "translate-y-0" : "translate-y-60"
               } mt-40 lg:-mt-20`} 
             />
-         <div className="absolute bottom-0 lg:-bottom-44 rounded-lg lg:rounded-2xl left-2/9 lg:left-1/2 p-1 lg:p-3 transform lg:-translate-x-1/2 flex flex-col items-center justify-center bg-white/10 backdrop-blur-md border border-white/20 ">
+         <div className="absolute bottom-0 lg:-bottom-44 rounded-lg lg:rounded-2xl left-2/9 lg:left-1/2 p-1 lg:p-3 transform lg:-translate-x-1/2 flex flex-col items-center justify-center bg-white/50  border border-[#BCB6B6] ">
          <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -151,9 +151,9 @@ export default function HeroSection() {
 
       </div>
       {/* Count Down */}
-      <div className=" items-center z-20 justify-center flex flex-col md:flex-row mx-2 lg:mx-0 ">
+      <div className=" items-center z-20 justify-center mt-12 flex flex-col md:flex-row mx-2 lg:mx-0 ">
         <div className="w-full  items-center ">
-          <div className="bg-white rounded-lg lg:rounded-3xl border border-[#BA24D5] border-r-0 border-l-0 py-1 lg:py-0 shadow-sm flex items-center justify-around "
+          <div className=" bg-transparent lg:bg-white  rounded-lg lg:rounded-3xl  gradient-border  py-1 lg:py-0  flex items-center justify-around "
           
           >
             <div className="flex items-center text-center">

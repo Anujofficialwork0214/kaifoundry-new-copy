@@ -124,7 +124,7 @@ const WhatWeProvide = () => {
   const displayServices = isMobile ? services : [...services, ...services];
 
   return (
-    <section ref={ref} className="py-10 md:py-30 lg:px-10 px-0 bg-gray-50 overflow-hidden  ">
+    <section ref={ref} className="py-0 md:py-30 lg:px-10 px-0 bg-gray-50 overflow-hidden  ">
       <div className=" mx-auto flex flex-col md:flex-row px-4 md:px-0 items-center lg:items-start">
         <motion.div
           className="w-full mb-10 md:mb-0 md:pr-10 text-center md:text-left"

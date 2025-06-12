@@ -12,8 +12,8 @@ const features = [
 
 export default function GameDevelopmentSection() {
   return (
-    <section className="relative bg-gradient-to-b from-white to-[#FBE8FF] py-20 px-8 md:px-16 lg:px-12 md:py-38">
-      <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+    <section className="relative bg-gradient-to-b from-white to-[#FBE8FF] py-20 lg:py-28 px-8 md:px-16 lg:px-16 ">
+  <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}

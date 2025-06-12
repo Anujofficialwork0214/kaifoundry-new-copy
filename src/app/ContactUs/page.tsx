@@ -1,6 +1,6 @@
 'use client'
 import ContactForm from "../Reusable/ContactForm";
-
+import { ArrowLeft } from "lucide-react";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { IoMdPaperPlane } from "react-icons/io";
 
@@ -16,7 +16,7 @@ const ContactUs = () => {
                 onClick={handleBackClick} 
                 className=" top-2  left-4 flex items-center font-bold text-gray-700 hover:text-gray-900 "
             >
-                <span className="mr-3 font-bold">&larr;</span> 
+                <ArrowLeft className="mr-2 text-[10px] lg:text-[10px]" />
                 Back
             </button>
 

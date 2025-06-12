@@ -26,7 +26,7 @@ const FaqGame = () => {
     },
   ];
   return (
-    <div className="max-w-3xl mx-auto px-6 flex-col py-24">
+    <div className="max-w-3xl mx-auto px-6 flex-col py-16 lg:py-24">
       <h2
         className="text-xl md:text-4xl lg:text-4xl  font-bold text-center text-gray-900"
         style={{

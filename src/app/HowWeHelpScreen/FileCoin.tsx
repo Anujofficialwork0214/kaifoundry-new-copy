@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const FileCoin = () => {
   return (
-    <section className="font-inter lg:pt-20 pt-10 relative flex flex-col-reverse lg:flex-row items-center justify-between lg:px-20 py-0 lg:py-16 bg-[#FFFFFF]"> 
+    <section className="font-inter lg:pt-20 pt-0 relative flex flex-col-reverse lg:flex-row items-center justify-between lg:px-20 py-0 lg:py-16 bg-[#FFFFFF]"> 
       {/* Left Content */}
       <div className="text-center md:text-left max-w-3xl">
         <motion.h1
@@ -87,7 +87,7 @@ const FileCoin = () => {
           alt="KaiOS Phone"
           width={550} // Adjusted width for mobile
           height={550} // Adjusted height for mobile
-          className="relative z-10" // Ensure the phone image is above the GIF
+          className="relative z-10 w-[450] h-[450] lg:w-[550] lg:h-[550]" // Ensure the phone image is above the GIF
           draggable={false}
         />
       </motion.div>
