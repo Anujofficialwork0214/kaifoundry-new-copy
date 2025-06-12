@@ -94,9 +94,9 @@ body {
 
 @media (min-width: 1024px) {
   .inverted-radius {
-    --r: 15px; /* corner radius */
-    --s: 20px; /* size of inner curve */
-    --x: 20px; /* horizontal offset */
+    --r: 13px; /* corner radius */
+    --s: 19px; /* size of inner curve */
+    --x: 19px; /* horizontal offset */
     --y: 2px;  /* vertical offset */
   
     

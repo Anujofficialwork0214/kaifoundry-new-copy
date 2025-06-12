@@ -68,7 +68,7 @@ export default function AnimatedImageMobile() {
         <button
           onClick={prevSlide}
           style={{ backgroundColor: '#BA24D5' }} 
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 p-4 rounded-xl text-white text-3xl hover:bg-purple-700 transition z-10 cursor-pointer"
+          className="absolute -left-3 -bottom-16 p-3 rounded-xl text-white text-2xl hover:bg-purple-700 transition z-10 cursor-pointer"
         >
           <FaChevronLeft />
         </button>
@@ -82,19 +82,19 @@ export default function AnimatedImageMobile() {
             animate="center"
             exit="exit"
             transition={{ duration: 0.5 }}
-            className="absolute w-[90%] md:w-[85%] h-full"
+            className="absolute w-[90%] md:w-[85%] h-full "
           >
             <img
               src={content[index].image}
               alt="Blockchain"
-              className="w-full h-full object-cover rounded-4xl shadow-2xl border-2 border-white"
+              className="w-full h-full object-cover rounded-4xl  shadow-2xl border-2 border-white"
             />
           </motion.div>
         </AnimatePresence>
         <button
           onClick={nextSlide}
           style={{ backgroundColor: '#BA24D5' }} 
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 p-4 rounded-xl text-white text-3xl hover:bg-purple-700 transition z-10 cursor-pointer"
+          className="absolute -right-3  -bottom-16 p-3 rounded-xl text-white text-2xl hover:bg-purple-700 transition z-10 cursor-pointer"
         >
           <FaChevronRight />
         </button>
