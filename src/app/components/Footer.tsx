@@ -108,17 +108,17 @@ const Footer: FC = () => {
       className="bg-[#821890] text-white p-8"
       style={{ fontFamily: "Inter, sans-serif", minHeight: "500px" }}
     >
-      <div className="flex  justify-between  items-center lg:hidden mb-5">
+      <div className="flex  justify-between  items-center lg:hidden mb-5 ">
         <div className="">
           <Image width={150} height={250}alt="logo" src="/svg/Logo.svg"    draggable="false"/>
         </div>
-        <div className=" flex  lg:hidden">
+        
           <Button
-            className="bg-white py-1 mr-4 lg:mr-0 lg:py-3 text-[12px] lg:text-[16.8px] text-[#192D53] font-inter font-[500] cursor-pointer"
+            className="bg-white py-0 px-0 lg:mr-0 lg:py-3 text-[10px] lg:text-[16.8px] text-[#192D53] font-inter font-[500] cursor-pointer"
             text="Get In Touch"
             href="/ContactUs"
           />
-        </div>
+        
         </div>
       <div className="mx-auto grid grid-cols-12 lg:grid-cols-12 lg:gap-6 sm:grid-cols-2 gap-8">
         {/* Logo - Start Aligned */}
