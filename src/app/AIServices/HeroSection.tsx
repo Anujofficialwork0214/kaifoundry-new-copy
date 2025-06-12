@@ -55,7 +55,7 @@ const HeroSection = () => {
       {/* Background GIF */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/background/bc_bg.gif"
+          src="/assets/background/Fluidsphere.gif"
           alt="Background"
           className="w-full h-full object-cover"
           width={1920}
@@ -68,7 +68,7 @@ const HeroSection = () => {
         initial={{ x: "-100%" }}
         animate={{ x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="hidden md:block absolute inset-y-0 left-0 w-1/2 bg-white/50 backdrop-blur-md z-10"
+        className=" absolute inset-y-0 left-0 w-full md:w-1/2 bg-white/50 backdrop-blur-sm md:backdrop-blur-md z-10"
       ></motion.div>
 
       <div className="w-full flex justify-center md:justify-start">
