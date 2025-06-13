@@ -128,7 +128,7 @@ const WhatWeProvide = () => {
   return (
     <section
       ref={ref}
-      className="py-0 md:py-30 lg:px-10 px-0 bg-gray-50 overflow-hidden  "
+      className="py-0 md:py-30 lg:px-10 px-4 bg-gray-50 overflow-hidden  "
     >
       <div className=" mx-auto flex flex-col md:flex-row px-4 md:px-0 items-center lg:items-start">
         <motion.div
@@ -148,7 +148,7 @@ const WhatWeProvide = () => {
             </p>
           </div>
         </motion.div>
-        <div className="relative w-full md:w-1/2 lg:w-2/3  py-4 px-4 md:px-0 ">
+        <div className="relative w-full md:w-1/2 lg:w-2/3  py-2 px-4 md:px-0 ">
           {isMobile ? (
             <div className="flex flex-col gap-6">
               {services.map((service) => (
