@@ -66,7 +66,7 @@ const ServicesPopup: React.FC<ServicesPopupProps> = ({ onClose }) => {
           {/* Right Side Service Cards */}
           <div className="grid md:grid-cols-2 grid-cols-1 gap-12 w-4xl ">
             <Link
-              href="/BlockChainService"
+              href="/blockchain-service"
               passHref
               prefetch={true}
               onClick={onClose}
@@ -112,11 +112,11 @@ const ServicesPopup: React.FC<ServicesPopupProps> = ({ onClose }) => {
                 }
                 title="Blockchain Development"
                 description="Solutions tailored to your needs."
-                isActive={isActive("/BlockChainService")}
+                isActive={isActive("/blockchain-service")}
               />
             </Link>
             <Link
-              href="/GameDevelopment"
+              href="/game-development"
               passHref
               prefetch={true}
               onClick={onClose}
@@ -163,10 +163,15 @@ const ServicesPopup: React.FC<ServicesPopupProps> = ({ onClose }) => {
                 }
                 title="Game Development"
                 description="Experiences that drive players."
-                isActive={isActive("/GameDevelopment")}
+                isActive={isActive("/game-development")}
               />
             </Link>
-            <Link href="/AIServices" passHref prefetch={true} onClick={onClose}>
+            <Link
+              href="/ai-services"
+              passHref
+              prefetch={true}
+              onClick={onClose}
+            >
               <ServiceItem
                 icon={
                   <svg
@@ -187,7 +192,7 @@ const ServicesPopup: React.FC<ServicesPopupProps> = ({ onClose }) => {
                 }
                 title="AI Services"
                 description="Unlock the power of AI."
-                isActive={isActive("/AIServices")}
+                isActive={isActive("/ai-services")}
               />
             </Link>
             <div /> {/* empty div to maintain grid layout if needed */}
