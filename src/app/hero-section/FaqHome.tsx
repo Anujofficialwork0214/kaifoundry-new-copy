@@ -16,7 +16,7 @@ const FaqHome = () => {
     fontFamily: 'Roboto, sans-serif',
   }}
       >
-        <span className="bg-clip-text text-transparent bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF]">Frequently</span> Asked Questions
+        <span className="bg-clip-text text-transparent bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF] text-[24px] md:text-[58px] xl:text-[62px]">Frequently</span> Asked Questions
       </h2>
       <div className="mt-6">
         {faqs.map((faq, index) => (

@@ -16,7 +16,7 @@ const AiFaq = () => {
            style={{
     fontFamily: 'Roboto, sans-serif',
   }}>
-        <span className="text-[#BA24D5]">Frequently</span> Asked Questions
+        <span className="text-[#BA24D5] text-[24px] md:text-[58px] xl:text-[62px]">Frequently</span> Asked Questions
       </h2>
       <div className="mt-6">
         {faqs.map((faq, index) => (
