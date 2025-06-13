@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex items-center py-40 w-full overflow-hidden px-2 md:px-6 ">
+    <section className="relative flex items-center py-50 w-full overflow-hidden px-2 md:px-6 ">
       {/* Background GIF */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -22,7 +22,7 @@ const HeroSection = () => {
         initial={{ x: "-100%" }}
         animate={{ x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="absolute inset-y-0 left-0 w-full md:w-1/2 bg-transparent md:bg-white/50 backdrop-blur-sm md:backdrop-blur-md  z-10"
+        className="absolute inset-y-0 left-0 w-full md:w-[52.8%] bg-transparent md:bg-white/50 backdrop-blur-sm md:backdrop-blur-md  z-10  "
       />
       <div className="w-full flex justify-center md:justify-start">
         <motion.div
@@ -31,9 +31,9 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-20 w-full md:w-2/3 lg:w-1/2 flex flex-col items-center text-center md:items-start md:text-left p-8 rounded-lg"
         >
-          <h2 className="font-bold text-gray-900">
+          <h2 className="font-bold text-[#333333]">
             {/* Small  */}
-            <span className="block md:hidden text-xl sm:text-xl ">
+            <span className="block md:hidden text-xl   ">
               Empowering Innovation with{" "}
               <span className="text-[#E95DFF] italic">Blockchain</span>{" "}
               Solutions
@@ -48,7 +48,7 @@ const HeroSection = () => {
             </span>
           </h2>
 
-          <p className="text-gray-600 text-[12px] lg:text-lg mt-4">
+          <p className="text-[#333333]s text-[12px] lg:text-lg mt-4">
             Secure, scalable, and customized blockchain
             <br className="hidden md:inline" />
             development for the digital future.

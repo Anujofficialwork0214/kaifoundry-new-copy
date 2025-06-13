@@ -40,7 +40,7 @@ export default function BlockchainSection() {
           transition={{ duration: 0.6 }}
           className="text-center md:text-left"
         >
-          <h2 className="text-xl  md:text-[30px] lg:text-[42px] 2xl:text-[54px]  font-semibold text-[#333333] leading-tight">
+          <h2 className="text-xl  md:text-[30px] lg:text-[42px] 2xl:text-[54px]   font-semibold text-[#333333] leading-tight">
             Blockchain <span className="text-[#BA24D5]">Development</span>:
             <br />
             <span className="block md:inline">Powering Secure Solutions</span>
