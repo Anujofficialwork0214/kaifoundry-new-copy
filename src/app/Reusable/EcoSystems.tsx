@@ -27,7 +27,7 @@ const EcoSystems: React.FC<EcosystemsProps> = ({
 
   return (
     <div className="text-center  md:p-6">
-      <h2 className="text-xl  md:text-5xl font-bold text-[#414141] my-20 ">
+      <h2 className="text-xl  md:text-[58px] xl:text-[62px] font-bold text-[#414141] my-20 ">
         <span className="bg-clip-text text-transparent bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF]">{highlight}</span>{" "}
         {title.replace(highlight, "").trim()}
       </h2>
