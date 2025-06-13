@@ -42,7 +42,7 @@ const Services: React.FC<ServicesProps> = ({
   }, []);
   return (
     <section
-      className="py-20 bg-white relative"
+      className="py-20 bg-white relative top-0"
       style={{
         backgroundImage: `url('/assets/background/bg2.gif')`,
         backgroundSize: "cover",
@@ -53,7 +53,7 @@ const Services: React.FC<ServicesProps> = ({
       <div className="mx-auto px-6 md:px-12 text-center">
         {/* Heading */}
         <motion.h2
-          className="text-2xl md:text-5xl text-[#333333] font-semibold font-roboto  mb-20 "
+          className="text-2xl md:text-6xl text-[#333333] font-semibold font-roboto  mb-20 "
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
@@ -65,11 +65,11 @@ const Services: React.FC<ServicesProps> = ({
         </motion.h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="p-4 border-t-2 mb-6 max-w-100 mx-auto"
+              className="py-4 border-t-2 mb-6 max-w-120 mx-auto"
               style={{ borderColor: "#D444F1" }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ const Services: React.FC<ServicesProps> = ({
             >
               <h3
                 // className="text-[18px] md:text-2xl  font-semibold text-left text-[#0E0E0E]"
-                className={`text-[18px] md:text-2xl  font-semibold text-left text-[#0E0E0E] ${manrope.className}`}
+                className={`text-[18px] md:text-[28px]  font-semibold text-left text-[#0E0E0E] ${manrope.className}`}
               >
                 {service.title}
               </h3>
@@ -88,7 +88,7 @@ const Services: React.FC<ServicesProps> = ({
                 {service.description}
               </p> */}
               <p
-                className="text-[#575656] mt-3 text-left text-sm md:text-base"
+                className="text-[#575656] mt-3 text-left text-sm md:text-[20px]"
                 style={{ fontFamily }}
               >
                 {service.description}

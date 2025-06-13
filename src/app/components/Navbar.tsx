@@ -31,14 +31,14 @@
 //   useEffect(() => {
 //     const prefetchRoutes = async () => {
 //       await Promise.all([
-//         router.prefetch('/HowWeHelpScreen'),
-//         router.prefetch('/WhoAreWe'),
-//         router.prefetch('/CareersScreen'),
-//         router.prefetch('/BlockChainService'),
-//         router.prefetch('/GameDevelopment'),
-//         router.prefetch('/AIServices'),
-//         router.prefetch('/blog'),
-//         router.prefetch('/ContactUs')
+//         router.prefetch("/HowWeHelpScreen"),
+//         router.prefetch("/WhoAreWe"),
+//         router.prefetch("/CareersScreen"),
+//         router.prefetch("/BlockChainService"),
+//         router.prefetch("/GameDevelopment"),
+//         router.prefetch("/AIServices"),
+//         router.prefetch("/blog"),
+//         router.prefetch("/ContactUs"),
 //       ]);
 //     };
 
@@ -92,8 +92,7 @@
 //           isVisible ? "translate-y-0" : "-translate-y-full"
 //         }`}
 //       >
-//    <nav className="max-w-[1920px] mx-auto py-2 px-0 md:px-5 lg:px-5 flex items-center justify-between md:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out ">
-
+//         <nav className="max-w-[1920px] mx-auto py-2 px-0 md:px-5 lg:px-5 flex items-center justify-between md:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out ">
 //           <button
 //             onClick={toggleMenu}
 //             className="md:hidden focus:outline-none p-3 rounded-md bg-[#FFFFFF4D] "
@@ -173,13 +172,15 @@
 //               </Link>
 //             </li>
 //             <li>
-//               <Link href="/WhoAreWe" className={`${
-//                   isActive("/WhoAreWe")
-//                     ? "text-[#821890]"
-//                     : "text-gray-700"
+//               <Link
+//                 href="/WhoAreWe"
+//                 className={`${
+//                   isActive("/WhoAreWe") ? "text-[#821890]" : "text-gray-700"
 //                 }`}
 //                 prefetch={true}
-//                 >Who We Are</Link>
+//               >
+//                 Who We Are
+//               </Link>
 //             </li>
 //             <li>
 //               <Link
@@ -256,7 +257,9 @@
 //         <nav className="flex flex-col items-start  text-gray-700">
 //           <Link href="/" className="px-6 pt-6 pb-2 w-full flex flex-col  gap-5">
 //             <Image src="/svg/Group.svg" alt="Logo" width={20} height={20} />
-//             <div className={`text-[20px] font-[500] ${roboto.className}`}>Kai Foundary</div>
+//             <div className={`text-[20px] font-[500] ${roboto.className}`}>
+//               Kai Foundary
+//             </div>
 //           </Link>
 //           <Link
 //             href="/"
@@ -365,7 +368,12 @@
 //               <li
 //                 className={`text-[#414141] cursor-pointer text-[12px] font-[400] flex gap-4 items-center w-full`}
 //               >
-//                 <Link href="/BlockChainService" passHref prefetch={true} onClick={closeMenu}>
+//                 <Link
+//                   href="/BlockChainService"
+//                   passHref
+//                   prefetch={true}
+//                   onClick={closeMenu}
+//                 >
 //                   Blockchain Development
 //                 </Link>
 //                 {isActive("/BlockChainService") && (
@@ -375,7 +383,12 @@
 //               <li
 //                 className={`text-[#414141] cursor-pointer text-[12px] font-[400] flex justify-between items-center w-full`}
 //               >
-//                 <Link href="/GameDevelopment" passHref prefetch={true} onClick={closeMenu}>
+//                 <Link
+//                   href="/GameDevelopment"
+//                   passHref
+//                   prefetch={true}
+//                   onClick={closeMenu}
+//                 >
 //                   Gaming
 //                 </Link>
 //                 {isActive("/GameDevelopment") && (
@@ -386,7 +399,12 @@
 //                 className={`
 //               text-[#414141]  cursor-pointer text-[12px] font-[400] flex justify-between items-center w-full`}
 //               >
-//                 <Link href="/AIServices" passHref prefetch={true} onClick={closeMenu}>
+//                 <Link
+//                   href="/AIServices"
+//                   passHref
+//                   prefetch={true}
+//                   onClick={closeMenu}
+//                 >
 //                   AI Services
 //                 </Link>
 //                 {isActive("/AIServices") && (
@@ -637,7 +655,7 @@ const Navbar: React.FC = () => {
           </ul>
 
           <Button
-            className="bg-[#D444F1] text-white cursor-pointer"
+            className="bg-[#D444F1] text-white cursor-pointer hover:bg-[#B33BC1]"
             text="Contact Us"
             href="/contact-us"
           />
