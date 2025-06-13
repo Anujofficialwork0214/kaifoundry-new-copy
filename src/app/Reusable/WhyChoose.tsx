@@ -9,6 +9,7 @@ type Feature = {
   description: string;
 };
 
+
 type WhyChooseUsProps = {
   features: Feature[];
   heading?: string;

@@ -16,7 +16,7 @@ const features = [
     icon: "/svg/tabler_automation.svg",
   },
   {
-    name: "Security & Trust",
+    name: "Security",
     icon: "/svg/security.svg",
   },
   {
@@ -39,8 +39,8 @@ const features = [
 
 export default function AIServicesSection() {
   return (
-    <section className="relative bg-gradient-to-b from-white to-[#FBE8FF] py-16 px-8 md:px-16 lg:px-12 md:py-34 ">
-      <div className="md:w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+    <section className="relative bg-gradient-to-b from-white to-[#FBE8FF] py-16 px-8 md:px-16 lg:px-12 md:py-20 ">
+      <div className="md:w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-4">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -53,17 +53,17 @@ export default function AIServicesSection() {
               <span className="text-[#BA24D5]">AI</span>
             </span>
           </h2> */}
-          <h2 className="text-xl sm:text-2xl md:text-[52px] lg:text-[50px]  font-bold text-gray-800 leading-tight">
+          <h2 className="text-xl sm:text-2xl md:text-[54px] font-bold text-gray-800 leading-tight -mt-8">
             Smarter Solutions with AI
           </h2>
-          <p className="mt-4 text-[12px] md:text-lg lg:text-lg sm:text-[12px] text-gray-600">
+          <p className="mt-4 text-[12px] md:text-[24px] lg:text-[24px] sm:text-[12px] text-gray-600">
             Harness the power of Artificial Intelligence to automate, optimize,
             and innovate—making your business faster, smarter, and more
             efficient.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 gap-10 pt-4 lg:pt-0">
+        <div className="grid grid-cols-2 gap-12  pt-4 lg:pt-0 ">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -88,7 +88,6 @@ export default function AIServicesSection() {
     </section>
   );
 }
-
 // "use client";
 // import { motion } from "framer-motion";
 
