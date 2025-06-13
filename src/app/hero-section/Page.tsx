@@ -32,12 +32,12 @@ export default function HeroSection() {
               </span>
             </span>
             & Powering
-            <span className="bg-gradient-to-r pr-5  from-[#821890] to-[#D444F1] bg-clip-text text-transparent italic">
-              WEB3
+            <span className="bg-gradient-to-r pr-5  from-[#821890] to-[#D444F1] bg-clip-text text-transparent  italic lg:not-italic">
+              {" "}WEB3
             </span>
           </h1>
           <p
-            className={`text-gray-600 mt-3 lg:mt-2 text-[12px] text-center lg:text-left lg:text-[21px] transition-opacity duration-1000 ${
+            className={`text-gray-600 mt-3 lg:mt-0 text-[12px] text-center lg:text-left lg:text-[21px] transition-opacity duration-1000 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -48,7 +48,7 @@ export default function HeroSection() {
             success easier to achieve.
           </p>
           <div className="flex justify-center lg:justify-start">
-          <div className="relative mt-8">
+          <div className="relative mt-14">
   
   <motion.div
     className={`absolute top-0 left-0 h-full bg-[#D444F1] rounded-full ${

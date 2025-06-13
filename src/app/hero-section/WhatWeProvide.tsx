@@ -51,7 +51,7 @@ const services: Service[] = [
 const CARD_WIDTH_PX = 500;
 const CARD_MARGIN_PX = 16;
 const TOTAL_CARD_WIDTH_PX = CARD_WIDTH_PX + CARD_MARGIN_PX;
-const ANIMATION_DURATION_SECONDS = 20;
+const ANIMATION_DURATION_SECONDS = 10;
 
 const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
   <Link href={service.link} passHref legacyBehavior>
@@ -149,7 +149,7 @@ const WhatWeProvide = () => {
           <div className="mt-20">
             <h2 className=" text-[24px] lg:text-[62px] font-bold text-gray-900 leading-tight">
               WHAT <br />
-              WE <span className="text-[#D444F1]">PROVIDE</span>
+              WE <span className="bg-clip-text text-transparent bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF]">PROVIDE</span>
             </h2>
             <p className="text-[14px] lg:text-[32px] font-[400] lg:font-semibold text-gray-600 mt-4">
               Services That Drive Your Success

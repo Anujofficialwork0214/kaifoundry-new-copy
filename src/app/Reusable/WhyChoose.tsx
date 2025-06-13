@@ -44,7 +44,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {heading} <span className="text-[#BA24D5]">{highlightText}</span>{" "}
+          {heading} <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#E95DFF]">{highlightText}</span>{" "}
           {suffixText}
         </motion.h2>
 
@@ -68,10 +68,10 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
                   draggable="false"
                 />
               </div>
-              <h3 className="text-xl font-semibold lg:font-bold lg:text-2xl text-center text-gray-900">
+              <h3 className="text-xl font-semibold lg:font-bold lg:text-[21px] text-center text-gray-900">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 mt-4 text-[14px]">
+              <p className="text-black mt-10 text-[14px] lg:text-[14.6px]">
                 {feature.description}
               </p>
             </motion.div>

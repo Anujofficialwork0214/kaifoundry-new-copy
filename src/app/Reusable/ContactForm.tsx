@@ -330,7 +330,7 @@ const ContactForm = () => {
         <Input
           label={
             <>
-              Name<span className="text-blue-500">*</span>
+              Name<span className="text-[#155EEF]">*</span>
             </>
           }
           type="text"
@@ -342,6 +342,7 @@ const ContactForm = () => {
           required
           onChange={handleChange}
           onKeyDown={preventSpace}
+          className="font-[500]"
         />
 
         <Input
@@ -353,12 +354,13 @@ const ContactForm = () => {
           value={formData.lastName}
           onChange={handleChange}
           onKeyDown={preventSpace}
+          className="font-[500]"
         />
       </div>
       <Input
         label={
           <>
-            Email<span className="text-blue-500">*</span>
+            Email<span className="text-[#155EEF]">*</span>
           </>
         }
         type="email"
@@ -371,11 +373,12 @@ const ContactForm = () => {
         onKeyDown={preventSpace}
         onPaste={preventPasteSpaces}
         placeholder="Enter your Email"
+        className="font-[500]"
       />
       <Input
         label={
           <>
-            Phone Number<span className="text-blue-500">*</span>
+            Phone Number<span className="text-[#155EEF]">*</span>
           </>
         }
         type="tel"
@@ -385,13 +388,14 @@ const ContactForm = () => {
         placeholder="Enter your Contact Number"
         value={formData.phone}
         onChange={handleChange}
+        className="font-[500]"
         onKeyDown={preventSpace}
         required
       />
       <Input
         label={
           <>
-            Message<span className="text-blue-500">*</span>
+            Message<span className="text-[#155EEF]">*</span>
           </>
         }
         type="text"
@@ -400,6 +404,7 @@ const ContactForm = () => {
         maxLength={500}
         placeholder="Write your message here."
         value={formData.message}
+        className="font-[500]"
         onChange={handleChange}
         required
         //  onKeyDown={preventSpace}
