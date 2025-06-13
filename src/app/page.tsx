@@ -1,33 +1,33 @@
+'use client';
+import React, { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+const HeroSection = dynamic(() => import('./HeroSection/Page'), { ssr: false });
+const HeroSectionMob = dynamic(() => import('./HeroSection/HeroSectionMobile'), { ssr: false });
+const WhatWeProvide = dynamic(() => import('./HeroSection/WhatWeProvide'), { ssr: false });
+const WhatWeOffer = dynamic(() => import('./HeroSection/WhatWeOffer'), { ssr: false });
+const WhyChooseHero = dynamic(() => import('./HeroSection/WhyChooseHome'), { ssr: false });
+const EcosystemSection = dynamic(() => import('./Reusable/EcosystemSection'), { ssr: false });
+const EcosystemMobile = dynamic(() => import('./Reusable/EcoSystemMobile'), { ssr: false });
+const AnimatedSection = dynamic(() => import('./HeroSection/AnimatedImageCard'), { ssr: false });
+const AnimatedSectionMob = dynamic(() => import('./HeroSection/AnimatedImageMobile'), { ssr: false });
+const CoolStuff = dynamic(() => import('./HeroSection/CoolStuff'), { ssr: false });
+const CoolStuffMob = dynamic(() => import('./HeroSection/CoolStuffMob'), { ssr: false });
+const FaqHome = dynamic(() => import('./HeroSection/FaqHome'), { ssr: false });
+const Contact = dynamic(() => import('./Reusable/Contact'), { ssr: false });
 
-'use client'
-import React from 'react'
-import { useEffect, useState } from "react";
-import HeroSection from './HeroSection/Page'
-import HeroSectionMob from './HeroSection/HeroSectionMobile';
-import WhatWeProvide from './HeroSection/WhatWeProvide';
-import WhatWeOffer from './HeroSection/WhatWeOffer';
-import WhyChooseHero from './HeroSection/WhyChooseHome';
-import EcosystemSection from './Reusable/EcosystemSection';
-import AnimatedSection from './HeroSection/AnimatedImageCard';
-import AnimatedSectionMob from './HeroSection/AnimatedImageMobile';
-import CoolStuff from './HeroSection/CoolStuff';
-import CoolStuffMob from "./HeroSection/CoolStuffMob"
-import FaqHome from './HeroSection/FaqHome';
-import Contact from './Reusable/Contact'
-import EcosystemMobile from './Reusable/EcoSystemMobile';
-const page = () => {
-    const [isMobile, setIsMobile] = useState(false);
+const Page = () => {
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    handleResize(); 
-    window.addEventListener("resize", handleResize); 
+    handleResize(); // initial check
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize); 
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -38,14 +38,13 @@ const page = () => {
       <WhatWeProvide />
       <WhatWeOffer />
       <WhyChooseHero />
-      {isMobile ?<EcosystemMobile/> : <EcosystemSection/>}
-   
+      {isMobile ? <EcosystemMobile /> : <EcosystemSection />}
       {isMobile ? <AnimatedSectionMob /> : <AnimatedSection />}
-            {isMobile ? <CoolStuffMob /> : <CoolStuff />}
+      {isMobile ? <CoolStuffMob /> : <CoolStuff />}
       <FaqHome />
-      <Contact/>
+      <Contact />
     </>
-  )
-}
+  );
+};
 
-export default page
+export default Page;
