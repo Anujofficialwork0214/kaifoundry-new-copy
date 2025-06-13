@@ -27,12 +27,12 @@ export default function HeroSection() {
           <h1 className={` lg:text-[62px] text-[24px] text-center lg:text-left font-bold transition-transform duration-1000 py-0 lg:py-10 leading-[1.3]`}>
             <span className="flex flex-row lg:flex-col items-center justify-center lg:items-start gap-x-2 text-center ">
               <span>Build Your</span>
-              <span className="bg-gradient-to-r from-[#821890] to-[#D444F1] bg-clip-text text-transparent block">
+              <span className="bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF] bg-clip-text text-transparent block">
                 BUSINESSES
               </span>
             </span>
             & Powering
-            <span className="bg-gradient-to-r pr-5  from-[#821890] to-[#D444F1] bg-clip-text text-transparent  italic lg:not-italic">
+            <span className="bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF] bg-clip-text text-transparent  italic lg:not-italic">
               {" "}WEB3
             </span>
           </h1>
@@ -48,10 +48,10 @@ export default function HeroSection() {
             success easier to achieve.
           </p>
           <div className="flex justify-center lg:justify-start">
-          <div className="relative mt-14">
-  
+          <div className="relative mt-14"> 
+          {/* bg-[#ba24d5] */}
   <motion.div
-    className={`absolute top-0 left-0 h-full bg-[#D444F1] rounded-full ${
+    className={`absolute top-0 left-0 h-full bg-orange-300 rounded-full ${
       isVisible ? "opacity-100" : "opacity-0"
     }`}
     initial={{ width: 0 }}
@@ -68,7 +68,7 @@ export default function HeroSection() {
   >
     <Link href="/HowWeHelpScreen">
       <button
-        className={`relative z-10 flex items-center px-4 py-2 lg:px-8 lg:py-3 text-white text-[11px] lg:text-lg transition-all duration-300 bg-[#D444F1] rounded-l-full rounded-r-none hover:bg-[#c13ae8]`}
+        className={`relative z-10 flex items-center px-4 py-2 lg:px-8 lg:py-3 text-white text-[11px] lg:text-lg transition-all duration-300 bg-[#d444f1] hover:bg-[#c13ae8]`}
       >
         HOW WE HELP
         <span className="ml-2 w-5 h-5 lg:w-7 lg:h-7 flex items-center justify-center border-2 border-white rounded-full font-light">
@@ -78,7 +78,7 @@ export default function HeroSection() {
     </Link>
     <Link href="/ContactUs">
       <button
-        className={`relative z-10 -ml-[15px] lg:ml-[-10px] px-3 py-2 lg:px-6 lg:py-3 rounded-full border border-white lg:border-purple-500 bg-white text-black text-[12px] lg:text-lg transition-all duration-300 cursor-pointer hover:bg-gray-100`}
+        className={`relative z-10 -ml-[15px] lg:ml-[-10px] px-3 py-2 lg:px-6 lg:py-3 rounded-full border border-white lg:border-[#d444f1] bg-white text-black text-[12px] lg:text-lg transition-all duration-300 cursor-pointer hover:bg-gray-100`}
       >
         Contact Us
       </button>
