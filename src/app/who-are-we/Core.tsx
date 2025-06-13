@@ -44,7 +44,7 @@ const CoreValuesSection = () => {
           className="text-[28px] lg:text-[62px] font-[600] text-center mb-12"
         >
           Our{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-b from-[#9C27B0] to-[#EA83FF]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">
             Core
           </span>{" "}
           Values
@@ -67,13 +67,14 @@ const CoreValuesSection = () => {
               <Image
                 src={value.img}
                 alt={value.title}
-                width={200}
-                height={200}
-                className="mb-6 w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] object-cover"
+                width={250}
+                height={250}
+                draggable="false"
+                className="mb-6 w-[150px] h-[150px] lg:w-[250px] lg:h-[250px] object-cover"
               />
               <div className="flex flex-col">
-              <h3 className={`text-[14px] lg:text-[28.09px] text-[#333333] lg:text-2xl font-semibold mb-2 lg:mb-4 text-left lg:text-center ${manrope.className}`}>{value.title}</h3>
-              <p className={`text-[#333333] text-[12px] lg:text-[18.73px] ${manrope.className} text-left lg:text-center`}>{value.description}</p>
+              <h3 className={`text-[14px] lg:text-[26.09px] text-[#333333] lg:text-2xl font-[800] mb-2 lg:mb-8 text-left lg:text-center ${manrope.className}`}>{value.title}</h3>
+              <p className={`text-[#333333] text-[12px] lg:text-[16.73px] ${manrope.className} text-left lg:text-center`}>{value.description}</p>
               </div>
               
             </motion.div>

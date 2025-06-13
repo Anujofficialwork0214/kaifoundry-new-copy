@@ -61,7 +61,7 @@ useEffect(() => {
         viewport={{ once: true }}
         className="lg:text-[62px] text-[24px]  font-bold text-gray-900"
       >
-        Helping <span className="text-[#E95DFF] text-[24px] lg:text-[62px]">Your Business Grow</span>
+        Helping <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-[24px] lg:text-[62px]">Your Business Grow</span>
       </motion.h2>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
@@ -110,7 +110,7 @@ useEffect(() => {
         )}
 
         {/* Icon with Background */}
-        <div className="bg-gradient-to-r from-[#E95DFF] to-[#D680FF] p-4 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mt-4 lg:mt-0 shadow-lg relative">
+        <div className="bg-gradient-to-tl from-[#aa29bc] to-[#D680FF] p-4 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mt-4 lg:mt-0 shadow-lg relative">
           <Image src={step.icon} alt={step.title} width={60} height={60} draggable="false"/>
         </div>
 

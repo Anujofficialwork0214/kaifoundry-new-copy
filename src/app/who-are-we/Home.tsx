@@ -41,7 +41,7 @@ const Home = () => {
           >
             <span className="hidden lg:block">This Is</span>
             <span className="block lg:-mt-6">
-              <span className="italic  text-transparent bg-clip-text bg-gradient-to-r from-[#BA24D5] to-[#EA83FF]">
+              <span className="  text-transparent bg-clip-text bg-gradient-to-r from-[#BA24D5] to-[#EA83FF]">
                 Who
               </span>{" "}
               We Are

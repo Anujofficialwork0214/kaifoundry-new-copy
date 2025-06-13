@@ -51,7 +51,7 @@ export default function HeroSection() {
           <div className="relative mt-14"> 
           {/* bg-[#ba24d5] */}
   <motion.div
-    className={`absolute top-0 left-0 h-full bg-orange-300 rounded-full ${
+    className={`absolute top-0 left-0 h-full bg-[#d444f1] lg:bg-[#ba24d5] rounded-full ${
       isVisible ? "opacity-100" : "opacity-0"
     }`}
     initial={{ width: 0 }}
@@ -61,14 +61,14 @@ export default function HeroSection() {
   
   
   <motion.div
-    className={`flex relative top-0  md:flex rounded-full overflow-hidden`}
+    className={`flex relative top-0  md:flex pl-8 overflow-hidden`}
     initial={{ opacity: 0 }}
     animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
     transition={{ delay: 0.8, duration: 0.5 }} 
   >
     <Link href="/HowWeHelpScreen">
       <button
-        className={`relative z-10 flex items-center px-4 py-2 lg:px-8 lg:py-3 text-white text-[11px] lg:text-lg transition-all duration-300 bg-[#d444f1] hover:bg-[#c13ae8]`}
+        className={`relative z-10 flex items-center px-4 py-2 lg:px-8 lg:py-3 text-white text-[11px] lg:text-lg transition-all duration-300 bg-[#d444f1] `}
       >
         HOW WE HELP
         <span className="ml-2 w-5 h-5 lg:w-7 lg:h-7 flex items-center justify-center border-2 border-white rounded-full font-light">
@@ -78,7 +78,7 @@ export default function HeroSection() {
     </Link>
     <Link href="/ContactUs">
       <button
-        className={`relative z-10 -ml-[15px] lg:ml-[-10px] px-3 py-2 lg:px-6 lg:py-3 rounded-full border border-white lg:border-[#d444f1] bg-white text-black text-[12px] lg:text-lg transition-all duration-300 cursor-pointer hover:bg-gray-100`}
+        className={`relative z-10 -ml-[15px] lg:ml-[-18px] px-3 py-2 lg:px-6 lg:py-3 rounded-full border border-white lg:border-[#d444f1] bg-white text-black text-[12px] lg:text-lg transition-all duration-300 cursor-pointer hover:bg-gray-100`}
       >
         Contact Us
       </button>
