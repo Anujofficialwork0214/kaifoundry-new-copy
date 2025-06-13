@@ -97,7 +97,7 @@ const HeroSection = () => {
             </span>
           </h2>
 
-          <p className="text-gray-600 text-sm md:text-lg mt-4">
+          <p className="text-gray-600 text-sm md:text-[28px] mt-6">
             Unlock the power of Artificial Intelligence to automated tasks,
             drive insights and create smater solutions for your business
           </p>
@@ -106,7 +106,7 @@ const HeroSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="hidden sm:block bg-[#D444F1] mt-12 text-white cursor-pointer hover:bg-[#B33BC1] rounded-full py-3 px-4 w-40 transition duration-300"
+              className="hidden sm:block bg-[#D444F1] mt-18 text-white cursor-pointer hover:bg-[#B33BC1] rounded-full py-3 px-4 w-40 transition duration-300"
             >
               Contact Us
             </motion.button>
