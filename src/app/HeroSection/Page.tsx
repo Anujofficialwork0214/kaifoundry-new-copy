@@ -37,7 +37,7 @@ export default function HeroSection() {
             </span>
           </h1>
           <p
-            className={`text-gray-600 mt-3 text-[12px] text-center lg:text-left lg:text-[21px] transition-opacity duration-1000 ${
+            className={`text-gray-600 mt-3 lg:mt-2 text-[12px] text-center lg:text-left lg:text-[21px] transition-opacity duration-1000 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -56,7 +56,7 @@ export default function HeroSection() {
     }`}
     initial={{ width: 0 }}
     animate={isVisible ? { width: "100%" } : { width: 0 }}
-    transition={{ duration: 0.6, ease: "easeInOut" }}
+    transition={{ duration: 0.5, ease: "easeInOut" }}
   />
   
   
