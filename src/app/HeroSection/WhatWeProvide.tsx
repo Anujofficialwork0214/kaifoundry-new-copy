@@ -56,7 +56,7 @@ const ANIMATION_DURATION_SECONDS = 20;
 const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
   <Link href={service.link} passHref legacyBehavior>
     <a
-      className="flex-shrink-0  h-104 md:w-110 lg:h-140  bg-white rounded-4xl shadow-xl overflow-hidden md:mx-2 cursor-pointer block"
+      className="flex-shrink-0 w-[300px] lg:w-[450px] bg-white rounded-4xl shadow-xl overflow-hidden md:mx-2 cursor-pointer block"
       style={{ minWidth: isMobile ? "100%" : "350px" }}
     >
       <div className="overflow-hidden">
@@ -70,18 +70,10 @@ const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
         />
       </div>
       <div className="p-4 md:p-6">
-        <h3
-          className={`${
-            screenWidth < 375 ? "text-[14px]" : ""
-          } sm:text-[16px] lg:text-[30.52px] font-bold text-gray-900 mb-2`}
-        >
-          {service.title}
+        <h3 className={`${screenWidth < 375 ? 'text-[14px]':''} sm:text-[16px] lg:text-[20.52px] font-bold text-gray-900 mb-2`}>
+          {service.title} 
         </h3>
-        <p
-          className={`${
-            screenWidth < 375 ? "text-[12px]" : ""
-          } text-[#333333] tsm:ext-[14px] lg:text-[21.54px] leading-relaxed`}
-        >
+        <p className={`${screenWidth < 375 ? 'text-[12px]':''} text-[#333333] text-[14px] lg:text-[15.54px] leading-relaxed`}>
           {service.description}
         </p>
       </div>
