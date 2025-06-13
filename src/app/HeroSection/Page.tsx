@@ -48,48 +48,52 @@ export default function HeroSection() {
             success easier to achieve.
           </p>
           <div className="flex justify-center lg:justify-start">
-          <div
-            className={`flex  relative top-0 lg:top-6 md:flex transition-opacity duration-1000 mt-8 ${
-              isVisible ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <div
-              className="absolute inset-y-0 left-0 right-0 bg-[#D444F1]  rounded-full  w-[calc(40%-10px)] lg:w-[calc(60%-10px)]  xl:w-80 "
-            ></div>
-            <Link href="/HowWeHelpScreen">
-              <button
-                className={`relative z-10 flex items-center px-4 py-2 lg:px-8 lg:py-3 text-white text-[11px] lg:text-lg transition-transform duration-1000 transform ${
-                  isVisible
-                    ? "translate-x-0 bg-[#D444F1]"
-                    : "translate-x-10 bg-[#D444F1]"
-                } rounded-l-full rounded-r-none`}
-              >
-                HOW WE HELP
-                <span className="ml-2 w-5 h-5 lg:w-7 lg:h-7 flex items-center justify-center border-2 border-white rounded-full font-light">
-                  ➜
-                </span>
-              </button>
-            </Link>
-            <Link href="/ContactUs">
-              <button
-                className={`relative z-10 -ml-[15px] lg:ml-[-10px] px-3 py-2 lg:px-6 lg:py-3 rounded-full border border-white lg:border-purple-500 bg-white text-black text-[12px] lg:text-lg transition-transform duration-1000 transform cursor-pointer ${
-                  isVisible
-                    ? "translate-x-0 bg-[#D444F1]"
-                    : "translate-x-10 bg-[#D444F1]"
-                }`}
-              >
-                Contact Us
-              </button>
-            </Link>
-          </div>
-
+          <div className="relative mt-8">
+  
+  <motion.div
+    className={`absolute top-0 left-0 h-full bg-[#D444F1] rounded-full ${
+      isVisible ? "opacity-100" : "opacity-0"
+    }`}
+    initial={{ width: 0 }}
+    animate={isVisible ? { width: "100%" } : { width: 0 }}
+    transition={{ duration: 0.6, ease: "easeInOut" }}
+  />
+  
+  
+  <motion.div
+    className={`flex relative top-0  md:flex rounded-full overflow-hidden`}
+    initial={{ opacity: 0 }}
+    animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+    transition={{ delay: 0.8, duration: 0.5 }} 
+  >
+    <Link href="/HowWeHelpScreen">
+      <button
+        className={`relative z-10 flex items-center px-4 py-2 lg:px-8 lg:py-3 text-white text-[11px] lg:text-lg transition-all duration-300 bg-[#D444F1] rounded-l-full rounded-r-none hover:bg-[#c13ae8]`}
+      >
+        HOW WE HELP
+        <span className="ml-2 w-5 h-5 lg:w-7 lg:h-7 flex items-center justify-center border-2 border-white rounded-full font-light">
+          ➜
+        </span>
+      </button>
+    </Link>
+    <Link href="/ContactUs">
+      <button
+        className={`relative z-10 -ml-[15px] lg:ml-[-10px] px-3 py-2 lg:px-6 lg:py-3 rounded-full border border-white lg:border-purple-500 bg-white text-black text-[12px] lg:text-lg transition-all duration-300 cursor-pointer hover:bg-gray-100`}
+      >
+        Contact Us
+      </button>
+    </Link>
+  </motion.div>
+</div>
           </div>
           
 
         </div>
         {/* Image */}
-        <div className="w-full lg:w-1/2 mt-8 md:mt-5 relative">
-          <div className="absolute top-0 right-0  w-full h-[950px] lg:h-[680px] xl:h-185 bg-gradient-to-b from-[#e0e7fb] to-[#ffeef8] lg:bg-gradient-to-r from-[#A5C0EE] to-[#FBC5EC] rounded-lg z-0 -mt-20 lg:-mt-42">
+        <div className="w-full lg:w-1/2 mt-5 md:mt-5 relative">
+          <div className="absolute top-0 right-0 w-full h-[950px] lg:h-[680px] xl:h-185 bg-no-repeat bg-cover lg:bg-desktop-image lg:rounded-lg z-0 -mt-20 lg:-mt-42"
+  style={{ backgroundImage: "url('/Rectangle 41.png')" }}
+          >
               {" "}
             </div>
             <Image
@@ -102,31 +106,24 @@ export default function HeroSection() {
                 isVisible ? "translate-y-0" : "translate-y-60"
               } mt-40 lg:-mt-20`} 
             />
-         <div className="absolute bottom-0 lg:-bottom-44 rounded-lg lg:rounded-2xl left-2/9 lg:left-1/2 p-1 lg:p-3 transform lg:-translate-x-1/2 flex flex-col items-center justify-center bg-white/50  border border-[#BCB6B6] ">
+         <div className="absolute bottom-0 lg:-bottom-44 rounded-lg lg:rounded-2xl left-2/9 lg:left-1/2 p-1 lg:p-3 transform lg:-translate-x-1/2 flex flex-col items-center justify-center bg-white/50 lg:w-[600px]  border border-gray-300 ">
          <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          
-          
-          
+          transition={{ duration: 1, ease: "easeOut" }}  
         >
-          <div className="relative  rounded  lg:rounded-[24px] w-[280px] lg:w-[422px] xl:w-lg ">
-            <div className="flex lg:gap-2 items-center bg-white rounded-lg lg:rounded-2xl pl-2 lg:pl-4 py-1 lg:py-1 lg:scale-y-[-1]   relative overflow-hidden inverted-radius ">
-              
-              
-              <div className="w-[40px] h-[40px] lg:w-[120px] lg:scale-y-[-1]  lg:h-[80px] overflow-hidden rounded-lg lg:rounded-xl flex-shrink-0">
+          <div className="relative  rounded  lg:rounded-[24px] w-[280px] lg:w-[522px] xl:w-lg ">
+            <div className="flex lg:gap-2 items-center bg-white lg:w-[560px] lg:-ml-6 rounded-lg lg:rounded-2xl pl-2 lg:pl-4 py-1 lg:py-2 lg:scale-y-[-1]  relative overflow-hidden inverted-radius ">
+              <div className="w-[40px] h-[40px] lg:w-[160px] lg:scale-y-[-1]  lg:h-[80px] overflow-hidden rounded-lg lg:rounded-xl flex-shrink-0">
                 <Image
                   src="/assets/abstract.png"
                   alt="Abstract Design"
-                  width={120}
+                  width={160}
                   height={80}
                   className="object-cover w-full h-full"
                   draggable="false"
                 />
               </div>
-
-              
               <div className="flex-1 px-2 lg:px-0 lg:scale-y-[-1]">
                 <h2 className="font-semibold text-[10.86px] lg:text-lg">Uncover our identity</h2>
                 <p className="text-gray-600 text-[10px] lg:text-sm">
@@ -137,7 +134,7 @@ export default function HeroSection() {
               
             </div>
             <Link href="/WhoAreWe">
-                <div className="absolute -top-[2px] right-[10px] lg:right-[10px] lg:top-[56px] w-6 h-6 lg:w-9 lg:h-9 bg-white rounded-full shadow-md flex items-center justify-center z-50">
+                <div className="absolute -top-[2px] right-[10px] lg:-right-[15px] lg:top-[64px] w-6 h-6 lg:w-9 lg:h-9 bg-white rounded-full shadow-md flex items-center justify-center z-50">
                   <GoArrowRight className="text-[#6F1877] lg:text-[25px] text-[15px]" />
                 </div>
               </Link>
@@ -154,7 +151,6 @@ export default function HeroSection() {
       <div className=" items-center z-20 justify-center mt-12 flex flex-col md:flex-row mx-2 lg:mx-0 ">
         <div className="w-full  items-center ">
           <div className=" bg-transparent lg:bg-white  rounded-lg lg:rounded-3xl  gradient-border  py-1 lg:py-0  flex items-center justify-around "
-          
           >
             <div className="flex items-center text-center">
               <CountUp
