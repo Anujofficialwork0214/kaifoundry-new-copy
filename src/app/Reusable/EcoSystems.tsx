@@ -31,13 +31,13 @@ const EcoSystems: React.FC<EcosystemsProps> = ({
         <span className="text-[#BA24D5]">{highlight}</span>{" "}
         {title.replace(highlight, "").trim()}
       </h2>
-      <div className="grid grid-cols-2  lg:grid-cols-4 gap-8 mt-16 ">
+      <div className="grid grid-cols-2  lg:grid-cols-4 gap-8 lg:gap-[90px] mt-16 ">
         {items.map((eco, index) => (
           <div
             key={index}
             data-aos="fade-up"
-            className="border border-fuchsia-500 rounded-lg flex flex-col items-center justify-center transition 
-              w-full h-[150px] p-4"
+            className="border border-fuchsia-500 rounded-2xl md:rounded-4xl flex flex-col items-center justify-center transition 
+             w-[145px] h-[120px] md:w-[250px] md:h-[217px] p-4 "
           >
             <div className="flex items-center justify-center w-10 h-10 md:w-20 md:h-20 lg:w-20 lg:h-20">
               <Image
