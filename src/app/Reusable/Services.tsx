@@ -42,7 +42,7 @@ const Services: React.FC<ServicesProps> = ({
   }, []);
   return (
     <section
-      className="py-20 bg-white relative"
+      className="py-20 bg-white relative top-0"
       style={{
         backgroundImage: `url('/assets/background/bg2.gif')`,
         backgroundSize: "cover",
@@ -53,7 +53,7 @@ const Services: React.FC<ServicesProps> = ({
       <div className="mx-auto px-6 md:px-12 text-center">
         {/* Heading */}
         <motion.h2
-          className="text-2xl md:text-5xl text-[#333333] font-semibold font-roboto  mb-20 "
+          className="text-2xl md:text-6xl text-[#333333] font-semibold font-roboto  mb-20 "
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
@@ -65,7 +65,7 @@ const Services: React.FC<ServicesProps> = ({
         </motion.h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
           {services.map((service, index) => (
             <motion.div
             key={index}

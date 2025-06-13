@@ -83,14 +83,16 @@ const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
 
 const WhatWeProvide = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [screenWidth, setScreenWidth] = useState<number>(0)
+  const [screenWidth, setScreenWidth] = useState<number>(0);
   const controls = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: false });
 
   useEffect(() => {
-    const checkMobile = () => {setIsMobile(window.innerWidth < 768);
-      setScreenWidth(window.innerWidth);};
-    
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+      setScreenWidth(window.innerWidth);
+    };
+
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
@@ -124,14 +126,17 @@ const WhatWeProvide = () => {
   const displayServices = isMobile ? services : [...services, ...services];
 
   return (
-    <section ref={ref} className="py-0 md:py-30 lg:px-10 px-0 bg-gray-50 overflow-hidden  ">
+    <section
+      ref={ref}
+      className="py-0 md:py-30 lg:px-10 px-0 bg-gray-50 overflow-hidden  "
+    >
       <div className=" mx-auto flex flex-col md:flex-row px-4 md:px-0 items-center lg:items-start">
         <motion.div
           className="w-full mb-10 md:mb-0 md:pr-10 text-center md:text-left"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut"}}
+          transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <div className="mt-20">
             <h2 className=" text-[24px] lg:text-[62px] font-bold text-gray-900 leading-tight">
@@ -143,7 +148,7 @@ const WhatWeProvide = () => {
             </p>
           </div>
         </motion.div>
-        <div className="relative w-full lg:w-2/3  py-4 px-4 md:px-0 ">
+        <div className="relative w-full md:w-1/2 lg:w-2/3  py-4 px-4 md:px-0 ">
           {isMobile ? (
             <div className="flex flex-col gap-6">
               {services.map((service) => (
@@ -158,7 +163,7 @@ const WhatWeProvide = () => {
           ) : (
             <div className="slider-container w-7xl overflow-hidden  flex space-x-0.5   ">
               {/* <Image src="/svg/Line134.svg" alt="line" width={4} height={4} /> */}
-              <img src="/svg/Line134.svg" alt="line" className="w-10 h-118" />
+              <img src="/svg/Line134.svg" alt="line" className="w-10 h-160" />
               <motion.div
                 className="flex items-center "
                 animate={controls}
