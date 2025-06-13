@@ -69,7 +69,7 @@ const Services: React.FC<ServicesProps> = ({
           {services.map((service, index) => (
             <motion.div
             key={index}
-            className="relative pt-2 p-4 mb-6 max-w-100 mx-auto bg-transparent"
+            className="relative pt-2 pl-0  lg:p-4 lg:pl-0 mb-6 max-w-100 mx-auto bg-transparent"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, delay: index * 0.2 }}
