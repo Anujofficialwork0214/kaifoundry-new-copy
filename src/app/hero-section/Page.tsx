@@ -106,7 +106,7 @@ export default function HeroSection() {
                 isVisible ? "translate-y-0" : "translate-y-60"
               } mt-40 lg:-mt-20`} 
             />
-         <div className="absolute bottom-0 lg:-bottom-44 rounded-lg lg:rounded-2xl left-2/9 lg:left-1/2 p-1 lg:p-3 transform lg:-translate-x-1/2 flex flex-col items-center justify-center bg-white/50 lg:w-[600px]  border border-gray-300 ">
+         <div className="absolute bottom-0 lg:-bottom-44 rounded-lg lg:rounded-2xl left-2/9 lg:left-1/2 p-1 lg:p-3 transform lg:-translate-x-1/2 flex flex-col items-center justify-center bg-white/50 lg:w-[590px]  border border-gray-300 ">
          <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
