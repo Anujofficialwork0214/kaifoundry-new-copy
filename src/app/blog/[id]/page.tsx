@@ -74,7 +74,7 @@ export default function BlogPost() {
             />
 
             <div className="w-full md:max-w-[80%] lg:md:max-w-[80%] px-2 sm:px-2 " >
-                <h1 className="text-[18px] text-[#2D3748] md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold">{post.title}</h1>
+                <h1 className="text-[18px] text-[#2D3748] md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl font-bold">{post.title}</h1>
                 <p className="text-[14px] md:text-[27px] lg:text-[27px] text-[#2D3748] mt-2">
                     <strong>Written by {post.author}</strong> &nbsp; | &nbsp; {post.date}
                 </p>
