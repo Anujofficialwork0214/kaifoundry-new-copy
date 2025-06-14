@@ -165,10 +165,15 @@ body {
   }
 }
 
+.bg-desktop-image {
+  background-image: url('/Rectangle 41.png');
+}
+
 @media (min-width: 1024px) {
   .bg-desktop-image {
     background-image: url('/Rectangle 40.png');
   }
+  
   .bg-desktop-animation {
     transform: scale(10);
   }

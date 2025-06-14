@@ -87,14 +87,12 @@ const FileCoin = () => {
             draggable="false"// Increased size and reduced opacity
   /> */}
 </div>
-
-        {/* Phone Image */}
         <Image
-          src="/assets/HowWeHelp/phone2.png" // Replace with your actual image path
+          src="/assets/HowWeHelp/phone2.png" 
           alt="KaiOS Phone"
-          width={550} // Adjusted width for mobile
-          height={550} // Adjusted height for mobile
-          className="relative z-10 w-[450] h-[450] lg:w-[550] lg:h-[550]" // Ensure the phone image is above the GIF
+          width={550} 
+          height={550} 
+          className="relative z-10 w-[400] h-[400] lg:w-[550] lg:h-[550]" 
           draggable={false}
         />
       </motion.div>
