@@ -8,12 +8,7 @@ const ecosystemList = [
     { name: "ETHEREUM", icon: "/log2.svg" },
     { name: "FILECOIN", icon: "/log6.svg" },
     { name: "BITCOIN", icon: "/log5.svg" },
-  
- 
-  
-
-
-   { name: "SOLANA", icon: "/log3.svg" }
+  { name: "SOLANA", icon: "/log3.svg" }
 ];
 
 const EcosystemMobile = () => {

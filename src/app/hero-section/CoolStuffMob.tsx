@@ -18,7 +18,7 @@ const CoolStuff = () => {
             us. Join a team that values creativity, collaboration, and
             cutting-edge technology to drive meaningful change.
           </p>
-          <Link href="/ContactUs">
+          <Link href="/contact-us">
             {" "}
             {/* Wrap the Button with Link */}
             <Button
@@ -46,7 +46,7 @@ const CoolStuff = () => {
         </div>
       </div>
 
-      <Link href="/ContactUs">
+      <Link href="/contact-us">
         {" "}
         {/* Wrap the Button with Link for mobile view */}
         <Button

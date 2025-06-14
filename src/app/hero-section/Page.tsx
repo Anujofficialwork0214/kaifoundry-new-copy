@@ -66,7 +66,7 @@ export default function HeroSection() {
     animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
     transition={{ delay: 0.8, duration: 0.5 }} 
   >
-    <Link href="/HowWeHelpScreen" className="pr-3 lg:pr-0">
+    <Link href="/how-we-help-screen" className="pr-3 lg:pr-0">
       <button
         className={`relative z-10 flex items-center px-4 py-2 lg:px-8 lg:py-3  text-white text-[11px] lg:text-lg transition-all duration-300 bg-[#d444f1] `}
       >
@@ -76,7 +76,7 @@ export default function HeroSection() {
         </span>
       </button>
     </Link>
-    <Link href="/ContactUs">
+    <Link href="/contact-us">
       <button
         className={`relative z-10 -ml-[13px] lg:ml-[-18px] px-3 py-[7px] mt-[1.5px] lg:mt-0 lg:px-6 lg:py-3 rounded-full border border-white lg:border-[#d444f1] bg-white text-black text-[12px] lg:text-lg transition-all duration-300 cursor-pointer hover:bg-gray-100`}
       >
@@ -133,7 +133,7 @@ export default function HeroSection() {
               </div>
               
             </div>
-            <Link href="/WhoAreWe">
+            <Link href="/who-are-we">
                 <div className="absolute -top-[2px] right-[10px] lg:-right-[15px] lg:top-[64px] w-6 h-6 lg:w-9 lg:h-9 bg-white rounded-full shadow-md flex items-center justify-center z-50">
                   <GoArrowRight className="text-[#6F1877] lg:text-[25px] text-[15px]" />
                 </div>

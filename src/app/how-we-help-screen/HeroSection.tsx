@@ -65,7 +65,7 @@ const HowWeHelp = () => {
           business needs, empowering you to innovate, secure your operations,
           and scale your growth.
         </p>
-        <Link href="/ContactUs">
+        <Link href="/contact-us">
           <button
               className="bg-[#D444F1] mt-10 text-white hover:bg-[#B33BC1] cursor-pointer rounded-full w-34 py-3 px-2 lg:py-3 lg:px-3 lg:w-34 transition duration-300">
             Contact Us
