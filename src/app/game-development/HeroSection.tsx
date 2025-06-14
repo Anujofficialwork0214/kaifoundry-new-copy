@@ -32,9 +32,9 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-20 w-full md:w-2/3 lg:w-1/2 flex flex-col items-center text-center md:items-start md:text-left p-8 rounded-lg"
         >
-          <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-[#333333]">
+          <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-[#333333] md:leading-20 ">
             Game That Keep <br />
-            <span className="text-[#E95DFF]">Players</span> Hooked
+            <span className="text-[#BA24D5]">Players</span> Hooked
           </h2>
           {/* <p className="text-gray-600 text-base md:text-[20px] mt-4 ">
         We create engaging, high-performance games <br /> that players love — seamless, fun, and built for <br /> the future of gaming
@@ -42,14 +42,14 @@ const HeroSection = () => {
           {/* Mobile version — Single line */}
           <p className=" text-base text-[#333333]  mt-4 block md:hidden">
             We create engaging, high-performance games that players love —
-            seamless, fun, and built for the future of gaming
+            seamless, fun, and built for the future of gaming.
           </p>
 
           {/* Desktop version — With line breaks */}
           <p className="text-[#333333] text-sm lg:text-lg mt-4 hidden md:block">
             We create engaging, high-performance games <br />
             that players love — seamless, fun, and built for <br />
-            the future of gaming
+            the future of gaming.
           </p>
 
           <Link href="/ContactUs">

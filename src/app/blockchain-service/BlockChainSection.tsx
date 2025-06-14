@@ -68,7 +68,7 @@ export default function BlockchainSection() {
                 width={6}
                 height={6}
               />
-              <span className="text-sm lg:text-xl sm:text-xs font-medium text-gray-900 whitespace-nowrap">
+              <span className="text-sm lg:text-xl sm:text-xs font-medium text-[#000000] whitespace-nowrap">
                 {feature.name}
               </span>
             </motion.div>

@@ -13,19 +13,19 @@ const features = [
 export default function GameDevelopmentSection() {
   return (
     <section className="relative bg-gradient-to-b from-white to-[#FBE8FF] py-20 lg:py-28 px-8 md:px-16 lg:px-16 ">
-  <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
+      <div className="w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center md:text-left"
         >
-          <h2 className="text-xl md:text-[30px] lg:text-[44px] 2xl:text-[54px]  font-bold text-gray-800 leading-tight">
+          <h2 className="text-xl md:text-[30px] lg:text-[42px] 2xl:text-[54px]  font-bold text-[#333333] leading-tight">
             Turning <span className="text-[#BA24D5]">Ideas</span> into{" "}
             <span className="text-[#BA24D5]">Games</span>
             <br /> That <span className="text-[#BA24D5]">People</span> Love
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-gray-600">
+          <p className="mt-4 text-base md:text-lg text-[#333333] px-2">
             We create fun, immersive, and high-quality games that keep players
             coming back for more. We bring your vision to life!
           </p>
@@ -46,7 +46,7 @@ export default function GameDevelopmentSection() {
                 alt={feature.name}
                 className="w-6 h-6 md:w-8 ms:w-8 lg:w-8 lg-w-8 object-contain"
               />
-              <span className="text-sm lg:text-lg sm:text-xs font-medium text-gray-900 whitespace-nowrap">
+              <span className="text-sm lg:text-lg sm:text-xs font-medium text-[#000000] whitespace-nowrap">
                 {feature.name}
               </span>
             </motion.div>
