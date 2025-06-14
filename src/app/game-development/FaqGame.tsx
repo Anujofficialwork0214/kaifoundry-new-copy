@@ -27,13 +27,12 @@ const FaqGame = () => {
   ];
   return (
     <div className="max-w-3xl mx-auto px-6 flex-col py-16 lg:py-24">
-      <h2
-        className="text-xl md:text-4xl lg:text-4xl  font-bold text-center text-gray-900"
-        style={{
-          fontFamily: "Roboto, sans-serif",
-        }}
+     <h2 className="text-[24px] md:text-[50px] xl:text-[54px] pb-0 lg:pb-4  font-bold text-center text-gray-900"
+           style={{
+    fontFamily: 'Roboto, sans-serif',
+  }}
       >
-        <span className="text-[#BA24D5]">Frequently</span> Asked Questions
+        <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] ">Frequently</span> Asked Questions
       </h2>
       <div className="mt-6">
         {faqs.map((faq, index) => (
