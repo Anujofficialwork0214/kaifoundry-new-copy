@@ -389,12 +389,12 @@ export default function BlogCarousel() {
   };
 
   return (
-      <div className="relative max-w-full mx-auto py-32 px-6 container">
+      <div className="relative max-w-full mx-auto py-32 lg:px-10 px-6 container">
         <div className="text-[#414141] font-[500] mb-6">
           <div className="block lg:hidden text-[30px] text-left">
             Our Latest Blogs
           </div>
-          <div className="hidden lg:flex flex-col text-[50px] w-[300px] text-left">
+          <div className="hidden lg:flex flex-col text-[50px] w-[300px] text-left mt-4 mb-16">
             <div>Our Latest</div>
             <div className="-mt-4">Blogs</div>
           </div>
@@ -438,11 +438,11 @@ export default function BlogCarousel() {
             ) : (
                 <div
                     ref={carouselRef}
-                    className="flex flex-col md:flex-row gap-8 transition-transform duration-500 ease-in-out"
+                    className="flex flex-col md:flex-row gap-8 ml-0 lg:ml-24 transition-transform duration-500 ease-in-out"
                 >
                   {blogs.map((blog, index) => (
-                    <div key={blog.id} className="flex-shrink-0 w-full md:w-[426px]">
-                      <div className="bg-white shadow-md flex flex-col h-[470px] overflow-hidden transition-transform duration-300 hover:scale-105">
+                    <div key={blog.id} className="flex-shrink-0 w-full md:w-[400px] pb-4 lg:px-0 px-2">
+                      <div className="bg-white shadow-lg lg:shadow-md flex flex-col h-[470px]   overflow-hidden transition-transform duration-300 hover:scale-105">
                         <div className="relative w-full h-[246px] bg-gray-100">
                           {!loadedImages[blog.id] && (
                               <Skeleton className="absolute inset-0" />
@@ -459,14 +459,14 @@ export default function BlogCarousel() {
                               draggable={false}
                           />
                         </div>
-                        <div className="p-6 flex flex-col flex-grow">
-                          <p className="text-sm font-medium text-gray-600">
+                        <div className="p-6 flex flex-col gap-4 lg:gap-6">
+                          <p className="text-[12px] lg:text-[16px]  font-[600] text-[#333333]">
                             {blog.category}
                           </p>
-                          <h3 className="mt-2 text-xl font-bold text-gray-900 leading-tight">
+                          <h3 className="mt-2 text-[17px] font-[600] lg:text-[22px] text-[#333333] leading-tight">
                             {blog.title}
                           </h3>
-                          <Link href={`/blog/${blog.id}`} prefetch={true} className="mt-auto text-base font-medium text-gray-900 underline underline-offset-2 hover:text-purple-600">
+                          <Link href={`/blog/${blog.id}`} prefetch={true} className="mt-auto text-[14px] lg:text-[18px]  font-[500]font-medium text-gray-900 underline underline-offset-2 hover:text-purple-600">
                             Read Blog
                           </Link>
                         </div>
@@ -481,7 +481,7 @@ export default function BlogCarousel() {
             {blogs.length > visibleCards && [...Array(blogs.length - visibleCards + 1)].map((_, index) => (
                 <div
                     key={index}
-                    className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${index === currentIndex ? 'w-4 bg-[#BA24D5]' : 'bg-[#999999]'}`}
+                    className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${index === currentIndex ? 'w-4 h-4 bg-[#BA24D5]' : 'bg-[#999999]'}`}
                     onClick={() => goToSlide(index)}
                 ></div>
             ))}
