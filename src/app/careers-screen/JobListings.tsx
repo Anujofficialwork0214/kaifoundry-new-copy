@@ -46,9 +46,9 @@ const JobListings = () => {
 </p>
 
 
-            <Link href="CareersScreen/JobApplication" prefetch={true}>
+            <Link href="careers-screen/JobApplication" prefetch={true}>
               <button
-                className="mt-4 px-10 py-2 text-white cursor-pointer font-semibold rounded-full bg-[#D444F1] border-2  hover:bg-purple-700 hover:border-[#D444F1] transition duration-300"
+                className="mt-4 px-10 py-2 text-white cursor-pointer font-semibold rounded-full bg-[#D444F1] border-2  hover:hover:bg-[#821890] hover:border-[#D444F1] transition duration-300"
               >
                 Apply
               </button> 

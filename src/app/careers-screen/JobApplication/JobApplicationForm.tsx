@@ -45,6 +45,11 @@ const JobApplicationForm = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
+    if (!/^\d{10}$/.test(formData.phone)) {
+      toast.error('Phone number must be exactly 10 digits.');
+      return;
+    }
+
     toast.success('Form submitted successfully!');
     setFormData({
       name: '',
@@ -115,7 +120,13 @@ const JobApplicationForm = () => {
           </label>
           <input
             type="tel"
-              onKeyDown={preventSpace}
+            onKeyDown={(e) => {
+              preventSpace(e);
+              if (!/[\d]/.test(e.key) && e.key !== "Backspace" && e.key !== "Delete" && e.key !== "ArrowLeft" && e.key !== "ArrowRight") {
+                e.preventDefault();
+              }
+            }}
+            maxLength={10}
             name="phone"
             placeholder="Enter your Contact Number"
             className="w-full p-3 border border-[#999999] rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-[#D444F1] placeholder:text-[#697586] placeholder:text-[14px] lg:placeholder:text-[18px] text-[14px] lg:text-[18px] placeholder:font-[400] font-[400]"
@@ -186,7 +197,7 @@ const JobApplicationForm = () => {
         <div className="flex justify-center">
           <button
             type="submit"
-            className=" bg-[#D444F1] text-white py-2 cursor-pointer px-6 text-[16px] rounded-full font-semibold hover:bg-[#821890] transition"
+            className=" bg-[#D444F1] text-white py-2 cursor-pointer px-6 lg:px-10 text-[16px] rounded-full font-semibold hover:bg-[#821890] transition"
           >
             Submit
           </button>
