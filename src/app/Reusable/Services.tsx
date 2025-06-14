@@ -58,7 +58,7 @@ const Services: React.FC<ServicesProps> = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
-          {suffixText} <span className="text-[#BA24D5]">{heading} </span>
+          {suffixText} <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text lg:text-transparent text-[#BA24D5]">{heading} </span>
           {subheading}
           <br />
           {breakHeading}
@@ -75,7 +75,7 @@ const Services: React.FC<ServicesProps> = ({
             transition={{ duration: 0.2, delay: index * 0.2 }}
             viewport={{ once: true }}
           >
-            {/* Animated top line */}
+            
             <motion.div
               className="absolute top-0 left-0 h-[2px] bg-[#D444F1]"
               initial={{ width: 0 }}

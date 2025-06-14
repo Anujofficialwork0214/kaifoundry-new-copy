@@ -30,7 +30,7 @@ const WhyChooseBlock = () => {
       heading="Why"
           highlightText="Choose "
            
-  suffixText="Service Ai?"
+  suffixText="This Service?"
     //   backgroundColor="bg-blue-100"
     />
   );

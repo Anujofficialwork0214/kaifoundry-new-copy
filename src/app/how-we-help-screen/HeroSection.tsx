@@ -13,7 +13,7 @@ const HowWeHelp = () => {
   alt="Background GIF"
   fill
   style={{ objectFit: "cover" }}
-  className="opacity-20"
+  className="opacity-20 "
   draggable={false}
 />
 
@@ -24,8 +24,8 @@ const HowWeHelp = () => {
         <Image
           src="/assets/HowWeHelp/blockchain.png"
           alt="Blockchain"
-          width={480}  
-          height={480} 
+          width={580}  
+          height={580} 
           loading="lazy"
           className="drop-shadow-lg"
           draggable={false} 
@@ -42,10 +42,10 @@ const HowWeHelp = () => {
   <span className="text-black opacity-70">w We Help <br /></span>
 
 
-          <span className="bg-clip-text text-transparent bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF]">Businesses Grow</span> <br />
+          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">BUSIESSES GROW</span> <br />
           <span className="text-black">Wi</span>
   <span className="text-black opacity-70">th</span>
-          <span className="bg-clip-text text-transparent bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF] italic">Blockchain</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] italic lg:not-italic">{" "}Blockchain</span>
         </h2>
         <h2 className="text-[24px]  font-bold block lg:hidden ">
           {/* How We Help <br /> */}
@@ -54,20 +54,20 @@ const HowWeHelp = () => {
   <span className="text-black opacity-70">w We Help </span>
 
 
-          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#E95DFF]">Businesses</span><br />
-          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#E95DFF]">Grow {" "}</span> 
+          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">Businesses</span><br />
+          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">Grow {" "}</span> 
           <span className="text-black">Wi</span>
   <span className="text-black opacity-70">th</span>
-          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#E95DFF] italic">Blockchain</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] italic">{" "}Blockchain</span>
         </h2>
-        <p className="text-gray-600 text-[14px] md:text-[22px] mt-4">
+        <p className="text-gray-800 text-[14px] md:text-[22px] mt-4">
           At Kai Foundry, we craft blockchain solutions tailored to your
           business needs, empowering you to innovate, secure your operations,
           and scale your growth.
         </p>
         <Link href="/ContactUs">
           <button
-                          className="bg-[#D444F1] mt-12 text-white hover:bg-[#B33BC1] cursor-pointer rounded-full w-26 py-2 px-2 lg:py-3 lg:px-3 lg:w-34 transition duration-300">
+              className="bg-[#D444F1] mt-12 text-white hover:bg-[#B33BC1] cursor-pointer rounded-full w-26 py-2 px-2 lg:py-3 lg:px-3 lg:w-34 transition duration-300">
             Contact Us
           </button>
         </Link>

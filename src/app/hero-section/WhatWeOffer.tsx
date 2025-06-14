@@ -14,12 +14,12 @@ const customServices = [
   {
     title: "Security Token Offering",
     description:
-      "Security Token Offering (STO) service helps businesses streamline asset digitization, ensuring compliance with financial regulations.",
+      "Security Token Offering (STO) service helps businesses tokenize real-world assets while ensuring compliance with regulatory standards. We design and develop secure, transparent, and legally tokenized securities.",
   },
   {
     title: "Smart Contract Development",
     description:
-      "Kai Foundry specializes in Smart Contract Development, creating secure and efficient blockchain solutions tailored to your needs.",
+      "Kai Foundry specializes in Smart Contract Development, creating secure, automated, and self-executing agreements on the blockchain. Our smart contracts eliminate the need for intermediaries, ensuring trust, transparency, and efficiency in transactions.",
   },
   {
     title: "White Label Exchange Platform",
@@ -34,7 +34,7 @@ const customServices = [
   {
     title: "Coin Development",
     description:
-      "Kai Foundry empowers businesses to create their own digital currency with a secure, scalable, and customized approach. From conceptualization to deployment, we handle everything-tokenomics design, blockchain integration, and security enhancements.",
+      "Kai Foundry empowers businesses to create their own digital currency with a secure, scalable, and customized approach. From conceptualization to deployment, we handle everything—tokenomics design, blockchain integration, and security enhancements.",
   },
   {
     title: "Blockchain Consultation",

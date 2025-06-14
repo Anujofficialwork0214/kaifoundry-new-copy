@@ -11,16 +11,16 @@ const CoolStuff = () => {
         <section className='bg-gradient-to-b from-white sm:via-0% via-50% via-[#FBE8FF] to-[#FBE8FF] sm:p-20 px-5'>
             <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10'>
                 <div className='text-center md:text-left'>
-                    <h2 className='text-6xl font-bold mb-4'> {/* Increased font size */}
-                        Wanna Build <span className='text-fuchsia-800'>Cool Stuff</span> With Us?
+                    <h2 className='text-6xl font-bold mb-8'> {/* Increased font size */}
+                        Wanna Build <span className='bg-clip-text text-transparent bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF]'>Cool Stuff</span> With Us?
                     </h2>
-                    <p className='text-[14px] font-400 text-[#666666] max-w-md'> {/* Changed to text-xl for larger font size */}
+                    <p className='text-[14px] font-400 text-[#666666] max-w-md '> {/* Changed to text-xl for larger font size */}
                         Be part of something big—innovate, grow, and shape the future with us. Join a team that values creativity, collaboration, and cutting-edge technology to drive meaningful change.
                     </p>
                     <Link href="/ContactUs">{/* Wrap the Button with Link */}
                         <Button
                             text="Join Us"
-                            className="hidden sm:inline-block mt-4 px-6 py-2 border border-[#6F1877] text-[#6F1877] rounded-full hover:bg-[#6F1877] hover:text-white transition cursor-pointer"
+                            className="hidden sm:inline-block mt-4 px-10 py-2 border border-[#6F1877] font-[500] text-[#6F1877] rounded-full hover:shadow-md  transition cursor-pointer"
                         />
                     </Link>
                 </div>
@@ -42,14 +42,14 @@ const CoolStuff = () => {
                     </motion.div>
 
                     {/* Badges without animation */}
-                    <Badge text="100+" subText={`Projects\nDelivered`} position="top-[5%] right-[5%]" width='w-[150]' />
-                    <Badge text="" subText="24/7 Learning" position="left-[6%] bottom-[30%]" bgColor="bg-[#D444F1]" textColor="text-white" width="w-24" />
+                    <Badge text="100+" subText={`Projects\nDelivered`} position="top-[-10%] right-[15%]" width='w-[170] py-2 p-2' textSize="font-[500]" />
+                    <Badge text="" subText="24/7 Learning" position="left-[6%] bottom-[30%] p-2" bgColor="bg-[#D444F1]" textColor="text-white"  width="w-24" />
                     
                     {/* Positioning "Shape Your Tomorrow" badge between the other two */}
-                    <Badge text="" subText="Shape Your Tomorrow" position="left-[15%] bottom-[50%]" width="w-28" />
+                    <Badge text="" subText="Shape Your Tomorrow" position="left-[15%] bottom-[50%] p-2" width="w-28" textSize="text-[13px] font-[500]" />
                     
-                    <Badge text="" subText="Break Boundaries" position="left-[20%] bottom-[15%]" width="w-24" />
-                    <Badge text="50+" subText={`Experts\nDriving Change`} position="bottom-[5%] right-[0%]" bgColor="bg-[#D444F1]" textColor="text-white" width="w-40 p-4" />
+                    <Badge text="" subText="Break Boundaries" position="left-[20%] bottom-[25%]" textSize="text-[13px] font-[500] py-1 px-2" width="w-30" />
+                    <Badge text="50+" subText={`Experts\nDriving Change`} position="bottom-[-17%] right-[20%]" bgColor="bg-[#D444F1] p-2"  textColor="text-white" width="w-44 px-4 py-5" />
                 </div>
             </div>
 

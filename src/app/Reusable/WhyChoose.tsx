@@ -39,12 +39,12 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
       <div className="container mx-auto px-6 md:px-12 text-center">
         {/* Heading */}
         <motion.h2
-          className="text-[24px] md:text-4xl xl:text-5xl font-roboto font-bold text-[#000000]"
+          className="text-[24px] md:text-[58px] xl:text-[62px] font-roboto font-bold text-[#000000]"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {heading} <span className="text-[#BA24D5]">{highlightText}</span>{" "}
+          {heading} <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text lg:text-transparent text-[#BA24D5]">{highlightText}</span>{" "}
           {suffixText}
         </motion.h2>
 
@@ -60,18 +60,18 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="flex items-center justify-center w-24 h-24 mx-auto mb-6 bg-[#BA24D5] rounded-full">
+              <div className="flex items-center justify-center w-28 h-28 mx-auto mb-6 bg-[#BA24D5] rounded-full">
                 <img
                   src={feature.icon}
                   alt={feature.title}
-                  className="w-8 h-8 md:w-10 md:h-10 object-contain"
+                  className="w-8 h-8 md:w-14 md:h-14 object-contain"
                   draggable="false"
                 />
               </div>
-              <h3 className="text-xl font-semibold lg:font-bold lg:text-2xl text-center text-gray-900">
+              <h3 className="text-xl font-semibold lg:font-bold lg:text-[21px] text-center text-gray-900">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 mt-4 text-[14px]">
+              <p className="text-black mt-10 text-[14px] lg:text-[14.6px]">
                 {feature.description}
               </p>
             </motion.div>

@@ -27,8 +27,8 @@ const EcoSystems: React.FC<EcosystemsProps> = ({
 
   return (
     <div className="text-center  md:p-6">
-      <h2 className="text-xl  md:text-5xl font-bold text-[#414141] my-20 ">
-        <span className="text-[#BA24D5]">{highlight}</span>{" "}
+      <h2 className="text-xl  md:text-[58px] xl:text-[62px] font-bold text-[#414141] mt-20 mb-14 lg:my-32 ">
+        <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text lg:text-transparent text-[#BA24D5]">{highlight}</span>{" "}
         {title.replace(highlight, "").trim()}
       </h2>
       {/* <div className="grid grid-cols-2  lg:grid-cols-4 gap-8 md:gap-[10px]  justify-center items-center lg:gap-[90px] mt-16 ">
@@ -55,7 +55,7 @@ const EcoSystems: React.FC<EcosystemsProps> = ({
         ))}
       </div> */}
       <div className="flex justify-center items-center mt-16">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-[40px] justify-center items-center lg:gap-[90px] ">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-[40px] justify-center items-center lg:gap-[50px] ">
           {items.map((eco, index) => (
             <div
               key={index}
@@ -67,8 +67,8 @@ const EcoSystems: React.FC<EcosystemsProps> = ({
                 <Image
                   src={eco.icon}
                   alt={eco.name}
-                  width={50}
-                  height={50}
+                  width={60}
+                  height={60}
                   draggable="false"
                 />
               </div>

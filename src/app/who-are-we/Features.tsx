@@ -7,6 +7,7 @@ import img2 from "./../../../public/assets/WhoAreWe/FeaturesImg2.svg";
 import img3 from "./../../../public/assets/WhoAreWe/FeaturesImg3.svg";
 import { roboto } from "../Fonts/fonts";
 
+
 const features = [
   {
     img: img1,
@@ -47,10 +48,10 @@ const FeaturesSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className={`text-[24px] lg:text-[62px] font-[700] lg:text-[600] text-center lg:text-left lg:w-1/2 ${roboto.className}`}
+          className={`text-[24px] lg:text-[62px] font-[700] lg:text-[600] text-center lg:text-left lg:w-1/2 `}
         >
           What
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BA24D5] to-[#EA83FF]">
+          <span className="text-transparent bg-clip-text bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">
             {" "}
             Drives
           </span>{" "}

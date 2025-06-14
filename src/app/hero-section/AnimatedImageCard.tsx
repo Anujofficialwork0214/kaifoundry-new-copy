@@ -33,7 +33,7 @@ export default function AnimatedSection() {
       if (inView && index < content.length - 1) {
         setIndex((prev) => prev + 1);
       }
-    }, 4000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [index, inView]);

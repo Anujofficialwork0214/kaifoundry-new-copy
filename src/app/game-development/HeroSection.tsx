@@ -22,7 +22,7 @@ const HeroSection = () => {
         initial={{ x: "-100%" }}
         animate={{ x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="absolute inset-y-0 left-0 w-full md:w-1/2 bg-transparent md:bg-white/50 backdrop-blur-sm md:backdrop-blur-md  z-10"
+        className="absolute inset-y-0 left-0 w-full md:w-[52.8%] bg-transparent md:bg-white/50 backdrop-blur-sm md:backdrop-blur-md  z-10"
       ></motion.div>
 
       <div className="w-full flex justify-center md:justify-start">
@@ -32,7 +32,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-20 w-full md:w-2/3 lg:w-1/2 flex flex-col items-center text-center md:items-start md:text-left p-8 rounded-lg"
         >
-          <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-gray-900">
+          <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-[#333333]">
             Game That Keep <br />
             <span className="text-[#E95DFF]">Players</span> Hooked
           </h2>
@@ -40,13 +40,13 @@ const HeroSection = () => {
         We create engaging, high-performance games <br /> that players love — seamless, fun, and built for <br /> the future of gaming
       </p> */}
           {/* Mobile version — Single line */}
-          <p className="text-gray-600 text-base  mt-4 block md:hidden">
+          <p className=" text-base text-[#333333]  mt-4 block md:hidden">
             We create engaging, high-performance games that players love —
             seamless, fun, and built for the future of gaming
           </p>
 
           {/* Desktop version — With line breaks */}
-          <p className="text-gray-600 text-sm lg:text-[20px] mt-4 hidden md:block">
+          <p className="text-[#333333] text-sm lg:text-lg mt-4 hidden md:block">
             We create engaging, high-performance games <br />
             that players love — seamless, fun, and built for <br />
             the future of gaming
