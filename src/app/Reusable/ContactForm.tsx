@@ -262,8 +262,7 @@ const ContactForm = () => {
     let processedValue = rawValue;
 
     if (name === "email") {
-      // Remove all whitespace and convert to lowercase
-      processedValue = rawValue.replace(/\s/g, "").toLowerCase();
+      processedValue = rawValue.replace(/\s/g, "");
     } else if (name === "phone") {
       // Allow only digits for phone number
       processedValue = rawValue.replace(/[^0-9]/g, "").slice(0, 10);
@@ -287,19 +286,31 @@ const ContactForm = () => {
     setError(null);
   };
 
-  const preventSpace = (
-    e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    if (e.key === " ") {
-      e.preventDefault();
-    }
-  };
+  // const preventSpace = (
+  //   e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //   if (e.key === " ") {
+  //     e.preventDefault();
+  //   }
+  // };
   const preventPasteSpaces = (
     e: React.ClipboardEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const paste = e.clipboardData.getData("text");
-    if (paste.includes(" ")) {
+    const sanitized = paste.replace(/\s+/g, "").toLowerCase();
+
+    if (e.currentTarget.name === "email") {
       e.preventDefault();
+      const input = e.currentTarget;
+      const start = input.selectionStart || 0;
+      const end = input.selectionEnd || 0;
+
+      const updatedValue =
+        input.value.substring(0, start) +
+        sanitized +
+        input.value.substring(end);
+
+      setFormData((prev) => ({ ...prev, email: updatedValue }));
     }
   };
 
@@ -396,14 +407,14 @@ const ContactForm = () => {
             Email<span className="text-[#155EEF]">*</span>
           </>
         }
-        type="email"
+        type="text"
         name="email"
         value={formData.email}
         minLength={5}
         maxLength={200}
+        pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
         required
         onChange={handleChange}
-        onKeyDown={preventSpace}
         onPaste={preventPasteSpaces}
         placeholder="Enter your Email"
         className="font-[500]"
