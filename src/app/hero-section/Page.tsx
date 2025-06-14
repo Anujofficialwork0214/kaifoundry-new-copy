@@ -91,8 +91,8 @@ export default function HeroSection() {
         </div>
         {/* Image */}
         <div className="w-full lg:w-1/2 mt-5 md:mt-5 relative">
-          <div className="absolute top-0 right-0 w-full h-[950px] lg:h-[680px] xl:h-185 bg-no-repeat bg-cover lg:bg-desktop-image lg:rounded-lg z-0 -mt-20 lg:-mt-42"
-  style={{ backgroundImage: "url('/Rectangle 41.png')" }}
+          <div className="absolute top-0 right-0 w-full h-[950px] lg:h-[680px] xl:h-185 bg-no-repeat bg-cover bg-desktop-image lg:rounded-lg z-0 -mt-20 lg:-mt-42"
+  
           >
               {" "}
             </div>

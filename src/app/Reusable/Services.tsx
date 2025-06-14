@@ -80,8 +80,13 @@ const Services: React.FC<ServicesProps> = ({
               className="absolute top-0 left-0 h-[2px] bg-[#D444F1]"
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{
+                duration: 0.3, 
+                ease: [0.25, 0.1, 0.25, 1], 
+                delay: index * 0.1, 
+              }}
             />
+
           
             <h3
               className={`text-[18px] md:text-2xl font-semibold text-left text-[#0E0E0E] ${manrope.className}`}
