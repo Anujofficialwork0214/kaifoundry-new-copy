@@ -44,7 +44,7 @@ const CoreValuesSection = () => {
           className="text-[28px] lg:text-[62px] font-[600] text-center mb-12"
         >
           Our{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">
+          <span className="bg-clip-text lg:text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-[#BA24D5]">
             Core
           </span>{" "}
           Values
@@ -73,7 +73,7 @@ const CoreValuesSection = () => {
                 className="mb-6 w-[150px] h-[150px] lg:w-[250px] lg:h-[250px] object-cover"
               />
               <div className="flex flex-col">
-              <h3 className={`text-[14px] lg:text-[26.09px] text-[#333333] lg:text-2xl font-[800] mb-2 lg:mb-8 text-left lg:text-center ${manrope.className}`}>{value.title}</h3>
+              <h3 className={`text-[14px] lg:text-[26.09px] text-[#333333] lg:text-2xl font-[900] mb-2 lg:mb-8 text-left lg:text-center ${manrope.className}`}>{value.title}</h3>
               <p className={`text-[#333333] text-[12px] lg:text-[16.73px] ${manrope.className} text-left lg:text-center`}>{value.description}</p>
               </div>
               

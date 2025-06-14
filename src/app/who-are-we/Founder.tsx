@@ -21,14 +21,14 @@ const FounderSection = () => {
           className="text-[24px] lg:text-[62px] font-[600] text-center leading-tight sm:leading-[72px] mb-6"
         >
           Meet{" "}
-          <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-transparent bg-clip-text">Our Founder</span>
+          <span className="bg-clip-text lg:text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-[#BA24D5]">Our Founder</span>
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className=" text-[#808080] lg:text-[#5A5C62] text-[14px] lg:text-[22px] font-[400] text-center mb-12 text-base sm:text-lg leading-relaxed max-w-2xl"
+          className=" text-[#808080] lg:text-[#5A5C62] text-[14px] lg:text-[22px] font-[400] text-center mb-24 text-base sm:text-lg leading-relaxed max-w-4xl"
         >
           We Focus on the details of everything we do. All to help businesses around the world.
         </motion.p>

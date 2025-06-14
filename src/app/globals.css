@@ -169,6 +169,9 @@ body {
   .bg-desktop-image {
     background-image: url('/Rectangle 40.png');
   }
+  .bg-desktop-animation {
+    transform: scale(10);
+  }
 }
 
 

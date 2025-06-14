@@ -51,7 +51,7 @@ const FeaturesSection = () => {
           className={`text-[24px] lg:text-[62px] font-[700] lg:text-[600] text-center lg:text-left lg:w-1/2 `}
         >
           What
-          <span className="text-transparent bg-clip-text bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">
+          <span className="bg-clip-text lg:text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-[#BA24D5]">
             {" "}
             Drives
           </span>{" "}
@@ -68,7 +68,7 @@ const FeaturesSection = () => {
                 duration: 0.4,
                 delay: inView ? 0.4 + 0.2 * index : 0,
               }}
-              className="flex flex-col items-center lg:items-start text-center lg:text-left gap-4"
+              className="flex flex-col items-center lg:items-start text-center lg:text-left gap-2 lg:gap-4"
             >
               <div className="w-20 h-20 flex-shrink-0 mx-auto lg:mx-0">
                 <Image
@@ -77,12 +77,13 @@ const FeaturesSection = () => {
                   width={80}
                   height={80}
                   draggable="false"
+                  className="w-16 h-16 lg:w-full lg:h-full"
                 />
               </div>
 
               <h3 className="text-[16px] lg:text-[24px] font-[600] text-[#333333] mt-3">{feature.title}</h3>
 
-              <p className="text-[12px] lg:text-[20px] font-[400] text-[#333333] mt-2">{feature.description}</p>
+              <p className="text-[12px] lg:text-[20px] font-[400] text-[#333333] mt-0 lg:mt-2">{feature.description}</p>
             </motion.div>
           ))}
         </div>

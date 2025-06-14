@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const FileCoin = () => {
   return (
-    <section className="font-inter lg:pt-20 pt-0 relative flex flex-col-reverse lg:flex-row items-center justify-between lg:px-20 py-0 lg:py-16 bg-[#FFFFFF]"> 
+    <section className="font-inter lg:pt-20 pt-0 relative flex flex-col-reverse lg:flex-row gap-2 lg:gap-0 items-center justify-between lg:px-20 py-0 lg:py-16 bg-[#FFFFFF]"> 
       {/* Left Content */}
       <div className="text-center md:text-left max-w-3xl">
         <motion.h1
@@ -13,7 +13,7 @@ const FileCoin = () => {
           transition={{ duration: 0.6 }}
           className="text-[24px] lg:text-[62px] font-bold text-gray-900 leading-tight" 
         >
-          Kai Foundry’s <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#EA83FF] to-[#EA83FF]">Filecoin </span><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#BA24D5] to-[#BA24D5]">Wallet </span>   for <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#EA83FF] to-[#BA24D5]">KaiOS</span> device
+          Kai Foundry’s <span className="text-transparent bg-clip-text bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] ">Filecoin </span><span className="text-transparent bg-clip-text bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">Wallet </span>   for <span className="text-transparent bg-clip-text bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">KaiOS</span> device
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -70,15 +70,22 @@ const FileCoin = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-[#414141] to-[#414141] opacity-20 blur-3xl w-full h-full rounded-full"></div>
 
         {/* GIF Background */}
-        <div className="absolute inset-0 w-full h-full rounded-full overflow-hidden">
-  <Image
+        <div className="absolute inset-0 w-full h-full lg:bg-desktop-animation scale-[1.5] lg:scale-[2.2] overflow-hidden" style={
+          {
+            backgroundImage:'url(/assets/HowWeHelp/bg.gif)',
+            backgroundAttachment:"cover",
+            backgroundPosition:"center",
+            opacity:'20%'
+          }
+        }>
+  {/* <Image
     src="/assets/HowWeHelp/bg.gif" 
     alt="Background GIF"
     layout="fill"
     objectFit="cover"
-            className="opacity-20  inset-0 transform scale-200 "
+            className="opacity-20  inset-0 transform scale-400 "
             draggable="false"// Increased size and reduced opacity
-  />
+  /> */}
 </div>
 
         {/* Phone Image */}

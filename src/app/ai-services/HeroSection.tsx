@@ -68,7 +68,7 @@ const HeroSection = () => {
         initial={{ x: "-100%" }}
         animate={{ x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className=" absolute inset-y-0 left-0 w-full md:w-[53.8%] bg-white/50 backdrop-blur-sm md:backdrop-blur-md z-10"
+        className=" absolute inset-y-0 left-0 w-full md:w-[52.8%] bg-white/50 backdrop-blur-sm md:backdrop-blur-md z-10"
       ></motion.div>
 
       <div className="w-full flex justify-center md:justify-start">
@@ -86,18 +86,18 @@ const HeroSection = () => {
           <h2 className="text-[#333333] font-bold">
             {/* Small screens: single-line version */}
             <span className="block md:hidden text-xl sm:text-3xl">
-              <span className="text-[#9F1AB1] font-bold">AI Solutions</span>{" "}
+              <span className="text-[#BA24D5] font-bold">AI Solutions</span>{" "}
               That Think, Learn & Evolve
             </span>
 
             {/* Medium and large screens: multi-line version */}
-            <span className="hidden md:block text-4xl md:text-5xl lg:text-6xl">
-              <span className="text-[#9F1AB1] font-bold">AI Solutions </span>
+            <span className="hidden md:block text-4xl md:text-5xl ">
+              <span className="text-[#BA24D5] font-bold">AI Solutions </span>
               That Think, Learn & Evolve
             </span>
           </h2>
 
-          <p className="text-[#333333] text-sm md:text-lg mt-6">
+          <p className="text-[#333333] text-sm md:text-lg mt-6 ">
             Unlock the power of Artificial Intelligence to automated tasks,
             drive insights and create smater solutions for your business
           </p>
