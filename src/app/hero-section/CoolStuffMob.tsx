@@ -6,7 +6,7 @@ import Link from "next/link"; // Import Link from next/link
 
 const CoolStuff = () => {
   return (
-    <section className="bg-gradient-to-b from-white sm:via-0% via-50% via-[#FBE8FF] to-[#FBE8FF] pb-10 lg:pb-0 sm:p-20 mt-16 px-5">
+    <section className="bg-gradient-to-b from-white sm:via-0% via-50% via-[#FBE8FF] to-[#FBE8FF] pb-10 lg:pb-0 sm:p-20 px-5">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-10">
         <div className="text-center md:text-left">
           <h2 className="text-[20px] lg:text-4xl font-bold mb-8">
