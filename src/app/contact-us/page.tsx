@@ -10,7 +10,7 @@ const ContactUs = () => {
     };
 
     return (
-        <section className="sm:p-20 p-4 mt-14  ">
+        <section className="lg:p-20 p-4 mt-0  ">
             {/* Back Button */}
             <button 
                 onClick={handleBackClick} 
@@ -20,7 +20,7 @@ const ContactUs = () => {
                 Back
             </button>
 
-            <h2 className="mt-6 sm:mt-14 text-[28px] sm:text-[14px] md:text-[48px] lg:text-[62px] font-bold text-[#333333] text-center mb-2">
+            <h2 className="mt-6 sm:mt-14 text-[28px] sm:text-[14px] md:text-[48px] lg:text-[62px] font-[600] text-[#333333] text-center mb-2">
   Let&apos;s Get In Touch
 </h2>
 
@@ -30,10 +30,10 @@ const ContactUs = () => {
             </p>
 
          
-                    <section className="flex justify-center ">
+                    <section className="flex justify-center w-full  ">
         
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-20 p-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-20 p-4 w-full lg:px-10">
              
                 <div className="md:row-span-1 flex-col">
                     <h3 className="text-xl md:text-3xl lg:text-3xl font-semibold mb-6 sm:mb-10 text-[#333333]">Where To Find Us</h3>
