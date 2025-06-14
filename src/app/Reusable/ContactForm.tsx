@@ -234,6 +234,27 @@ const ContactForm = () => {
   //   setError(null); // Your existing error handling
   // };
 
+  // const handleChange = (
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //   const { name, value: rawValue } = e.target;
+  //   let processedValue = rawValue;
+
+  //   if (name === "email") {
+  //     processedValue = rawValue.replace(/\s/g, ""); // Remove spaces from email
+  //   } else if (name === "message") {
+  //     processedValue = rawValue.replace(/ {2,}/g, " "); // Remove multiple spaces in the message
+  //     if (formData.message === "" && processedValue === " ") {
+  //       processedValue = ""; // Prevent starting message with a space
+  //     }
+  //   } else if (name === "phone") {
+  //     processedValue = rawValue.replace(/[^0-9]/g, ""); // Allow only digits for phone number
+  //   }
+
+  //   setFormData((prev) => ({ ...prev, [name]: processedValue }));
+  //   setError(null);
+  // };
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -241,26 +262,38 @@ const ContactForm = () => {
     let processedValue = rawValue;
 
     if (name === "email") {
-      processedValue = rawValue.replace(/\s/g, ""); // Remove spaces from email
-    } else if (name === "message") {
-      processedValue = rawValue.replace(/ {2,}/g, " "); // Remove multiple spaces in the message
-      if (formData.message === "" && processedValue === " ") {
-        processedValue = ""; // Prevent starting message with a space
-      }
+      // Remove all spaces from email
+      processedValue = rawValue.replace(/\s/g, "");
     } else if (name === "phone") {
-      processedValue = rawValue.replace(/[^0-9]/g, ""); // Allow only digits for phone number
+      // Allow only digits for phone number
+      processedValue = rawValue.replace(/[^0-9]/g, "").slice(0, 10);
+    } else if (name === "message") {
+      // Collapse multiple spaces and prevent leading space
+      processedValue = rawValue.replace(/ {2,}/g, " ");
+      if (formData.message === "" && processedValue === " ") {
+        processedValue = "";
+      }
+    } else if (name === "name") {
+      // Allow letters and single spaces only
+      processedValue = rawValue.replace(/[^a-zA-Z\s]/g, ""); // Allow only letters and spaces
+      processedValue = processedValue.replace(/\s+/g, " "); // Collapse multiple spaces
+      processedValue = processedValue.trim(); // Trim leading/trailing spaces
+    } else if (name === "lastName") {
+      // Disallow all spaces in last name
+      processedValue = rawValue.replace(/\s/g, "");
     }
 
     setFormData((prev) => ({ ...prev, [name]: processedValue }));
     setError(null);
   };
-  const preventSpace = (
-    e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    if (e.key === " ") {
-      e.preventDefault();
-    }
-  };
+
+  // const preventSpace = (
+  //   e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //   if (e.key === " ") {
+  //     e.preventDefault();
+  //   }
+  // };
   const preventPasteSpaces = (
     e: React.ClipboardEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -319,6 +352,8 @@ const ContactForm = () => {
       </div>
     );
 
+  console.log(formData);
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6 w-full ">
       {error && <p className="text-red-600 bg-red-100 p-2 rounded">{error}</p>}
@@ -341,7 +376,6 @@ const ContactForm = () => {
           value={formData.name}
           required
           onChange={handleChange}
-          onKeyDown={preventSpace}
           className="font-[500]"
         />
 
@@ -353,7 +387,6 @@ const ContactForm = () => {
           placeholder="Enter your Last Name"
           value={formData.lastName}
           onChange={handleChange}
-          onKeyDown={preventSpace}
           className="font-[500]"
         />
       </div>
@@ -370,7 +403,6 @@ const ContactForm = () => {
         maxLength={200}
         required
         onChange={handleChange}
-        onKeyDown={preventSpace}
         onPaste={preventPasteSpaces}
         placeholder="Enter your Email"
         className="font-[500]"
@@ -389,7 +421,6 @@ const ContactForm = () => {
         value={formData.phone}
         onChange={handleChange}
         className="font-[500]"
-        onKeyDown={preventSpace}
         required
       />
       <Input
@@ -407,7 +438,6 @@ const ContactForm = () => {
         className="font-[500]"
         onChange={handleChange}
         required
-        //  onKeyDown={preventSpace}
         textarea
       />
 
@@ -433,3 +463,5 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
+// onKeyDown={preventSpace}
