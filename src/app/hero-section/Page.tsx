@@ -24,20 +24,20 @@ export default function HeroSection() {
       <div className={`flex flex-col-reverse lg:flex-row w-full  items-center  transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
         {/* Text */}
         <div className="w-full lg:w-1/2 text-center md:text-left mt-20 z-10  flex flex-col justify-center  lg:justify-start">
-          <h1 className={` lg:text-[62px] text-[24px] text-center lg:text-left font-bold transition-transform duration-1000 py-0 lg:py-10 leading-[1.3]`}>
+          <h1 className={` lg:text-[62px] text-[24px] text-center lg:text-left font-bold transition-transform duration-1000 py-0 lg:py-10 leading-[1.2]`}>
             <span className="flex flex-row lg:flex-col items-center justify-center lg:items-start gap-x-2 text-center ">
               <span>Build Your</span>
-              <span className="bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF] bg-clip-text text-transparent block">
+              <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text text-transparent block">
                 BUSINESSES
               </span>
             </span>
             & Powering
-            <span className="bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF] bg-clip-text text-transparent  italic lg:not-italic">
+            <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text text-transparent  italic lg:not-italic">
               {" "}WEB3
             </span>
           </h1>
           <p
-            className={`text-gray-600 mt-3 lg:mt-0 text-[12px] text-center lg:text-left lg:text-[21px] transition-opacity duration-1000 ${
+            className={`text-black mt-3 lg:mt-0 text-[12px] text-center lg:text-left lg:text-[21px] transition-opacity duration-1000 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -66,9 +66,9 @@ export default function HeroSection() {
     animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
     transition={{ delay: 0.8, duration: 0.5 }} 
   >
-    <Link href="/HowWeHelpScreen">
+    <Link href="/HowWeHelpScreen" className="pr-3 lg:pr-0">
       <button
-        className={`relative z-10 flex items-center px-4 py-2 lg:px-8 lg:py-3 text-white text-[11px] lg:text-lg transition-all duration-300 bg-[#d444f1] `}
+        className={`relative z-10 flex items-center px-4 py-2 lg:px-8 lg:py-3  text-white text-[11px] lg:text-lg transition-all duration-300 bg-[#d444f1] `}
       >
         HOW WE HELP
         <span className="ml-2 w-5 h-5 lg:w-7 lg:h-7 flex items-center justify-center border-2 border-white rounded-full font-light">
@@ -78,7 +78,7 @@ export default function HeroSection() {
     </Link>
     <Link href="/ContactUs">
       <button
-        className={`relative z-10 -ml-[15px] lg:ml-[-18px] px-3 py-2 lg:px-6 lg:py-3 rounded-full border border-white lg:border-[#d444f1] bg-white text-black text-[12px] lg:text-lg transition-all duration-300 cursor-pointer hover:bg-gray-100`}
+        className={`relative z-10 -ml-[13px] lg:ml-[-18px] px-3 py-[7px] mt-[1.5px] lg:mt-0 lg:px-6 lg:py-3 rounded-full border border-white lg:border-[#d444f1] bg-white text-black text-[12px] lg:text-lg transition-all duration-300 cursor-pointer hover:bg-gray-100`}
       >
         Contact Us
       </button>
@@ -148,7 +148,7 @@ export default function HeroSection() {
 
       </div>
       {/* Count Down */}
-      <div className=" items-center z-20 justify-center mt-12 flex flex-col md:flex-row mx-2 lg:mx-0 ">
+      <div className=" items-center z-20 justify-center mt-0 flex flex-col md:flex-row mx-2 lg:mx-0 ">
         <div className="w-full  items-center ">
           <div className=" bg-transparent lg:bg-white  rounded-lg lg:rounded-3xl  gradient-border  py-1 lg:py-0  flex items-center justify-around "
           >

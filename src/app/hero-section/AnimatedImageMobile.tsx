@@ -26,7 +26,7 @@ const content = [
 
 export default function AnimatedImageMobile() {
   const [index, setIndex] = useState(0);
-  const [direction, setDirection] = useState(0); // 0 for right, 1 for left
+  const [direction, setDirection] = useState(0); 
 
   const nextSlide = () => {
     setDirection(0);
@@ -62,13 +62,13 @@ export default function AnimatedImageMobile() {
   };
 
   return (
-    <div className="flex flex-col items-center sm:justify-center min-h-[85vh] sm:min-h-screen bg-white text-black p-6 md:p-10 relative">
+    <div className="flex flex-col items-center sm:justify-center min-h-[85vh] sm:min-h-screen bg-white text-black p-6 md:p-10 mt-16 relative">
       
       <div className="relative w-full md:w-1/2 h-[40vh] md:h-[85vh] flex justify-center items-center">
         <button
           onClick={prevSlide}
           style={{ backgroundColor: '#BA24D5' }} 
-          className="absolute -left-3 -bottom-16 p-3 rounded-xl text-white text-2xl hover:bg-purple-700 transition z-10 cursor-pointer"
+          className="absolute -left-3 top-1/2 p-3 rounded-xl text-white text-2xl hover:bg-purple-700 transition z-10 cursor-pointer"
         >
           <FaChevronLeft />
         </button>
@@ -82,24 +82,24 @@ export default function AnimatedImageMobile() {
             animate="center"
             exit="exit"
             transition={{ duration: 0.5 }}
-            className="absolute w-[90%] md:w-[85%] h-full "
+            className="absolute  h-full "
           >
             <img
               src={content[index].image}
               alt="Blockchain"
-              className="w-full h-full object-cover rounded-4xl  shadow-2xl border-2 border-white"
+              className="w-[255px] h-[300px] object-cover rounded-[24px] border-2 border-white"
             />
           </motion.div>
         </AnimatePresence>
         <button
           onClick={nextSlide}
           style={{ backgroundColor: '#BA24D5' }} 
-          className="absolute -right-3  -bottom-16 p-3 rounded-xl text-white text-2xl hover:bg-purple-700 transition z-10 cursor-pointer"
+          className="absolute -right-3  top-1/2  p-3 rounded-xl text-white text-2xl hover:bg-purple-700 transition z-10 cursor-pointer"
         >
           <FaChevronRight />
         </button>
       </div>
-      <div className="w-full md:w-1/2 mt-20 md:mt-0 md:pl-10 text-center md:text-left">
+      <div className="w-full md:w-1/2 mt-24 md:mt-0 md:pl-10 text-center md:text-left">
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
