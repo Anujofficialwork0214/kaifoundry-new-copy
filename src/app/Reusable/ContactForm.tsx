@@ -262,8 +262,8 @@ const ContactForm = () => {
     let processedValue = rawValue;
 
     if (name === "email") {
-      // Remove all spaces from email
-      processedValue = rawValue.replace(/\s/g, "");
+      // Remove all whitespace and convert to lowercase
+      processedValue = rawValue.replace(/\s/g, "").toLowerCase();
     } else if (name === "phone") {
       // Allow only digits for phone number
       processedValue = rawValue.replace(/[^0-9]/g, "").slice(0, 10);
@@ -287,13 +287,13 @@ const ContactForm = () => {
     setError(null);
   };
 
-  // const preventSpace = (
-  //   e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
-  // ) => {
-  //   if (e.key === " ") {
-  //     e.preventDefault();
-  //   }
-  // };
+  const preventSpace = (
+    e: React.KeyboardEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    if (e.key === " ") {
+      e.preventDefault();
+    }
+  };
   const preventPasteSpaces = (
     e: React.ClipboardEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -403,6 +403,7 @@ const ContactForm = () => {
         maxLength={200}
         required
         onChange={handleChange}
+        onKeyDown={preventSpace}
         onPaste={preventPasteSpaces}
         placeholder="Enter your Email"
         className="font-[500]"
