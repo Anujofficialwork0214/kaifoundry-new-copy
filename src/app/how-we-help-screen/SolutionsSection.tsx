@@ -49,39 +49,88 @@ const SolutionsSection = () => {
     <div className="py-12 w-full">
       {/* Title */}
       <h2 className="text-[24px] lg:text-[62px] font-semibold text-black text-center px-4 md:px-10">
-      <span style={{ color: '#BA24D5' }}>Solutions  </span>  Built For <span style={{ color: '#BA24D5' }}>The Future</span>
+      <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">Solutions  </span>  Built For <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">The Future</span>
       </h2>
       <p className="text-[#666666] lg:text-[#333333]  mt-2 text-center px-4 md:px-70  text-[14px] lg:text-[22px] font-[400]">
         Blockchain solutions designed to power your business with security, <br /> efficiency, and scalability.
       </p>
 
       {/* List of Solutions */}
-      <div className="mt-8 w-full flex flex-col space-y-4 ">
+      <div className="mt-8 w-full flex flex-col space-y-0 py-4">
         {solutions.map((solution, index) => (
-          <div key={index} className="relative w-full px-0 md:px-40 "> {/* Added consistent padding here */}
+          <div key={index} className="relative w-full px-0  md:px-40 " > 
+          
             <div
-              className="relative overflow-hidden text-2xl cursor-pointer md:text-3xl font-semibold" 
+              className="relative overflow-hidden text-2xl w-full    cursor-pointer md:text-3xl font-semibold" 
               style={{ color: '#BA24D5', padding: '2rem 0' ,
 
-                ...(hoverIndex === index && selectedSolution !== index && {
-                  backgroundImage: "url('/assets/background/bg3.gif')",
-                  backgroundSize: "100% auto",
-                  backgroundPosition: "right",
-                  
-                 
-                }),
-              }} // Set text color and padding
+                
+              }} 
               onMouseEnter={() => setHoverIndex(index)}
               onMouseLeave={() => setHoverIndex(null)}
               onClick={() => setSelectedSolution(selectedSolution === index ? null : index)} // Toggle selection
              
             >
+              {/* {hoverIndex === index && selectedSolution !== index && (
+                <motion.div
+                  initial={{ 
+                    y: '10%',
+                    opacity: 0,
+                    scale: 0.5
+                  }}
+                  animate={{ 
+                    y: '-50%',
+                    x:'200%',
+                    opacity: 1,
+                    scale: 2.5
+                  }}
+                  exit={{ 
+                    y: '100%',
+                    opacity: 0
+                  }}
+                  transition={{ 
+                    duration: 1,
+                    ease: [0.16, 1, 0.3, 1]
+                  }}
+                  className="absolute top-1/2 left-0 w-64 h-64 rounded-full z-0"
+                  style={{
+                    background: 'radial-gradient(circle, #F6D0FE 0%, #D7CDFF 100%)',
+                    filter: 'blur(40px)',
+                    transformOrigin: 'center'
+                  }}
+                />
+              )} */}
+              {hoverIndex === index && selectedSolution !== index && (
+                <motion.div
+                  initial={{ 
+                    y: '100%',
+                    opacity: 0,
+                    scale: 0.8
+                  }}
+                  animate={{ 
+                    y: '50%',
+                    x:'-50%',
+                    opacity: 1,
+                    scale: 2.5
+                  }}
+                  transition={{ 
+                    duration: 1.2, 
+                    ease: [0.2, 0, 0, 1] 
+                  }}
+                  className="absolute bottom-0 left-1/2 w-80 h-80 rounded-full z-0"
+                  style={{
+                    background: 'radial-gradient(circle, #F6D0FE 0%, #D7CDFF 70%)',
+                    filter: 'blur(50px)',
+                    transform: 'translateX(-30%)'
+                  }}
+                />
+              )}
               {selectedSolution === index && (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.3 }}
-                  className="absolute top-0 left-0 w-full h-full cursor-pointer z-0"
+                  className="absolute top-0 left-0 mb-0 w-full h-full cursor-pointer z-0"
                   style={{
                     background: 'linear-gradient(90deg, #F6D0FE 0%, #D7CDFF 100%)',
                   }}
