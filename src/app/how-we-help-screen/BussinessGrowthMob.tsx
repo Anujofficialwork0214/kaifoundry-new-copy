@@ -59,22 +59,22 @@ useEffect(() => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="lg:text-[62px] text-[24px]  font-bold text-gray-900"
+        className="lg:text-[62px] text-[22px]  font-bold text-gray-900"
       >
-        Helping <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-[24px] lg:text-[62px]">Your Business Grow</span>
+        Helping <span className="bg-clip-text lg:text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-[#BA24D5] text-[22px] lg:text-[62px]">Your Business Grow</span>
       </motion.h2>
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
-        className="lg:text-[22px] text-[#808080] text-[14px] mt-4"
+        className="lg:text-[22px] text-[#808080] text-[14px] lg:mt-0 mt-4 max-w-3xl flex justify-center mx-auto"
       >
         We help businesses grow with smart blockchain solutions, making things faster, safer, and more efficient.
       </motion.p>
 
   {/* Steps Section */}
-  <div className="flex flex-col lg:flex-row items-center justify-between mt-6 relative">
+  <div className="flex flex-col lg:flex-row items-center justify-between lg:mt-28 mt-6 relative">
     {steps.map((step, index) => (
       <motion.div
         key={index}
@@ -110,8 +110,8 @@ useEffect(() => {
         )}
 
         {/* Icon with Background */}
-        <div className="bg-gradient-to-tl from-[#aa29bc] to-[#D680FF] p-4 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mt-4 lg:mt-0 shadow-lg relative">
-          <Image src={step.icon} alt={step.title} width={60} height={60} draggable="false"/>
+        <div className="bg-gradient-to-tl from-[#9F1AB1] to-[#E478FA] lg:p-4 p-3 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mt-4 lg:mt-0 shadow-lg relative">
+          <Image src={step.icon} alt={step.title} width={60} height={60} draggable="false" className="w-10 h-10 lg:w-12 lg:h-12"/>
         </div>
 
         {/* Title */}
