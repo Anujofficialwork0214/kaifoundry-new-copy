@@ -55,7 +55,7 @@ const HeroSection = () => {
           </p>
 
           {/* large */}
-          <Link href="/ContactUs">
+          <Link href="/contact-us">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -66,7 +66,7 @@ const HeroSection = () => {
           </Link>
 
           {/* Small */}
-          <Link href="/ContactUs">
+          <Link href="/contact-us">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

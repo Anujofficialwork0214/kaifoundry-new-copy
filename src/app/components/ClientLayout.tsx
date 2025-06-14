@@ -13,7 +13,7 @@ export default function ClientLayout({
   console.log("Current Pathname:", pathname);
 
   // Hide Navbar only on /CareersScreen/JobApplication
-  const hideNavbarPaths = ["/careers-screen/JobApplication","/contact-us"];
+  const hideNavbarPaths = ["/careers-screen/job-application","/contact-us"];
 
   return (
     <>

@@ -58,7 +58,7 @@ const Home = () => {
             future of blockchain.
           </motion.p>
 
-          <Link href="/ContactUs"> {/* Link to the Contact Us page */}
+          <Link href="/contact-us"> {/* Link to the Contact Us page */}
             <motion.button
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}

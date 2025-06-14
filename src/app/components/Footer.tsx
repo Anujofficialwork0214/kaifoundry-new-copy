@@ -116,7 +116,7 @@ const Footer: FC = () => {
           <Button
             className="bg-white py-0 px-0 lg:mr-0 lg:py-3 text-[10px] lg:text-[16.8px] text-[#192D53] font-inter font-[500] cursor-pointer"
             text="Get In Touch"
-            href="/ContactUs"
+            href="/contact-us"
           />
         
         </div>
@@ -153,7 +153,7 @@ const Footer: FC = () => {
           <Button
             className="bg-white py-1 mr-4 lg:mr-0 lg:py-3 text-[12px] lg:text-[16.8px] text-[#192D53] font-inter font-[500] cursor-pointer"
             text="Get In Touch"
-            href="/ContactUs"
+            href="/contact-us"
           />
         </div>
       </div>

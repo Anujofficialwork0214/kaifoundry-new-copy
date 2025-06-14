@@ -203,7 +203,7 @@ export default function HeroSectionMob() {
               className="absolute inset-y-0 left-1/2 lg:left-0 right-0  bg-[#D444F1] rounded-full w-42"
               // style={{ width: "calc(42% - 10px)" }}
             ></div>
-            <Link href="/HowWeHelp">
+            <Link href="/how-we-help-screen">
               <button
                 className={`relative z-10 flex items-center px-6 py-3 rounded-full text-white font-semibold text-lg transition-transform duration-1000 transform ${
                   isVisible
@@ -217,7 +217,7 @@ export default function HeroSectionMob() {
                 </span>
               </button>
             </Link>
-            <Link href="/ContactUs">
+            <Link href="/contact-us">
               <button
                 className={`relative z-10 ml-[-10px] px-6 py-3 rounded-full border border-purple-500 bg-white text-black font-semibold text-[15px] transition-transform duration-1000 transform ${
                   isVisible
@@ -266,7 +266,7 @@ export default function HeroSectionMob() {
                 </p>
               </div>
               {/* Right Arrow Button with curved background */}
-              <Link href="/WhoAreWe">
+              <Link href="/who-are-we">
                 <div className="relative w-[55px]  translate-x-[12px] h-full flex items-center justify-center">
                   {/* Curved pink background rotated from bottom */}
                   <div className="absolute h-[45px] w-[60px] bg-[#fce7f3] rounded-tr-[10px] rotate-180 bottom-0 left-0 -top-2 " />
@@ -348,7 +348,7 @@ export default function HeroSectionMob() {
               technology.
             </p>
           </div>
-          <Link href="/WhoAreWe">
+          <Link href="/who-are-we">
             <div className="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md cursor-pointer">
               <span className="text-purple-500 text-xl">→</span>
             </div>

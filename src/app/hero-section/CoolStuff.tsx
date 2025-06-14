@@ -17,7 +17,7 @@ const CoolStuff = () => {
                     <p className='text-[14px] font-400 text-[#666666] max-w-md '> {/* Changed to text-xl for larger font size */}
                         Be part of something big—innovate, grow, and shape the future with us. Join a team that values creativity, collaboration, and cutting-edge technology to drive meaningful change.
                     </p>
-                    <Link href="/ContactUs">{/* Wrap the Button with Link */}
+                    <Link href="/contact-us">{/* Wrap the Button with Link */}
                         <Button
                             text="Join Us"
                             className="hidden sm:inline-block mt-4 px-10 py-2 border border-[#6F1877] font-[500] text-[#6F1877] rounded-full hover:shadow-md  transition cursor-pointer"
@@ -53,7 +53,7 @@ const CoolStuff = () => {
                 </div>
             </div>
 
-            <Link href="/ContactUs"> {/* Wrap the Button with Link for mobile view */}
+            <Link href="/contact-us"> {/* Wrap the Button with Link for mobile view */}
                 <Button
                     text="Join Us"
                     className="sm:hidden mt-4 px-6 cursor-pointer py-1 border border-[#6F1877] text-[#6F1877] rounded-full hover:bg-[#6F1877] hover:text-white transition justify-center items-center mx-auto block"
