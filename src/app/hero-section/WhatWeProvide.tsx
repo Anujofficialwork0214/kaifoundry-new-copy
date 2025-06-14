@@ -54,16 +54,18 @@ const TOTAL_CARD_WIDTH_PX = CARD_WIDTH_PX + CARD_MARGIN_PX;
 const ANIMATION_DURATION_SECONDS = 10;
 
 const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
-  <Link href={service.link} passHref legacyBehavior>
+  <Link href={service.link} passHref legacyBehavior
+  
+  >
     <a
-      className="flex-shrink-0  h-104 md:w-110 lg:h-140  bg-white rounded-4xl shadow-xl overflow-hidden md:mx-2 cursor-pointer block"
+      className="flex-shrink-0  h-104 md:w-[500px] lg:h-[530px]  bg-white rounded-4xl shadow-xl overflow-hidden md:mx-2 cursor-pointer block"
       style={{ minWidth: isMobile ? "100%" : "350px" }}
     >
       <div className="overflow-hidden">
         <Image
           src={service.image}
           alt={service.title}
-          className="w-full h-64 object-cover"
+          className="w-full lg:h-[300px] h-64 object-cover"
           draggable="false"
           width={100}
           height={64}
@@ -73,14 +75,14 @@ const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
         <h3
           className={`${
             screenWidth < 375 ? "text-[14px]" : ""
-          } sm:text-[16px] lg:text-[30.52px] font-bold text-gray-900 mb-2`}
+          } text-[16px] lg:text-[30.52px] font-bold text-[#333333] mb-2`}
         >
           {service.title}
         </h3>
         <p
           className={`${
             screenWidth < 375 ? "text-[12px]" : ""
-          } text-[#333333] tsm:ext-[14px] lg:text-[21.54px] leading-relaxed`}
+          } text-[#333333] text-[14px] lg:text-[21.54px]  leading-0.3`}
         >
           {service.description}
         </p>
@@ -146,18 +148,30 @@ const WhatWeProvide = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <div className="mt-20">
+          <div className="mt-20 hidden lg:block">
             <h2 className=" text-[24px] lg:text-[62px] font-bold text-gray-900 leading-tight">
               WHAT <br />
-              WE <span className="bg-clip-text text-transparent bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF]">PROVIDE</span>
+              WE <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">PROVIDE</span>
             </h2>
-            <p className="text-[14px] lg:text-[32px] font-[400] lg:font-semibold text-gray-600 mt-4">
+            <p className="text-[14px] lg:text-[32px] font-[400] lg:font-semibold text-[#434343] mt-6 lg:leading-10">
+              Services That Drive Your Success
+            </p>
+          </div>
+          <div className="mt-20 block lg:hidden">
+            <h2 className=" text-[24px] lg:text-[62px] font-[700] text-gray-900 leading-tight">
+              WHAT 
+              WE <span className="text-[#BA24D5] ">PROVIDE</span>
+            </h2>
+            <p className="text-[14px] lg:text-[32px] font-[400] lg:font-semibold text-[#434343] mt-6 leading-0 lg:leading-10">
               Services That Drive Your Success
             </p>
           </div>
         </motion.div>
-        <div className="relative w-full md:w-1/2 lg:w-2/3  py-4 px-4 md:px-0 ">
+        <div className="relative w-full md:w-1/2 lg:w-2/3 pb-4 pt-0 lg:p-4 px-4 md:px-0 ">
+        
           {isMobile ? (
+            <>
+            <hr className="text-[#E4E4E4] w-full h-[1.5px] mb-10 -mt-2"/>
             <div className="flex flex-col gap-6">
               {services.map((service) => (
                 <ServiceCard
@@ -167,13 +181,15 @@ const WhatWeProvide = () => {
                   screenWidth={screenWidth}
                 />
               ))}
+              
             </div>
+            </>
           ) : (
             <div className="slider-container w-7xl overflow-hidden  flex space-x-0.5   ">
               {/* <Image src="/svg/Line134.svg" alt="line" width={4} height={4} /> */}
               <img src="/svg/Line134.svg" alt="line" className="w-10 h-160" />
               <motion.div
-                className="flex items-center "
+                className="flex items-center  "
                 animate={controls}
                 initial={{ x: 0 }}
               >

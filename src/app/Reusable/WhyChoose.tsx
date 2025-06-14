@@ -44,7 +44,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {heading} <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#E95DFF]">{highlightText}</span>{" "}
+          {heading} <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text lg:text-transparent text-[#BA24D5]">{highlightText}</span>{" "}
           {suffixText}
         </motion.h2>
 
@@ -60,11 +60,11 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="flex items-center justify-center w-24 h-24 mx-auto mb-6 bg-[#BA24D5] rounded-full">
+              <div className="flex items-center justify-center w-28 h-28 mx-auto mb-6 bg-[#BA24D5] rounded-full">
                 <img
                   src={feature.icon}
                   alt={feature.title}
-                  className="w-8 h-8 md:w-10 md:h-10 object-contain"
+                  className="w-8 h-8 md:w-14 md:h-14 object-contain"
                   draggable="false"
                 />
               </div>
