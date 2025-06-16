@@ -42,7 +42,7 @@ const HowWeHelp = () => {
   <span className="text-black opacity-70">w We Help <br /></span>
 
 
-          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">BUSIESSES GROW</span> <br />
+          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">BUSINESSES GROW</span> <br />
           <span className="text-black">Wi</span>
   <span className="text-black opacity-70">th</span>
           <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] italic lg:not-italic">{" "}Blockchain</span>
