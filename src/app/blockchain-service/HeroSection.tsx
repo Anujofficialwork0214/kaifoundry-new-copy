@@ -43,7 +43,7 @@ const HeroSection = () => {
             <span className="hidden md:block text-3xl md:text-3xl lg:text-5xl xl:text-[65px]  leading-tight">
               Empowering <br />
               Innovation with <br />
-              <span className="text-[#E95DFF]">Blockchain</span>{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">Blockchain</span>{" "}
               Solutions
             </span>
           </h2>
