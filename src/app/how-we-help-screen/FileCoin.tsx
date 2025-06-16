@@ -5,16 +5,18 @@ import { useEffect, useState } from "react";
 
 // Hook to detect screen size
 const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  if (typeof window !== "undefined") {
+    const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    handleResize(); // check on load
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [window.innerWidth]);
+    useEffect(() => {
+      const handleResize = () => setIsMobile(window.innerWidth < 768);
+      handleResize(); // check on load
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, [window.innerWidth]);
 
-  return isMobile;
+    return isMobile;
+  }
 };
 
 const FileCoin = () => {
@@ -51,9 +53,9 @@ const FileCoin = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-[#666666] text-[14px] lg:text-[22px] mt-4 hidden lg:block"
         >
-          It is specially designed to facilitate the storage, sending, <br /> and
-          receiving of Filecoin (FIL) on devices running the KaiOS <br /> operating
-          system.
+          It is specially designed to facilitate the storage, sending, <br />{" "}
+          and receiving of Filecoin (FIL) on devices running the KaiOS <br />{" "}
+          operating system.
         </motion.p>
 
         {/* Mobile Description */}
@@ -63,8 +65,9 @@ const FileCoin = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-[#666666] text-[14px] lg:text-[22px] px-2 mt-4 block lg:hidden"
         >
-          It is specially designed to facilitate the storage, sending, and receiving
-          of Filecoin (FIL) on devices running the KaiOS operating system.
+          It is specially designed to facilitate the storage, sending, and
+          receiving of Filecoin (FIL) on devices running the KaiOS operating
+          system.
         </motion.p>
 
         {/* Features Bubble */}
@@ -98,9 +101,7 @@ const FileCoin = () => {
             : { opacity: 0, scale: 0.8 }
         }
         animate={
-          isMobile
-            ? { opacity: 1, y: 0, scale: 1 }
-            : { opacity: 1, scale: 1 }
+          isMobile ? { opacity: 1, y: 0, scale: 1 } : { opacity: 1, scale: 1 }
         }
         transition={{ duration: 0.8, delay: 0.3 }}
         className="relative mt-10 md:mt-0"
