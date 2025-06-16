@@ -91,7 +91,7 @@ const HeroSection = () => {
             </span>
 
             {/* Medium and large screens: multi-line version */}
-            <span className="hidden md:block text-3xl md:text-3xl lg:text-5xl xl:text-[70px]  leading-tight">
+            <span className="hidden md:block text-3xl md:text-3xl lg:text-4xl xl:text-[70px]  leading-tight">
               <span className="text-[#BA24D5] font-bold">AI Solutions </span>
               That Think, Learn & Evolve
             </span>
