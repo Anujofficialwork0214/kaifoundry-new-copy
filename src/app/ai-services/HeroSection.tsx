@@ -86,15 +86,21 @@ const HeroSection = () => {
           <h2 className="text-[#333333] font-bold">
             {/* Small screens: single-line version */}
             <span className="block md:hidden text-xl sm:text-3xl">
-              <span className="text-[#BA24D5] font-bold">AI Solutions</span>{" "}
+              <span className=" text-[#BA24D5]  font-bold">AI Solutions</span>{" "}
               That Think, Learn & Evolve
             </span>
 
-            {/* Medium and large screens: multi-line version */}
-            <span className="hidden md:block text-3xl md:text-3xl lg:text-5xl xl:text-[70px]  leading-tight">
-              <span className="text-[#BA24D5] font-bold">AI Solutions </span>
-              That Think, Learn & Evolve
-            </span>
+          {/* Mobile only */}
+
+
+{/* Medium and larger screens only */}
+<span className="hidden md:block text-3xl lg:text-4xl xl:text-[60px] leading-tight">
+  <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] font-bold">
+    AI Solutions
+  </span>
+  {" "}That Think, Learn & Evolve
+</span>
+
           </h2>
 
           <p className="text-[#333333] md:text-lg mt-6 text-[12px] md:text-[20px] 2xl:text-[28px]  ">
