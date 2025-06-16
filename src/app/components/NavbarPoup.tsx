@@ -448,7 +448,7 @@ const ServiceItem: React.FC<{
     >
       <div className="bg-[#FAE4FF] p-2 rounded-full">{icon}</div>
       <div className="flex flex-col gap-1">
-        <h3 className="text-[22px] font-semibold">{title}</h3>
+        <h3 className="text-[22px] font-[400]">{title}</h3>
         <p className=" text-[16px]">{description}</p>
       </div>
     </div>
