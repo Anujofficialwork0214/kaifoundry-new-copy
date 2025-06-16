@@ -35,8 +35,8 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
     }
   }, []);
   return (
-    <section className={` py-20 lg:py-44 ${backgroundColor} `}>
-      <div className="container mx-auto px-6 md:px-12 text-center">
+    <section className={` py-20 lg:py-44 px-0 lg:px-14 ${backgroundColor} `}>
+      <div className=" px-6 md:px-0 text-center">
         {/* Heading */}
         <motion.h2
           className="text-[24px] md:text-[58px] xl:text-[62px] font-roboto font-bold text-[#000000]"
@@ -44,7 +44,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {heading} <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text lg:text-transparent text-[#BA24D5]">{highlightText}</span>{" "}
+          {heading} <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text text-transparent ">{highlightText}</span>{" "}
           {suffixText}
         </motion.h2>
 

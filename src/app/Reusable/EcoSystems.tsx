@@ -26,20 +26,20 @@ const EcoSystems: React.FC<EcosystemsProps> = ({
   }, []);
 
   return (
-    <div className="text-center  md:p-6">
+    <div className="container text-center  md:p-6">
       <h2 className="text-xl  md:text-[58px] xl:text-[62px] font-bold text-[#414141] mt-20 mb-14 lg:my-14 ">
         <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text lg:text-transparent text-[#BA24D5]">{highlight}</span>{" "}
         {title.replace(highlight, "").trim()}
       </h2>
     
-      <div className="flex justify-center items-center mt-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-[40px] justify-center items-center lg:gap-[50px] ">
+      <div className="flex justify-center  items-center mt-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-[40px] px-2 lg:px-0 justify-center items-center lg:gap-[50px] ">
           {items.map((eco, index) => (
             <div
               key={index}
               data-aos="fade-up"
               className="border border-fuchsia-500 rounded-2xl md:rounded-4xl flex flex-col items-center justify-center transition 
-        w-[145px] h-[120px]  md:w-[170px] md:h-[155px] xl:w-[200px] xl:h-[200px]  "
+        w-[135px] h-[110px]  md:w-[170px] md:h-[155px] xl:w-[200px] xl:h-[200px]  "
             >
               <div className="flex items-center justify-center w-10 h-10 md:w-20 md:h-20 lg:w-20 lg:h-20">
                 <Image

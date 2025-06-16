@@ -65,7 +65,7 @@ const Services: React.FC<ServicesProps> = ({
         </motion.h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 px-10 lg:px-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 px-6 lg:px-0">
           {services.map((service, index) => (
             <motion.div
             key={index}
