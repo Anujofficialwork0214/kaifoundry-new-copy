@@ -455,6 +455,7 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
+  const [isScrolling, setIsScrolling] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const pathname = usePathname();
   const lastScrollY = useRef(0);
@@ -501,6 +502,7 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      setIsScrolling(true);
       setIsVisible(window.scrollY < lastScrollY.current);
       lastScrollY.current = window.scrollY;
     };
@@ -523,7 +525,7 @@ const Navbar: React.FC = () => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <nav className="max-w-[1920px] mx-auto py-2 px-0 md:px-5 lg:px-5 flex items-center justify-between backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out ">
+        <nav className={`max-w-[1920px] mx-auto py-2 px-0 md:px-5 lg:px-5 flex items-center justify-between ${isScrolling ?'backdrop-blur-md':''} lg:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out `}>
           <button
             onClick={toggleMenu}
             className="md:hidden focus:outline-none p-3 rounded-md bg-[#FFFFFF4D] "

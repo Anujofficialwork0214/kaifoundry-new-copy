@@ -53,7 +53,7 @@ const Services: React.FC<ServicesProps> = ({
       <div className="text-center">
         {/* Heading */}
         <motion.h2
-          className="text-2xl md:text-6xl text-[#333333] font-semibold font-roboto lg:py-10 py-0  mb-20 "
+          className="text-2xl md:text-6xl text-[#333333] font-semibold font-roboto lg:py-10 lg:px-0   py-0  mb-20 "
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
@@ -65,11 +65,11 @@ const Services: React.FC<ServicesProps> = ({
         </motion.h2>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 px-10 lg:px-0">
           {services.map((service, index) => (
             <motion.div
             key={index}
-            className="relative pt-2 pl-0  lg:py-4 lg:pl-0 lg:mb-10 mb-6 max-w-100 mx-auto bg-transparent"
+            className="relative pt-2 pl-0  lg:py-4  lg:pl-0 lg:mb-10 mb-6 max-w-100 mx-auto bg-transparent"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.1 }}
