@@ -20,7 +20,7 @@ export default function GameDevelopmentSection() {
           transition={{ duration: 0.6 }}
           className="text-center md:text-left"
         >
-          <h2 className="text-xl md:text-[30px] lg:text-[42px] 2xl:text-[54px]  font-bold text-[#333333] leading-tight">
+          <h2 className="text-xl md:text-[30px] lg:text-[42px] 2xl:text-[60px]  font-bold text-[#333333] leading-tight">
             Turning <span className="text-[#BA24D5]">Ideas</span> into{" "}
             <span className="text-[#BA24D5]">Games</span>
             <br /> That <span className="text-[#BA24D5]">People</span> Love
@@ -44,7 +44,7 @@ export default function GameDevelopmentSection() {
               <img
                 src={feature.icon}
                 alt={feature.name}
-                className="w-6 h-6 md:w-8 ms:w-8 lg:w-8 lg-w-8 object-contain"
+                  className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain"
               />
               <span className="text-sm lg:text-lg sm:text-xs font-medium text-[#000000] whitespace-nowrap">
                 {feature.name}

@@ -4,8 +4,10 @@ import { useState } from "react";
 import Image from "next/image";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SubmissionSuccessPopup from "./SubmissionSuccessPopup";
 
 const JobApplicationForm = () => {
+  const [showPopup, setShowPopup] = useState(false);
   const [file, setFile] = useState<File | null>(null);
   const [formData, setFormData] = useState({
     name: '',
@@ -51,6 +53,7 @@ const JobApplicationForm = () => {
     }
 
     toast.success('Form submitted successfully!');
+    setShowPopup(true); 
     setFormData({
       name: '',
       email: '',
@@ -68,6 +71,7 @@ const JobApplicationForm = () => {
   return (
   
     <div className="w-fullmx-auto p-6 lg:px-12 ">
+        {showPopup && <SubmissionSuccessPopup onClose={() => setShowPopup(false)} />}
       <ToastContainer
         position="top-center"
       />

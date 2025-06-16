@@ -91,13 +91,13 @@ const HeroSection = () => {
             </span>
 
             {/* Medium and large screens: multi-line version */}
-            <span className="hidden md:block text-4xl md:text-5xl ">
+            <span className="hidden md:block text-3xl md:text-3xl lg:text-5xl xl:text-[70px]  leading-tight">
               <span className="text-[#BA24D5] font-bold">AI Solutions </span>
               That Think, Learn & Evolve
             </span>
           </h2>
 
-          <p className="text-[#333333] text-sm md:text-lg mt-6 ">
+          <p className="text-[#333333] md:text-lg mt-6 text-[12px] md:text-[20px] 2xl:text-[28px]  ">
             Unlock the power of Artificial Intelligence to automated tasks,
             drive insights and create smater solutions for your business
           </p>
