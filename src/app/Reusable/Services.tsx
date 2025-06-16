@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Manrope } from "next/font/google";
 import { useEffect, useState } from "react";
 
-// Define the type for services
+
 type Service = {
   title: string;
   description: string;
@@ -50,10 +50,10 @@ const Services: React.FC<ServicesProps> = ({
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="mx-auto px-6 md:px-12 text-center">
+      <div className="text-center">
         {/* Heading */}
         <motion.h2
-          className="text-2xl md:text-6xl text-[#333333] font-semibold font-roboto  mb-20 "
+          className="text-2xl md:text-6xl text-[#333333] font-semibold font-roboto lg:py-10 py-0  mb-20 "
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
@@ -69,10 +69,10 @@ const Services: React.FC<ServicesProps> = ({
           {services.map((service, index) => (
             <motion.div
             key={index}
-            className="relative pt-2 pl-0  lg:p-4 lg:pl-0 mb-6 max-w-100 mx-auto bg-transparent"
+            className="relative pt-2 pl-0  lg:py-4 lg:pl-0 lg:mb-10 mb-6 max-w-100 mx-auto bg-transparent"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, delay: index * 0.2 }}
+            transition={{ duration: 0.1 }}
             viewport={{ once: true }}
           >
             
@@ -81,10 +81,11 @@ const Services: React.FC<ServicesProps> = ({
               initial={{ width: 0 }}
               whileInView={{ width: "100%" }}
               transition={{
-                duration: 0.3, 
+                duration: 0.2, 
                 ease: [0.25, 0.1, 0.25, 1], 
-                delay: index * 0.1, 
+                delay:  0.2, 
               }}
+              viewport={{ once: true }}
             />
 
           

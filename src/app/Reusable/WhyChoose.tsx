@@ -35,7 +35,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
     }
   }, []);
   return (
-    <section className={` py-20 lg:py-44 ${backgroundColor}`}>
+    <section className={` py-20 lg:py-44 ${backgroundColor} `}>
       <div className="container mx-auto px-6 md:px-12 text-center">
         {/* Heading */}
         <motion.h2

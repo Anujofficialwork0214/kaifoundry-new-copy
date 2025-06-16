@@ -25,13 +25,10 @@ const Badge: React.FC<BadgeProps> = ({
     width = "w-auto",
     textSize
 }) => {
-    useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
-    }, []);
+    
     return (
         <div
             className={`absolute ${position} ${bgColor} ${textColor} ${textSize}  rounded-xl text-center shadow-md ${width}`}
-            data-aos="zoom-in"
         >
             <p className='text-center'>
                 {text && <span className="font-semibold text-lg md:text-2xl">{text}</span>}

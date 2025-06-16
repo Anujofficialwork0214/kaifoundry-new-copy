@@ -58,10 +58,10 @@ const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
   
   >
     <a
-      className="flex-shrink-0  h-104 md:w-[500px] lg:h-[530px]  bg-white rounded-4xl shadow-xl overflow-hidden md:mx-2 cursor-pointer block"
+      className="flex-shrink-0  h-104 md:w-[500px] lg:h-[530px] ml-0 lg:ml-2   rounded-4xl shadow-xl overflow-hidden md:mx-2 cursor-pointer block"
       style={{ minWidth: isMobile ? "100%" : "350px" }}
     >
-      <div className="overflow-hidden">
+      <div className="">
         <Image
           src={service.image}
           alt={service.title}
@@ -138,7 +138,7 @@ const WhatWeProvide = () => {
   return (
     <section
       ref={ref}
-      className="py-0 md:py-30 lg:px-10 px-0 bg-gray-50 overflow-hidden  "
+      className="py-0 md:py-30 lg:px-14 px-0 bg-gray-50 overflow-hidden  "
     >
       <div className=" mx-auto flex flex-col md:flex-row px-4 md:px-0 items-center lg:items-start">
         <motion.div
@@ -148,7 +148,7 @@ const WhatWeProvide = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <div className="mt-20 hidden lg:block">
+          <div className="mt-20 hidden  lg:block">
             <h2 className=" text-[24px] lg:text-[62px] font-bold text-gray-900 leading-tight">
               WHAT <br />
               WE <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">PROVIDE</span>
@@ -187,9 +187,10 @@ const WhatWeProvide = () => {
           ) : (
             <div className="slider-container w-7xl overflow-hidden  flex space-x-0.5   ">
               {/* <Image src="/svg/Line134.svg" alt="line" width={4} height={4} /> */}
-              <img src="/svg/Line134.svg" alt="line" className="w-10 h-160" />
+              <img src="/svg/Line134.svg" alt="line" className="w-20 h-160 z-20 bg-gray-50 ml-0 " />
+              {/* <div className = 'border-2 border-gray-500 z-20'></div> */}
               <motion.div
-                className="flex items-center  "
+                className="flex items-center"
                 animate={controls}
                 initial={{ x: 0 }}
               >
