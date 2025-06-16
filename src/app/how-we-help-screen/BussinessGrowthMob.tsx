@@ -107,8 +107,9 @@ const handleAnimationComplete = (index: number) => {
                 absolute 
                 ${index % 2 === 0 ? 'top-[0px]' : 
                   screenSize === 'lg-1024-1280' ? 'bottom-[270px]' :
-                  screenSize === 'lg-md' ? 'bottom-[210px]' :  
-                  screenSize === 'lg-xl' ? 'bottom-[160px]' : ''}
+              screenSize === 'lg-md' ? 'bottom-[210px]' :  
+                
+               screenSize === 'lg-xl' ? 'bottom-[130px]' : ''}
                 ${
                   screenSize === 'lg-1024-1280' ? 'left-1/2 translate-x-[50px]' : 
                   screenSize === 'lg-md' ? 'left-1/2 translate-x-[50px]' : 
