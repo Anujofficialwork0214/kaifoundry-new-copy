@@ -19,12 +19,12 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="  text-gray-800 pt-0 lg:pt-16 bg-white px-0 lg:px-10 w-full flex flex-col gap-12 lg:gap-44  ">
+    <div className="  text-gray-800 pt-0 lg:pt-16 bg-white px-0 lg:px-12 w-full flex flex-col gap-12 lg:gap-44  ">
       {/* Main Content */}
       <div className={`flex flex-col-reverse lg:flex-row w-full  items-center  transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"}`}>
         {/* Text */}
         <div className="w-full lg:w-1/2 text-center md:text-left mt-20 z-10  flex flex-col justify-center  lg:justify-start">
-          <h1 className={` lg:text-[62px] text-[24px] text-center lg:text-left font-bold transition-transform duration-1000 py-0 lg:py-10 leading-[1.2]`}>
+          <h1 className={` lg:text-[65px] text-[24px] text-center lg:text-left font-bold transition-transform duration-1000 py-0 lg:py-10 leading-[1.2]`}>
             <span className="flex flex-row lg:flex-col items-center justify-center lg:items-start gap-x-2 text-center ">
               <span>Build Your</span>
               <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text text-transparent block">
@@ -37,7 +37,7 @@ export default function HeroSection() {
             </span>
           </h1>
           <p
-            className={`text-black mt-3 lg:mt-0 text-[12px] text-center lg:text-left lg:text-[21px] transition-opacity duration-1000 ${
+            className={`text-black mt-3 lg:mt-0 text-[12px] text-center lg:text-left lg:text-[24px] transition-opacity duration-1000 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -106,7 +106,7 @@ export default function HeroSection() {
                 isVisible ? "translate-y-0" : "translate-y-60"
               } mt-40 lg:-mt-20`} 
             />
-         <div className="absolute bottom-0 lg:-bottom-44 rounded-lg lg:rounded-2xl left-2/9 lg:left-1/2 p-1 lg:p-3 transform lg:-translate-x-1/2 flex flex-col items-center justify-center bg-white/50 lg:w-[590px]  border border-gray-300 ">
+         {/* <div className="absolute bottom-0 lg:-bottom-44 rounded-lg lg:rounded-2xl left-2/9 lg:left-1/2 p-1 lg:p-3 transform lg:-translate-x-1/2 flex flex-col items-center justify-center bg-white/50 lg:w-[590px]  border border-gray-300 ">
          <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -140,7 +140,7 @@ export default function HeroSection() {
               </Link>
           </div>
         </motion.div>
-         </div>
+         </div> */}
          
 
 

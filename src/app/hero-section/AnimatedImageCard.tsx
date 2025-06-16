@@ -27,13 +27,14 @@ const content = [
 export default function AnimatedSection() {
   const [index, setIndex] = useState(0);
   const [ref, inView] = useInView({ threshold: 0.1 }); // Trigger when 10% of the section is in view
-
+  const [prevIndex, setPrevIndex] = useState<number | null>(null);
   useEffect(() => {
     const interval = setInterval(() => {
       if (inView && index < content.length - 1) {
+         setPrevIndex(index);
         setIndex((prev) => prev + 1);
       }
-    }, 2000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [index, inView]);
@@ -42,9 +43,9 @@ export default function AnimatedSection() {
 
     <div
   ref={ref}
-  className="flex flex-row flex-nowrap items-center justify-center my-20 bg-white text-black  md:p-10 overflow-hidden gap-4"
+  className="container flex flex-row flex-nowrap items-center justify-center my-20  text-black  md:p-18 bg-white  overflow-hidden gap-4"
 >
-  <div className="relative flex-shrink-0  w-full md:w-1/2 h-[500px] flex justify-center items-center ">
+  <div className="relative flex-shrink-0  w-full md:w-1/2 h-[600px] flex  items-center">
     <AnimatePresence>
       {inView &&
         content.map((item, i) => i <= index && (
@@ -52,10 +53,10 @@ export default function AnimatedSection() {
             key={item.image}
             src={item.image}
             alt="Blockchain"
-            className="absolute w-3/4 h-full object-cover rounded-4xl  border-2 border-white"
+            className="absolute w-[600px] h-full object-cover rounded-4xl  border-2 border-white"
             initial={{ y: 100 + 10 * i, opacity: 0, x: 20 * i }}
-            animate={{ y: 20 * i, opacity: 1, x: 20 * i }}
-            exit={{ y: -100 - 20 * i, opacity: 0 }}
+            animate={{ y: 30 * i, opacity: 1, x: 30 * i }}
+            viewport={{once:true}}
             transition={{ duration: 1 }}
           />
         ))}
@@ -64,30 +65,53 @@ export default function AnimatedSection() {
 
   <div className="max-w-[700px] text-left ">
     <AnimatePresence mode="wait">
-      {inView && (
-        <>
-          <motion.h2
-            key={content[index].title}
-            className="text-4xl md:text-5xl font-bold tracking-wide"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -50, opacity: 0 }}
-            transition={{ duration: 1 }}
+    {/* {inView && (
+      <motion.div
+        key={index} 
+        initial={{ y: 300, opacity: 1 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: -300, opacity: 1 }}
+        transition={{ duration: 1,ease: "easeInOut" }}
+      >
+        <h2 className="text-4xl md:text-5xl font-bold tracking-wide">
+          {content[index].title}
+        </h2>
+        <p className="mt-6 text-xl md:text-2xl text-gray-600 leading-relaxed">
+          {content[index].description}
+        </p>
+      </motion.div>
+    )} */}
+    {prevIndex !== null && (
+          <motion.div
+            key={`prev-text-${prevIndex}`}
+            className=""
+            initial={{ y: 0, opacity: 1 }}
+            animate={{ y: -500, opacity: 1 }}
+            transition={{ duration: 1, ease: "easeInOut" }}
           >
+            <h2 className="text-4xl md:text-5xl font-bold ">
+              {content[prevIndex].title}
+            </h2>
+            <p className="mt-6 text-xl md:text-2xl text-gray-600 leading-relaxed">
+              {content[prevIndex].description}
+            </p>
+          </motion.div>
+        )}
+
+        <motion.div
+          key={`curr-text-${index}`}
+          className=""
+          initial={{ y: 300, opacity: 1 }}
+          animate={{ y: -100, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold ">
             {content[index].title}
-          </motion.h2>
-          <motion.p
-            key={content[index].description}
-            className="mt-6 text-xl md:text-2xl text-gray-600 leading-relaxed"
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -50, opacity: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-          >
+          </h2>
+          <p className="mt-6 text-xl md:text-2xl text-gray-600 leading-relaxed">
             {content[index].description}
-          </motion.p>
-        </>
-      )}
+          </p>
+        </motion.div>
     </AnimatePresence>
   </div>
 </div>
