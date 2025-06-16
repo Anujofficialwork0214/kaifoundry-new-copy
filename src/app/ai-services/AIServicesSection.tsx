@@ -53,10 +53,10 @@ export default function AIServicesSection() {
               <span className="text-[#BA24D5]">AI</span>
             </span>
           </h2> */}
-          <h2 className="md:text-xl text-2xl lg:text-5xl font-bold text-[#333333] leading-tight -mt-8">
+          <h2 className="md:text-xl text-2xl lg:text-5xl 2xl:text-[58px] font-bold text-[#333333] leading-tight -mt-8">
             Smarter Solutions with AI
           </h2>
-          <p className="mt-4 text-[12px] md:text-lg  text-[#333333]">
+          <p className="mt-4 text-[12px] md:text-lg 2xl:text-[22px] font-[400] text-[#333333]">
             Harness the power of Artificial Intelligence to automate, optimize,
             and innovate—making your business faster, smarter, and more
             efficient.
@@ -76,7 +76,7 @@ export default function AIServicesSection() {
               <img
                 src={feature.icon}
                 alt={feature.name}
-                className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain text-[#BA24D5]"
+               className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain"
               />
               <span className="text-sm lg:text-xl sm:text-xs font-medium text-gray-900 whitespace-nowrap">
                 {feature.name}

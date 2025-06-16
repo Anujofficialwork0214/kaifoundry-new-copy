@@ -40,15 +40,15 @@ const HeroSection = () => {
             </span>
 
             {/* Medium  */}
-            <span className="hidden md:block text-3xl md:text-3xl lg:text-6xl leading-tight">
+            <span className="hidden md:block text-3xl md:text-3xl lg:text-5xl xl:text-[70px]  leading-tight">
               Empowering <br />
               Innovation with <br />
-              <span className="text-[#E95DFF] italic">Blockchain</span>{" "}
+              <span className="text-[#E95DFF]">Blockchain</span>{" "}
               Solutions
             </span>
           </h2>
 
-          <p className="text-[#333333]s text-[12px] lg:text-lg mt-4">
+          <p className="text-[#333333] text-[12px] md:text-[20px] 2xl:text-[28px]  mt-4">
             Secure, scalable, and customized blockchain
             <br className="hidden md:inline" />
             development for the digital future.
