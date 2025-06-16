@@ -20,7 +20,7 @@ export default function GameDevelopmentSection() {
           transition={{ duration: 0.6 }}
           className="text-center md:text-left"
         >
-          <h2 className="text-xl md:text-[30px] lg:text-[42px] 2xl:text-[60px]  font-bold text-[#333333] leading-tight">
+          <h2 className="text-xl md:text-[30px] lg:text-[42px] 2xl:text-[50px]  font-bold text-[#333333] leading-tight">
             Turning <span className="text-[#BA24D5]">Ideas</span> into{" "}
             <span className="text-[#BA24D5]">Games</span>
             <br /> That <span className="text-[#BA24D5]">People</span> Love
