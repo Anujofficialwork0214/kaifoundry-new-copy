@@ -34,7 +34,7 @@ const HeroSection = () => {
         >
           <h2 className="text-3xl md:text-3xl lg:text-5xl xl:text-[70px] 2xl:text-[74px] font-bold text-[#333333] md:leading-20 ">
             Game That Keep <br />
-            <span className="text-[#BA24D5]">Players</span> Hooked
+            <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] font-bold">Players</span> Hooked
           </h2>
           {/* <p className="text-gray-600 text-base md:text-[20px] mt-4 ">
         We create engaging, high-performance games <br /> that players love — seamless, fun, and built for <br /> the future of gaming
