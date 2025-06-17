@@ -223,10 +223,10 @@ const SolutionsSection = () => {
           const isSelected = selectedSolution === index;
 
           return (
-            <div key={index} className="relative w-full px-0 md:px-40">
+            <div key={index} className="relative w-full px-0 md:px-40 ">
               <div
                 className="relative overflow-hidden text-2xl w-full cursor-pointer md:text-3xl font-semibold"
-                style={{ color: '#BA24D5', padding: '2rem 0' }}
+                style={{ color: '#BA24D5' }}
                 onMouseEnter={() => !isMobile && setHoverIndex(index)}
                 onMouseLeave={() => !isMobile && setHoverIndex(null)}
                 onClick={() => setSelectedSolution(isSelected ? null : index)}
