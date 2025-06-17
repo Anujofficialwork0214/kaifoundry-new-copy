@@ -78,10 +78,10 @@ const BusinessGrowth = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="lg:text-[62px] text-[22px]  font-bold text-gray-900"
+        className="text-[22px] md:text-5xl 2xl:text-6xl font-bold text-gray-900"
       >
         Helping{" "}
-        <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]  text-[22px] lg:text-[62px]">
+        <span className="bg-color text-[22px] md:text-5xl 2xl:text-6xl">
           Your Business Grow
         </span>
       </motion.h2>
@@ -90,7 +90,7 @@ const BusinessGrowth = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
-        className="lg:text-[22px] text-[#808080] text-[14px] lg:mt-0 mt-4 max-w-3xl flex justify-center mx-auto"
+        className="2xl:text-[22px] md:text-[20px] text-[#808080] text-[14px] lg:mt-4 mt-4 max-w-3xl flex justify-center mx-auto"
       >
         We help businesses grow with smart blockchain solutions, making things
         faster, safer, and more efficient.
@@ -109,7 +109,7 @@ const BusinessGrowth = () => {
           >
             
 
-            <div className="bg-gradient-to-tl from-[#9F1AB1] to-[#E478FA] lg:p-4 p-3 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mt-4 lg:mt-0 shadow-lg relative">
+            <div className="bg-gradient-to-b from-[#9F1AB1] to-[#E478FA] lg:p-4 p-3 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mt-4 lg:mt-0 shadow-lg relative">
               {animationsComplete && index < steps.length - 1 && (
               <div
                 className={`

@@ -12,7 +12,7 @@ const AiFaq = () => {
 
   return (
     <div className="max-w-3xl mx-auto px-6 flex-col py-24">
-    <h2 className="text-[24px] md:text-[50px] xl:text-[54px] pb-0 lg:pb-4  font-bold text-center text-gray-900"
+    <h2 className="text-[24px] md:text-5xl 2xl:text-6xl pb-0 lg:pb-4  font-bold text-center text-gray-900"
            style={{
     fontFamily: 'Roboto, sans-serif',
   }}
