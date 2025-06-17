@@ -58,6 +58,7 @@ const ContactUs = () => {
     //   </section>
     // </>
     <>
+
       <h2 className="text-[24px] md:text-5xl 2xl:text-6xl font-semibold text-center mb-10 md:mb-2 font-inter text-[#333333]">
     Let&apos;s Get <span className="bg-color">In Touch</span>
   </h2>
@@ -74,6 +75,7 @@ const ContactUs = () => {
         ></iframe>
       </div>
 
+
           <div className="md:col-start-2 row-span-2 flex-col mt-20 md:mt-0">
             <h3 className="text-2xl font-semibold mb-6 sm:mb-10 text-start">
               Leave A Message
@@ -81,21 +83,23 @@ const ContactUs = () => {
             <ContactForm />
           </div>
 
-      <div className="md:row-span-1 flex-col">
-        <div className="mt-10">
-          <div className="text-black">
-            <h3 className="font-semibold text-3xl mb-4">Contact Details</h3>
-            <div className="grid grid-cols-2 gap-4 text-[#4D4D4D] lg:text-[#666666] text-[10px] lg:text-base">
-              <p>
-                Akshya Nagar 1st Block 1st <br /> Cross, Rammurthy Nagar,
-                <br /> Bangalore-560016
-              </p>
-              <div>
-                <p>Ph No: +1234567890</p>
-                <p>E-Mail: sodnn@gmail.com</p>
+          <div className="md:row-span-1 flex-col">
+            <div className="mt-10">
+              <div className="text-black">
+                <h3 className="font-semibold text-3xl mb-4">Contact Details</h3>
+                <div className="grid grid-cols-2 gap-4 text-[#4D4D4D] lg:text-[#666666] text-[10px] lg:text-base">
+                  <p>
+                    Akshya Nagar 1st Block 1st <br /> Cross, Rammurthy Nagar,
+                    <br /> Bangalore-560016
+                  </p>
+                  <div>
+                    <p>Ph No: +1234567890</p>
+                    <p>E-Mail: sodnn@gmail.com</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+
         </div>
         <div className="mt-10">
           <div className="hidden sm:flex space-x-4">
@@ -104,6 +108,7 @@ const ContactUs = () => {
 <path d="M3.75 20V10C3.75 8.3424 4.40848 6.75269 5.58058 5.58058C6.75269 4.40848 8.3424 3.75 10 3.75H20C21.6576 3.75 23.2473 4.40848 24.4194 5.58058C25.5915 6.75269 26.25 8.3424 26.25 10V20C26.25 21.6576 25.5915 23.2473 24.4194 24.4194C23.2473 25.5915 21.6576 26.25 20 26.25H10C8.3424 26.25 6.75269 25.5915 5.58058 24.4194C4.40848 23.2473 3.75 21.6576 3.75 20Z" stroke="#1A1A1A" stroke-width="1.5"/>
 <path d="M21.875 8.13875L21.8875 8.125" stroke="#1A1A1A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
+
 
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14.9809 19.2604L19.0334 23.8679C20.5334 25.5741 21.2847 26.4279 22.0709 26.2191C22.8559 26.0116 23.1259 24.8891 23.6647 22.6429L26.6522 10.1829C27.4834 6.72285 27.8984 4.9941 26.9759 4.14035C26.0534 3.2866 24.4547 3.9216 21.2572 5.19035L6.42468 11.0816C3.86718 12.0979 2.58843 12.6054 2.50718 13.4779C2.49761 13.5668 2.49761 13.6564 2.50718 13.7454C2.58593 14.6191 3.86218 15.1304 6.41718 16.1541C7.57343 16.6179 8.15218 16.8504 8.56718 17.2941C8.61384 17.3441 8.65884 17.3958 8.70218 17.4491C9.08468 17.9241 9.24718 18.5491 9.57343 19.7941L10.1847 22.1279C10.5009 23.3404 10.6597 23.9479 11.0759 24.0304C11.4922 24.1129 11.8534 23.6104 12.5772 22.6041L14.9809 19.2604ZM14.9809 19.2604L14.5847 18.8479C14.1322 18.3754 13.9059 18.1404 13.9059 17.8479C13.9059 17.5554 14.1309 17.3191 14.5847 16.8479L19.0509 12.1929" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
