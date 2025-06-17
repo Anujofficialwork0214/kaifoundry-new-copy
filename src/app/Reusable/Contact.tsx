@@ -58,7 +58,7 @@ const ContactUs = () => {
     //   </section>
     // </>
     <>
-      <h2 className="text-3xl md:text-5xl font-semibold text-center mb-10 md:mb-2 font-inter text-[#333333]">
+      <h2 className="text-[24px] md:text-5xl 2xl:text-6xl font-semibold text-center mb-10 md:mb-2 font-inter text-[#333333]">
     Let&apos;s Get <span className="bg-color">In Touch</span>
   </h2>
   <section className="p-0 lg:p-4 flex items-center justify-center w-full">
