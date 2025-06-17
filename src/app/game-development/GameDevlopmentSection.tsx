@@ -21,9 +21,9 @@ export default function GameDevelopmentSection() {
           className="text-center md:text-left"
         >
           <h2 className="text-xl md:text-[30px] lg:text-[42px] 2xl:text-[50px]  font-bold text-[#333333] leading-tight">
-            Turning <span className="bg-clip-text bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] lg:text-transparent text-[#BA24D5] ">Ideas</span> into{" "}
-            <span className="bg-clip-text  bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] lg:text-transparent text-[#BA24D5] ">Games</span>
-            <br /> That <span className="bg-clip-text  bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]  lg:text-transparent text-[#BA24D5] ">People</span> Love
+            Turning <span className="bg-clip-text bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-transparent  ">Ideas</span> into{" "}
+            <span className="bg-clip-text  bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-transparent ">Games</span>
+            <br /> That <span className="bg-clip-text  bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-transparent ">People</span> Love
           </h2>
           <p className="mt-4 text-base md:text-lg text-[#333333] px-2">
             We create fun, immersive, and high-quality games that keep players
