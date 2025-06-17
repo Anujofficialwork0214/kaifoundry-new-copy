@@ -657,7 +657,7 @@ const Navbar: React.FC = () => {
           </ul>
 
           <Button
-            className="bg-[#D444F1] text-white cursor-pointer hover:bg-[#821890]"
+            className="bg-[#D444F1] text-white cursor-pointer px-6 py-2 hover:bg-[#821890]"
             text="Contact Us"
             href="/contact-us"
           />

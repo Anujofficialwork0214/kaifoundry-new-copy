@@ -58,7 +58,7 @@ const Services: React.FC<ServicesProps> = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
         >
-          {suffixText} <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text lg:text-transparent text-[#BA24D5]">{heading} </span>
+          {suffixText} <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text text-transparent ">{heading} </span>
           {subheading}
           <br />
           {breakHeading}
