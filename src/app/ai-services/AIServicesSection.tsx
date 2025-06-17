@@ -55,18 +55,18 @@ export default function AIServicesSection() {
           </h2> */}
          {/* Mobile Only (up to md) */}
 <h2 className="block md:hidden text-2xl font-bold text-[#333333] ]  leading-tight -mt-8">
-  Smarter <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] font-bold">
+  Smarter <span className="bg-color font-bold">
     Solutions
-  </span> with <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] font-bold">
+  </span> with <span className="bg-color font-bold">
     AI
   </span>
 </h2>
 
 {/* Desktop Only (md and above) */}
 <h2 className="hidden md:block md:text-xl lg:text-5xl 2xl:text-[55px] font-bold text-[#333333] leading-tight -mt-8">
-  Smarter <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] font-bold">
+  Smarter <span className="bg-color font-bold">
     Solutions
-  </span> with <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] font-bold">
+  </span> with <span className="bg-color font-bold">
     AI
   </span>
 </h2>
