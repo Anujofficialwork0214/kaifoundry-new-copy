@@ -81,7 +81,7 @@ const BusinessGrowth = () => {
         className="lg:text-[62px] text-[22px]  font-bold text-gray-900"
       >
         Helping{" "}
-        <span className="bg-clip-text lg:text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-[#BA24D5] text-[22px] lg:text-[62px]">
+        <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]  text-[22px] lg:text-[62px]">
           Your Business Grow
         </span>
       </motion.h2>

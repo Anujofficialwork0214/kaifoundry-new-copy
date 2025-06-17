@@ -26,7 +26,7 @@ export default function HeroSection() {
         <div className="w-full lg:w-1/2 text-center md:text-left mt-20 z-10  flex flex-col justify-center  lg:justify-start">
           <h1 className={` lg:text-[65px] text-[24px] text-center lg:text-left font-bold transition-transform duration-1000 py-0 lg:py-10 leading-[1.2]`}>
             <span className="flex flex-row lg:flex-col items-center justify-center lg:items-start gap-x-2 text-center ">
-              <span>Build Your</span>
+              <span>Building Your</span>
               <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text text-transparent block">
                 BUSINESSES
               </span>
@@ -51,8 +51,8 @@ export default function HeroSection() {
           <div className="relative mt-14"> 
           {/* bg-[#ba24d5] */}
   <motion.div
-    className={`absolute top-0 left-0 h-full bg-[#d444f1] lg:bg-[#ba24d5] rounded-full ${
-      isVisible ? "opacity-100" : "opacity-0"
+    className={`absolute top-0 left-0 h-full bg-[#ba24d5] rounded-full ${
+      isVisible ? "opacity-100 bg-[#d444f1]" : "opacity-0"
     }`}
     initial={{ width: 0 }}
     animate={isVisible ? { width: "100%" } : { width: 0 }}

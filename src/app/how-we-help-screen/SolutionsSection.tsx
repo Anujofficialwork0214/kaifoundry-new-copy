@@ -49,7 +49,7 @@ const SolutionsSection = () => {
     <div className="py-12 w-full">
       {/* Title */}
       <h2 className="text-[24px] lg:text-[62px] font-semibold text-black text-center px-4 md:px-10">
-      <span className="bg-clip-text lg:text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-[#BA24D5]">Solutions  </span>  Built For <span className="bg-clip-text lg:text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-[#BA24D5]">The Future</span>
+      <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] ">Solutions  </span>  Built For <span className="bg-clip-text lg:text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-[#BA24D5]">The Future</span>
       </h2>
       <p className="text-[#666666] lg:text-[#333333]  mt-2 text-center px-4 md:px-70  text-[14px] lg:text-[22px] font-[400]">
         Blockchain solutions designed to power your business with security, <br /> efficiency, and scalability.
