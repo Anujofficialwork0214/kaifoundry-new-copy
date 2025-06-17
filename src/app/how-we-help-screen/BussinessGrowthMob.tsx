@@ -121,9 +121,11 @@ const BusinessGrowth = () => {
                     : "bottom-[-25px]"
                 }
                 
-                hidden lg:block translate-x-[70px]
-                w-[300px] 
-  h-[50px]  
+                hidden lg:block translate-x-[80px]
+                xl:w-[170px]
+                xl:translate-x-[80px] 
+  h-[50px]   lg:translate-x-[100px] 2xl:w-[220px]
+  w-[140px]
               `}
               >
                 <Image
@@ -133,10 +135,10 @@ const BusinessGrowth = () => {
                       : "/svg/Ellipse 81.png"
                   }
                   alt="Arrow"
-                  width={250}
+                  width={220}
                   height={50}
                   draggable="false"
-                  className="hidden lg:block"
+                  className="hidden lg:block w-full"
                 />
               </div>
             )}
