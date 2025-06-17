@@ -160,7 +160,7 @@ const WhatWeProvide = () => {
           <div className="mt-20 block lg:hidden">
             <h2 className=" text-[24px] lg:text-[62px] font-[700] text-gray-900 leading-tight">
               WHAT 
-              WE <span className="text-[#BA24D5] ">PROVIDE</span>
+              WE <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] ">PROVIDE</span>
             </h2>
             <p className="text-[14px] lg:text-[32px] font-[400] lg:font-semibold text-[#434343] mt-6 leading-0 lg:leading-10">
               Services That Drive Your Success

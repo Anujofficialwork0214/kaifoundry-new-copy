@@ -10,7 +10,7 @@ const CoolStuff = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-10">
         <div className="text-center md:text-left">
           <h2 className="text-[20px] lg:text-4xl font-bold mb-8">
-            Wanna Build <span className="text-[#BA24D5]">Cool Stuff</span> With
+            Wanna Build <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">Cool Stuff</span> With
             Us?
           </h2>
           <p className="text-[12px] text-gray-700  text-center">
