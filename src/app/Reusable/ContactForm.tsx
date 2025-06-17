@@ -356,16 +356,22 @@ const ContactForm = () => {
     }
   };
 
-  if (loading)
-    return (
-      <div className="mt-20 md:mt-40">
-        <Loader />
-      </div>
-    );
+  // if (loading)
+  //   return (
+  //     <div className="mt-20 md:mt-40">
+  //       <Loader />
+  //     </div>
+  //   );
 
   console.log(formData);
 
   return (
+    <div className="min-h-[670px] flex items-center justify-center">
+    {loading ? (
+          <div className="flex justify-center  items-center h-full">
+            <Loader />
+          </div>
+      ):(
     <form onSubmit={handleSubmit} className="space-y-6 w-full ">
       {error && <p className="text-red-600 bg-red-100 p-2 rounded">{error}</p>}
       {success && (
@@ -453,7 +459,7 @@ const ContactForm = () => {
         textarea
       />
 
-      <div className="flex justify-center">
+      <div className="flex justify-center cursor-pointer">
         <ReCAPTCHA
           sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
           onChange={(token) =>
@@ -471,6 +477,9 @@ const ContactForm = () => {
         />
       </div>
     </form>
+    
+  )}
+  </div>
   );
 };
 
