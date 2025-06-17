@@ -35,7 +35,7 @@ const HeroSection = () => {
             {/* Small  */}
             <span className="block md:hidden text-xl   ">
               Empowering Innovation with{" "}
-              <span className="text-[#E95DFF] italic">Blockchain</span>{" "}
+              <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] italic">Blockchain</span>{" "}
               Solutions
             </span>
 

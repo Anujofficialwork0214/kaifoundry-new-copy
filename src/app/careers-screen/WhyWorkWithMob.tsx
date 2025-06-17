@@ -41,7 +41,7 @@ const WhyWorkWithUs = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-         Why <span style={{ color: '#D444F1' }}>Work</span> With Us
+         Why <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] ">Work</span> With Us
         </motion.h2>
 
         {/* Benefits Grid */}

@@ -21,7 +21,7 @@ const FounderSection = () => {
           className="text-[24px] lg:text-[62px] font-[600] text-center leading-tight sm:leading-[72px] mb-6"
         >
           Meet{" "}
-          <span className="bg-clip-text lg:text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-[#BA24D5]">Our Founder</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] ">Our Founder</span>
         </motion.h2>
 
         <motion.p

@@ -26,7 +26,7 @@ const Home = () => {
             transition={{ duration: 1.0, ease: "easeInOut" }}
             className={`text-[24px] lg:text-[70px] font-[700] flex justify-center lg:justify-start ${roboto.className}`}
           >
-            <span className="bg-clip-text lg:text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-[#BA24D5]">
+            <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] ">
               Kai Foundry
             </span>
             :
@@ -41,7 +41,7 @@ const Home = () => {
           >
             <span className="hidden lg:block">This Is</span>
             <span className="block lg:-mt-6">
-              <span className="  bg-clip-text lg:text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-[#BA24D5]">
+              <span className=" bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">
                 Who
               </span>{" "}
               We Are

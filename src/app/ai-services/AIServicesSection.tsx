@@ -55,9 +55,9 @@ export default function AIServicesSection() {
           </h2> */}
          {/* Mobile Only (up to md) */}
 <h2 className="block md:hidden text-2xl font-bold text-[#333333] ]  leading-tight -mt-8">
-  Smarter <span className="text-[#BA24D5]  font-bold">
+  Smarter <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] font-bold">
     Solutions
-  </span> with <span className="text-[#BA24D5]  font-bold">
+  </span> with <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] font-bold">
     AI
   </span>
 </h2>
