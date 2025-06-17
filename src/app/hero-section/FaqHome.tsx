@@ -10,13 +10,13 @@ const FaqHome = () => {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto px-6 flex-col pt-0 pb-10 lg:py-38">
+    <div className="max-w-4xl mx-auto px-6 flex-col pt-14 pb-10 lg:py-38">
       <h2 className="text-[24px] md:text-[50px] xl:text-[54px] pb-0 lg:pb-4  font-bold text-center text-gray-900"
            style={{
     fontFamily: 'Roboto, sans-serif',
   }}
       >
-        <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] ">Frequently</span> Asked Questions
+        <span className="bg-color">Frequently</span> Asked Questions
       </h2>
       <div className="mt-6">
         {faqs.map((faq, index) => (

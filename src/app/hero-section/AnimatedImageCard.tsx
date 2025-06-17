@@ -177,7 +177,7 @@ export default function AnimatedSection() {
   return (
     <div
       ref={ref}
-      className=" flex flex-row flex-nowrap items-center justify-center my-20 text-black lg:py-44 lg:pl-18  overflow-hidden gap-4"
+      className=" flex flex-row flex-nowrap items-center justify-center my-20 text-black py-44 2xl:py-20 xl:py-28 lg:pl-18  overflow-hidden gap-4"
     >
       <div className="container relative flex w-full md:w-1/2 h-[600px] items-center">
         <AnimatePresence mode="wait">

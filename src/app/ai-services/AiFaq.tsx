@@ -17,7 +17,7 @@ const AiFaq = () => {
     fontFamily: 'Roboto, sans-serif',
   }}
       >
-        <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] ">Frequently</span> Asked Questions
+        <span className="bg-color">Frequently</span> Asked Questions
       </h2>
       <div className="mt-6">
         {faqs.map((faq, index) => (

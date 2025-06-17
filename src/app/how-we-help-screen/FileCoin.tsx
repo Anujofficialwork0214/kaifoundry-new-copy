@@ -33,14 +33,14 @@ const FileCoin = () => {
           className="text-[24px] lg:text-[62px] font-bold text-gray-900 leading-tight"
         >
           Kai Foundry’s{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">
+          <span className="bg-color">
             Filecoin{" "}
           </span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">
+          <span className="bg-color">
             Wallet{" "}
           </span>{" "}
           for{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">
+          <span className="bg-color">
             KaiOS
           </span>{" "}
           device

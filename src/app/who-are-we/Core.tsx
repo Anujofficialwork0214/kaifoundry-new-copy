@@ -44,7 +44,7 @@ const CoreValuesSection = () => {
           className="text-[28px] lg:text-[62px] font-[600] text-center mb-12"
         >
           Our{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">
+          <span className="bg-color">
             Core
           </span>{" "}
           Values

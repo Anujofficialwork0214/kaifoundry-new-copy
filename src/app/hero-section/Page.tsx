@@ -27,12 +27,12 @@ export default function HeroSection() {
           <h1 className={` lg:text-[65px] text-[24px] text-center lg:text-left font-bold transition-transform duration-1000 py-0 lg:py-10 leading-[1.2]`}>
             <span className="flex flex-row lg:flex-col items-center justify-center lg:items-start gap-x-2 text-center ">
               <span>Building Your</span>
-              <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text text-transparent block">
+              <span className="bg-color block">
                 BUSINESSES
               </span>
             </span>
             & Powering
-            <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text text-transparent c">
+            <span className="bg-color">
               {" "}WEB3
             </span>
           </h1>

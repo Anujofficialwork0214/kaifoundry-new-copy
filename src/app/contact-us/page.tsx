@@ -21,7 +21,9 @@ const ContactUs = () => {
             </button>
 
             <h2 className="mt-6 sm:mt-14 text-[28px] sm:text-[14px] md:text-[48px] lg:text-[62px] font-[600] text-[#333333] text-center mb-2">
-  Let&apos;s Get <span className="bg-clip-text text-transparent bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF] ">In Touch</span>
+
+  Let&apos;s Get<span className="bg-color">In Touch</span>
+
 </h2>
 
 

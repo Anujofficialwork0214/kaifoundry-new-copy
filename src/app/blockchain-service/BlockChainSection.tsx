@@ -41,7 +41,7 @@ export default function BlockchainSection() {
           className="text-center md:text-left"
         >
           <h2 className="text-xl md:text-[30px] lg:text-[40px] 2xl:text-[50px] font-semibold text-[#333333] leading-tight">
-            Blockchain <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] ">Development</span>:
+            Blockchain <span className="bg-color">Development</span>:
             <br />
             <span className="block md:inline">Powering Secure <span >
                Solutions</span></span>
