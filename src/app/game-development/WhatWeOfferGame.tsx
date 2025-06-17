@@ -12,11 +12,11 @@ const customServices = [
   {
     title: "Tap-To-Earn Game",
     description:
-      "Build lightweight, addictive hyper-casual games. Designed for quick sessions with simple mechanics and high replayability."},
+      "Create casual and interactive tap-to-earn games. Designed for seamless gameplay while offering real-world or digital rewards."},
   {
     title: "Hyper Casual Game Development",
     description:
-      "Kai Foundry specializes in Smart Contract Development, creating secure and efficient blockchain solutions tailored to your needs.",
+      "Build lightweight, addictive hyper-casual games. Designed for quick sessions with simple mechanics and high replayability.",
   },
   {
     title: "Telegram Game Development",
