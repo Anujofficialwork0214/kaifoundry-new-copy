@@ -45,7 +45,7 @@ const HowWeHelp = () => {
           <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">BUSINESSES GROW</span> <br />
           <span className="text-black">Wi</span>
   <span className="text-black opacity-70">th</span>
-          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] italic lg:not-italic">{" "}Blockchain</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] ">{" "}Blockchain</span>
         </h2>
         <h2 className="text-[24px]  font-bold block lg:hidden ">
           {/* How We Help <br /> */}
@@ -58,7 +58,7 @@ const HowWeHelp = () => {
           <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">Grow {" "}</span> 
           <span className="text-black">Wi</span>
   <span className="text-black opacity-70">th</span>
-          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] italic">{" "}Blockchain</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] ">{" "}Blockchain</span>
         </h2>
      {/* Mobile */}
 <p className="text-gray-800 text-[14px] mt-4 md:hidden">
