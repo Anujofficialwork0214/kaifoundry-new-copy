@@ -107,31 +107,23 @@ const BusinessGrowth = () => {
             onAnimationComplete={() => handleAnimationComplete(index)}
             className="flex flex-col items-center w-full lg:w-1/4 px-4 lg:px-6 text-center relative"
           >
-            {animationsComplete && index < steps.length - 1 && (
+            
+
+            <div className="bg-gradient-to-tl from-[#9F1AB1] to-[#E478FA] lg:p-4 p-3 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mt-4 lg:mt-0 shadow-lg relative">
+              {animationsComplete && index < steps.length - 1 && (
               <div
                 className={`
                 absolute 
                 ${
                   index % 2 === 0
-                    ? "top-[0px]"
-                    : screenSize === "lg-1024-1280"
-                    ? "bottom-[270px]"
-                    : screenSize === "lg-md"
-                    ? "bottom-[210px]"
-                    : screenSize === "lg-xl"
-                    ? "bottom-[160px]"
-                    : ""
+                    ? "top-[-5px]"
+                    
+                    : "bottom-[-25px]"
                 }
-                ${
-                  screenSize === "lg-1024-1280"
-                    ? "left-1/2 translate-x-[50px]"
-                    : screenSize === "lg-md"
-                    ? "left-1/2 translate-x-[50px]"
-                    : screenSize === "lg-xl"
-                    ? "left-1/3 translate-x-[110px]"
-                    : ""
-                }
-                hidden lg:block
+                
+                hidden lg:block translate-x-[70px]
+                w-[300px] 
+  h-[50px]  
               `}
               >
                 <Image
@@ -141,15 +133,13 @@ const BusinessGrowth = () => {
                       : "/svg/Ellipse 81.png"
                   }
                   alt="Arrow"
-                  width={1900}
-                  height={960}
+                  width={250}
+                  height={50}
                   draggable="false"
                   className="hidden lg:block"
                 />
               </div>
             )}
-
-            <div className="bg-gradient-to-tl from-[#9F1AB1] to-[#E478FA] lg:p-4 p-3 rounded-tl-2xl rounded-tr-2xl rounded-br-2xl mt-4 lg:mt-0 shadow-lg relative">
               <Image
                 src={step.icon}
                 alt={step.title}
