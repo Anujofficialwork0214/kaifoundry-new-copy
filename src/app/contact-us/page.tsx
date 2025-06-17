@@ -14,14 +14,16 @@ const ContactUs = () => {
             {/* Back Button */}
             <button 
                 onClick={handleBackClick} 
-                className=" top-2  left-4 flex items-center font-bold text-gray-700 cursor-pointer hover:text-gray-900 "
+                className=" top-2  left-4 flex items-center lg:pl-8 pl-2 font-bold text-gray-700 cursor-pointer hover:text-gray-900 "
             >
                 <ArrowLeft className="mr-2 text-[10px] lg:text-[10px]" />
                 Back
             </button>
 
             <h2 className="mt-6 sm:mt-14 text-[28px] sm:text-[14px] md:text-[48px] lg:text-[62px] font-[600] text-[#333333] text-center mb-2">
+
   Let&apos;s Get<span className="bg-color">In Touch</span>
+
 </h2>
 
 

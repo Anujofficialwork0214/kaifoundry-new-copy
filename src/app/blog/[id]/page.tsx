@@ -53,10 +53,10 @@ export default function BlogPost() {
         }}
     
 >
-            <div className="flex w-full md:px-5 mb-10">
+            <div className="flex w-full md:px-5 mb-10 ">
                 <button
                     onClick={() => router.back()}
-                    className="flex items-center space-x-2 mx-auto cursor-pointer text-gray-600  px-4 py-2 rounded-lg absolute top-25 transition duration-300 ease-in-out"
+                    className="flex items-center space-x-2 mx-auto cursor-pointer text-gray-600 sm:px-2 py-2 rounded-lg absolute top-25 transition duration-300 ease-in-out"
                 >
 
                     <span className="text-lg  flex justify-between items-center "><IoMdArrowBack size={20}  /> Back</span>
@@ -69,11 +69,11 @@ export default function BlogPost() {
                 alt="Blog Cover"
                 width={900}
                 height={800}
-                className="w-[325px]  lg:w-full lg:h-[500px] object-cover  mb-6 mt-20 lg:mt-30 px-0 lg:px-10"
+                className="lg:w-full lg:h-[500px] object-cover  mb-6 mt-20 lg:mt-30 px-0 lg:px-10"
                 draggable={false}
             />
 
-            <div className="w-full md:max-w-[80%] lg:md:max-w-[80%] px-2 sm:px-2 " >
+            <div className="w-full md:max-w-[80%] lg:md:max-w-[80%] lg:px-2 px-0 " >
                 <h1 className="text-[18px] text-[#2D3748] md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl font-bold">{post.title}</h1>
                 <p className="text-[14px] md:text-[27px] lg:text-[27px] text-[#2D3748] mt-2">
                     <strong>Written by {post.author}</strong> &nbsp; | &nbsp; {post.date}
@@ -81,7 +81,7 @@ export default function BlogPost() {
                 <div className="border-b border-gray-300 my-4"></div>
             </div>
 
-            <div className="mt-6 text-[#2D3748] space-y-4 leading-relaxed w-full items-center mx-auto px-4 sm:px-2 md:max-w-[80%] lg:md:max-w-[80%]" >
+            <div className="mt-6 text-[#2D3748] space-y-4 leading-relaxed w-full items-center mx-auto lg:px-2  px-0 md:max-w-[80%] lg:md:max-w-[80%] "  >
                 <p className="text-[#718096] text-[16px] md:text-2xl lg:text-2xl ">{post.content}</p>
                 {post.subheadings.map((subheading, index) => (
                     <div key={index}>

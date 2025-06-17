@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 
 const features = [
-  { name: "Immersive", icon: "/svg/people.svg" },
+  { name: "Immersive", icon: "/immersive.svg" },
   { name: "Cross-Platform", icon: "/svg/crossPlatform.svg" },
   { name: "Web3-Ready", icon: "/svg/web3.svg" },
   { name: "Optimized", icon: "/svg/optimized.svg" },
