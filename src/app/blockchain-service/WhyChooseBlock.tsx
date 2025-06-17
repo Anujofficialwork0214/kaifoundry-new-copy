@@ -4,7 +4,7 @@ const customFeatures = [
   {
     icon: "/custom.png",
     title: "Custom-Built for Your Needs",
-    description: "We create blockchain solutions tailored to your business goals.",
+    description: "We have expertise in developing Blockchain.",
   },
   {
     icon: "/unmatched.png",
