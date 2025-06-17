@@ -177,7 +177,7 @@ export default function AnimatedSection() {
   return (
     <div
       ref={ref}
-      className=" flex flex-row flex-nowrap items-center justify-center my-20 text-black md:p-18 overflow-hidden gap-4"
+      className=" flex flex-row flex-nowrap items-center justify-center my-20 text-black lg:py-44 lg:pl-18  overflow-hidden gap-4"
     >
       <div className="container relative flex w-full md:w-1/2 h-[600px] items-center">
         <AnimatePresence mode="wait">
@@ -187,7 +187,7 @@ export default function AnimatedSection() {
                 key={item.image}
                 src={item.image}
                 alt="Blockchain"
-                className="absolute w-[90%] object-cover rounded-4xl border-2 border-white"
+                className="absolute w-[90%]  object-cover rounded-4xl border-2 border-white"
                 initial={{ y: 100 + 10 * i, opacity: 0, x: 20 * i }}
                 animate={{ y: 30 * i, opacity: 1, x: 30 * i }}
                 viewport={{ once: true }}
@@ -198,7 +198,7 @@ export default function AnimatedSection() {
         </AnimatePresence>
       </div>
 
-      <div className="w-1/2 text-left flex items-center h-[400px] mr-2 relative overflow-hidden">
+      <div className="w-1/2 text-left flex items-center h-[400px] mr-10 relative overflow-hidden">
         <AnimatePresence mode="wait">
           {inView && (
             <motion.div
