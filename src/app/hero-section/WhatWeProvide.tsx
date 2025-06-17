@@ -73,14 +73,16 @@ const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
       </div>
       <div className="p-4 md:p-6">
         <h3
-          className={`${screenWidth < 375 ? "text-[14px]" : ""
-            } text-[16px] lg:text-[30.52px] font-bold text-[#333333] mb-2`}
+          className={`${
+            screenWidth < 375 ? "text-[14px]" : ""
+          } text-[16px] md:text-[20px] 2xl:text-[30.52px] font-bold text-[#333333] mb-2`}
         >
           {service.title}
         </h3>
         <p
-          className={`${screenWidth < 375 ? "text-[12px]" : ""
-            } text-[#333333] text-[14px] lg:text-[21.54px]  leading-0.3`}
+          className={`${
+            screenWidth < 375 ? "text-[12px]" : ""
+          } text-[#333333] text-[14px] md:text-[17px] 2xl:text-[21.54px]  leading-0.3`}
         >
           {service.description}
         </p>
@@ -147,11 +149,11 @@ const WhatWeProvide = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <div className="mt-20 hidden  lg:block">
-            <h2 className=" text-[24px] lg:text-[62px] font-bold text-gray-900 leading-tight">
+            <h2 className=" text-[24px] md:text-[52px] 2xl:text-[62px] font-bold text-gray-900 leading-tight">
               WHAT <br />
               WE <span className="bg-color">PROVIDE</span>
             </h2>
-            <p className="text-[14px] lg:text-[32px] font-[400] lg:font-semibold text-[#434343] mt-6 lg:leading-10">
+            <p className="text-[14px] md:text-[24px] 2xl:text-[32px] font-[400] lg:font-semibold text-[#434343] mt-6 lg:leading-10">
               Services That Drive Your Success
             </p>
           </div>

@@ -692,7 +692,7 @@ const Navbar: React.FC = () => {
           <Link href="/" className="px-6 pt-6 pb-2 w-full flex flex-col  gap-5">
             <Image src="/svg/Group.svg" alt="Logo" width={20} height={20} />
             <div className={`text-[20px] font-[500] ${roboto.className}`}>
-              Kai Foundary
+              Kai Foundry
             </div>
           </Link>
           <Link

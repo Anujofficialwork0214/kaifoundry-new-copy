@@ -40,7 +40,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
       <div className=" px-6 md:px-0 text-center">
         {/* Heading */}
         <motion.h2
-          className="text-[24px] md:text-[58px] xl:text-[62px] font-roboto font-bold text-[#000000]"
+          className="text-[24px] md:text-5xl 2xl:text-6xl font-roboto font-bold text-[#000000]"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}

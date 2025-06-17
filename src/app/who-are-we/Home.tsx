@@ -27,10 +27,18 @@ const Home = () => {
             className={`text-[24px] lg:text-[70px] font-[700] flex justify-center lg:justify-start ${roboto.className}`}
           >
             <span className="bg-color">
-              Kai Foundry
+              Kai Foundry: 
             </span>
-            :
-            <span className="inline lg:hidden text-[24px]  font-[700] text-gray-900">{" "}This Is</span>
+      
+            {/* <span className="inline lg:hidden text-[24px]  font-[700] text-gray-900"> This Is</span> */}
+            {/* <span className="bg-color mr-1">
+  Kai Foundry:
+</span> */}
+<span className="mx-1"></span>
+<span className="inline lg:hidden text-[24px] font-[700] text-gray-900">
+  This Is
+</span>
+
           </motion.h2>
 
           <motion.h2
