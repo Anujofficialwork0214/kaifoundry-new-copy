@@ -96,7 +96,7 @@ const navs = [
     links: [
       { label: "Who We Are", href: "/who-are-we" },
       { label: "What We Do", href: "/" },
-      { label: "Career", href: "/career-screen" },
+      { label: "Career", href: "/careers-screen" },
       { label: "Portfolio", href: "/portfolio" },
     ],
   },
