@@ -14,7 +14,7 @@ const ContactUs = () => {
             {/* Back Button */}
             <button 
                 onClick={handleBackClick} 
-                className=" top-2  left-4 flex items-center font-bold text-gray-700 cursor-pointer hover:text-gray-900 "
+                className=" top-2  left-4 flex items-center lg:pl-8 pl-2 font-bold text-gray-700 cursor-pointer hover:text-gray-900 "
             >
                 <ArrowLeft className="mr-2 text-[10px] lg:text-[10px]" />
                 Back
