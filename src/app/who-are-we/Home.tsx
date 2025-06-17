@@ -72,7 +72,7 @@ const Home = () => {
 
         <div className="mt-10 lg:mt-0 lg:ml-10">
           <div className="rounded-3xl overflow-hidden ">
-            <Image src={pic} alt="Team Working" width={650} height={400}
+            <Image src={pic} alt="Team Working" width={650} height={400} priority={true}
               draggable="false" />
           
           </div>

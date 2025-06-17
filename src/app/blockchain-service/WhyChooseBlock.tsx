@@ -28,9 +28,9 @@ const WhyChooseBlock = () => {
     <WhyChoose
       features={customFeatures}
       heading="Why"
-          highlightText="Choose "
-           
-  suffixText="This Service?"
+      highlightText="Choose "
+
+      suffixText="This Service?"
     //   backgroundColor="bg-blue-100"
     />
   );

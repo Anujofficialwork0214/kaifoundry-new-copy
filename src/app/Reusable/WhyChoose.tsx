@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 type Feature = {
@@ -61,9 +62,11 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
               viewport={{ once: true }}
             >
               <div className="flex items-center justify-center w-28 h-28 mx-auto mb-6 bg-[#BA24D5] rounded-full">
-                <img
+                <Image
                   src={feature.icon}
                   alt={feature.title}
+                  width={8}
+                  height={8}
                   className="w-8 h-8 md:w-14 md:h-14 object-contain"
                   draggable="false"
                 />
@@ -90,9 +93,11 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
               viewport={{ once: true }}
             >
               <div className="flex items-center justify-center w-20 h-20 mb-4 bg-[#D444F1] rounded-full">
-                <img
+                <Image
                   src={feature.icon}
                   alt={feature.title}
+                  width={10}
+                  height={10}
                   className="w-10 h-10 md:w-12 md:h-12 lg:w-12 lg:h-12 object-contain"
                   draggable="false"
                 />

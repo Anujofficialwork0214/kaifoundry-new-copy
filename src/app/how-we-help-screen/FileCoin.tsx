@@ -128,6 +128,7 @@ const FileCoin = () => {
           height={550}
           className="relative z-10 w-[350px] h-[350px] lg:w-[550px] lg:h-[550px]"
           draggable={false}
+          priority={true}
         />
       </motion.div>
     </section>

@@ -139,6 +139,7 @@ const BusinessGrowth = () => {
                   height={50}
                   draggable="false"
                   className="hidden lg:block w-full"
+                  priority={true}
                 />
               </div>
             )}
@@ -149,6 +150,7 @@ const BusinessGrowth = () => {
                 height={60}
                 draggable="false"
                 className="w-10 h-10 lg:w-12 lg:h-12"
+                priority={true}
               />
             </div>
 

@@ -367,119 +367,119 @@ const ContactForm = () => {
 
   return (
     <div className="min-h-[670px] flex items-center justify-center">
-    {loading ? (
-          <div className="flex justify-center  items-center h-full">
-            <Loader />
+      {loading ? (
+        <div className="flex justify-center  items-center h-full">
+          <Loader />
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit} className="space-y-6 w-full ">
+          {error && <p className="text-red-600 bg-red-100 p-2 rounded">{error}</p>}
+          {success && (
+            <p className="text-green-600 bg-green-100 p-2 rounded">{success}</p>
+          )}
+
+          <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
+            <Input
+              label={
+                <>
+                  Name<span className="text-[#155EEF]">*</span>
+                </>
+              }
+              type="text"
+              name="name"
+              minLength={2}
+              maxLength={50}
+              placeholder="Enter your Name"
+              value={formData.name}
+              required
+              onChange={handleChange}
+              className="font-[500]"
+            />
+
+            <Input
+              label="Last Name"
+              type="text"
+              name="lastName"
+              maxLength={50}
+              placeholder="Enter your Last Name"
+              value={formData.lastName}
+              onChange={handleChange}
+              className="font-[500]"
+            />
           </div>
-      ):(
-    <form onSubmit={handleSubmit} className="space-y-6 w-full ">
-      {error && <p className="text-red-600 bg-red-100 p-2 rounded">{error}</p>}
-      {success && (
-        <p className="text-green-600 bg-green-100 p-2 rounded">{success}</p>
+          <Input
+            label={
+              <>
+                Email<span className="text-[#155EEF]">*</span>
+              </>
+            }
+            type="text"
+            name="email"
+            value={formData.email}
+            minLength={5}
+            maxLength={200}
+            pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+            required
+            onChange={handleChange}
+            onPaste={preventPasteSpaces}
+            placeholder="Enter your Email"
+            className="font-[500]"
+          />
+          <Input
+            label={
+              <>
+                Phone Number<span className="text-[#155EEF]">*</span>
+              </>
+            }
+            type="tel"
+            name="phone"
+            minLength={8}
+            maxLength={15}
+            placeholder="Enter your Contact Number"
+            value={formData.phone}
+            onChange={handleChange}
+            className="font-[500]"
+            required
+          />
+          <Input
+            label={
+              <>
+                Message<span className="text-[#155EEF]">*</span>
+              </>
+            }
+            type="text"
+            name="message"
+            minLength={10}
+            maxLength={500}
+            placeholder="Write your message here."
+            value={formData.message}
+            className="font-[500]"
+            onChange={handleChange}
+            required
+            textarea
+          />
+
+          <div className="flex justify-center cursor-pointer">
+            <ReCAPTCHA
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+              onChange={(token) =>
+                setFormData((prev) => ({ ...prev, captchaToken: token || "" }))
+              }
+              ref={recaptchaRef}
+            />
+          </div>
+
+          <div className="flex justify-center">
+            <Button
+              type="submit"
+              text="Submit"
+              className="bg-[#D444F1] text-white hover:hover:bg-[#821890] rounded-full py-2 px-4 w-40 lg:44 transition duration-300 cursor-pointer"
+            />
+          </div>
+        </form>
+
       )}
-
-      <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
-        <Input
-          label={
-            <>
-              Name<span className="text-[#155EEF]">*</span>
-            </>
-          }
-          type="text"
-          name="name"
-          minLength={2}
-          maxLength={50}
-          placeholder="Enter your Name"
-          value={formData.name}
-          required
-          onChange={handleChange}
-          className="font-[500]"
-        />
-
-        <Input
-          label="Last Name"
-          type="text"
-          name="lastName"
-          maxLength={50}
-          placeholder="Enter your Last Name"
-          value={formData.lastName}
-          onChange={handleChange}
-          className="font-[500]"
-        />
-      </div>
-      <Input
-        label={
-          <>
-            Email<span className="text-[#155EEF]">*</span>
-          </>
-        }
-        type="text"
-        name="email"
-        value={formData.email}
-        minLength={5}
-        maxLength={200}
-        pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
-        required
-        onChange={handleChange}
-        onPaste={preventPasteSpaces}
-        placeholder="Enter your Email"
-        className="font-[500]"
-      />
-      <Input
-        label={
-          <>
-            Phone Number<span className="text-[#155EEF]">*</span>
-          </>
-        }
-        type="tel"
-        name="phone"
-        minLength={8}
-        maxLength={15}
-        placeholder="Enter your Contact Number"
-        value={formData.phone}
-        onChange={handleChange}
-        className="font-[500]"
-        required
-      />
-      <Input
-        label={
-          <>
-            Message<span className="text-[#155EEF]">*</span>
-          </>
-        }
-        type="text"
-        name="message"
-        minLength={10}
-        maxLength={500}
-        placeholder="Write your message here."
-        value={formData.message}
-        className="font-[500]"
-        onChange={handleChange}
-        required
-        textarea
-      />
-
-      <div className="flex justify-center cursor-pointer">
-        <ReCAPTCHA
-          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
-          onChange={(token) =>
-            setFormData((prev) => ({ ...prev, captchaToken: token || "" }))
-          }
-          ref={recaptchaRef}
-        />
-      </div>
-
-      <div className="flex justify-center">
-        <Button
-          type="submit"
-          text="Submit"
-          className="bg-[#D444F1] text-white hover:hover:bg-[#821890] rounded-full py-2 px-4 w-40 lg:44 transition duration-300 cursor-pointer"
-        />
-      </div>
-    </form>
-    
-  )}
-  </div>
+    </div>
   );
 };
 

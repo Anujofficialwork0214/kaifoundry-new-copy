@@ -64,6 +64,7 @@ const CoolStuff = () => {
               height={500}
               className='rounded-lg sm:w-[300px] w-[250px]'
               draggable="false"
+              priority={true}
             />
           </motion.div>
 

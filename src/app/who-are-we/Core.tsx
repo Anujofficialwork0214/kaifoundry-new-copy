@@ -70,6 +70,7 @@ const CoreValuesSection = () => {
                 width={250}
                 height={250}
                 draggable="false"
+                priority={true}
                 className="mb-6 w-[150px] h-[150px] lg:w-[250px] lg:h-[250px] object-cover"
               />
               <div className="flex flex-col">

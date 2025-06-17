@@ -15,6 +15,7 @@ const HeroSection = () => {
           width={1920}
           height={1080}
           draggable="false"
+          priority={true}
         />
       </div>
 
@@ -37,7 +38,7 @@ const HeroSection = () => {
 
             <span className="bg-color font-bold">Players</span> Hooked
 
-          
+
 
           </h2>
           {/* <p className="text-gray-600 text-base md:text-[20px] mt-4 ">

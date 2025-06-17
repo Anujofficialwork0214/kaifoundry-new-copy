@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Cog, Shield, LineChart, Users, Lightbulb, Expand } from "lucide-react";
+import Image from "next/image";
 
 // const features = [
 //   { name: "Automation", icon: Cog },
@@ -53,23 +54,23 @@ export default function AIServicesSection() {
               <span className="text-[#BA24D5]">AI</span>
             </span>
           </h2> */}
-         {/* Mobile Only (up to md) */}
-<h2 className="block md:hidden text-2xl font-bold text-[#333333] ]  leading-tight -mt-8">
-  Smarter <span className="bg-color font-bold">
-    Solutions
-  </span> with <span className="bg-color font-bold">
-    AI
-  </span>
-</h2>
+          {/* Mobile Only (up to md) */}
+          <h2 className="block md:hidden text-2xl font-bold text-[#333333] ]  leading-tight -mt-8">
+            Smarter <span className="bg-color font-bold">
+              Solutions
+            </span> with <span className="bg-color font-bold">
+              AI
+            </span>
+          </h2>
 
-{/* Desktop Only (md and above) */}
-<h2 className="hidden md:block md:text-xl lg:text-5xl 2xl:text-[55px] font-bold text-[#333333] leading-tight -mt-8">
-  Smarter <span className="bg-color font-bold">
-    Solutions
-  </span> with <span className="bg-color font-bold">
-    AI
-  </span>
-</h2>
+          {/* Desktop Only (md and above) */}
+          <h2 className="hidden md:block md:text-xl lg:text-5xl 2xl:text-[55px] font-bold text-[#333333] leading-tight -mt-8">
+            Smarter <span className="bg-color font-bold">
+              Solutions
+            </span> with <span className="bg-color font-bold">
+              AI
+            </span>
+          </h2>
 
           <p className="mt-4 text-[12px] md:text-lg 2xl:text-[22px] font-[400] text-[#333333]">
             Harness the power of Artificial Intelligence to automate, optimize,
@@ -88,10 +89,13 @@ export default function AIServicesSection() {
               className="flex items-center space-x-3"
             >
               {/* <feature.icon className="h-7 w-7 text-[#BA24D5]" /> */}
-              <img
+              <Image
                 src={feature.icon}
                 alt={feature.name}
-               className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain"
+                width={6}
+                height={6}
+                className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain"
+                priority={true}
               />
               <span className="text-sm lg:text-xl sm:text-xs font-medium text-gray-900 whitespace-nowrap">
                 {feature.name}

@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const features = [
   { name: "Immersive", icon: "/immersive.svg" },
@@ -41,10 +42,13 @@ export default function GameDevelopmentSection() {
               className="flex items-center space-x-3"
             >
               {/* <feature.icon className="w-6 h-6 md:w-8 ms:w-8 lg:w-8 lg-w-8  text-[#BA24D5]" /> */}
-              <img
+              <Image
                 src={feature.icon}
                 alt={feature.name}
-                  className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain"
+                width={6}
+                height={6}
+                className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain"
+                priority={true}
               />
               <span className="text-sm lg:text-lg sm:text-xs font-medium text-[#000000] whitespace-nowrap">
                 {feature.name}

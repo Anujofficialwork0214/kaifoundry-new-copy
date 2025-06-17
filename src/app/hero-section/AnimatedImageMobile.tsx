@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Image from "next/image";
 
 const content = [
   {
@@ -88,10 +89,13 @@ export default function AnimatedImageMobile() {
               }}
               transition={{ duration: 0.3 }}
             >
-              <img
+              <Image
                 src={content[stackIndex].image}
                 alt="Blockchain"
+                width={80}
+                height={80}
                 className="w-full h-full object-cover rounded-[24px] border-2 border-white"
+                priority={true}
               />
             </motion.div>
           ))}
@@ -108,9 +112,12 @@ export default function AnimatedImageMobile() {
               transition={{ duration: 0.5 }}
               style={{ zIndex: stack.length + 2 }}
             >
-              <img
+              <Image
                 src={content[currentIndex].image}
                 alt="Blockchain"
+                width={80}
+                height={80}
+                priority={true}
                 className="w-full h-full object-cover rounded-[24px] border-2 border-white"
               />
             </motion.div>

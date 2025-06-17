@@ -12,31 +12,31 @@ import EcosystemSection from '../Reusable/EcosystemSection';
 import EcosystemMobile from '../Reusable/EcoSystemMobile';
 
 const GameDevelopmentPage: React.FC = () => {
-      const [isMobile, setIsMobile] = useState(false);
-  
-    useEffect(() => {
-      const handleResize = () => {
-        setIsMobile(window.innerWidth < 768);
-      };
-  
-      handleResize(); 
-      window.addEventListener("resize", handleResize); 
-  
-      return () => {
-        window.removeEventListener("resize", handleResize); 
-      };
-    }, []);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div>
-   <HeroSection />
-   <BlockchainSection/>
+      <HeroSection />
+      <BlockchainSection />
       <WhatWeOfferGame />
       <WhyChooseGame />
-    {isMobile ?<EcosystemMobile/> : <EcosystemSection/>}
+      {isMobile ? <EcosystemMobile /> : <EcosystemSection />}
       <FaqGame />
-      <Contact/>
+      <Contact />
 
-     </div>
+    </div>
   );
 };
 

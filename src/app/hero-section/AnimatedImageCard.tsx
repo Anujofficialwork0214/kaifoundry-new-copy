@@ -192,7 +192,8 @@ export default function AnimatedSection() {
                 animate={{ y: 30 * i, opacity: 1, x: 30 * i }}
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
-                
+
+
               />
             ))}
         </AnimatePresence>
@@ -208,7 +209,7 @@ export default function AnimatedSection() {
               exit={{ y: -400, opacity: 1 }}
               className="absolute ml-10"
               transition={{ duration: 1, ease: "easeInOut" }}
-              viewport={{once:true}}
+              viewport={{ once: true }}
             >
               <h2 className="text-xl md:text-3xl font-bold tracking-wide">
                 {content[index].title}

@@ -61,6 +61,7 @@ const HeroSection = () => {
           width={1920}
           height={1080}
           draggable="false"
+          priority={true}
         />
       </div>
 
@@ -90,16 +91,16 @@ const HeroSection = () => {
               That Think, Learn & Evolve
             </span>
 
-          {/* Mobile only */}
+            {/* Mobile only */}
 
 
-{/* Medium and larger screens only */}
-<span className="hidden md:block text-3xl lg:text-4xl xl:text-[60px] leading-tight">
-  <span className="bg-color font-bold">
-    AI Solutions
-  </span>
-  {" "}That Think, Learn & Evolve
-</span>
+            {/* Medium and larger screens only */}
+            <span className="hidden md:block text-3xl lg:text-4xl xl:text-[60px] leading-tight">
+              <span className="bg-color font-bold">
+                AI Solutions
+              </span>
+              {" "}That Think, Learn & Evolve
+            </span>
 
           </h2>
 
