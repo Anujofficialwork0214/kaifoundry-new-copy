@@ -59,7 +59,7 @@ const ContactUs = () => {
     // </>
     <>
       <h2 className="text-3xl md:text-5xl font-semibold text-center mb-10 md:mb-2 font-inter text-[#333333]">
-    Let&apos;s Get <span className="bg-clip-text text-transparent bg-gradient-to-t  from-[#BA24D5] to-[#E95DFF] ">In Touch</span>
+    Let&apos;s Get <span className="bg-color">In Touch</span>
   </h2>
   <section className="p-0 lg:p-4 flex items-center justify-center w-full">
     <div className="grid grid-cols-1 md:grid-cols-2 md:gap-34 p-0 md:p-4 ">

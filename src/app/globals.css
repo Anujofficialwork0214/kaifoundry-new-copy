@@ -179,6 +179,12 @@ body {
   }
 }
 
+.bg-color {
+  background: linear-gradient(0deg, #BA24D5 8.24%, #DE6BF5 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 
 

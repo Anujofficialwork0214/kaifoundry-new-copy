@@ -44,7 +44,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {heading} <span className="bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] bg-clip-text text-transparent ">{highlightText}</span>{" "}
+          {heading} <span className="bg-color">{highlightText}</span>{" "}
           {suffixText}
         </motion.h2>
 

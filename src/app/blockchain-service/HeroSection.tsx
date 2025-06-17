@@ -35,7 +35,7 @@ const HeroSection = () => {
             {/* Small  */}
             <span className="block md:hidden text-xl   ">
               Empowering Innovation with{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] italic">Blockchain</span>{" "}
+              <span className="bg-color">Blockchain</span>{" "}
               Solutions
             </span>
 
@@ -43,7 +43,7 @@ const HeroSection = () => {
             <span className="hidden md:block text-3xl md:text-3xl lg:text-5xl xl:text-[65px]  leading-tight">
               Empowering <br />
               Innovation with <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">Blockchain</span>{" "}
+              <span className="bg-color">Blockchain</span>{" "}
               Solutions
             </span>
           </h2>

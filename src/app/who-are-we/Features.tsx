@@ -51,7 +51,7 @@ const FeaturesSection = () => {
           className={`text-[24px] lg:text-[62px] font-[700] lg:text-[600] text-center lg:text-left lg:w-1/2 `}
         >
           What
-          <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6]">
+          <span className="bg-color">
             {" "}
             Drives
           </span>{" "}
