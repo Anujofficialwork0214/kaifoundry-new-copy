@@ -31,10 +31,13 @@ const CoolStuff = () => {
 
   return (
     <section className='bg-gradient-to-b from-white sm:via-0% via-50% via-[#FBE8FF] to-[#FBE8FF] p-20 lg:py-20'>
-      <div className='max-w-7xl grid grid-cols-1 md:grid-cols-2 items-center gap-10'>
-        <div className='text-center md:text-left'>
-          <h2 className='text-6xl font-bold mb-8'>
-            Wanna Build <span className='bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#E95DFF]'>Cool Stuff</span> With Us?
+      <div className='w-full grid grid-cols-1 md:grid-cols-2 items-center gap-10'>
+        <div className='text-center md:text-left '>
+          <h2 className='text-6xl font-bold mb-8 hidden lg:block'>
+            Wanna Build <span className='bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#E95DFF]'>Cool<br/> Stuff</span> With Us?
+          </h2>
+          <h2 className='text-6xl font-bold mb-8 block lg:hidden'>
+            Wanna Build <span className='bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#E95DFF]'>Cool<br/> Stuff</span> With Us?
           </h2>
           <p className='text-[14px] font-400 text-[#666666] max-w-md'>
             Be part of something big—innovate, grow, and shape the future with us. Join a team that values creativity, collaboration, and cutting-edge technology to drive meaningful change.
