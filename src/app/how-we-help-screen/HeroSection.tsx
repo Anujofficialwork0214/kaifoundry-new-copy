@@ -7,13 +7,13 @@ const HowWeHelp = () => {
     <section className="flex flex-col md:flex-row-reverse w-full items-center text-center px-6 pt-20 pb-8 lg:py-32 md:text-left md:px-20 md:justify-between relative">
 
       {/* Background GIF Container */}
-      <div className="absolute inset-y-0 right-0 lg:right-20 z-0 w-full h-full md:w-1/3 md:h-[1000px] transform -translate-y-40 lg:-translate-y-50 -translate-x-5"> 
+      <div className="absolute inset-y-0 right-0 lg:right-20 z-0 w-full h-full md:w-1/3 md:h-[1000px] transform -translate-y-40 lg:-translate-y-40 -translate-x-15"> 
       <Image
   src="/assets/HowWeHelp/bg.gif"
   alt="Background GIF"
   fill
   style={{ objectFit: "cover" }}
-  className="opacity-20 inset-0 transform scale-100  "
+  className="opacity-20 inset-0 transform scale-130"
   draggable={false}
 />
 
@@ -34,8 +34,8 @@ const HowWeHelp = () => {
       </div>
      
       {/* Text Section */}
-      <div className="w-full  md:w-2/3 mt-10 md:mt-20 z-10">
-        <h2 className=" lg:text-[62px] 2xl:text-[74px] font-bold hidden lg:block leading-[1.3]">
+      <div className="w-full  md:w-1/2 mt-10 md:mt-20 z-10">
+        <h2 className=" lg:text-[62px] font-bold hidden lg:block leading-[1.3]">
           {/* How We Help <br /> */}
    
   <span className="text-black">Ho</span>
@@ -67,7 +67,7 @@ const HowWeHelp = () => {
 
 {/* Desktop  */}
 <p className="text-gray-800 text-[14px] md:text-[20px] 2xl:text-[26px] lg:mt-5 mt-4 hidden md:block">
-  At Kai Foundry, we craft blockchain solutions tailored <br /> to your business needs, empowering you to innovate, secure <br /> your operations, and scale your growth.
+  At Kai Foundry, we craft blockchain solutions tailored to your business needs, empowering you to innovate, secure  your operations, and scale your growth.
 </p>
 
         <Link href="/contact-us">
