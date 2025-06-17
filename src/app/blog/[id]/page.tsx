@@ -71,6 +71,7 @@ export default function BlogPost() {
                 height={800}
                 className="lg:w-full lg:h-[500px] object-cover  mb-6 mt-20 lg:mt-30 px-0 lg:px-10"
                 draggable={false}
+                priority={true}
             />
 
             <div className="w-full md:max-w-[80%] lg:md:max-w-[80%] lg:px-2 px-0 " >

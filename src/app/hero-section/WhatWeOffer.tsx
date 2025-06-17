@@ -44,17 +44,17 @@ const customServices = [
 ];
 
 const WhatWeOffer = () => {
-    return (
-        <div>
-            <Services
-                services={customServices}
-          heading="What We Offer - "
-          subheading="Our"
-              breakHeading=" Specialized Features"
-               
-            />
-        </div>
-    );
+  return (
+    <div>
+      <Services
+        services={customServices}
+        heading="What We Offer - "
+        subheading="Our"
+        breakHeading=" Specialized Features"
+
+      />
+    </div>
+  );
 };
 
 export default WhatWeOffer;

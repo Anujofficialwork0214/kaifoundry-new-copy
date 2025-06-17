@@ -55,7 +55,7 @@ const ANIMATION_DURATION_SECONDS = 10;
 
 const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
   <Link href={service.link} passHref legacyBehavior
-  
+
   >
     <a
       className="flex-shrink-0  h-104 md:w-[500px] lg:h-[530px] ml-0 lg:ml-2   rounded-4xl shadow-xl overflow-hidden md:mx-2 cursor-pointer block"
@@ -73,16 +73,20 @@ const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
       </div>
       <div className="p-4 md:p-6">
         <h3
+
           className={`${
             screenWidth < 375 ? "text-[14px]" : ""
           } text-[16px] md:text-[20px] 2xl:text-[30.52px] font-bold text-[#333333] mb-2`}
+
         >
           {service.title}
         </h3>
         <p
+
           className={`${
             screenWidth < 375 ? "text-[12px]" : ""
           } text-[#333333] text-[14px] md:text-[17px] 2xl:text-[21.54px]  leading-0.3`}
+
         >
           {service.description}
         </p>
@@ -159,7 +163,7 @@ const WhatWeProvide = () => {
           </div>
           <div className="mt-20 block lg:hidden">
             <h2 className=" text-[24px] lg:text-[62px] font-[700] text-gray-900 leading-tight">
-              WHAT 
+              WHAT
               WE <span className="bg-color">PROVIDE</span>
             </h2>
             <p className="text-[14px] lg:text-[32px] font-[400] lg:font-semibold text-[#434343] mt-6 leading-0 lg:leading-10">
@@ -168,21 +172,21 @@ const WhatWeProvide = () => {
           </div>
         </motion.div>
         <div className="relative w-full md:w-1/2 lg:w-2/3 pb-4 pt-0 lg:p-4 px-4 md:px-0 ">
-        
+
           {isMobile ? (
             <>
-            <hr className="text-[#E4E4E4] w-full h-[1.5px] mb-10 -mt-2"/>
-            <div className="flex flex-col gap-6">
-              {services.map((service) => (
-                <ServiceCard
-                  key={service.id}
-                  service={service}
-                  isMobile={isMobile}
-                  screenWidth={screenWidth}
-                />
-              ))}
-              
-            </div>
+              <hr className="text-[#E4E4E4] w-full h-[1.5px] mb-10 -mt-2" />
+              <div className="flex flex-col gap-6">
+                {services.map((service) => (
+                  <ServiceCard
+                    key={service.id}
+                    service={service}
+                    isMobile={isMobile}
+                    screenWidth={screenWidth}
+                  />
+                ))}
+
+              </div>
             </>
           ) : (
             <div className="slider-container w-7xl overflow-hidden  flex space-x-0.5   ">

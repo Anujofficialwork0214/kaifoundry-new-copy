@@ -37,9 +37,8 @@ export default function HeroSection() {
             </span>
           </h1>
           <p
-            className={`text-black mt-3 lg:mt-0 text-[12px] text-center lg:text-left lg:text-[24px] transition-opacity duration-1000 ${
-              isVisible ? "opacity-100" : "opacity-0"
-            }`}
+            className={`text-black mt-3 lg:mt-0 text-[12px] text-center lg:text-left lg:text-[24px] transition-opacity duration-1000 ${isVisible ? "opacity-100" : "opacity-0"
+              }`}
           >
             We help businesses grow with smart strategies
             <br />
@@ -48,65 +47,64 @@ export default function HeroSection() {
             success easier to achieve.
           </p>
           <div className="flex justify-center lg:justify-start">
-          <div className="relative mt-14"> 
-          {/* bg-[#ba24d5] */}
-  <motion.div
-    className={`absolute top-0 left-0 h-full bg-[#ba24d5] rounded-full ${
-      isVisible ? "opacity-100 bg-[#d444f1]" : "opacity-0"
-    }`}
-    initial={{ width: 0 }}
-    animate={isVisible ? { width: "100%" } : { width: 0 }}
-    transition={{ duration: 0.5, ease: "easeInOut" }}
-  />
-  
-  
-  <motion.div
-    className={`flex relative top-0  md:flex pl-8 overflow-hidden`}
-    initial={{ opacity: 0 }}
-    animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-    transition={{ delay: 0.8, duration: 0.5 }} 
-  >
-    <Link href="/how-we-help-screen" className="pr-3 lg:pr-0">
-      <button
-        className={`relative z-10 flex items-center px-4 py-2 lg:px-8 lg:py-3  text-white text-[11px] lg:text-lg transition-all duration-300 bg-[#d444f1] `}
-      >
-        HOW WE HELP
-        <span className="ml-2 w-5 h-5 lg:w-7 lg:h-7 flex items-center justify-center border-2 border-white rounded-full font-light">
-          ➜
-        </span>
-      </button>
-    </Link>
-    <Link href="/contact-us">
-      <button
-        className={`relative z-10 -ml-[13px] lg:ml-[-18px] px-3 py-[7px] mt-[1px] lg:mt-0 lg:px-6 lg:py-3 rounded-full border border-white lg:border-[#d444f1] bg-white text-black text-[12px] lg:text-lg transition-all duration-300 cursor-pointer hover:bg-gray-100`}
-      >
-        Contact Us
-      </button>
-    </Link>
-  </motion.div>
-</div>
+            <div className="relative mt-14">
+              {/* bg-[#ba24d5] */}
+              <motion.div
+                className={`absolute top-0 left-0 h-full bg-[#ba24d5] rounded-full ${isVisible ? "opacity-100 bg-[#d444f1]" : "opacity-0"
+                  }`}
+                initial={{ width: 0 }}
+                animate={isVisible ? { width: "100%" } : { width: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+              />
+
+
+              <motion.div
+                className={`flex relative top-0  md:flex pl-8 overflow-hidden`}
+                initial={{ opacity: 0 }}
+                animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+                transition={{ delay: 0.8, duration: 0.5 }}
+              >
+                <Link href="/how-we-help-screen" className="pr-3 lg:pr-0">
+                  <button
+                    className={`relative z-10 flex items-center px-4 py-2 lg:px-8 lg:py-3  text-white text-[11px] lg:text-lg transition-all duration-300 bg-[#d444f1] `}
+                  >
+                    HOW WE HELP
+                    <span className="ml-2 w-5 h-5 lg:w-7 lg:h-7 flex items-center justify-center border-2 border-white rounded-full font-light">
+                      ➜
+                    </span>
+                  </button>
+                </Link>
+                <Link href="/contact-us">
+                  <button
+                    className={`relative z-10 -ml-[13px] lg:ml-[-18px] px-3 py-[7px] mt-[1px] lg:mt-0 lg:px-6 lg:py-3 rounded-full border border-white lg:border-[#d444f1] bg-white text-black text-[12px] lg:text-lg transition-all duration-300 cursor-pointer hover:bg-gray-100`}
+                  >
+                    Contact Us
+                  </button>
+                </Link>
+              </motion.div>
+            </div>
           </div>
-          
+
 
         </div>
         {/* Image */}
         <div className="w-full lg:w-1/2 mt-5 md:mt-5 relative">
           <div className="absolute top-0 right-0 w-full h-[950px] lg:h-[680px] xl:h-185 bg-no-repeat bg-cover bg-desktop-image lg:rounded-lg z-0 -mt-20 lg:-mt-42"
-  
+
           >
-              {" "}
-            </div>
-            <Image
-              src="/assets/cube1.png"
-              alt="Web3 Cube"
-              width={400}
-              height={400}
-              draggable="false"
-              className={`mx-auto z-10 w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] transition-transform duration-1000 md:h-auto ${
-                isVisible ? "translate-y-0" : "translate-y-60"
-              } mt-40 lg:-mt-20`} 
-            />
-         {/* <div className="absolute bottom-0 lg:-bottom-44 rounded-lg lg:rounded-2xl left-2/9 lg:left-1/2 p-1 lg:p-3 transform lg:-translate-x-1/2 flex flex-col items-center justify-center bg-white/50 lg:w-[590px]  border border-gray-300 ">
+            {" "}
+          </div>
+          <Image
+            src="/assets/cube1.png"
+            alt="Web3 Cube"
+            width={400}
+            height={400}
+            draggable="false"
+            className={`mx-auto z-10 w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] transition-transform duration-1000 md:h-auto ${isVisible ? "translate-y-0" : "translate-y-60"
+              } mt-40 lg:-mt-20`}
+            priority={true}
+          />
+          {/* <div className="absolute bottom-0 lg:-bottom-44 rounded-lg lg:rounded-2xl left-2/9 lg:left-1/2 p-1 lg:p-3 transform lg:-translate-x-1/2 flex flex-col items-center justify-center bg-white/50 lg:w-[590px]  border border-gray-300 ">
          <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -141,7 +139,7 @@ export default function HeroSection() {
           </div>
         </motion.div>
          </div> */}
-         
+
 
 
         </div>
@@ -169,8 +167,8 @@ export default function HeroSection() {
                 duration={2}
                 className={`text-[20px] lg:text-[49.07px] font-[600] text-[#414141] ${roboto.className}`}
               />
-             <span className="text-[20px] lg:text-[49.07px] font-[600] text-[#414141]">+</span>
-             <span className={`text-[14px] lg:text-[26.17px] text-[#6E6E6E] whitespace-nowrap  ${roboto.className}`}>
+              <span className="text-[20px] lg:text-[49.07px] font-[600] text-[#414141]">+</span>
+              <span className={`text-[14px] lg:text-[26.17px] text-[#6E6E6E] whitespace-nowrap  ${roboto.className}`}>
                 &nbsp;Developers
               </span>
             </div>
@@ -180,8 +178,8 @@ export default function HeroSection() {
                 duration={2}
                 className={`text-[20px] lg:text-[49.07px] font-[600] text-[#414141] ${roboto.className}`}
               />
-             <span className="text-[20px] lg:text-[49.07px] font-[600] text-[#414141]">+</span>
-             <span className={`text-[14px] lg:text-[26.17px] text-[#6E6E6E] whitespace-nowrap  ${roboto.className}`}>
+              <span className="text-[20px] lg:text-[49.07px] font-[600] text-[#414141]">+</span>
+              <span className={`text-[14px] lg:text-[26.17px] text-[#6E6E6E] whitespace-nowrap  ${roboto.className}`}>
                 &nbsp;Ecosystems
               </span>
             </div>
@@ -189,7 +187,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      
+
     </div>
   );
 }

@@ -68,40 +68,40 @@ const Services: React.FC<ServicesProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 px-6 lg:px-0">
           {services.map((service, index) => (
             <motion.div
-            key={index}
-            className="relative pt-2 pl-0  lg:py-4  lg:pl-0 lg:mb-10 mb-6 max-w-100 mx-auto bg-transparent"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.1 }}
-            viewport={{ once: true }}
-          >
-            
-            <motion.div
-              className="absolute top-0 left-0 h-[2px] bg-[#D444F1]"
-              initial={{ width: 0 }}
-              whileInView={{ width: "100%" }}
-              transition={{
-                duration: 0.2, 
-                ease: [0.25, 0.1, 0.25, 1], 
-                delay:  0.2, 
-              }}
+              key={index}
+              className="relative pt-2 pl-0  lg:py-4  lg:pl-0 lg:mb-10 mb-6 max-w-100 mx-auto bg-transparent"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.1 }}
               viewport={{ once: true }}
-            />
+            >
 
-          
-            <h3
-              className={`text-[18px] md:text-2xl font-semibold text-left text-[#0E0E0E] ${manrope.className}`}
-            >
-              {service.title}
-            </h3>
-            <p
-              className="text-[#575656] mt-3 text-left text-sm md:text-base"
-              style={{ fontFamily }}
-            >
-              {service.description}
-            </p>
-          </motion.div>
-          
+              <motion.div
+                className="absolute top-0 left-0 h-[2px] bg-[#D444F1]"
+                initial={{ width: 0 }}
+                whileInView={{ width: "100%" }}
+                transition={{
+                  duration: 0.2,
+                  ease: [0.25, 0.1, 0.25, 1],
+                  delay: 0.2,
+                }}
+                viewport={{ once: true }}
+              />
+
+
+              <h3
+                className={`text-[18px] md:text-2xl font-semibold text-left text-[#0E0E0E] ${manrope.className}`}
+              >
+                {service.title}
+              </h3>
+              <p
+                className="text-[#575656] mt-3 text-left text-sm md:text-base"
+                style={{ fontFamily }}
+              >
+                {service.description}
+              </p>
+            </motion.div>
+
           ))}
         </div>
       </div>

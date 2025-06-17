@@ -35,14 +35,15 @@ const CoolStuff = () => {
             width={300}
             height={500}
             className="rounded-lg sm:w-[300px] w-[250px]"
+            priority={true}
           />
 
           {/* Badges without animation */}
           <Badge text="100+" subText={`Projects\nDelivered`} position="top-[5%] right-[5%] text-[14px]" width='w-[150] p-1' />
-                    <Badge text="" subText="Shape Your Tomorrow" position="left-[20%] top-[10%] translate-x-[-50%] text-[12px]" width="w-28 p-3" />
-                    <Badge text="" subText="24/7 Learning" position="left-[-3%] bottom-[30%]" bgColor="bg-[#D444F1] text-[12px] z-10" textColor="text-white" width="w-24 p-3"  />
-                    <Badge text="" subText="Break Boundaries" position="left-[4%] bottom-[15%] text-[12px] p-2" width="w-24" />
-                    <Badge text="50+" subText={`Experts\nDriving Change`} position="bottom-[5%] right-[0%] text-[10px]" bgColor="bg-[#D444F1]" textColor="text-white" width="w-30 p-2" />
+          <Badge text="" subText="Shape Your Tomorrow" position="left-[20%] top-[10%] translate-x-[-50%] text-[12px]" width="w-28 p-3" />
+          <Badge text="" subText="24/7 Learning" position="left-[-3%] bottom-[30%]" bgColor="bg-[#D444F1] text-[12px] z-10" textColor="text-white" width="w-24 p-3" />
+          <Badge text="" subText="Break Boundaries" position="left-[4%] bottom-[15%] text-[12px] p-2" width="w-24" />
+          <Badge text="50+" subText={`Experts\nDriving Change`} position="bottom-[5%] right-[0%] text-[10px]" bgColor="bg-[#D444F1]" textColor="text-white" width="w-30 p-2" />
         </div>
       </div>
 

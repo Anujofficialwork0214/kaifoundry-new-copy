@@ -12,23 +12,23 @@ const HowWeHelpSection: React.FC = () => {
 
   React.useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); 
+      setIsMobile(window.innerWidth < 768);
     };
 
-handleResize(); 
-window.addEventListener("resize", handleResize);
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
-return () => {
-  window.removeEventListener("resize", handleResize); 
-};
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
     <div>
-    <HowWeHelp />
-       <BussinessGrowthMob /> 
-    <FileCoin/>
-     <SolutionsSection />
+      <HowWeHelp />
+      <BussinessGrowthMob />
+      <FileCoin />
+      <SolutionsSection />
     </div>
   );
 };

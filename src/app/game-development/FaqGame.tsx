@@ -27,12 +27,14 @@ const FaqGame = () => {
   ];
   return (
     <div className="max-w-3xl mx-auto px-6 flex-col py-16 lg:py-24">
+
      <h2 className="text-[24px] md:text-5xl 2xl:text-6xl pb-0 lg:pb-4  font-bold text-center text-gray-900"
            style={{
     fontFamily: 'Roboto, sans-serif',
   }}
+
       >
-        <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] ">Frequently</span> Asked Questions
+        <span className="bg-color">Frequently</span> Asked Questions
       </h2>
       <div className="mt-6">
         {faqs.map((faq, index) => (

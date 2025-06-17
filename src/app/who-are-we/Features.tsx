@@ -78,6 +78,7 @@ const FeaturesSection = () => {
                   height={80}
                   draggable="false"
                   className="w-16 h-16 lg:w-full lg:h-full"
+                  priority={true}
                 />
               </div>
 

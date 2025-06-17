@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const features = [
   { name: "Immersive", icon: "/immersive.svg" },
@@ -21,9 +22,9 @@ export default function GameDevelopmentSection() {
           className="text-center md:text-left"
         >
           <h2 className="text-xl md:text-[30px] lg:text-[42px] 2xl:text-[50px]  font-bold text-[#333333] leading-tight">
-            Turning <span className="bg-clip-text bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-transparent  ">Ideas</span> into{" "}
-            <span className="bg-clip-text  bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-transparent ">Games</span>
-            <br /> That <span className="bg-clip-text  bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-transparent ">People</span> Love
+            Turning <span className="bg-color">Ideas</span> into{" "}
+            <span className="bg-color ">Games</span>
+            <br /> That <span className="bg-color ">People</span> Love
           </h2>
           <p className="mt-4 text-base md:text-lg text-[#333333] px-2">
             We create fun, immersive, and high-quality games that keep players
@@ -41,10 +42,13 @@ export default function GameDevelopmentSection() {
               className="flex items-center space-x-3"
             >
               {/* <feature.icon className="w-6 h-6 md:w-8 ms:w-8 lg:w-8 lg-w-8  text-[#BA24D5]" /> */}
-              <img
+              <Image
                 src={feature.icon}
                 alt={feature.name}
-                  className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain"
+                width={6}
+                height={6}
+                className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain"
+                priority={true}
               />
               <span className="text-sm lg:text-lg sm:text-xs font-medium text-[#000000] whitespace-nowrap">
                 {feature.name}

@@ -31,7 +31,7 @@ const EcoSystems: React.FC<EcosystemsProps> = ({
         <span className="bg-color ">{highlight}</span>{" "}
         {title.replace(highlight, "").trim()}
       </h2>
-    
+
       <div className="flex justify-center  items-center mt-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8  px-2 lg:px-0 justify-center items-center lg:gap-[50px] ">
           {items.map((eco, index) => (
@@ -48,6 +48,7 @@ const EcoSystems: React.FC<EcosystemsProps> = ({
                   width={60}
                   height={60}
                   draggable="false"
+                  priority={true}
                 />
               </div>
               <p className="mt-4 md:mt-2 lg:mt-2 text-sm md:text-lg text-[#414141] font-semibold">

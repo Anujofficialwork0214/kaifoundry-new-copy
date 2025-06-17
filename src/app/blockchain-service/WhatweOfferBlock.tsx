@@ -44,17 +44,17 @@ const customServices = [
 ];
 
 const WhatWeOffer = () => {
-    return (
-   <Services
-  services={customServices}
-  suffixText="Key"
-  heading="Features"
-            subheading="of Blockchain"
-            breakHeading="Development"
+  return (
+    <Services
+      services={customServices}
+      suffixText="Key"
+      heading="Features"
+      subheading="of Blockchain"
+      breakHeading="Development"
 
-/>
+    />
 
-    );
+  );
 };
 
 export default WhatWeOffer;

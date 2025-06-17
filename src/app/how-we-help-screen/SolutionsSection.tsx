@@ -228,7 +228,6 @@ const SolutionsSection = () => {
         {solutions.map((solution, index) => {
           const isHovered = hoverIndex === index && selectedSolution !== index;
           const isSelected = selectedSolution === index;
-
           return (
             <div key={index} className="relative w-full px-0 md:px-40 ">
               <div
@@ -277,8 +276,7 @@ const SolutionsSection = () => {
                     }}
                   />
                 )}
-
-                
+ 
                 <span className="relative z-10 text-[18px] px-4 lg:px-6 lg:text-[24px] font-[600] text-[#BA24D5] block w-full">
                   {index + 1}. {solution.title}
                 </span>
@@ -301,9 +299,7 @@ const SolutionsSection = () => {
                   </p>
                 </div>
               </motion.div>
-
-              
-              <div className="absolute bottom-0 h-[0.6px] lg:h-[1px] w-full lg:w-[79%]" style={{ backgroundColor: '#BA24D5' }} />
+              <div className="absolute bottom-0 h-[0.6px] lg:h-[1px] w-full md:w-[79%] xl:w-[75%] 2xl:w-[82.5%] " style={{ backgroundColor: '#BA24D5' }} />
             </div>
           );
         })}

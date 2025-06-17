@@ -44,7 +44,7 @@ export default function BlockchainSection() {
             Blockchain <span className="bg-color">Development</span>:
             <br />
             <span className="block md:inline">Powering Secure <span >
-               Solutions</span></span>
+              Solutions</span></span>
           </h2>
           <p className="mt-4 text-base text-[12px] md:text-[18px] lg:text-xl text-[#808080] px-2 lg:px-0">
             We help businesses use blockchain technology for enhanced{" "}
@@ -68,6 +68,7 @@ export default function BlockchainSection() {
                 className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain"
                 width={6}
                 height={6}
+                priority={true}
               />
               <span className="text-sm lg:text-xl sm:text-xs font-medium text-[#000000] whitespace-nowrap">
                 {feature.name}

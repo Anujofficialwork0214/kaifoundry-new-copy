@@ -49,6 +49,7 @@ const FounderSection = () => {
               height={600}
               className="shadow-md object-cover"
               draggable="false"
+              priority={true}
             />
           </motion.div>
 

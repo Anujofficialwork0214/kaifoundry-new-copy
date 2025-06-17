@@ -585,6 +585,7 @@ const Navbar: React.FC = () => {
                 alt="Logo"
                 width={150}
                 height={40}
+                priority={true}
               />
             </Link>
           </div>
@@ -640,6 +641,7 @@ const Navbar: React.FC = () => {
                   width={4}
                   height={4}
                   className="w-4 h-4 transition-transform duration-200"
+                  priority={true}
                 />
               </button>
             </li>
