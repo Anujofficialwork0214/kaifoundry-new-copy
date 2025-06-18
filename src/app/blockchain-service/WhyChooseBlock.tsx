@@ -2,12 +2,12 @@ import WhyChoose from "../Reusable/WhyChoose"
 
 const customFeatures = [
   {
-    icon: "/custom.png",
+    icon: "/block1.svg",
     title: "Custom-Built for Your Needs",
     description: "We have expertise in developing Blockchain.",
   },
   {
-    icon: "/unmatched.png",
+    icon: "/block2.svg",
     title: "Unmatched Security",
     description: "Decentralization and encryption ensure your data stays protected.",
   },

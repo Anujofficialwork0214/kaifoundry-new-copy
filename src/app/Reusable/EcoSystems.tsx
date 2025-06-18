@@ -48,7 +48,7 @@ const EcoSystems: React.FC<EcosystemsProps> = ({
                   width={60}
                   height={60}
                   draggable="false"
-                  priority={true}
+                
                 />
               </div>
               <p className="mt-4 md:mt-2 lg:mt-2 text-sm md:text-lg text-[#414141] font-semibold">
