@@ -76,10 +76,10 @@ const navs = [
   {
     title: "Offerings",
     links: [
-      { label: "STO", href: "/" },
-      { label: "Smart Contracts", href: "/" },
-      { label: "White Label Exchange Platform", href: "/" },
-      { label: "White Label Wallet", href: "/" },
+      { label: "STO", href: "#services" },
+      { label: "Smart Contracts", href: "#services" },
+      { label: "White Label Exchange Platform", href: "#services" },
+      { label: "White Label Wallet", href: "#services" },
     ],
   },
   {
@@ -96,7 +96,7 @@ const navs = [
     links: [
       { label: "Who We Are", href: "/who-are-we" },
       { label: "What We Do", href: "/" },
-      { label: "Career", href: "/careers-screen" },
+      { label: "Careers", href: "/careers-screen" },
       { label: "Portfolio", href: "/" },
     ],
   },
