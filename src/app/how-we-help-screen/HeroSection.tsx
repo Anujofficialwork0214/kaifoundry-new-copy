@@ -40,26 +40,26 @@ const HowWeHelp = () => {
         <h2 className=" lg:text-[62px] font-bold hidden lg:block leading-[1.3]">
           {/* How We Help <br /> */}
 
-          <span className="text-black">Ho</span>
-          <span className="text-black opacity-70">w We Help <br /></span>
+          <span className="text-black">How We Help</span> <br />
+          {/* <span className="text-black opacity-70"> <br /></span> */}
 
 
           <span className="bg-color">BUSINESSES GROW</span> <br />
-          <span className="text-black">Wi</span>
-          <span className="text-black opacity-70">th</span>
+          <span className="text-black">With</span>
+   
           <span className="bg-color ">{" "}Blockchain</span>
         </h2>
         <h2 className="text-[24px]  font-bold block lg:hidden ">
           {/* How We Help <br /> */}
 
-          <span className="text-black">Ho</span>
-          <span className="text-black opacity-70">w We Help </span>
+          <span className="text-black">How We Help </span>
+      
 
 
           <span className="bg-color">Businesses</span><br />
           <span className="bg-color">Grow {" "}</span>
-          <span className="text-black">Wi</span>
-          <span className="text-black opacity-70">th</span>
+          <span className="text-black">With</span>
+        
           <span className="bg-color">{" "}Blockchain</span>
         </h2>
         {/* Mobile */}
@@ -74,7 +74,7 @@ const HowWeHelp = () => {
 
         <Link href="/contact-us">
           <button
-            className="bg-[#D444F1] mt-10 text-white hover:bg-[#B33BC1] cursor-pointer rounded-full w-34 py-3 px-2 lg:py-3 lg:px-3 lg:w-34 transition duration-300">
+            className="mt-10 text-white bg-[#BA24D5] hover:bg-[#821890]  cursor-pointer rounded-full w-34 py-3 px-2 lg:py-3 lg:px-3 lg:w-34 transition duration-300">
             Contact Us
           </button>
         </Link>

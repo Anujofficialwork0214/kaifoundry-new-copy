@@ -473,7 +473,7 @@ const ContactForm = () => {
             <Button
               type="submit"
               text="Submit"
-              className="bg-[#D444F1] text-white hover:hover:bg-[#821890] rounded-full py-2 px-4 w-40 lg:44 transition duration-300 cursor-pointer"
+              className=" text-white bg-[#BA24D5] hover:bg-[#821890] rounded-full py-2 px-4 w-40 lg:44 transition duration-300 cursor-pointer"
             />
           </div>
         </form>
