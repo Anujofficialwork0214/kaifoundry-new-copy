@@ -25,7 +25,7 @@ const services: Service[] = [
     id: 2,
     title: "GAME DEVELOPMENT",
     description:
-      "We specialize in engaging game experiences, leveraging cutting-edge tech for captivating gameplay and stunning visuals.",
+      "We craft immersive gaming experiences with extra-ordinary visuals, mechanics, and performance.",
     image: "/svg/img2.svg",
     link: "/game-development",
   },
@@ -42,7 +42,7 @@ const services: Service[] = [
     id: 3,
     title: "AI SERVICES",
     description:
-      "Unlock the power of AI. We build custom AI solutions to automate processes, gain insights, and enhance user experiences.",
+      "Using the power of enhance user experiences and grow business opportunities.",
     image: "/svg/img1.svg",
     link: "/ai-services",
   },
@@ -58,7 +58,7 @@ const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
 
   >
     <a
-      className="flex-shrink-0  h-104 md:w-[450px] lg:h-[500px] ml-0 lg:ml-2   rounded-4xl shadow-xl overflow-hidden md:mx-2 cursor-pointer block"
+      className="flex-shrink-0  h-104 md:w-[450px] lg:h-[480px] ml-0 lg:ml-2  rounded-4xl shadow-xl overflow-hidden md:mx-2 cursor-pointer block"
       style={{ minWidth: isMobile ? "100%" : "350px" }}
     >
       <div className="">
@@ -84,7 +84,7 @@ const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
 
           className={`${
             screenWidth < 375 ? "text-[12px]" : ""
-          } text-[#333333] text-[12px] md:text-[14px] lg:text-[14px] xl:text-[14px] 2xl:text-[14px] leading-0.3`}
+          } text-[#333333] text-[12px] md:text-[16px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px] leading-0.3`}
 
         >
           {service.description}

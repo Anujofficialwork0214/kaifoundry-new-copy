@@ -52,7 +52,7 @@ const CoolStuff = () => {
         {/* Wrap the Button with Link for mobile view */}
         <Button
           text="Join Us"
-          className="sm:hidden mt-4 px-8 py-1 border cursor-pointer border-[#6F1877] text-[#6F1877] rounded-full hover:shadow-md  transition justify-center items-center mx-auto block"
+          className="sm:hidden mt-8 px-12 py-2 border cursor-pointer border-[#6F1877] text-[#6F1877] rounded-full hover:shadow-md  transition justify-center items-center mx-auto block"
         />
       </Link>
     </section>
