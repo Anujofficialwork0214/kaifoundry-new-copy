@@ -40,26 +40,26 @@ const HowWeHelp = () => {
         <h2 className=" lg:text-[62px] font-bold hidden lg:block leading-[1.3]">
           {/* How We Help <br /> */}
 
-          <span className="text-black">Ho</span>
-          <span className="text-black opacity-70">w We Help <br /></span>
+          <span className="text-black">How We Help</span> <br />
+          {/* <span className="text-black opacity-70"> <br /></span> */}
 
 
           <span className="bg-color">BUSINESSES GROW</span> <br />
-          <span className="text-black">Wi</span>
-          <span className="text-black opacity-70">th</span>
+          <span className="text-black">With</span>
+   
           <span className="bg-color ">{" "}Blockchain</span>
         </h2>
         <h2 className="text-[24px]  font-bold block lg:hidden ">
           {/* How We Help <br /> */}
 
-          <span className="text-black">Ho</span>
-          <span className="text-black opacity-70">w We Help </span>
+          <span className="text-black">How We Help </span>
+      
 
 
           <span className="bg-color">Businesses</span><br />
           <span className="bg-color">Grow {" "}</span>
-          <span className="text-black">Wi</span>
-          <span className="text-black opacity-70">th</span>
+          <span className="text-black">With</span>
+        
           <span className="bg-color">{" "}Blockchain</span>
         </h2>
         {/* Mobile */}

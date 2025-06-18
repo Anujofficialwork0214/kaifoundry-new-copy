@@ -78,7 +78,7 @@ const BusinessGrowth = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-[22px] md:text-5xl 2xl:text-6xl font-bold text-gray-900"
+        className="text-[22px] md:text-5xl 2xl:text-6xl font-bold text-[#333333]"
       >
         Helping{" "}
         <span className="bg-color text-[22px] md:text-5xl 2xl:text-6xl">
