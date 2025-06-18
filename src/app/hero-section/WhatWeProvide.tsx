@@ -27,7 +27,7 @@ const services: Service[] = [
     description:
       "We specialize in engaging game experiences, leveraging cutting-edge tech for captivating gameplay and stunning visuals.",
     image: "/svg/img2.svg",
-    link: "/GameDevelopment",
+    link: "/game-development",
   },
   {
     id: 1,
@@ -35,7 +35,7 @@ const services: Service[] = [
     description:
       "We create blockchain solutions that help businesses grow whether it’s smart contracts, digital tokens, or decentralized apps.",
     image: "/svg/img3.svg",
-    link: "/BlockChainService",
+    link: "/blockchain-service",
   },
 
   {
@@ -44,7 +44,7 @@ const services: Service[] = [
     description:
       "Unlock the power of AI. We build custom AI solutions to automate processes, gain insights, and enhance user experiences.",
     image: "/svg/img1.svg",
-    link: "/AIServices",
+    link: "/ai-services",
   },
 ];
 
