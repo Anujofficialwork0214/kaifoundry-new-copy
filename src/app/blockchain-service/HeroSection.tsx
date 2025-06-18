@@ -16,6 +16,7 @@ const HeroSection = () => {
           height={1080}
           draggable="false"
           priority={true}
+          unoptimized
         />
       </div>
 
@@ -60,7 +61,7 @@ const HeroSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-             className="bg-[#BA24D5] mt-10 text-white hover:bg-[#B33BC1] cursor-pointer rounded-full w-34 py-3 px-2 lg:py-3 lg:px-3 lg:w-34 transition duration-300">
+              className="bg-[#BA24D5] mt-10 text-white hover:bg-[#B33BC1] cursor-pointer rounded-full w-34 py-3 px-2 lg:py-3 lg:px-3 lg:w-34 transition duration-300">
               Contact Us
             </motion.button>
           </Link>

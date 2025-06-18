@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import HeroSection from './HeroSection';
 import BlockchainSection from './GameDevlopmentSection';
 import WhyChooseGame from "./WhyChooseGame"
-
+import { ImArrowUp } from "react-icons/im";
 import WhatWeOfferGame from "./WhatWeOfferGame"
 import FaqGame from './FaqGame';
 import Contact from "../Reusable/Contact"
@@ -35,6 +35,12 @@ const GameDevelopmentPage: React.FC = () => {
       {isMobile ? <EcosystemMobile /> : <EcosystemSection />}
       <FaqGame />
       <Contact />
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="fixed bottom-6 right-6 bg-[#BA24D5] cursor-pointer text-white p-3 rounded-full shadow-md  transition"
+      >
+        <ImArrowUp />
+      </button>
 
     </div>
   );

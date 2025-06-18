@@ -519,13 +519,11 @@ const Navbar: React.FC = () => {
   return (
     <>
       <header
-        className={`fixed  ${
-          inter.className
-        } etop-0 left-0 right-0 w-full pt-5 z-50 transition-transform  lg:px-4 px-0 duration-500 ease-in-out ${
-          isVisible ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`fixed  ${inter.className
+          } etop-0 left-0 right-0 w-full pt-5 z-50 transition-transform  lg:px-4 px-0 duration-500 ease-in-out ${isVisible ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
-        <nav className={`max-w-[1920px] mx-auto py-2 px-2 md:px-5 lg:px-5 flex items-center justify-between ${isScrolling ?'backdrop-blur-md':''} lg:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out `}>
+        <nav className={`max-w-[1920px] mx-auto py-2 px-2 md:px-5 lg:px-5 flex items-center justify-between ${isScrolling ? 'backdrop-blur-md' : ''} lg:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out `}>
           <button
             onClick={toggleMenu}
             className="md:hidden focus:outline-none p-3 rounded-md bg-[#FFFFFF4D] "
@@ -591,15 +589,14 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex space-x-6 text-gray-700 flex-1 justify-center transition-all duration-500 ease-in-out xl:text-[20px] lg:text-[16px] md:text-[10px]">
+          <ul className="hidden md:flex space-x-6 text-gray-700 flex-1 justify-center transition-all duration-500 ease-in-out md:text-[16px] xl:text-[20px] lg:text-[16px] ">
             <li>
               <Link
                 href="/how-we-help-screen"
-                className={`${
-                  isActive("/how-we-help-screen")
+                className={`${isActive("/how-we-help-screen")
                     ? "text-[#821890]"
                     : "text-gray-700"
-                }`}
+                  }`}
                 prefetch={true}
               >
                 How We Help
@@ -608,9 +605,8 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 href="/who-are-we"
-                className={`${
-                  isActive("/who-are-we") ? "text-[#821890]" : "text-gray-700"
-                }`}
+                className={`${isActive("/who-are-we") ? "text-[#821890]" : "text-gray-700"
+                  }`}
                 prefetch={true}
               >
                 Who We Are
@@ -619,11 +615,10 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 href="/careers-screen"
-                className={`${
-                  isActive("/careers-screen")
+                className={`${isActive("/careers-screen")
                     ? "text-[#821890]"
                     : "text-gray-700"
-                }`}
+                  }`}
                 prefetch={true}
               >
                 Careers
@@ -648,9 +643,8 @@ const Navbar: React.FC = () => {
             <li>
               <Link
                 href="/blog"
-                className={`${
-                  isActive("/blog") ? "text-[#821890]" : "text-gray-700"
-                }`}
+                className={`${isActive("/blog") ? "text-[#821890]" : "text-gray-700"
+                  }`}
                 prefetch={true}
               >
                 Blogs
@@ -678,9 +672,8 @@ const Navbar: React.FC = () => {
 
       <div
         id="mobile-sidebar"
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-500 ease-in-out ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
       >
         <button
           onClick={closeMenu}
@@ -697,11 +690,10 @@ const Navbar: React.FC = () => {
           </Link>
           <Link
             href="/"
-            className={`${
-              isActive("/")
+            className={`${isActive("/")
                 ? "text-[#821890] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent font-[400]"
-            }  cursor-pointer text-[14px] px-6 py-3 w-full `}
+              }  cursor-pointer text-[14px] px-6 py-3 w-full `}
             onClick={closeMenu}
             prefetch={true}
           >
@@ -709,11 +701,10 @@ const Navbar: React.FC = () => {
           </Link>
           <Link
             href="/how-we-help-screen"
-            className={`${
-              isActive("/how-we-help-screen")
+            className={`${isActive("/how-we-help-screen")
                 ? "text-[#821890] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent font-[400]"
-            }  cursor-pointer text-[14px] px-6 py-3 w-full `}
+              }  cursor-pointer text-[14px] px-6 py-3 w-full `}
             onClick={closeMenu}
             prefetch={true}
           >
@@ -721,11 +712,10 @@ const Navbar: React.FC = () => {
           </Link>
           <Link
             href="/who-are-we"
-            className={`${
-              isActive("/who-are-we")
+            className={`${isActive("/who-are-we")
                 ? "text-[#821890] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent font-[400]"
-            }  cursor-pointer text-[14px] px-6 py-3 w-full`}
+              }  cursor-pointer text-[14px] px-6 py-3 w-full`}
             onClick={closeMenu}
             prefetch={true}
           >
@@ -733,11 +723,10 @@ const Navbar: React.FC = () => {
           </Link>
           <Link
             href="/careers-screen"
-            className={`${
-              isActive("/careers-screen")
+            className={`${isActive("/careers-screen")
                 ? "text-[#821890] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent "
-            }  cursor-pointer text-[14px] px-6 py-3 w-full`}
+              }  cursor-pointer text-[14px] px-6 py-3 w-full`}
             prefetch={true}
             onClick={closeMenu}
           >
@@ -746,11 +735,10 @@ const Navbar: React.FC = () => {
 
           <Link
             href="/blog"
-            className={`${
-              isActive("/blog")
+            className={`${isActive("/blog")
                 ? "text-[#821890] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent font-[400]"
-            }  cursor-pointer text-[14px] px-6 py-3 w-full`}
+              }  cursor-pointer text-[14px] px-6 py-3 w-full`}
             prefetch={true}
             onClick={closeMenu}
           >
@@ -761,44 +749,40 @@ const Navbar: React.FC = () => {
               e.preventDefault();
               setIsOpenMenu(!isOpenMenu);
             }}
-            className={`text-gray-700 focus:outline-none flex justify-between w-full items-center px-6 py-4 ${
-              ["/blockchain-service", "/game-development", "/ai-services"].some(
-                (path) => isActive(path)
-              )
+            className={`text-gray-700 focus:outline-none flex justify-between w-full items-center px-6 py-4 ${["/blockchain-service", "/game-development", "/ai-services"].some(
+              (path) => isActive(path)
+            )
                 ? "bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "bg-transparent"
-            }`}
+              }`}
           >
             <div
-              className={`${
-                [
+              className={`${[
                   "/blockchain-service",
                   "/game-development",
                   "/ai-services",
                 ].some((path) => isActive(path))
                   ? "text-[#821890] "
                   : "text-[#4D4D4D] bg-transparent font-[400]"
-              }  cursor-pointer text-[14px]`}
+                }  cursor-pointer text-[14px]`}
             >
               {isActive("/blockchain-service")
                 ? "Blockchain Development"
                 : isActive("/game-development")
-                ? "Gaming"
-                : isActive("/ai-services")
-                ? "AI Services"
-                : "Services"}
+                  ? "Gaming"
+                  : isActive("/ai-services")
+                    ? "AI Services"
+                    : "Services"}
             </div>
 
             <IoIosArrowDown
-              className={`transition-transform duration-300 ${
-                isOpenMenu ? "rotate-180" : ""
-              } cursor-pointer`}
+              className={`transition-transform duration-300 ${isOpenMenu ? "rotate-180" : ""
+                } cursor-pointer`}
             />
           </button>
           <div
-            className={`overflow-hidden transition-all px-6  duration-500 ease-in-out p-0 ${
-              isOpenMenu ? "max-h-60 opacity-100" : "max-h-0 opacity-0 hidden"
-            }`}
+            className={`overflow-hidden transition-all px-6  duration-500 ease-in-out p-0 ${isOpenMenu ? "max-h-60 opacity-100" : "max-h-0 opacity-0 hidden"
+              }`}
           >
             <ul className="bg-white mt-2  px-2 space-y-4 text-sm font-medium text-gray-700">
               <li
