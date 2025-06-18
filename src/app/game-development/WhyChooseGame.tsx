@@ -2,7 +2,7 @@ import WhyChoose from "../Reusable/WhyChoose";
 
 const customFeatures = [
   {
-    icon: "/game3.svg",
+    icon: "/svg/mingcute_game-2-line.svg",
     title: "Engaging Experiences",
     description:
       "We craft immersive games that captivate players.",
@@ -14,7 +14,7 @@ const customFeatures = [
       "we create games for mobile, PC, web, and blockchain for wider audience.",
   },
   {
-    icon: "/carbon_chart-line-smooth",
+    icon: "/svg/carbon_chart-line-smooth.svg",
     title: "Scalability & Performance",
     description:
       "Optimized for smooth gameplay and future expansion.ms.",
