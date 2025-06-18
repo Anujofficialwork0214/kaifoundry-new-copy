@@ -58,7 +58,7 @@ const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
 
   >
     <a
-      className="flex-shrink-0  h-104 md:w-[500px] lg:h-[530px] ml-0 lg:ml-2   rounded-4xl shadow-xl overflow-hidden md:mx-2 cursor-pointer block"
+      className="flex-shrink-0  h-104 md:w-[450px] lg:h-[500px] ml-0 lg:ml-2   rounded-4xl shadow-xl overflow-hidden md:mx-2 cursor-pointer block"
       style={{ minWidth: isMobile ? "100%" : "350px" }}
     >
       <div className="">
@@ -67,17 +67,16 @@ const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
           alt={service.title}
           className="w-full lg:h-[300px] h-64 object-cover"
           draggable="false"
-          width={100}
-          height={64}
+          width={80}
+          height={54}
         />
       </div>
-      <div className="p-4 md:p-6">
+      <div className="p-4 md:p-6 ">
         <h3
 
           className={`${
             screenWidth < 375 ? "text-[14px]" : ""
-          } text-[16px] md:text-[20px] 2xl:text-[30.52px] font-bold text-[#333333] mb-2`}
-
+          } text-[16px] md:text-[21.52px] lg:text-[24.52px] xl:text-[24.50px] 2xl:text-[24.52px] font-[600] text-[#333333] mb-2`}
         >
           {service.title}
         </h3>
@@ -85,7 +84,7 @@ const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
 
           className={`${
             screenWidth < 375 ? "text-[12px]" : ""
-          } text-[#333333] text-[14px] md:text-[17px] 2xl:text-[21.54px]  leading-0.3`}
+          } text-[#333333] text-[12px] md:text-[14px] lg:text-[14px] xl:text-[14px] 2xl:text-[14px] leading-0.3`}
 
         >
           {service.description}
@@ -161,7 +160,7 @@ const WhatWeProvide = () => {
               Services That Drive Your Success
             </p>
           </div>
-          <div className="mt-20 block lg:hidden">
+          <div className="mt-20 block sticky  z-30 lg:hidden">
             <h2 className=" text-[24px] lg:text-[62px] font-[700] text-gray-900 leading-tight">
               WHAT
               WE <span className="bg-color">PROVIDE</span>
@@ -175,7 +174,7 @@ const WhatWeProvide = () => {
 
           {isMobile ? (
             <>
-              <hr className="text-[#E4E4E4] w-full h-[1.5px] mb-10 -mt-2" />
+              <hr className="text-[#E4E4E4] sticky  w-full h-[1.5px] mb-10 -mt-2" />
               <div className="flex flex-col gap-6">
                 {services.map((service) => (
                   <ServiceCard
@@ -190,9 +189,9 @@ const WhatWeProvide = () => {
             </>
           ) : (
             <div className="slider-container w-7xl overflow-hidden  flex space-x-0.5   ">
-              {/* <Image src="/svg/Line134.svg" alt="line" width={4} height={4} /> */}
+              
               <img src="/svg/Line134.svg" alt="line" className="w-20 h-160 z-20 bg-gray-50 ml-0 " />
-              {/* <div className = 'border-2 border-gray-500 z-20'></div> */}
+             
               <motion.div
                 className="flex items-center"
                 animate={controls}

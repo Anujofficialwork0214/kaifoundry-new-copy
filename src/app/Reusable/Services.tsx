@@ -56,7 +56,7 @@ const Services: React.FC<ServicesProps> = ({
           className="text-2xl md:text-5xl 2xl:text-6xl text-[#333333] font-semibold font-roboto lg:py-10 lg:px-0   py-0  mb-20 "
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0 }}
         >
           {suffixText} <span className="bg-color">{heading} </span>
           {subheading}
@@ -81,9 +81,9 @@ const Services: React.FC<ServicesProps> = ({
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
                 transition={{
-                  duration: 0.2,
+                  duration: 0,
                   ease: [0.25, 0.1, 0.25, 1],
-                  delay: 0.2,
+                  delay: 0,
                 }}
                 viewport={{ once: true }}
               />
