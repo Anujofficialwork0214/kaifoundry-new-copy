@@ -76,10 +76,10 @@ const navs = [
   {
     title: "Offerings",
     links: [
-      { label: "STO", href: "/sto" },
-      { label: "Smart Contracts", href: "/smart-contracts" },
-      { label: "White Label Exchange Platform", href: "/exchange-platform" },
-      { label: "White Label Wallet", href: "/wallet" },
+      { label: "STO", href: "#services" },
+      { label: "Smart Contracts", href: "#services" },
+      { label: "White Label Exchange Platform", href: "#services" },
+      { label: "White Label Wallet", href: "#services" },
     ],
   },
   {
@@ -88,7 +88,7 @@ const navs = [
       { label: "AI", href: "/ai-services" },
       { label: "Gaming", href: "/game-development" },
       { label: "Blockchain", href: "/blockchain-service" },
-      { label: "Web3 Solutions", href: "/web3" },
+      { label: "Web3 Solutions", href: "/" },
     ],
   },
   {
@@ -96,8 +96,8 @@ const navs = [
     links: [
       { label: "Who We Are", href: "/who-are-we" },
       { label: "What We Do", href: "/" },
-      { label: "Career", href: "/careers-screen" },
-      { label: "Portfolio", href: "/portfolio" },
+      { label: "Careers", href: "/careers-screen" },
+      { label: "Portfolio", href: "/" },
     ],
   },
 ];

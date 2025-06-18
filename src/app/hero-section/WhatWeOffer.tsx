@@ -45,7 +45,7 @@ const customServices = [
 
 const WhatWeOffer = () => {
   return (
-    <div>
+    <div id="services">
       <Services
         services={customServices}
         heading="What We Offer - "

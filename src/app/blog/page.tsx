@@ -452,7 +452,7 @@ export default function BlogCarousel() {
                         alt={blog.title}
                         fill
                         className="object-cover"
-                        loading={index < visibleCards ? 'eager' : 'lazy'}
+                        // loading={index < visibleCards ? 'eager' : 'lazy'}
                         onLoad={() => handleImageLoad(blog.id)}
                         quality={75}
                         sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
