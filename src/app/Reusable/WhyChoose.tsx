@@ -71,10 +71,10 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
                   draggable="false"
                 />
               </div>
-              <h3 className="text-xl font-semibold lg:font-[800] lg:text-[21px] text-center text-[#434343]">
+              <h3 className="text-xl font-semibold lg:font-[800] lg:text-[21px] text-center text-[#333333]">
                 {feature.title}
               </h3>
-              <p className="text-[#434343] mt-6 text-[14px] lg:text-[16px]">
+              <p className="text-[#333333] mt-6 text-[14px] lg:text-[16px]">
                 {feature.description}
               </p>
             </motion.div>

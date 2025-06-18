@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion,useInView } from "framer-motion";
 import { Manrope } from "next/font/google";
-import { useEffect, useState } from "react";
+import { useEffect, useState,useRef } from "react";
 
 
 type Service = {
@@ -32,7 +32,8 @@ const Services: React.FC<ServicesProps> = ({
   breakHeading = "",
 }) => {
   const [fontFamily, setFontFamily] = useState("Inter, sans-serif");
-
+const headingRef = useRef(null);
+  const isInView = useInView(headingRef, { once: true, amount: 0.5 });
   useEffect(() => {
     if (typeof window !== "undefined") {
       setFontFamily(
@@ -53,12 +54,14 @@ const Services: React.FC<ServicesProps> = ({
       <div className="text-center">
         {/* Heading */}
         <motion.h2
+          ref={headingRef}
           className="text-2xl md:text-5xl 2xl:text-6xl text-[#333333] font-semibold font-roboto lg:py-10 lg:px-0   py-0  mb-20 "
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0 }}
+       
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
         >
-          {suffixText} <span className="bg-color">{heading} </span>
+          {suffixText} <span className="bg-color font-[700]">{heading} </span>
           {subheading}
           <br />
           {breakHeading}
@@ -77,7 +80,7 @@ const Services: React.FC<ServicesProps> = ({
             >
 
               <motion.div
-                className="absolute top-0 left-0 h-[2px] bg-[#D444F1]"
+                className="absolute top-0 left-0 h-[2px] bg-[#D444F1] lg:mb-0"
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
                 transition={{
@@ -90,7 +93,7 @@ const Services: React.FC<ServicesProps> = ({
 
 
               <h3
-                className={`text-[18px] md:text-2xl font-semibold text-left text-[#0E0E0E] ${manrope.className}`}
+                className={`text-[18px] md:text-2xl font-semibold text-left mt-2 text-[#0E0E0E] ${manrope.className}`}
               >
                 {service.title}
               </h3>

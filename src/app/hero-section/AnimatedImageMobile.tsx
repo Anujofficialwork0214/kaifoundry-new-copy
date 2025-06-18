@@ -71,7 +71,7 @@ export default function AnimatedImageMobile() {
           onClick={prevSlide}
           style={{ backgroundColor: '#BA24D5' }}
           className={`absolute -left-4 top-1/2 p-3 rounded-xl text-white text-2xl hover:bg-purple-700 transition z-50 cursor-pointer ${
-            !canGoLeft ? 'opacity-50 cursor-not-allowed' : ''
+            !canGoLeft ? 'opacity-40 cursor-not-allowed' : ''
           }`}
           disabled={!canGoLeft}
         >
@@ -128,7 +128,7 @@ export default function AnimatedImageMobile() {
           onClick={nextSlide}
           style={{ backgroundColor: '#BA24D5' }}
           className={`absolute -right-4 top-1/2 p-3 rounded-xl text-white text-2xl hover:bg-purple-700 transition z-50 cursor-pointer ${
-            !canGoRight ? 'opacity-50 cursor-not-allowed' : ''
+            !canGoRight ? 'opacity-40 cursor-not-allowed' : ''
           }`}
           disabled={!canGoRight}
         >

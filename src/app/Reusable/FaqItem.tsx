@@ -22,7 +22,7 @@ const FaqItem: React.FC<FAQItemProps> = ({ question, answer }) => {
       className="border-gray-300"
     >
       <button
-        className="w-full flex justify-between items-center py-4 text-left text-gray-700 font-semibold text-[14px] lg:text-[23px] font-inter" 
+        className="w-full flex justify-between items-center py-4 text-left text-[#414141] font-[500] text-[14px] lg:text-[20px] font-inter" 
         onClick={() => setIsOpen(!isOpen)}
       >
         {question}
@@ -42,7 +42,7 @@ const FaqItem: React.FC<FAQItemProps> = ({ question, answer }) => {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         className="overflow-hidden"
       >
-        <p className="text-gray-600 pb-4 text-[14px] font-medium md:text-xl lg:text-xl"> {/* Increased font size to text-xl */}
+        <p className="text-[#414141] pb-4 text-[14px] font-medium md:text-[15px] lg:text-[15px]"> {/* Increased font size to text-xl */}
           {answer}
         </p>
       </motion.div>

@@ -199,7 +199,7 @@ export default function AnimatedSection() {
         </AnimatePresence>
       </div>
 
-      <div className="w-1/2 text-left flex items-center h-[400px] mr-10 relative overflow-hidden">
+      <div className="w-1/2 text-left flex items-center h-[600px] mr-10 relative overflow-hidden">
         <AnimatePresence mode="wait">
           {inView && (
             <motion.div
@@ -211,10 +211,10 @@ export default function AnimatedSection() {
               transition={{ duration: 1, ease: "easeInOut" }}
               viewport={{ once: true }}
             >
-              <h2 className="text-xl md:text-3xl font-bold tracking-wide">
+              <h2 className="text-xl md:text-[40px] lg:text-[43px] xl:text-[43px] font-[700] tracking-wide text-[#333333]">
                 {content[index].title}
               </h2>
-              <p className="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed">
+              <p className="mt-6 text-lg md:text-[20px] lg:text-[22px]  text-[#333333]">
                 {content[index].description}
               </p>
             </motion.div>
