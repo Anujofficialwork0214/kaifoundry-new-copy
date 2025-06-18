@@ -2,28 +2,28 @@ import WhyChoose from "../Reusable/WhyChoose";
 
 const customFeatures = [
   {
-    icon: "/custom.png",
-    title: "Custom-Built for Your Needs",
+    icon: "/game3.svg",
+    title: "Engaging Experiences",
     description:
-      "We create blockchain solutions tailored to your business goals.",
+      "We craft immersive games that captivate players.",
   },
   {
-    icon: "/unmatched.png",
-    title: "Unmatched Security",
+    icon: "/game4.svg",
+    title: "Multi-Platform Development",
     description:
-      "Decentralization and encryption ensure your data stays protected.",
+      "we create games for mobile, PC, web, and blockchain for wider audience.",
   },
   {
-    icon: "/seemless.png",
-    title: "Seamless Integration",
+    icon: "/carbon_chart-line-smooth",
+    title: "Scalability & Performance",
     description:
-      "Our blockchain solutions work smoothly with your existing systems.",
+      "Optimized for smooth gameplay and future expansion.ms.",
   },
   {
-    icon: "/future.png",
-    title: "Future-Ready Technology",
+    icon: "/game2.svg",
+    title: "Monetization Ready",
     description:
-      "Scalable, efficient, and designed to grow with your business.",
+      "Seamless integration of in-game purchases, ads, and NFTs.",
   },
 ];
 
