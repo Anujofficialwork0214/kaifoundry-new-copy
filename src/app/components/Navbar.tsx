@@ -659,7 +659,7 @@ const Navbar: React.FC = () => {
           </ul>
 
           <Button
-            className="bg-[#D444F1] text-white cursor-pointer px-6 py-2 hover:bg-[#821890]"
+            className="bg-[#BA24D5] text-white cursor-pointer px-6 py-2 hover:bg-[#821890]"
             text="Contact Us"
             href="/contact-us"
           />
@@ -699,7 +699,7 @@ const Navbar: React.FC = () => {
             href="/"
             className={`${
               isActive("/")
-                ? "text-[#BA24D5] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
+                ? "text-[#821890] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent font-[400]"
             }  cursor-pointer text-[14px] px-6 py-3 w-full `}
             onClick={closeMenu}
@@ -711,7 +711,7 @@ const Navbar: React.FC = () => {
             href="/how-we-help-screen"
             className={`${
               isActive("/how-we-help-screen")
-                ? "text-[#BA24D5] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
+                ? "text-[#821890] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent font-[400]"
             }  cursor-pointer text-[14px] px-6 py-3 w-full `}
             onClick={closeMenu}
@@ -723,7 +723,7 @@ const Navbar: React.FC = () => {
             href="/who-are-we"
             className={`${
               isActive("/who-are-we")
-                ? "text-[#BA24D5] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
+                ? "text-[#821890] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent font-[400]"
             }  cursor-pointer text-[14px] px-6 py-3 w-full`}
             onClick={closeMenu}
@@ -748,7 +748,7 @@ const Navbar: React.FC = () => {
             href="/blog"
             className={`${
               isActive("/blog")
-                ? "text-[#BA24D5] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
+                ? "text-[#821890] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent font-[400]"
             }  cursor-pointer text-[14px] px-6 py-3 w-full`}
             prefetch={true}
@@ -776,7 +776,7 @@ const Navbar: React.FC = () => {
                   "/game-development",
                   "/ai-services",
                 ].some((path) => isActive(path))
-                  ? "text-[#BA24D5] "
+                  ? "text-[#821890] "
                   : "text-[#4D4D4D] bg-transparent font-[400]"
               }  cursor-pointer text-[14px]`}
             >
@@ -813,7 +813,7 @@ const Navbar: React.FC = () => {
                   Blockchain Development
                 </Link>
                 {isActive("/blockchain-service") && (
-                  <MdDone className="text-[#D444F1]" />
+                  <MdDone className="text-[#821890]" />
                 )}
               </li>
               <li
@@ -828,7 +828,7 @@ const Navbar: React.FC = () => {
                   Gaming
                 </Link>
                 {isActive("/game-development") && (
-                  <MdDone className="text-[#D444F1]" />
+                  <MdDone className="text-[#821890]" />
                 )}
               </li>
               <li
@@ -844,7 +844,7 @@ const Navbar: React.FC = () => {
                   AI Services
                 </Link>
                 {isActive("/ai-services") && (
-                  <MdDone className="text-[#D444F1]" />
+                  <MdDone className="text-[#821890]" />
                 )}
               </li>
             </ul>
