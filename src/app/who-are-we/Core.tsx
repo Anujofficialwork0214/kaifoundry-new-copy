@@ -21,13 +21,13 @@ const coreValues = [
     description:
       "We believe in teamwork, continuous learning, and evolving with the industry.",
   },
-    {
+  {
     img: img3,
     title: "User-Centric Approach",
     description:
       "We design with people in mind, making blockchain technology accessible and seamless.",
   },
-  
+
 ];
 
 const CoreValuesSection = () => {
@@ -62,7 +62,7 @@ const CoreValuesSection = () => {
                 delay: inView ? index * 0.2 + 0.3 : 0,
                 ease: "easeOut",
               }}
-              className={`bg-white shadow-lg rounded-2xl p-4 lg:p-6 flex ${index %2 === 0 ? 'flex-row':'flex-row-reverse'}  lg:flex-col items-center text-center max-w-sm lg:w-[484px]`}
+              className={`bg-white shadow-lg rounded-2xl p-4 lg:p-6 flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}  lg:flex-col items-center text-center  lg:w-[484px]`}
             >
               <Image
                 src={value.img}
@@ -74,10 +74,10 @@ const CoreValuesSection = () => {
                 className="mb-6 w-[150px] h-[150px] lg:w-[250px] lg:h-[250px] object-cover"
               />
               <div className="flex flex-col">
-              <h3 className={`text-[14px] lg:text-[26.09px] text-[#333333] lg:text-2xl font-[900] mb-2 lg:mb-8 text-left lg:text-center ${manrope.className}`}>{value.title}</h3>
-              <p className={`text-[#333333] text-[12px] lg:text-[16.73px] ${manrope.className} text-left lg:text-center`}>{value.description}</p>
+                <h3 className={`text-[14px] lg:text-[26.09px] text-[#333333] lg:text-2xl font-[900] mb-2 lg:mb-8 text-left lg:text-center `}>{value.title}</h3>
+                <p className={`text-[#333333] text-[12px] lg:text-[16.73px]  text-left lg:text-center`}>{value.description}</p>
               </div>
-              
+
             </motion.div>
           ))}
         </div>

@@ -59,17 +59,17 @@
 //       <div className="mt-8 w-full flex flex-col space-y-0 py-4">
 //         {solutions.map((solution, index) => (
 //           <div key={index} className="relative w-full px-0  md:px-40 " > 
-          
+
 //             <div
 //               className="relative overflow-hidden text-2xl w-full    cursor-pointer md:text-3xl font-semibold" 
 //               style={{ color: '#BA24D5', padding: '2rem 0' ,
 
-                
+
 //               }} 
 //               onMouseEnter={() => setHoverIndex(index)}
 //               onMouseLeave={() => setHoverIndex(null)}
 //               onClick={() => setSelectedSolution(selectedSolution === index ? null : index)} // Toggle selection
-             
+
 //             >
 //               {/* {hoverIndex === index && selectedSolution !== index && (
 //                 <motion.div
@@ -136,13 +136,13 @@
 //                   }}
 //                 />
 //               )}
-              
+
 //               <span className="relative z-10 text-[18px] px-4 lg:px-6 lg:text-[24px] font-[600] text-[#BA24D5] block w-full">
 //                 {index + 1}. {solution.title}
 //               </span>
 
 //               {/* Always Visible Bottom Border Line */}
-             
+
 //             </div>
 
 //             {/* Description Section (Smooth Slide Down) */}
@@ -155,7 +155,7 @@
 //               style={{background: 'linear-gradient(90deg,rgb(242, 222, 246) 0%,rgb(242, 222, 246) 100%)',}}
 //             >
 //               <div className="p-4 text-left"> {/* Added text-left for description */}
-                
+
 //                 <p className="text-gray-700 mt-2 px-4 lg:px-6 text-base md:text-2xl"> {/* Increased text size */}
 //                   {solution.description}
 //                 </p>
@@ -192,7 +192,7 @@ const solutions = [
 
 
 const useIsMobile = () => {
-const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -224,36 +224,36 @@ const SolutionsSection = () => {
         Blockchain solutions designed to power your business with security, <br /> efficiency, and scalability.
       </p>
 
-      <div className="mt-8 w-full flex flex-col space-y-0 py-4">
+      <div className="mt-8 w-full  flex flex-col space-y-0 py-4">
         {solutions.map((solution, index) => {
           const isHovered = hoverIndex === index && selectedSolution !== index;
           const isSelected = selectedSolution === index;
           return (
-            <div key={index} className="relative w-full px-0 md:px-40 ">
+            <div key={index} className="relative  w-full lg:max-w-5xl mx-auto ">
               <div
-                className="relative overflow-hidden text-2xl w-full cursor-pointer md:text-3xl font-semibold"
-                style={{ color: '#BA24D5',padding:'2rem 0' }}
+                className="relative overflow-hidden text-2xl w-full  cursor-pointer md:text-3xl font-semibold"
+                style={{ color: '#BA24D5', padding: '2rem 0' }}
                 onMouseEnter={() => !isMobile && setHoverIndex(index)}
                 onMouseLeave={() => !isMobile && setHoverIndex(null)}
                 onClick={() => setSelectedSolution(isSelected ? null : index)}
               >
-                
+
                 {(isHovered || isMobile || isSelected) && (
                   <motion.div
                     initial={isSelected ? { scale: 1, opacity: 0.5 } : { y: "100%", scale: 0.8, opacity: 0 }}
                     animate={isSelected
                       ? {
-                          y: 0,
-                          scale: isMobile ? 3 : 4,
-                          opacity: 1,
-                        }
+                        y: 0,
+                        scale: isMobile ? 3 : 4,
+                        opacity: 1,
+                      }
                       : isMobile
-                      ? {
+                        ? {
                           y: 0,
                           scale: 1.5,
                           opacity: 0.8,
                         }
-                      : {
+                        : {
                           y: "50%",
                           x: "-50%",
                           scale: 2.5,
@@ -270,19 +270,19 @@ const SolutionsSection = () => {
                       filter: isSelected
                         ? ""
                         : isMobile
-                        ? "blur(20px)"
-                        : "blur(50px)",
+                          ? "blur(20px)"
+                          : "blur(50px)",
                       transform: isSelected ? "translateX(-50%)" : "translateX(-30%)",
                     }}
                   />
                 )}
- 
+
                 <span className="relative z-10 text-[18px] px-4 lg:px-6 lg:text-[24px] font-[600] text-[#BA24D5] block w-full">
                   {index + 1}. {solution.title}
                 </span>
               </div>
 
-              
+
               <motion.div
                 initial={{ height: 0, opacity: 0 }}
                 animate={isSelected ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
@@ -299,7 +299,7 @@ const SolutionsSection = () => {
                   </p>
                 </div>
               </motion.div>
-              <div className="absolute bottom-0 h-[0.6px] lg:h-[1px] w-full md:w-[79%] xl:w-[75%] 2xl:w-[82.5%] " style={{ backgroundColor: '#BA24D5' }} />
+              <div className="absolute bottom-0 h-[0.6px] md:h-[1px] lg:h-[1px] xl:h-[2px] w-full " style={{ backgroundColor: '#BA24D5' }} />
             </div>
           );
         })}

@@ -71,13 +71,13 @@ const FileCoin = () => {
         </motion.p>
 
         {/* Features Bubble */}
-        <div className="w-full h-[200px] lg:w-[600px] lg:h-[300px] rounded-full bg-[radial-gradient(circle,_#D7CDFF80_20%,_#FBE8FF00_50%)] lg:bg-[radial-gradient(circle,_#D7CDFF80_10%,_#FBE8FF00_50%)] relative">
+        <div className="w-full h-[200px] lg:w-[600px] lg:h-[300px] rounded-full bg-[radial-gradient(circle,_#FBE8FFCC_20%,_#D7CDFF00_70%)] lg:bg-[radial-gradient(circle,_#FBE8FFCC_20%,_#D7CDFF00_70%)] relative">
           <div className="flex justify-start items-start absolute top-1/4 left-10 lg:top-1/3 lg:left-5">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="grid grid-cols-3 md:grid-cols-3 gap-4 border-white border-t-2 border-b-2 lg:border-t-4 lg:border-b-4 py-0 px-4 md:px-10"
+              className="grid grid-cols-3 md:grid-cols-3 gap-4 border-white border-t-2 border-b-2  lg:border-t-4 lg:border-b-4 py-0 px-4 md:px-10"
             >
               <div className="text-center border-r-2 lg:border-r-4 py-3 border-white pr-4 text-[12px] lg:text-[22px]">
                 Secure <br /> storage

@@ -16,6 +16,7 @@ const HowWeHelp = () => {
           className="opacity-20 inset-0 transform scale-130"
           draggable={false}
           priority={true}
+          unoptimized
         />
 
       </div>
@@ -30,7 +31,7 @@ const HowWeHelp = () => {
           className="drop-shadow-lg"
           draggable={false}
           priority={true}
-          
+          unoptimized
 
         />
       </div>
@@ -46,20 +47,20 @@ const HowWeHelp = () => {
 
           <span className="bg-color">BUSINESSES GROW</span> <br />
           <span className="text-black">With</span>
-   
+
           <span className="bg-color ">{" "}Blockchain</span>
         </h2>
         <h2 className="text-[24px]  font-bold block lg:hidden ">
           {/* How We Help <br /> */}
 
           <span className="text-black">How We Help </span>
-      
+
 
 
           <span className="bg-color">Businesses</span><br />
           <span className="bg-color">Grow {" "}</span>
           <span className="text-black">With</span>
-        
+
           <span className="bg-color">{" "}Blockchain</span>
         </h2>
         {/* Mobile */}
