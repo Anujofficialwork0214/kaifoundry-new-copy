@@ -12,12 +12,12 @@ const customFeatures = [
     description: "Decentralization and encryption ensure your data stays protected.",
   },
   {
-    icon: "/seemless.png",
+    icon: "/svg/seemless.svg",
     title: "Seamless Integration",
     description: "Our blockchain solutions work smoothly with your existing systems.",
   },
   {
-    icon: "/future.png",
+    icon: "/svg/future.svg",
     title: "Future-Ready Technology",
     description: "Scalable, efficient, and designed to grow with your business.",
   },
