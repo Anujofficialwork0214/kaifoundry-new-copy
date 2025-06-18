@@ -273,9 +273,9 @@ const ServicesPopup: React.FC<ServicesPopupProps> = ({ onClose }) => {
       >
         <button
           onClick={onClose}
-          className="absolute top-24 right-3 cursor-pointer text-gray-500 hover:text-gray-700"
+          className="absolute top-17 right-3 cursor-pointer text-[#666666]"
         >
-          <AiOutlineClose className="w-7 h-7" />
+          <AiOutlineClose className="w-5 h-7" />
         </button>
 
         <div className="flex flex-col md:flex-row gap-8 py-10">
@@ -291,7 +291,7 @@ const ServicesPopup: React.FC<ServicesPopupProps> = ({ onClose }) => {
           </div>
 
           {/* Right Side Service Cards */}
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-12 w-4xl ">
+          <div className="grid md:grid-cols-2 grid-cols-1 gap-10 w-4xl ">
             <Link
               href="/blockchain-service"
               passHref
@@ -438,7 +438,7 @@ const ServiceItem: React.FC<{
 }> = ({ icon, title, description, isActive }) => {
   return (
     <div
-      className={`flex items-center gap-6 cursor-pointer px-3 py-6
+      className={`flex items-center gap-3 cursor-pointer px-3 
       transition-all duration-300 ease-in-out
       ${
         isActive

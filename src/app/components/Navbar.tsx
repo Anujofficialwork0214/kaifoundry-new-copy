@@ -691,7 +691,7 @@ const Navbar: React.FC = () => {
         <nav className="flex flex-col items-start  text-gray-700">
           <Link href="/" className="px-6 pt-6 pb-2 w-full flex flex-col  gap-5">
             <Image src="/svg/Group.svg" alt="Logo" width={20} height={20} />
-            <div className={`text-[20px] font-[500] ${roboto.className}`}>
+            <div className={`text-[20px] font-[600] ${roboto.className}`}>
               Kai Foundry
             </div>
           </Link>
