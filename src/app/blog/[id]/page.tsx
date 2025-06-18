@@ -44,7 +44,7 @@ export default function BlogPost() {
     return (
         // <div className="w-full p-5 flex flex-col items-center bg-cover bg-fill mt-10  lg:mt-0" style={{ backgroundImage: "url('/assets/blogs/background.png')" }}>
         <div 
-    className="w-full p-2 md:p-5 flex flex-col items-center  mt-10 lg:mt-0" 
+    className="w-full p-4 md:p-5 flex flex-col items-center  mt-10 lg:mt-0 " 
     style={{  backgroundImage: "url('/assets/background/bg3.gif')",
         backgroundSize: "100% auto",
         backgroundPosition: "center",
