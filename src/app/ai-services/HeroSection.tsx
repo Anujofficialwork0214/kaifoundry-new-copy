@@ -95,7 +95,7 @@ const HeroSection = () => {
 
 
             {/* Medium and larger screens only */}
-            <span className="hidden md:block text-3xl lg:text-4xl xl:text-[60px] leading-tight">
+            <span className="hidden md:block text-3xl md:text-[52px] lg:text-[55px] xl:text-[59px]  text-[24px] leading-tight">
               <span className="bg-color font-bold">
                 AI Solutions
               </span>

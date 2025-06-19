@@ -229,7 +229,7 @@ export default function HeroSection() {
 
         <div className="w-full lg:w-1/2 text-center md:text-left mt-20 z-10 flex flex-col justify-center lg:justify-start">
           <h1
-            className={`md:text-[62px] lg:text-[62px] xl:text-[58px]  text-[24px] text-center lg:text-left font-bold transition-transform duration-1000 py-0 lg:py-10 leading-[1.2]`}
+            className={`md:text-[52px] lg:text-[55px] xl:text-[58px]  text-[24px] text-center lg:text-left font-bold transition-transform duration-1000 py-0 lg:py-10 leading-[1.2]`}
           >
 
             <span className="flex flex-row lg:flex-col items-center justify-center lg:items-start gap-x-2 text-center ">
@@ -241,7 +241,7 @@ export default function HeroSection() {
           </h1>
           <p
 
-            className={`lg:text-black mt-3 lg:mt-0 text-[12px] text-center md:text-[21px] lg:text-left xl:text-[21px] lg:text-[24px] transition-opacity duration-1000 ${
+            className={`lg:text-black mt-3 lg:mt-0 text-[12px] text-center md:text-[18px] lg:text-left xl:text-[21px] lg:text-[18px] transition-opacity duration-1000 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
 

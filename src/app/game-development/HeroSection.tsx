@@ -33,7 +33,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-20 w-full md:w-2/3 lg:w-1/2 flex flex-col items-center text-center md:items-start md:text-left p-8 rounded-lg"
         >
-          <h2 className="text-3xl md:text-3xl lg:text-5xl xl:text-[70px] 2xl:text-[74px] font-bold text-[#333333] md:leading-20 ">
+          <h2 className="md:text-[52px] lg:text-[55px] xl:text-[58px]  text-[24px] font-bold text-[#333333] md:leading-20 ">
             Games That Keep <br />
 
             <span className="bg-color font-bold">Players</span> Hooked

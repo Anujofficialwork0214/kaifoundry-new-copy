@@ -40,7 +40,7 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
       <div className=" px-6 md:px-0 text-center">
         {/* Heading */}
         <motion.h2
-          className="text-[24px] md:text-5xl 2xl:text-6xl font-roboto font-bold text-[#000000]"
+          className="text-[24px] md:text-5xl xl:text-[45px] font-roboto font-bold text-[#000000]"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -71,10 +71,10 @@ const WhyChooseUs: React.FC<WhyChooseUsProps> = ({
                   draggable="false"
                 />
               </div>
-              <h3 className="text-xl font-semibold lg:font-[800] lg:text-[21px] text-center text-[#333333]">
+              <h3 className="text-xl font-semibold lg:font-[800] lg:text-[21px] xl:text-[19px] text-center text-[#333333]">
                 {feature.title}
               </h3>
-              <p className="text-[#333333] mt-6 text-[14px] lg:text-[16px]">
+              <p className="text-[#333333] mt-6 text-[14px] lg:text-[16px] ">
                 {feature.description}
               </p>
             </motion.div>
