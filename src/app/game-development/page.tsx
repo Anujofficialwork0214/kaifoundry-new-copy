@@ -48,7 +48,7 @@
 
 // export default GameDevelopmentPage;
 
-// 'use client'
+"use client";
 import React, { useEffect, useState, useCallback } from "react";
 import { ImArrowUp } from "react-icons/im";
 
