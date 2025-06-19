@@ -77,14 +77,14 @@ const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
       <div className="p-4 md:p-6 ">
         <h3
 
-          className={`${screenWidth < 375 ? "text-[14px]" : ""} text-[16px] md:text-[21.52px] lg:text-[24.52px] xl:text-[24.50px] 2xl:text-[24.52px] font-[600] text-[#333333] mb-2`}
+          className={`${screenWidth < 375 ? "text-[14px]" : ""} text-[16px] md:text-[21.52px] lg:text-[24.52px] xl:text-[21.50px]  font-[600] text-[#333333] mb-2`}
         >
           {service.title}
         </h3>
         <p
 
           className={`${screenWidth < 375 ? "text-[12px]" : ""
-            } text-[#333333] text-[12px] md:text-[16px] lg:text-[16px] xl:text-[16px] 2xl:text-[18px] leading-0.3`}
+            } text-[#333333] text-[12px] md:text-[16px] lg:text-[16px] xl:text-[13px]  leading-0.3`}
 
         >
           {service.description}
@@ -170,11 +170,11 @@ const WhatWeProvide = () => {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <div className="mt-20 hidden  lg:block">
-            <h2 className=" text-[24px] md:text-[52px] 2xl:text-[62px] font-bold text-gray-900 leading-tight">
+            <h2 className=" text-[24px] md:text-[52px] xl:text-[58px] font-bold text-gray-900 leading-tight">
               WHAT <br />
               WE <span className="bg-color">PROVIDE</span>
             </h2>
-            <p className="text-[14px] md:text-[24px] 2xl:text-[32px] font-[400] lg:font-semibold text-[#434343] mt-6 lg:leading-10">
+            <p className="text-[14px] md:text-[24px] xl:text-[21px] font-[400] lg:font-semibold text-[#434343] mt-6 lg:leading-10">
               Services That Drive Your Success
             </p>
           </div>

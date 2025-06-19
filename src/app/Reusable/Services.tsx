@@ -56,7 +56,7 @@ const Services: React.FC<ServicesProps> = ({
         {/* Heading */}
         <motion.h2
           ref={headingRef}
-          className="text-2xl md:text-5xl 2xl:text-6xl text-[#333333] font-semibold font-roboto lg:py-10 lg:px-0   py-0  mb-20 "
+          className="text-2xl md:text-5xl xl:text-[58px] text-[#333333] font-semibold font-roboto lg:py-10 lg:px-0   py-0  mb-20 "
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
@@ -93,7 +93,7 @@ const Services: React.FC<ServicesProps> = ({
 
 
               <h3
-                className={`text-[18px] md:text-2xl font-semibold text-left mt-2 text-[#0E0E0E] ${manrope.className}`}
+                className={`text-[18px] md:text-2xl font-semibold text-left mt-2 text-[#0E0E0E]  `}
               >
                 {service.title}
               </h3>
