@@ -33,13 +33,13 @@ const CoolStuff = () => {
     <section className='bg-gradient-to-b from-white sm:via-0% via-50% via-[#FBE8FF] to-[#FBE8FF] p-20 lg:py-36'>
       <div className='w-full grid grid-cols-1 md:grid-cols-2 items-center gap-10'>
         <div className='text-center md:text-left '>
-          <h2 className='text-[54px] font-[600] mb-8 hidden lg:block text-[#333333]'>
+          <h2 className='text-[54px] xl:text-[51px] font-[600] mb-8 hidden lg:block text-[#333333]'>
             Wanna Build <span className='bg-color'>Cool<br/> Stuff</span> With Us?
           </h2>
           <h2 className='text-6xl font-bold mb-8 block lg:hidden'>
             Wanna Build <span className='bg-color'>Cool<br/> Stuff</span> With Us?
           </h2>
-          <p className='text-[20px] font-[400] text-[#4D4D4D]'>
+          <p className='text-[20px] xl:text-[17px] font-[400] text-[#4D4D4D]'>
             Be part of something big—innovate, grow, and shape the future with us. Join a team that values creativity, collaboration, and cutting-edge technology to drive meaningful change.
           </p>
           <Link href="/contact-us">

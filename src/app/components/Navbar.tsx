@@ -519,8 +519,8 @@ const Navbar: React.FC = () => {
   return (
     <>
       <header
-        className={`fixed  ${inter.className
-          } etop-0 left-0 right-0 w-full pt-5 z-50 transition-transform  lg:px-4 px-0 duration-500 ease-in-out ${isVisible ? "translate-y-0" : "-translate-y-full"
+        className={`fixed  
+           top-0 left-0 right-0 w-full pt-5 z-50 transition-transform  lg:px-4 px-0 duration-500 ease-in-out ${isVisible ? "translate-y-0" : "-translate-y-full"
           }`}
       >
         <nav className={`max-w-[1920px] mx-auto py-2 px-2 md:px-5 lg:px-5 flex items-center justify-between ${isScrolling ? 'backdrop-blur-md' : ''} lg:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out `}>
@@ -589,7 +589,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex space-x-6 text-gray-700 flex-1 justify-center transition-all duration-500 ease-in-out md:text-[16px] xl:text-[20px] lg:text-[16px] ">
+          <ul className="hidden md:flex space-x-6 text-gray-700 flex-1 justify-center transition-all duration-500 ease-in-out md:text-[14px] xl:text-[17px] lg:text-[17px] ">
             <li>
               <Link
                 href="/how-we-help-screen"
@@ -684,7 +684,7 @@ const Navbar: React.FC = () => {
         <nav className="flex flex-col items-start  text-gray-700">
           <Link href="/" className="px-6 pt-6 pb-2 w-full flex flex-col  gap-5">
             <Image src="/svg/Group.svg" alt="Logo" width={20} height={20} />
-            <div className={`text-[20px] font-[600] ${roboto.className}`}>
+            <div className={`text-[20px]  font-[600] ${roboto.className}`}>
               Kai Foundry
             </div>
           </Link>
