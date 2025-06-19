@@ -204,7 +204,7 @@ import { motion } from "framer-motion";
 import CountUp from "react-countup";
 import { roboto } from "../Fonts/fonts"; // Assuming you've already set this up in your Fonts module
 // import { GoArrowRight } from "react-icons/go";
-import { FaArrowRight } from "react-icons/fa6";
+
 
 export default function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -275,8 +275,11 @@ export default function HeroSection() {
                     className={`relative z-10 flex items-center px-4 py-2 lg:pl-3 lg:pr-8 lg:py-3  text-white text-[11px] lg:text-lg xl:text-[15px] transition-all duration-300 bg-[#BA24D5] `}
                   >
                     HOW WE HELP
-                    <span className="ml-2 w-5 h-5 lg:w-8 lg:h-8 flex items-center justify-center border-2 border-white rounded-full font-light">
-                      <FaArrowRight />
+                    <span className="ml-2 w-5 h-5 lg:w-8 lg:h-8 flex items-center justify-center rounded-full font-light">
+                    <svg width="356" height="356" viewBox="0 0 356 356" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="7.56606" y="7.56606" width="340.868" height="340.868" rx="166.453" stroke="white" stroke-width="15.1321"/>
+<path d="M187.225 117.676C189.396 115.496 192.343 114.267 195.419 114.26C198.496 114.253 201.449 115.468 203.629 117.638L255.954 169.725C258.133 171.896 259.362 174.844 259.369 177.92C259.376 180.996 258.161 183.949 255.991 186.13L203.904 238.454C201.721 240.572 198.793 241.748 195.751 241.729C192.709 241.709 189.796 240.496 187.641 238.35C185.485 236.203 184.258 233.296 184.225 230.255C184.191 227.213 185.354 224.28 187.462 222.087L218.793 189.613L108.581 189.864C105.504 189.871 102.551 188.655 100.37 186.484C98.1896 184.314 96.9606 181.366 96.9536 178.289C96.9466 175.212 98.1622 172.258 100.333 170.078C102.504 167.897 105.452 166.668 108.529 166.661L218.741 166.411L187.262 134.08C185.082 131.909 183.854 128.962 183.847 125.885C183.84 122.809 185.055 119.856 187.225 117.676Z" fill="white"/>
+</svg>
                     </span>
                   </button>
                 </Link>
