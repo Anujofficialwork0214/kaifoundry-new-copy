@@ -135,7 +135,7 @@ export default function BlogCarousel() {
         <div className="block lg:hidden text-[30px] text-left">
           Our Latest Blogs
         </div>
-        <div className="hidden lg:flex flex-col text-[50px] w-[300px] text-left mt-4 mb-16">
+        <div className="hidden lg:flex flex-col text-[50px]  text-left pl-22 mt-4 mb-16">
           <div>Our Latest</div>
           <div className="-mt-4">Blogs</div>
         </div>
@@ -187,7 +187,7 @@ export default function BlogCarousel() {
               {blogs.map((blog, index) => (
                 <div
                   key={blog.id}
-                  className="flex-shrink-0 w-full md:w-[400px] pb-4 lg:px-0 px-2"
+                  className="flex-shrink-0 w-full md:w-[350px] pb-4 lg:px-0 px-2"
                 >
                   <div className="bg-white shadow-lg lg:shadow-md flex flex-col h-[470px] overflow-hidden transition-transform duration-300 hover:scale-105">
                     <div className="relative w-full h-[246px] bg-gray-100">
@@ -207,16 +207,16 @@ export default function BlogCarousel() {
                       />
                     </div>
                     <div className="p-6 flex flex-col gap-4 lg:gap-6">
-                      <p className="text-[12px] lg:text-[16px] font-[600] text-[#333333]">
+                      <p className="text-[12px] lg:text-[14px] font-[600] text-[#333333]">
                         {blog.category}
                       </p>
-                      <h3 className="mt-2 text-[17px] font-[600] lg:text-[22px] text-[#333333] leading-tight">
+                      <h3 className="mt-0 text-[17px] font-[600] lg:text-[18px] text-[#333333] leading-tight">
                         {blog.title}
                       </h3>
                       <Link
                         href={`/blog/${blog.id}`}
                         prefetch={true}
-                        className="mt-auto text-[14px] lg:text-[18px] font-[500]font-medium text-gray-900 underline underline-offset-2 hover:text-purple-600"
+                        className="mt-auto text-[14px] lg:text-[16px] font-[500]font-medium text-gray-900 underline underline-offset-2 hover:text-purple-600"
                       >
                         Read Blog
                       </Link>
