@@ -1,3 +1,4 @@
+
 // 'use client'
 // import React from 'react';
 // import { useEffect, useState } from "react";
@@ -64,6 +65,7 @@ const Contact = dynamic(() => import("../Reusable/Contact"));
 const EcosystemSection = dynamic(() => import("../Reusable/EcosystemSection"));
 const EcosystemMobile = dynamic(() => import("../Reusable/EcoSystemMobile"));
 
+
 const GameDevelopmentPage: React.FC = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
@@ -99,12 +101,14 @@ const GameDevelopmentPage: React.FC = () => {
       {isMobile ? <EcosystemMobile /> : <EcosystemSection />}
       <FaqGame />
       <Contact />
+
       <button
         onClick={scrollToTop}
         className="fixed bottom-6 right-6 bg-[#BA24D5] cursor-pointer text-white p-3 rounded-full shadow-md  transition"
       >
         <ImArrowUp />
       </button>
+
     </div>
   );
 };

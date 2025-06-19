@@ -1,5 +1,4 @@
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { IoMdPaperPlane } from "react-icons/io";
+
 import ContactForm from "./ContactForm";
 
 const ContactUs = () => {

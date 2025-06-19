@@ -1,3 +1,4 @@
+
 // 'use client'
 // import React from 'react';
 // import HowWeHelp from './HeroSection';
@@ -31,6 +32,7 @@ import React, { useCallback } from "react";
 import dynamic from "next/dynamic";
 import { ImArrowUp } from "react-icons/im";
 
+
 // Dynamically import components
 const HowWeHelp = dynamic(() => import("./HeroSection"));
 const FileCoin = dynamic(() => import("./FileCoin"));
@@ -60,7 +62,9 @@ const HowWeHelpSection: React.FC = () => {
       <BussinessGrowthMob />
       <FileCoin />
       <SolutionsSection />
+
       <ScrollToTopButton />
+
     </div>
   );
 };

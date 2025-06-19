@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 import Image from "next/image";
 
 const content = [
@@ -70,12 +70,12 @@ export default function AnimatedImageMobile() {
         <button
           onClick={prevSlide}
           style={{ backgroundColor: '#BA24D5' }}
-          className={`absolute -left-4 top-1/2 p-3 rounded-xl text-white text-2xl hover:bg-purple-700 transition z-50 cursor-pointer ${
+          className={`absolute -left-4 top-1/2 p-2 rounded-xl text-white text-2xl hover:bg-purple-700 transition z-50 cursor-pointer ${
             !canGoLeft ? 'opacity-40 cursor-not-allowed' : ''
           }`}
           disabled={!canGoLeft}
         >
-          <FaChevronLeft />
+          <Image src='/svg/chevonArrow.svg' alt="arrow" width={30} height={30} priority={false} />
         </button>
 
         <div className="relative w-[255px] h-[300px] ">
@@ -118,6 +118,7 @@ export default function AnimatedImageMobile() {
                 width={80}
                 height={80}
                 priority={true}
+                draggable="false"
                 className="w-full h-full object-cover rounded-[24px] border-2 border-white"
               />
             </motion.div>
@@ -127,12 +128,12 @@ export default function AnimatedImageMobile() {
         <button
           onClick={nextSlide}
           style={{ backgroundColor: '#BA24D5' }}
-          className={`absolute -right-4 top-1/2 p-3 rounded-xl text-white text-2xl hover:bg-purple-700 transition z-50 cursor-pointer ${
+          className={`absolute -right-4 top-1/2 p-2 rounded-xl text-white text-2xl hover:bg-purple-700 transition z-50 cursor-pointer ${
             !canGoRight ? 'opacity-40 cursor-not-allowed' : ''
           }`}
           disabled={!canGoRight}
         >
-          <FaChevronRight />
+          <Image src='/svg/chevonArrow.svg' className="rotate-180" alt="arrow" width={30} height={30} priority={false} />
         </button>
       </div>
 

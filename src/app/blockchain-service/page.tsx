@@ -50,9 +50,11 @@
 
 "use client";
 
+
 import React, { useState, useEffect, useCallback } from "react";
 import dynamic from "next/dynamic";
 import { ImArrowUp } from "react-icons/im";
+
 
 // Dynamically import the components
 const HeroSection = dynamic(() => import("./HeroSection"));
@@ -104,7 +106,9 @@ const BlockChainServicePage: React.FC = () => {
       {isMobile ? <EcosystemMobile /> : <EcosystemSection />}
       <BlockFaq />
       <Contact />
+
       <ScrollToTopButton />
+
     </div>
   );
 };

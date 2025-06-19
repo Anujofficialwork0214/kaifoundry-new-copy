@@ -34,14 +34,14 @@ const WhyWorkWithUs = () => {
     <section className="py-20 bg-white text-center">
       <div className="container mx-auto px-6">
         {/* Title */}
-        <motion.h2 
-          className="text-[62px] font-[700] text-[#333333]"
-          initial={{ opacity: 0, y: 50 }} 
-          whileInView={{ opacity: 1, y: 0 }} 
+        <motion.h2
+          className="text-[24px] md:text-5xl xl:text-[45px] font-[600] text-[#333333]"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-         Why <span className="bg-clip-text lg:text-transparent bg-gradient-to-t from-[#BA24D5] to-[#ea9df6] text-[#BA24D5]">Work</span> With Us
+          Why <span className="bg-color text-[24px] md:text-5xl xl:text-[45px] ">Work</span> With Us
         </motion.h2>
 
         {/* Benefits Grid */}
@@ -55,10 +55,10 @@ const WhyWorkWithUs = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="w-1  mr-3" style={{ height: 'calc(100% + 10px)', backgroundColor: '#D444F1' }}></div>
+              <div className="w-[2px]  mr-3" style={{ height: 'calc(100% + 10px)', backgroundColor: '#D444F1' }}></div>
               <div>
-                <h3 className="text-[25px] font-[600] text-[#333333]">{benefit.title}</h3>
-                <p className="text-[18px] font-[400] text-[#333333] mt-4">{benefit.description}</p>
+                <h3 className="text-[19px] font-[600] text-[#333333]">{benefit.title}</h3>
+                <p className="text-[14px] font-[400] text-[#333333] mt-3">{benefit.description}</p>
               </div>
             </motion.div>
           ))}

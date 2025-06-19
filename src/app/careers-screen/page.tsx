@@ -1,3 +1,4 @@
+
 // 'use client'
 // import React from 'react';
 // import CareersSection from './CareersSection';
@@ -51,6 +52,7 @@ const JobListings = dynamic(() => import("./JobListings"));
 const WhyWorkWithUsMob = dynamic(() => import("./WhyWorkWithMob"));
 const CareerSectionMob = dynamic(() => import("./CareerSectionMob"));
 
+
 const CareersPage: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -77,12 +79,14 @@ const CareersPage: React.FC = () => {
       {isMobile ? <CareerSectionMob /> : <CareersSection />}
       {isMobile ? <WhyWorkWithUsMob /> : <WhyWorkWithUs />}
       <JobListings />
+
       <button
         onClick={handleScrollToTop}
         className="fixed bottom-6 right-6 bg-[#BA24D5] cursor-pointer text-white p-3 rounded-full shadow-md transition"
       >
         <ImArrowUp />
       </button>
+
     </div>
   );
 };

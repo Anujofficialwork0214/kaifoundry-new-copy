@@ -1,3 +1,4 @@
+
 // 'use client'
 // import React from "react";
 // import Home from "./Home";
@@ -31,6 +32,7 @@ import React, { useCallback } from "react";
 import dynamic from "next/dynamic";
 import { ImArrowUp } from "react-icons/im";
 
+
 // Dynamically import the sections
 const Home = dynamic(() => import("./Home"));
 const FeaturesSection = dynamic(() => import("./Features"));
@@ -60,7 +62,9 @@ const WhoAreWePage: React.FC = () => {
       <FeaturesSection />
       <CoreValuesSection />
       <FounderSection />
+
       <ScrollToTopButton />
+
     </div>
   );
 };
