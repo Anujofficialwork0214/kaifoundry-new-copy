@@ -10,6 +10,7 @@ import BlockFaq from "./BlockFaq";
 import Contact from "../Reusable/Contact";
 import WhatWeOfferBlock from "./WhatweOfferBlock";
 import EcosystemMobile from "../Reusable/EcoSystemMobile";
+import { ImArrowUp } from "react-icons/im";
 
 const BlockChainServicePage: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -35,6 +36,12 @@ const BlockChainServicePage: React.FC = () => {
       {isMobile ? <EcosystemMobile /> : <EcosystemSection />}
       <BlockFaq />
       <Contact />
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="fixed bottom-6 right-6 bg-[#BA24D5] cursor-pointer text-white p-3 rounded-full shadow-md  transition"
+      >
+        <ImArrowUp />
+      </button>
     </div>
   );
 };

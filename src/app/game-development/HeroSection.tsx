@@ -33,7 +33,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-20 w-full md:w-2/3 lg:w-1/2 flex flex-col items-center text-center md:items-start md:text-left p-8 rounded-lg"
         >
-          <h2 className="text-3xl md:text-3xl lg:text-5xl xl:text-[70px] 2xl:text-[74px] font-bold text-[#333333] md:leading-20 ">
+          <h2 className="md:text-[52px] lg:text-[55px] xl:text-[58px]  text-[24px] font-bold text-[#333333] md:leading-20 ">
             Games That Keep <br />
 
             <span className="bg-color font-bold">Players</span> Hooked
@@ -51,7 +51,7 @@ const HeroSection = () => {
           </p>
 
           {/* Desktop version — With line breaks */}
-          <p className="text-[#333333] text-[12px] md:text-[20px] 2xl:text-[28px]  mt-4 hidden md:block">
+          <p className="text-[#333333] text-[12px] md:text-[20px] 2xl:text-[24px]  mt-4 hidden md:block">
             We create engaging, high-performance games <br />
             that players love — seamless, fun, and built for <br />
             the future of gaming.

@@ -438,7 +438,7 @@ const ServiceItem: React.FC<{
 }> = ({ icon, title, description, isActive }) => {
   return (
     <div
-      className={`flex items-center gap-3 cursor-pointer px-3 
+      className={`flex items-center gap-3 cursor-pointer px-3 pt-2
       transition-all duration-300 ease-in-out
       ${
         isActive

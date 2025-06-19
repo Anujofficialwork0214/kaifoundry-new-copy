@@ -5,19 +5,19 @@ import ContactForm from "./ContactForm";
 const ContactUs = () => {
   return (
     <>
-      <h2 className="text-[24px] md:text-5xl 2xl:text-6xl font-semibold text-center mb-10  md:mb-14 font-inter text-[#333333]">
+      <h2 className="text-[24px] lg:text-[42px]  xl:text-[45px] font-semibold text-center mb-10  md:mb-14 font-inter text-[#333333]">
         Let's Get <span className="bg-color">In Touch</span>
       </h2>
-      <section className="p-0 lg:p-4 flex items-center justify-center w-full">
+      <section className="p-2 lg:p-20 flex items-center justify-center w-full">
         {/* Main grid container for the three sections: Map, Form, Details */}
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-34 p-0 md:p-4 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-24 p-0 md:p-4 ">
           {/* Grid Item 1: Map */}
-          <div className="row-span-8 md:row-span-1 flex-col gap-10 md:gap-0">
-            <h3 className="text-2xl md:text-[32px] lg:text-[35px] text-[#333333] font-semibold mb-6 sm:mb-10 text-start">
+          <div className="row-span-8 md:row-span-1 flex-col gap-10 md:gap-0 ">
+            <h3 className="text-2xl md:text-[32px] lg:text-[32px] xl:text-[32px] text-[#333333] font-semibold mb-6 sm:mb-10 text-start">
               Where To Find Us
             </h3>
             <iframe
-              className="w-full lg:w-lg h-64  md:h-full"
+              className="w-full lg:w-xl h-64  md:h-full"
               src="https://maps.google.com/maps?q=Ludhiana&t=&z=13&ie=UTF8&iwloc=&output=embed"
               loading="lazy"
             ></iframe>
@@ -25,7 +25,7 @@ const ContactUs = () => {
 
           {/* Grid Item 2: Form */}
           <div className="md:col-start-2 row-span-2 flex-col mt-20 md:mt-0">
-            <h3 className="text-2xl md:text-[32px] lg:text-[35px] text-[#333333] font-semibold mb-6 sm:mb-10 text-start">
+            <h3 className="text-2xl md:text-[32px] lg:text-[32px] xl:text-[32px] text-[#333333] font-semibold mb-6 sm:mb-10 text-start">
               Leave A Message
             </h3>
             <ContactForm />
@@ -36,7 +36,7 @@ const ContactUs = () => {
             {/* Sub-item: Contact Details */}
             <div className="mt-10">
               <div className="text-black">
-                <h3 className="font-semibold text-2xl md:text-[32px] lg:text-[35px] text-[#333333] mb-4">Contact Details</h3>
+                <h3 className="font-semibold text-2xl md:text-[29px] lg:text-[29px] xl:text-[32px] text-[#333333] mb-4">Contact Details</h3>
                 <div className="grid grid-cols-2 gap-4 text-[#4D4D4D] lg:text-[#666666] text-[10px] lg:text-base">
                   <p>
                     Akshya Nagar 1st Block 1st <br /> Cross, Rammurthy Nagar,

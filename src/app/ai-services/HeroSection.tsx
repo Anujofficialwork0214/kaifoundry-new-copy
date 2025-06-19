@@ -95,7 +95,7 @@ const HeroSection = () => {
 
 
             {/* Medium and larger screens only */}
-            <span className="hidden md:block text-3xl lg:text-4xl xl:text-[60px] leading-tight">
+            <span className="hidden md:block text-3xl md:text-[52px] lg:text-[55px] xl:text-[59px]  text-[24px] leading-tight">
               <span className="bg-color font-bold">
                 AI Solutions
               </span>
@@ -104,7 +104,7 @@ const HeroSection = () => {
 
           </h2>
 
-          <p className="text-[#333333] md:text-lg mt-6 text-[12px] md:text-[20px] 2xl:text-[28px]  ">
+          <p className="text-[#333333] md:text-lg mt-6 text-[12px] md:text-[20px] 2xl:text-[24px]  ">
             Unlock the power of Artificial Intelligence to automated tasks,
             drive insights and create smater solutions for your business
           </p>

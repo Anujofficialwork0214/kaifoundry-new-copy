@@ -16,6 +16,7 @@ const HeroSection = () => {
           height={1080}
           draggable="false"
           priority={true}
+          unoptimized
         />
       </div>
 
@@ -30,7 +31,7 @@ const HeroSection = () => {
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative z-20 w-full md:w-2/3 lg:w-1/2 flex flex-col items-center text-center md:items-start md:text-left p-8 rounded-lg"
+          className="relative z-20 w-full md:w-2/3 lg:w-1/2 flex flex-col items-center text-center md:items-start md:text-left py-8 pl-8 rounded-lg"
         >
           <h2 className="font-bold text-[#333333]">
             {/* Small  */}
@@ -41,7 +42,7 @@ const HeroSection = () => {
             </span>
 
             {/* Medium  */}
-            <span className="hidden md:block text-3xl md:text-3xl lg:text-5xl xl:text-[65px]  leading-tight">
+            <span className="hidden md:block md:text-[52px]  lg:text-[55px] xl:text-[57px]  text-[24px]  leading-tight">
               Empowering <br />
               Innovation with <br />
               <span className="bg-color">Blockchain</span>{" "}
@@ -49,7 +50,7 @@ const HeroSection = () => {
             </span>
           </h2>
 
-          <p className="text-[#333333] text-[12px] md:text-[16px] 2xl:text-[28px]  mt-4">
+          <p className="text-[#333333] text-[12px] md:text-[20px] 2xl:text-[24px]  mt-4">
             Secure, scalable, and customized blockchain
             <br className="hidden md:inline" />
             development for the digital future.
@@ -60,7 +61,7 @@ const HeroSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-             className="bg-[#BA24D5] mt-10 text-white hover:bg-[#B33BC1] cursor-pointer rounded-full w-34 py-3 px-2 lg:py-3 lg:px-3 lg:w-34 transition duration-300">
+              className="bg-[#BA24D5] mt-10 text-white hover:bg-[#B33BC1] cursor-pointer rounded-full w-34 py-3 px-2 lg:py-3 lg:px-3 lg:w-34 transition duration-300">
               Contact Us
             </motion.button>
           </Link>
