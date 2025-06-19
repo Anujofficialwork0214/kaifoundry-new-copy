@@ -51,7 +51,7 @@ const HeroSection = () => {
           </p>
 
           {/* Desktop version — With line breaks */}
-          <p className="text-[#333333] text-[12px] md:text-[20px] 2xl:text-[28px]  mt-4 hidden md:block">
+          <p className="text-[#333333] text-[12px] md:text-[20px] 2xl:text-[24px]  mt-4 hidden md:block">
             We create engaging, high-performance games <br />
             that players love — seamless, fun, and built for <br />
             the future of gaming.

@@ -56,13 +56,13 @@ const Services: React.FC<ServicesProps> = ({
         {/* Heading */}
         <motion.h2
           ref={headingRef}
-          className="text-2xl md:text-5xl xl:text-[58px] text-[#333333] font-semibold font-roboto lg:py-10 lg:px-0   py-0  mb-20 "
+          className="text-[24px] md:text-5xl xl:text-[45px] text-[#333333] font-medium lg:py-10 lg:px-0   py-0  mb-20 "
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          {suffixText} <span className="bg-color font-[700]">{heading} </span>
+          {suffixText} <span className="bg-color font-[600]">{heading} </span>
           {subheading}
           <br />
           {breakHeading}

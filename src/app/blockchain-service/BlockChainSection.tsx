@@ -40,13 +40,13 @@ export default function BlockchainSection() {
           transition={{ duration: 0.6 }}
           className="text-center md:text-left"
         >
-          <h2 className="text-xl md:text-[30px] lg:text-[40px] 2xl:text-[50px] font-semibold text-[#333333] leading-tight">
+          <h2 className="text-xl md:text-[30px] lg:text-[42px] 2xl:text-[42px] font-semibold text-[#333333] leading-tight">
             Blockchain <span className="bg-color">Development</span>:
             <br />
             <span className="block md:inline">Powering Secure <span >
               Solutions</span></span>
           </h2>
-          <p className="mt-4 text-base text-[12px] md:text-[18px] lg:text-xl text-[#808080] px-2 lg:px-0">
+          <p className="mt-4 text-base text-[12px] md:text-[16px] lg:text-[18px] text-[#333333] px-2 lg:px-0">
             We help businesses use blockchain technology for enhanced{" "}
             <br className="hidden sm:inline" />
             transparency and automation.
@@ -65,12 +65,12 @@ export default function BlockchainSection() {
               <Image
                 src={feature.icon}
                 alt={feature.name}
-                className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain"
+                className="w-6 h-6 md:w-10 h:w-10 lg:w-10 lg:h-10 object-contain"
                 width={6}
                 height={6}
                 priority={true}
               />
-              <span className="text-sm lg:text-xl sm:text-xs font-medium text-[#000000] whitespace-nowrap">
+              <span className="text-sm lg:text-[16px] sm:text-xs font-medium text-[#000000] whitespace-nowrap">
                 {feature.name}
               </span>
             </motion.div>
