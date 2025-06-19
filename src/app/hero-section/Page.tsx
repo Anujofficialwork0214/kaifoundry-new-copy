@@ -226,10 +226,12 @@ export default function HeroSection() {
         }`}
       >
         {/* Text */}
+
         <div className="w-full lg:w-1/2 text-center md:text-left mt-20 z-10 flex flex-col justify-center lg:justify-start">
           <h1
-            className={`md:text-[62px] lg:text-[62px] 2xl:text-[65px] text-[24px] text-center lg:text-left font-bold transition-transform duration-1000 py-0 lg:py-10 leading-[1.2]`}
+            className={`md:text-[62px] lg:text-[62px] xl:text-[58px]  text-[24px] text-center lg:text-left font-bold transition-transform duration-1000 py-0 lg:py-10 leading-[1.2]`}
           >
+
             <span className="flex flex-row lg:flex-col items-center justify-center lg:items-start gap-x-2 text-center ">
               <span>Building Your</span>
               <span className="bg-color block">BUSINESSES</span>
@@ -238,9 +240,11 @@ export default function HeroSection() {
             <span className="bg-color"> WEB3</span>
           </h1>
           <p
-            className={`lg:text-black mt-3 lg:mt-0 text-[12px] text-center md:text-[21px] lg:text-left 2xl:text-[27px] lg:text-[24px] transition-opacity duration-1000 ${
+
+            className={`lg:text-black mt-3 lg:mt-0 text-[12px] text-center md:text-[21px] lg:text-left xl:text-[21px] lg:text-[24px] transition-opacity duration-1000 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
+
           >
             We help businesses grow with smart strategies
             <br />
@@ -257,18 +261,18 @@ export default function HeroSection() {
                 }`}
                 initial={{ width: 0 }}
                 animate={isVisible ? { width: "100%" } : { width: 0 }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
               />
 
               <motion.div
                 className={`flex items-center relative top-0 md:flex pl-8 overflow-hidden`}
                 initial={{ opacity: 0 }}
                 animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-                transition={{ delay: 1, duration: 0.7 }}
+                transition={{ delay: 1, duration: 1.5 }}
               >
                 <Link href="/how-we-help-screen" className="pr-3 lg:pr-0">
                   <button
-                    className={`relative z-10 flex items-center px-4 py-2 lg:pl-3 lg:pr-8 lg:py-3  text-white text-[11px] lg:text-lg transition-all duration-300 bg-[#BA24D5] `}
+                    className={`relative z-10 flex items-center px-4 py-2 lg:pl-3 lg:pr-8 lg:py-3  text-white text-[11px] lg:text-lg xl:text-[15px] transition-all duration-300 bg-[#BA24D5] `}
                   >
                     HOW WE HELP
                     <span className="ml-2 w-5 h-5 lg:w-8 lg:h-8 flex items-center justify-center border-2 border-white rounded-full font-light">
@@ -278,7 +282,7 @@ export default function HeroSection() {
                 </Link>
                 <Link href="/contact-us">
                   <button
-                    className={`relative z-10 mr-[2px] -ml-[13px]  lg:ml-[-16px] lg:mr-[2px] px-3 py-[7px]   lg:px-10 lg:py-[11.6px] rounded-full   bg-white text-black text-[12px] lg:text-lg transition-all duration-300 cursor-pointer hover:bg-gray-100`}
+                    className={`relative z-10 mr-[2px] -ml-[13px]  lg:ml-[-16px] lg:mr-[2px] px-3 py-[7px]   lg:px-10 lg:py-[11.6px] rounded-full   bg-white text-black text-[12px] lg:text-lg xl:text-[15px] transition-all duration-300 cursor-pointer hover:bg-gray-100`}
                   >
                     Contact Us
                   </button>
@@ -312,14 +316,13 @@ export default function HeroSection() {
               <CountUp
                 end={30}
                 duration={2}
-                className={`text-[20px] lg:text-[49.07px] font-[600] text-[#414141] ${roboto.className}`}
+                className={`text-[20px] lg:text-[49.07px] xl:text-[46px] font-[600] text-[#414141] ${roboto.className}`}
               />
-              <span className="text-[20px] lg:text-[49.07px] font-[600] text-[#414141]">
-                +
-              </span>
-              <span
-                className={`text-[14px] lg:text-[26.17px] text-[#6E6E6E] whitespace-nowrap ${roboto.className}`}
-              >
+
+
+              <span className="text-[20px] lg:text-[49.07px] xl:text-[46px] font-[600] text-[#414141]">+</span>
+              <span className={`text-[14px] lg:text-[26.17px] xl:text-[46px] text-[#6E6E6E] whitespace-nowrap  ${roboto.className}`}>
+
                 &nbsp;Projects
               </span>
             </div>
@@ -327,14 +330,12 @@ export default function HeroSection() {
               <CountUp
                 end={40}
                 duration={2}
-                className={`text-[20px] lg:text-[49.07px] font-[600] text-[#414141] ${roboto.className}`}
+                className={`text-[20px] lg:text-[49.07px] xl:text-[46px] font-[600] text-[#414141] ${roboto.className}`}
               />
-              <span className="text-[20px] lg:text-[49.07px] font-[600] text-[#414141]">
-                +
-              </span>
-              <span
-                className={`text-[14px] lg:text-[26.17px] text-[#6E6E6E] whitespace-nowrap ${roboto.className}`}
-              >
+
+              <span className="text-[20px] lg:text-[49.07px] xl:text-[46px] font-[600] text-[#414141]">+</span>
+              <span className={`text-[14px] lg:text-[26.17px] xl:text-[46px] text-[#6E6E6E] whitespace-nowrap  ${roboto.className}`}>
+
                 &nbsp;Developers
               </span>
             </div>
@@ -342,14 +343,12 @@ export default function HeroSection() {
               <CountUp
                 end={10}
                 duration={2}
-                className={`text-[20px] lg:text-[49.07px] font-[600] text-[#414141] ${roboto.className}`}
+                className={`text-[20px] lg:text-[49.07px] xl:text-[46px] font-[600] text-[#414141] ${roboto.className}`}
               />
-              <span className="text-[20px] lg:text-[49.07px] font-[600] text-[#414141]">
-                +
-              </span>
-              <span
-                className={`text-[14px] lg:text-[26.17px] text-[#6E6E6E] whitespace-nowrap ${roboto.className}`}
-              >
+
+              <span className="text-[20px] lg:text-[49.07px] xl:text-[46px] font-[600] text-[#414141]">+</span>
+              <span className={`text-[14px] lg:text-[26.17px] xl:text-[46px] text-[#6E6E6E] whitespace-nowrap  ${roboto.className}`}>
+
                 &nbsp;Ecosystems
               </span>
             </div>
