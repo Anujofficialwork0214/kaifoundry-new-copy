@@ -35,7 +35,7 @@ const CoreValuesSection = () => {
 
   return (
     <section ref={ref} className="px-6 lg:px-20 py-16 bg-[#FCEBFF] ">
-      <div className="max-w-6xl mx-auto flex flex-col items-center">
+      <div className="max-w-6xl mx-auto flex flex-col  items-center">
         {/* Heading Animation */}
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
@@ -62,7 +62,7 @@ const CoreValuesSection = () => {
                 delay: inView ? index * 0.2 + 0.3 : 0,
                 ease: "easeOut",
               }}
-              className={`bg-white shadow-lg rounded-2xl p-4 lg:p-6 flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}  lg:flex-col items-center text-center  lg:w-[484px]`}
+              className={`bg-white shadow-lg rounded-2xl p-4 lg:p-6 flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}  lg:flex-col items-center text-center max-w-md  lg:w-[484px]`}
             >
               <Image
                 src={value.img}
