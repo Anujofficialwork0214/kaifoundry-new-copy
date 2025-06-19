@@ -1,24 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --font-geist-sans: "Geist", sans-serif;
-  --font-geist-mono: "Geist Mono", monospace;
+  /* --font-geist-sans: "Geist", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace; */
 }
 
 body {
   font-family: var(--font-geist-sans);
 }
+
 body {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+
   @layer base {
+
     input[type="number"]::-webkit-inner-spin-button,
     input[type="number"]::-webkit-outer-spin-button {
       -webkit-appearance: none;
       margin: 0;
     }
+
     input[type="number"] {
       -moz-appearance: textfield;
     }
@@ -32,7 +36,7 @@ body {
   position: relative;
   background: white;
   border-radius: 24px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 
   /* Apply the SVG clip-path */
   -webkit-mask-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 h100 v30 a30,30 0 0,1 -30,30 h-70 v-60 z" fill="white"/></svg>');
@@ -55,7 +59,7 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 10;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .arrow {
@@ -63,11 +67,16 @@ body {
   font-size: 20px;
   font-weight: bold;
 }
+
 .inverted-radius {
-  --r: 10px; /* corner radius */
-  --s: 13px; /* size of inner curve */
-  --x: 13px; /* horizontal offset of inner curve */
-  --y: 2px; /* vertical offset of inner curve */
+  --r: 10px;
+  /* corner radius */
+  --s: 13px;
+  /* size of inner curve */
+  --x: 13px;
+  /* horizontal offset of inner curve */
+  --y: 2px;
+  /* vertical offset of inner curve */
 
   --_m: /calc(2 * var(--r)) calc(2 * var(--r)) radial-gradient(#000 70%, #0000 72%);
   --_g: conic-gradient(at calc(100% - var(--r)) var(--r), #0000 25%, #000 0);
@@ -76,17 +85,15 @@ body {
   -webkit-mask:
     calc(100% - var(--_d) - var(--x)) 0 var(--_m),
     100% calc(var(--_d) + var(--y)) var(--_m),
-    radial-gradient(var(--s) at 100% 0, #0000 99%, #000 calc(100% + 1px)) 
-      calc(-1 * var(--r) - var(--x)) calc(var(--r) + var(--y)),
+    radial-gradient(var(--s) at 100% 0, #0000 99%, #000 calc(100% + 1px)) calc(-1 * var(--r) - var(--x)) calc(var(--r) + var(--y)),
     var(--_g) calc(-1 * var(--_d) - var(--x)) 0,
     var(--_g) 0 calc(var(--_d) + var(--y));
-    
+
   -webkit-mask-repeat: no-repeat;
   mask:
     calc(100% - var(--_d) - var(--x)) 0 var(--_m),
     100% calc(var(--_d) + var(--y)) var(--_m),
-    radial-gradient(var(--s) at 100% 0, #0000 99%, #000 calc(100% + 1px)) 
-      calc(-1 * var(--r) - var(--x)) calc(var(--r) + var(--y)),
+    radial-gradient(var(--s) at 100% 0, #0000 99%, #000 calc(100% + 1px)) calc(-1 * var(--r) - var(--x)) calc(var(--r) + var(--y)),
     var(--_g) calc(-1 * var(--_d) - var(--x)) 0,
     var(--_g) 0 calc(var(--_d) + var(--y));
   mask-repeat: no-repeat;
@@ -96,7 +103,7 @@ body {
 .gradient-border {
   position: relative;
   z-index: 1;
-  border-radius: 15px; 
+  border-radius: 15px;
 }
 
 .gradient-border::before {
@@ -106,17 +113,15 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  padding-top: 1px;     
-  padding-bottom: 2px;  
-  background: linear-gradient(
-    to right,
-    #FBE8FF 0%,
-    #FBE8FF 0%,
-    #BA24D5 20%,
-    #BA24D5 80%,
-    #FBE8FF 100%,
-    #FBE8FF 100%
-  );
+  padding-top: 1px;
+  padding-bottom: 2px;
+  background: linear-gradient(to right,
+      #FBE8FF 0%,
+      #FBE8FF 0%,
+      #BA24D5 20%,
+      #BA24D5 80%,
+      #FBE8FF 100%,
+      #FBE8FF 100%);
   border-radius: 15px;
   box-sizing: border-box;
 
@@ -133,35 +138,38 @@ body {
 
 @media (min-width: 1024px) {
   .inverted-radius {
-    --r: 13px; /* corner radius */
-    --s: 19px; /* size of inner curve */
-    --x: 19px; /* horizontal offset */
-    --y: 2px;  /* vertical offset */
-  
-    
+    --r: 13px;
+    /* corner radius */
+    --s: 19px;
+    /* size of inner curve */
+    --x: 19px;
+    /* horizontal offset */
+    --y: 2px;
+    /* vertical offset */
+
+
   }
+
   .gradient-border {
-    
-    border-radius: 1.5rem; 
+
+    border-radius: 1.5rem;
   }
-  
+
   .gradient-border::before {
-    
-    padding-top: 1.5px;     
-    padding-bottom: 2px;  
-    background: linear-gradient(
-      to right,
-      #e8abf4 0%,
-      #e49ef3 20%,
-      #BA24D5 50%,
-      #BA24D5 80%,
-      #e8abf4 90%,
-      #e8abf4 0%
-    );
+
+    padding-top: 1.5px;
+    padding-bottom: 2px;
+    background: linear-gradient(to right,
+        #e8abf4 0%,
+        #e49ef3 20%,
+        #BA24D5 50%,
+        #BA24D5 80%,
+        #e8abf4 90%,
+        #e8abf4 0%);
     border-radius: 3rem;
-   
-  
-    
+
+
+
   }
 }
 
@@ -173,7 +181,7 @@ body {
   .bg-desktop-image {
     background-image: url('/Rectangle 40.png');
   }
-  
+
   .bg-desktop-animation {
     transform: scale(10);
   }
@@ -185,11 +193,7 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-
-
-
-
-
-
-
-
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

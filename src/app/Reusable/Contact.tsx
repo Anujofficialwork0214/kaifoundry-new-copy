@@ -10,14 +10,14 @@ const ContactUs = () => {
       </h2>
       <section className="p-0 lg:p-4 flex items-center justify-center w-full">
         {/* Main grid container for the three sections: Map, Form, Details */}
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-34 p-0 md:p-4 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-24 p-0 md:p-4 ">
           {/* Grid Item 1: Map */}
-          <div className="row-span-8 md:row-span-1 flex-col gap-10 md:gap-0">
+          <div className="row-span-8 md:row-span-1 flex-col gap-10 md:gap-0 ">
             <h3 className="text-2xl md:text-[32px] lg:text-[35px] text-[#333333] font-semibold mb-6 sm:mb-10 text-start">
               Where To Find Us
             </h3>
             <iframe
-              className="w-full lg:w-lg h-64  md:h-full"
+              className="w-full lg:w-xl h-64  md:h-full"
               src="https://maps.google.com/maps?q=Ludhiana&t=&z=13&ie=UTF8&iwloc=&output=embed"
               loading="lazy"
             ></iframe>

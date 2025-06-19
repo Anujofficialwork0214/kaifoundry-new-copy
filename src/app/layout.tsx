@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Lato, Montserrat, Oswald, Slabo_27px, Merriweather, Space_Grotesk, Nunito, Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer"; // Assuming this path is correct
 import ClientLayout from "./components/ClientLayout"; // handles conditional Navbar
@@ -17,6 +17,71 @@ const geistMono = Geist_Mono({
 });
 const inter = Inter({
   subsets: ["latin"],
+});
+
+
+export const lato = Lato({
+  subsets: ['latin'],
+  weight: ['400', '700'], // or as needed
+  variable: '--font-lato',
+  display: 'swap',
+});
+
+export const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-montserrat',
+  display: 'swap',
+});
+
+export const oswald = Oswald({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-oswald',
+  display: 'swap',
+});
+
+export const slabo = Slabo_27px({
+  subsets: ['latin'],
+  weight: ['400'], // Only 400 available
+  variable: '--font-slabo',
+  display: 'swap',
+});
+
+export const merriweather = Merriweather({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-merriweather',
+  display: 'swap',
+});
+export const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'], // You can customize this
+  variable: '--font-space-grotesk',
+  display: 'swap',
+});
+
+export const nunito = Nunito({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-nunito',
+  display: 'swap',
+});
+
+export const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-playfair',
+  display: 'swap',
+});
+
+
+
+export const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-dm-sans',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {

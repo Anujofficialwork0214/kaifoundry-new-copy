@@ -55,7 +55,7 @@ export default function HeroSection() {
                   }`}
                 initial={{ width: 0 }}
                 animate={isVisible ? { width: "100%" } : { width: 0 }}
-                transition={{ duration: 0.5, ease: "easeInOut" }}
+                transition={{ duration: 1.5, ease: "easeInOut" }}
               />
 
 
@@ -63,7 +63,7 @@ export default function HeroSection() {
                 className={`flex items-center relative top-0  md:flex pl-8 overflow-hidden`}
                 initial={{ opacity: 0 }}
                 animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-                transition={{ delay: 1, duration: 0.7 }}
+                transition={{ delay: 1, duration: 1.5 }}
               >
                 <Link href="/how-we-help-screen" className="pr-3 lg:pr-0">
                   <button
@@ -71,7 +71,7 @@ export default function HeroSection() {
                   >
                     HOW WE HELP
                     <span className="ml-2 w-5 h-5 lg:w-8 lg:h-8 flex items-center justify-center border-2 border-white rounded-full font-light">
-                     <FaArrowRight />
+                      <FaArrowRight />
                     </span>
                   </button>
                 </Link>
