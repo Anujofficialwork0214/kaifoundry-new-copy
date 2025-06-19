@@ -7,7 +7,7 @@ const HowWeHelp = () => {
     <section className="flex flex-col md:flex-row-reverse w-full items-center text-center px-6 pt-20 pb-8 lg:py-32 md:text-left md:px-20 md:justify-between relative">
 
       {/* Background GIF Container */}
-      <div className="absolute inset-y-0 right-0 lg:right-20 z-0 w-full h-full md:w-1/3 md:h-[1000px] transform -translate-y-40 lg:-translate-y-40 -translate-x-15">
+      <div className="absolute inset-y-0 right-0 lg:right-20 z-0 w-full h-full md:w-1/2 md:h-[1000px] transform -translate-y-40 lg:-translate-y-40 -translate-x-0">
         <Image
           src="/assets/HowWeHelp/bg.gif"
           alt="Background GIF"
@@ -37,29 +37,29 @@ const HowWeHelp = () => {
       </div>
 
       {/* Text Section */}
-      <div className="w-full  md:w-1/2 mt-10 md:mt-20 z-10">
-        <h2 className=" lg:text-[62px] font-bold hidden lg:block leading-[1.3]">
+      <div className="w-full  md:w-2/3 mt-10 md:mt-20 z-10">
+        <h2 className="md:text-[52px] lg:text-[55px] xl:text-[58px] text-[24px] font-bold hidden lg:block leading-[1.3]">
           {/* How We Help <br /> */}
 
-          <span className="text-black">How We Help</span> <br />
+          <span className="text-[#333333]">How We Help</span> <br />
           {/* <span className="text-black opacity-70"> <br /></span> */}
 
 
           <span className="bg-color">BUSINESSES GROW</span> <br />
-          <span className="text-black">With</span>
+          <span className="text-[#333333]">With</span>
 
           <span className="bg-color ">{" "}Blockchain</span>
         </h2>
         <h2 className="text-[24px]  font-bold block lg:hidden ">
           {/* How We Help <br /> */}
 
-          <span className="text-black">How We Help </span>
+          <span className="text-[#333333]">How We Help </span>
 
 
 
           <span className="bg-color">Businesses</span><br />
           <span className="bg-color">Grow {" "}</span>
-          <span className="text-black">With</span>
+          <span className="text-[#333333]">With</span>
 
           <span className="bg-color">{" "}Blockchain</span>
         </h2>

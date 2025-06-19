@@ -78,7 +78,7 @@ const BusinessGrowth = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-[22px] md:text-5xl 2xl:text-6xl font-bold text-[#333333]"
+        className="text-[22px] md:text-5xl 2xl:text-6xl font-semibold text-[#333333]"
       >
         Helping{" "}
         <span className="bg-color text-[22px] md:text-5xl 2xl:text-6xl">
@@ -90,7 +90,7 @@ const BusinessGrowth = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         viewport={{ once: true }}
-        className="2xl:text-[22px] md:text-[20px] text-[#808080] text-[14px] lg:mt-4 mt-4 max-w-3xl flex justify-center mx-auto"
+        className="2xl:text-[18px] md:text-[16px] text-[#808080] text-[14px] lg:mt-4 mt-4 max-w-2xl flex justify-center mx-auto"
       >
         We help businesses grow with smart blockchain solutions, making things
         faster, safer, and more efficient.
@@ -154,7 +154,7 @@ const BusinessGrowth = () => {
               />
             </div>
 
-            <h3 className="text-[16px] lg:text-[20px] font-[600] lg:font-[500]  text-gray-900 mt-4">
+            <h3 className="text-[16px] lg:text-[16px] font-[600] lg:font-[500]  text-gray-900 mt-4">
               {step.title}
             </h3>
 
@@ -189,7 +189,7 @@ const BusinessGrowth = () => {
                 //             </div>
                 //             )
               )}
-              <p className="text-[#808080] text-[12px] lg:text-[16px] mt-4">
+              <p className="text-[#808080] text-[12px] lg:text-[14px] mt-4">
                 {step.description}
               </p>
             </div>
