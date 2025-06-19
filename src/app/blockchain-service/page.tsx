@@ -50,11 +50,9 @@
 
 "use client";
 
-
 import React, { useState, useEffect, useCallback } from "react";
 import dynamic from "next/dynamic";
 import { ImArrowUp } from "react-icons/im";
-
 
 // Dynamically import the components
 const HeroSection = dynamic(() => import("./HeroSection"));
@@ -66,20 +64,26 @@ const Contact = dynamic(() => import("../Reusable/Contact"));
 const WhatWeOfferBlock = dynamic(() => import("./WhatweOfferBlock"));
 const EcosystemMobile = dynamic(() => import("../Reusable/EcoSystemMobile"));
 
-// ScrollToTopButton component for handling scroll functionality
-const ScrollToTopButton: React.FC = () => {
-  const handleScrollToTop = useCallback(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+const scrollToTopSlowly = () => {
+  const duration = 1000;
+  const start = window.scrollY;
+  const startTime = performance.now();
 
-  return (
-    <button
-      onClick={handleScrollToTop}
-      className="fixed bottom-6 right-6 bg-[#BA24D5] cursor-pointer text-white p-3 rounded-full shadow-md transition"
-    >
-      <ImArrowUp />
-    </button>
-  );
+  const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+
+  const animateScroll = (currentTime: number) => {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const easedProgress = easeOutCubic(progress);
+
+    window.scrollTo(0, start * (1 - easedProgress));
+
+    if (progress < 1) {
+      requestAnimationFrame(animateScroll);
+    }
+  };
+
+  requestAnimationFrame(animateScroll);
 };
 
 const BlockChainServicePage: React.FC = () => {
@@ -107,8 +111,23 @@ const BlockChainServicePage: React.FC = () => {
       <BlockFaq />
       <Contact />
 
-      <ScrollToTopButton />
-
+      <button
+        onClick={scrollToTopSlowly}
+        className="fixed bottom-6 right-6 bg-[#BA24D5] z-30 cursor-pointer text-white p-2 rounded-full shadow-md transition"
+      >
+        <svg
+          width="25"
+          height="25"
+          viewBox="0 0 300 320"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M119.621 266.337H199.371V160.004H263.703L159.496 55.7969L55.2898 160.004H119.621V266.337Z"
+            fill="white"
+          />
+        </svg>
+      </button>
     </div>
   );
 };
