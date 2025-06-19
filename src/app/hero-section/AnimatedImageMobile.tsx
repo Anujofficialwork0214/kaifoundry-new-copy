@@ -118,6 +118,7 @@ export default function AnimatedImageMobile() {
                 width={80}
                 height={80}
                 priority={true}
+                draggable="false"
                 className="w-full h-full object-cover rounded-[24px] border-2 border-white"
               />
             </motion.div>

@@ -187,6 +187,7 @@ export default function AnimatedSection() {
                 key={item.image}
                 src={item.image}
                 alt="Blockchain"
+                draggable="false"
                 className="absolute w-[90%]  object-cover rounded-4xl border-2 border-white"
                 initial={{ y: 100 + 10 * i, opacity: 0, x: 20 * i }}
                 animate={{ y: 30 * i, opacity: 1, x: 30 * i }}

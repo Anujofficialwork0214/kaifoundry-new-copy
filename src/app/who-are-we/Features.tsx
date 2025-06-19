@@ -35,7 +35,7 @@ const FeaturesSection = () => {
   return (
     <section
       ref={ref}
-      className="px-6 lg:px-20 py-6 lg:py-16 bg-white w-full flex items-center pt-10 lg:pt-24 relative z-10"
+      className="px-6 lg:px-24 py-6 lg:py-16 bg-white w-full flex items-center pt-10 lg:pt-24 relative z-10"
       style={{
         backgroundImage: `url('/assets/background/bg3.gif')`,
         backgroundSize: "cover",
@@ -48,7 +48,7 @@ const FeaturesSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className={`text-[24px] lg:text-[62px] font-[700] lg:text-[600] text-center lg:text-left lg:w-1/2 `}
+          className={`text-[24px] md:text-5xl xl:text-[47px] font-[600] lg:pl-12 lg:text-left lg:w-1/2 `}
         >
           What
           <span className="bg-color">
@@ -82,9 +82,9 @@ const FeaturesSection = () => {
                 />
               </div>
 
-              <h3 className="text-[16px] lg:text-[24px] font-[600] text-[#333333] mt-3">{feature.title}</h3>
+              <h3 className="text-[16px] lg:text-[20px] font-[600] text-[#333333] mt-3">{feature.title}</h3>
 
-              <p className="text-[12px] lg:text-[20px] font-[400] text-[#333333] mt-0 lg:mt-2">{feature.description}</p>
+              <p className="text-[12px] lg:text-[16px] font-[400] text-[#333333] mt-0 lg:mt-0">{feature.description}</p>
             </motion.div>
           ))}
         </div>
