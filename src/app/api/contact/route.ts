@@ -77,7 +77,8 @@
 // }
 
 import { NextResponse } from "next/server";
-import { getTransporter } from "./nodemailerTransporter";
+// import { getTransporter } from "./nodemailerTransporter";
+const { getTransporter } = await import("./nodemailerTransporter");
 
 export async function POST(req: Request) {
   try {
