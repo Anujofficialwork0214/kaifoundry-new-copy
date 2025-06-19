@@ -216,11 +216,11 @@ const SolutionsSection = () => {
 
   return (
     <div className="py-12 w-full">
-      <h2 className="text-[24px] lg:text-[62px] font-semibold text-black text-center px-4 md:px-10">
+      <h2 className="md:text-[44px] lg:text-[46px] xl:text-[46px]  text-[22px] font-semibold text-black text-center px-4 md:px-10">
         <span className="bg-color">Solutions </span>
         Built For <span className="bg-color">The Future</span>
       </h2>
-      <p className="text-[#666666] lg:text-[#333333] mt-2 text-center hidden md:block px-4 text-[14px] lg:text-[22px] font-[400]">
+      <p className="text-[#333333] mt-2 text-center hidden md:block px-4 text-[14px] lg:text-[18px] font-[400]">
         Blockchain solutions designed to power your business with security, <br /> efficiency, and scalability.
       </p>
       <p className="text-[#666666] lg:text-[#333333] block md:hidden mt-2 text-center px-4 text-[14px] lg:text-[22px] font-[400]">
@@ -280,7 +280,7 @@ const SolutionsSection = () => {
                   />
                 )}
 
-                <span className="relative z-10 text-[18px] px-4 lg:px-6 lg:text-[24px] font-[600] text-[#BA24D5] block w-full">
+                <span className="relative z-10 text-[18px] px-4 lg:px-6 lg:text-[28px] font-[600] text-[#BA24D5] block w-full">
                   {index + 1}. {solution.title}
                 </span>
               </div>
@@ -297,7 +297,7 @@ const SolutionsSection = () => {
                 }}
               >
                 <div className="p-4 text-left">
-                  <p className="text-gray-700 mt-2 px-4 lg:px-6 text-base md:text-2xl">
+                  <p className="text-gray-700 mt-2 px-4 lg:px-6 text-base md:text-[22px]">
                     {solution.description}
                   </p>
                 </div>

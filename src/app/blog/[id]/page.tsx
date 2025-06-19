@@ -57,12 +57,12 @@ export default function BlogPost() {
       <div className="flex w-full md:px-5 mb-10 ">
         <button
           onClick={() => router.back()}
-          className="flex items-center space-x-2 mx-auto cursor-pointer text-gray-600 sm:px-2 py-2 rounded-lg absolute top-25 transition duration-300 ease-in-out"
+          className="flex items-center space-x-2 lg:pl-2  mx-auto cursor-pointer text-gray-600 sm:px-2 py-2 rounded-lg absolute top-25 transition duration-300 ease-in-out"
         >
-          <span className="text-lg  flex justify-between items-center ">
+          <span className="text-lg font-medium gap-2 flex justify-between items-center ">
             <svg
-              width="24"
-              height="24"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ export default function BlogPost() {
                 strokeLinejoin="round"
               />
             </svg>{" "}
-            Back
+             Back
           </span>
         </button>
       </div>
@@ -98,25 +98,25 @@ export default function BlogPost() {
       />
 
       <div className="w-full md:max-w-[80%] lg:md:max-w-[80%] lg:px-2 px-0 ">
-        <h1 className="text-[18px] text-[#2D3748] md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-5xl font-bold">
+        <h1 className="text-[18px] text-[#2D3748] md:text-3xl lg:text-4xl xl:text-[44px] font-bold">
           {post.title}
         </h1>
-        <p className="text-[14px] md:text-[27px] lg:text-[27px] text-[#2D3748] mt-2">
-          <strong>Written by {post.author}</strong> &nbsp; | &nbsp; {post.date}
+        <p className="text-[14px] md:text-[24px] lg:text-[24px] text-[#718096] mt-2">
+          <strong className="text-[#2D3748]">Written by {post.author}</strong> &nbsp; | &nbsp; {post.date}
         </p>
         <div className="border-b border-gray-300 my-4"></div>
       </div>
 
       <div className="mt-6 text-[#2D3748] space-y-4 leading-relaxed w-full items-center mx-auto lg:px-2  px-0 md:max-w-[80%] lg:md:max-w-[80%] ">
-        <p className="text-[#718096] text-[16px] md:text-2xl lg:text-2xl ">
+        <p className="text-[#718096] text-[16px] md:text-[18px] lg:text-[18px] ">
           {post.content}
         </p>
         {post.subheadings.map((subheading, index) => (
           <div key={index}>
-            <h2 className="text-[16px] md:text-2xl lg:text-2xl font-semibold text-[#2D3748]  mt-6">
+            <h2 className="text-[16px] md:text-3xl lg:text-3xl font-bold text-[#2D3748]  mt-6">
               {subheading.title}
             </h2>
-            <p className="text-[#718096] text-[16px] md:text-2xl lg:text-2xl  ">
+            <p className="text-[#718096] text-[16px] md:text-[18px] lg:text-[18px]  ">
               {subheading.content}
             </p>
           </div>
@@ -137,24 +137,10 @@ export default function BlogPost() {
       <footer className="w-full max-w-4xl px-4 sm:px-10 mb-6 hidden lg:block">
         <div className="flex justify-end space-x-6 text-gray-600">
           {/* <a href="#" className="hover:text-black"><FaFacebook size={24} /></a> */}
-          <a href="#" className="hover:text-black">
+            <a href="#" className="hover:text-black">
             <svg
-              width="32"
-              height="24"
-              viewBox="0 0 32 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M31.2424 3.04405C30.0973 3.5243 28.8829 3.83969 27.6394 3.97981C28.9501 3.23666 29.931 2.06707 30.3994 0.689015C29.1694 1.38301 27.8209 1.86938 26.4154 2.13247C25.4713 1.17478 24.22 0.539639 22.8559 0.325782C21.4918 0.111925 20.0914 0.331337 18.8723 0.949908C17.6533 1.56848 16.684 2.55155 16.1151 3.74629C15.5462 4.94103 15.4096 6.2805 15.7264 7.55646C13.2321 7.43793 10.792 6.82338 8.56439 5.75272C6.33682 4.68206 4.37166 3.17922 2.79647 1.34177C2.2389 2.24973 1.9459 3.28187 1.94747 4.3325C1.94747 6.39458 3.05447 8.21632 4.73746 9.28292C3.74148 9.25319 2.76741 8.99818 1.89647 8.53914V8.61309C1.89677 9.98644 2.39802 11.3174 3.31524 12.3804C4.23245 13.4433 5.50918 14.1729 6.92896 14.4452C6.00438 14.6828 5.03492 14.7178 4.09396 14.5476C4.49426 15.7297 5.27447 16.7636 6.32535 17.5044C7.37622 18.2452 8.64515 18.6558 9.95446 18.6789C8.65318 19.6478 7.16323 20.3641 5.56978 20.7867C3.97634 21.2094 2.31066 21.3301 0.667969 21.142C3.53551 22.8904 6.87361 23.8186 10.283 23.8156C21.8224 23.8156 28.1329 14.7524 28.1329 6.89232C28.1329 6.63634 28.1254 6.37751 28.1134 6.12438C29.3417 5.28272 30.4018 4.24009 31.2439 3.04548L31.2424 3.04405Z"
-                fill="#454444"
-              />
-            </svg>
-          </a>
-          <a href="#" className="hover:text-black">
-            <svg
-              width="37"
-              height="35"
+              width="30"
+              height="30"
               viewBox="0 0 37 35"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -179,8 +165,8 @@ export default function BlogPost() {
           </a>
           <a href="#" className="hover:text-black">
             <svg
-              width="32"
-              height="24"
+              width="30"
+              height="30"
               viewBox="0 0 32 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -190,6 +176,20 @@ export default function BlogPost() {
                 fill="#454444"
               />
             </svg>
+          </a>
+        
+          <a href="#" className="hover:text-black">
+      <svg width="30" height="30" viewBox="0 0 37 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_67784_26647)">
+<path d="M28.0025 26.0796H24.005V20.1394C24.005 18.723 23.975 16.8998 21.92 16.8998C19.8365 16.8998 19.5185 18.4414 19.5185 20.0356V26.0796H15.5195V13.865H19.3595V15.5289H19.412C19.949 14.5704 21.254 13.5564 23.204 13.5564C27.254 13.5564 28.004 16.0849 28.004 19.3743V26.0796H28.0025ZM11.0045 12.194C10.6993 12.1944 10.3971 12.1376 10.1151 12.027C9.8331 11.9164 9.5769 11.7542 9.36119 11.5495C9.14547 11.3449 8.97448 11.1019 8.85802 10.8344C8.74155 10.567 8.68191 10.2804 8.6825 9.99111C8.6828 9.5557 8.81927 9.13016 9.07466 8.76829C9.33005 8.40642 9.69289 8.12447 10.1173 7.95811C10.5417 7.79175 11.0086 7.74844 11.459 7.83366C11.9093 7.91888 12.3229 8.1288 12.6475 8.43687C12.972 8.74495 13.1929 9.13735 13.2822 9.56444C13.3715 9.99154 13.3252 10.4341 13.1492 10.8363C12.9732 11.2385 12.6753 11.5821 12.2933 11.8238C11.9113 12.0654 11.4622 12.1943 11.003 12.194H11.0045ZM13.0085 26.0796H8.999V13.865H13.01V26.0796H13.0085ZM30.005 4.26562H6.9935C5.8895 4.26562 5 5.09046 5 6.11012V28.0194C5 29.0391 5.891 29.8639 6.992 29.8639H29.999C31.1 29.8639 32 29.0391 32 28.0194V6.11012C32 5.09046 31.1 4.26562 29.999 4.26562H30.0035H30.005Z" fill="#454444"/>
+</g>
+<defs>
+<clipPath id="clip0_67784_26647">
+<rect width="36" height="34.131" fill="white" transform="translate(0.5)"/>
+</clipPath>
+</defs>
+</svg>
+
           </a>
         </div>
       </footer>

@@ -11,7 +11,7 @@ const ContactUs = () => {
       {/* Back Button */}
       <button
         onClick={handleBackClick}
-        className=" top-2  left-4 flex items-center mr-2 lg:pl-8 pl-2 font-bold text-gray-700 cursor-pointer hover:text-gray-900 "
+        className=" top-2  left-4 flex gap-2 items-center mr-2 lg:pl-8 pl-2 font-bold text-gray-700 cursor-pointer hover:text-gray-900 "
       >
         {/* <ArrowLeft className="mr-2 text-[10px] lg:text-[10px]" /> */}
         <svg
@@ -39,11 +39,11 @@ const ContactUs = () => {
         Back
       </button>
 
-      <h2 className="mt-6 sm:mt-14 text-[28px] sm:text-[14px] md:text-[48px] lg:text-[62px] font-[600] text-[#333333] text-center mb-2">
+      <h2 className="mt-6 sm:mt-14 text-[28px] sm:text-[14px] md:text-[40px] lg:text-[48px] font-[600] text-[#333333] text-center mb-2">
         Let&apos;s Get<span className="bg-color"> In Touch</span>
       </h2>
 
-      <p className="text-[22px] text-center text-[#333333] mb-10 px-60 hidden lg:block md:block">
+      <p className="text-[17px] text-center text-[#333333] mb-10 px-60 hidden lg:block md:block">
         Have A Question Or A Big Idea? Let's Connect And Create <br /> Something
         Amazing Together!
       </p>
@@ -72,7 +72,7 @@ const ContactUs = () => {
             <div className="mt-10">
               <div className="text-black">
                 <h3 className="font-semibold text-3xl mb-4">Contact Details</h3>
-                <div className="grid grid-cols-2 gap-4 text-[#4D4D4D] lg:text-[#666666]">
+                <div className="grid grid-cols-2 text-[14px] gap-4 text-[#4D4D4D] lg:text-[#666666]">
                   <p>
                     Akshya Nagar 1st Block 1st <br /> Cross, Rammurthy Nagar,
                     <br /> Bangalore-560016
@@ -87,8 +87,8 @@ const ContactUs = () => {
             <div className="mt-10">
               <div className="hidden sm:flex space-x-4">
                 <svg
-                  width="30"
-                  height="30"
+                  width="24"
+                  height="24"
                   viewBox="0 0 30 30"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -115,8 +115,8 @@ const ContactUs = () => {
                 </svg>
 
                 <svg
-                  width="30"
-                  height="30"
+                  width="24"
+                  height="24"
                   viewBox="0 0 30 30"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -131,8 +131,8 @@ const ContactUs = () => {
                 </svg>
 
                 <svg
-                  width="30"
-                  height="30"
+                  width="24"
+                  height="24"
                   viewBox="0 0 30 30"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"

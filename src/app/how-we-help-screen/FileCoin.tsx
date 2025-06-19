@@ -30,12 +30,13 @@ const FileCoin = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-[24px] lg:text-[62px] font-bold text-gray-900 leading-tight"
+          className="md:text-[52px] lg:text-[55px] xl:text-[50px] text-[24px] font-bold text-[#333333] leading-tight"
         >
           Kai Foundry’s{" "}
           <span className="bg-color">
             Filecoin{" "}
           </span>
+          <br />
           <span className="bg-color">
             Wallet{" "}
           </span>{" "}
@@ -51,7 +52,7 @@ const FileCoin = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-[#666666] text-[14px] lg:text-[22px] mt-4 hidden lg:block"
+          className="text-[#666666] text-[14px] lg:text-[18px] mt-4 hidden lg:block"
         >
           It is specially designed to facilitate the storage, sending, <br />{" "}
           and receiving of Filecoin (FIL) on devices running the KaiOS <br />{" "}
@@ -77,15 +78,15 @@ const FileCoin = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="grid grid-cols-3 md:grid-cols-3 gap-4 border-white border-t-2 border-b-2  lg:border-t-4 lg:border-b-4 py-0 px-4 md:px-10"
+              className="grid grid-cols-3 md:grid-cols-3 text-[#808080] gap-4 border-white border-t-2 border-b-2  lg:border-t-4 lg:border-b-4 py-0 px-4 md:px-10"
             >
-              <div className="text-center border-r-2 lg:border-r-4 py-3 border-white pr-4 text-[12px] lg:text-[22px]">
+              <div className="text-center border-r-2 lg:border-r-4 py-4 flex items-center border-white pr-4 text-[12px] lg:text-[18px]">
                 Secure <br /> storage
               </div>
-              <div className="text-center border-r-2 lg:border-r-4 py-3 border-white pr-4 text-[12px] lg:text-[22px]">
+              <div className="text-center border-r-2 lg:border-r-4 py-4 border-white pr-4 text-[12px] lg:text-[18px]">
                 Send and <br /> receive FIL <br /> tokens
               </div>
-              <div className="text-center text-[12px] py-3 lg:text-[22px] border-white">
+              <div className="text-center text-[12px] py-4 lg:text-[18px] border-white">
                 Recovery <br /> phrase <br /> protection
               </div>
             </motion.div>
