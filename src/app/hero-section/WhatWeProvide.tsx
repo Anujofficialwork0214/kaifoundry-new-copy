@@ -84,7 +84,7 @@ const ServiceCard = ({ service, isMobile, screenWidth }: ServiceCardProps) => (
         <p
 
           className={`${screenWidth < 375 ? "text-[12px]" : ""
-            } text-[#333333] text-[12px] md:text-[16px] lg:text-[16px] xl:text-[13px]  leading-0.3`}
+            } text-[#333333] text-[12px] md:text-[16px] lg:text-[16px] xl:text-[16px]  leading-0.3`}
 
         >
           {service.description}

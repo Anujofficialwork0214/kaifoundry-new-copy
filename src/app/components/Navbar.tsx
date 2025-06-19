@@ -501,15 +501,33 @@ const Navbar: React.FC = () => {
   }, [isOpen]);
 
   useEffect(() => {
+    let ticking = false;
+  
     const handleScroll = () => {
-      setIsScrolling(true);
-      setIsVisible(window.scrollY < lastScrollY.current);
-      lastScrollY.current = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+  
+          
+          if (Math.abs(currentScrollY - lastScrollY.current) > 10) {
+            setIsVisible(currentScrollY < lastScrollY.current || currentScrollY < 50);
+            lastScrollY.current = currentScrollY;
+          }
+  
+          ticking = false;
+        });
+  
+        ticking = true;
+      }
     };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+  
+    window.addEventListener("scroll", handleScroll, { passive: true });
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
+  
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);

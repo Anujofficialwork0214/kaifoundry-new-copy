@@ -282,7 +282,7 @@ export default function HeroSection() {
                 </Link>
                 <Link href="/contact-us">
                   <button
-                    className={`relative z-10 mr-[2px] -ml-[13px]  lg:ml-[-16px] lg:mr-[2px] px-3 py-[7px]   lg:px-10 lg:py-[11.6px] rounded-full   bg-white text-black text-[12px] lg:text-lg xl:text-[15px] transition-all duration-300 cursor-pointer hover:bg-gray-100`}
+                    className={`relative z-10 mr-[2px] -ml-[13px]  lg:ml-[-16px] lg:mr-[2.5px] px-3 py-[7px]   lg:px-10 lg:py-[13px] rounded-full   bg-white text-black text-[12px] lg:text-lg xl:text-[15px] transition-all duration-300 cursor-pointer hover:bg-gray-100`}
                   >
                     Contact Us
                   </button>
@@ -321,7 +321,8 @@ export default function HeroSection() {
 
 
               <span className="text-[20px] lg:text-[49.07px] xl:text-[46px] font-[600] text-[#414141]">+</span>
-              <span className={`text-[14px] lg:text-[26.17px] xl:text-[46px] text-[#6E6E6E] whitespace-nowrap  ${roboto.className}`}>
+
+              <span className={`text-[14px] lg:text-[26.17px] xl:text-[23px] text-[#6E6E6E] whitespace-nowrap  ${roboto.className}`}>
 
                 &nbsp;Projects
               </span>
@@ -334,7 +335,8 @@ export default function HeroSection() {
               />
 
               <span className="text-[20px] lg:text-[49.07px] xl:text-[46px] font-[600] text-[#414141]">+</span>
-              <span className={`text-[14px] lg:text-[26.17px] xl:text-[46px] text-[#6E6E6E] whitespace-nowrap  ${roboto.className}`}>
+
+              <span className={`text-[14px] lg:text-[26.17px] xl:text-[23px] text-[#6E6E6E] whitespace-nowrap  ${roboto.className}`}>
 
                 &nbsp;Developers
               </span>
@@ -347,7 +349,8 @@ export default function HeroSection() {
               />
 
               <span className="text-[20px] lg:text-[49.07px] xl:text-[46px] font-[600] text-[#414141]">+</span>
-              <span className={`text-[14px] lg:text-[26.17px] xl:text-[46px] text-[#6E6E6E] whitespace-nowrap  ${roboto.className}`}>
+
+              <span className={`text-[14px] lg:text-[26.17px] xl:text-[23px] text-[#6E6E6E] whitespace-nowrap  ${roboto.className}`}>
 
                 &nbsp;Ecosystems
               </span>
