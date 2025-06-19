@@ -41,7 +41,7 @@ const CoreValuesSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="text-[28px] lg:text-[62px] font-[600] text-center mb-12"
+          className="text-[24px] md:text-[43px] xl:text-[45px] font-[600] text-center mb-12"
         >
           Our{" "}
           <span className="bg-color">
@@ -62,7 +62,7 @@ const CoreValuesSection = () => {
                 delay: inView ? index * 0.2 + 0.3 : 0,
                 ease: "easeOut",
               }}
-              className={`bg-white shadow-lg rounded-2xl p-4 lg:p-6 flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}  lg:flex-col items-center text-center max-w-md xl:max-w-sm lg:w-[484px]`}
+              className={`bg-white shadow-lg rounded-2xl p-4 lg:p-8 flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}  lg:flex-col items-center text-center max-w-md xl:max-w-sm lg:w-[484px]`}
             >
               <Image
                 src={value.img}
@@ -71,11 +71,11 @@ const CoreValuesSection = () => {
                 height={250}
                 draggable="false"
                 priority={true}
-                className="mb-6 w-[150px] h-[150px] lg:w-[250px] lg:h-[250px] object-cover"
+                className="mb-2 w-[150px] h-[150px] lg:w-[250px] lg:h-[250px] object-cover"
               />
               <div className="flex flex-col">
-                <h3 className={`text-[14px] lg:text-[26.09px] text-[#333333] lg:text-2xl font-[900] mb-2 lg:mb-8 text-left lg:text-center `}>{value.title}</h3>
-                <p className={`text-[#333333] text-[12px] lg:text-[16.73px]  text-left lg:text-center`}>{value.description}</p>
+                <h3 className={`text-[14px] lg:text-[22.09px] text-[#333333] font-[700] mb-2 lg:mb-6 text-left lg:text-center `}>{value.title}</h3>
+                <p className={`text-[#333333] text-[12px] lg:text-[14.73px]  text-left lg:text-center`}>{value.description}</p>
               </div>
 
             </motion.div>
