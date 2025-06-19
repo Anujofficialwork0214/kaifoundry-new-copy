@@ -30,7 +30,7 @@ const CoolStuff = () => {
   };
 
   return (
-    <section className='bg-gradient-to-b from-white sm:via-0% via-50% via-[#FBE8FF] to-[#FBE8FF] p-20 lg:py-36'>
+    <section className='bg-gradient-to-b from-white sm:via-0% via-50% via-[#FBE8FF] to-[#FBE8FF] p-20 lg:py-16'>
       <div className='w-full grid grid-cols-1 md:grid-cols-2 items-center gap-10'>
         <div className='text-center md:text-left '>
           <h2 className='text-[54px] xl:text-[51px] font-[600] mb-8 hidden lg:block text-[#333333]'>
@@ -59,17 +59,17 @@ const CoolStuff = () => {
           >
             <Image
               alt=''
-              src={'/assets/image.png'}
-              width={300}
+              src={'/svg/2.svg'}
+              width={500}
               height={500}
-              className='rounded-lg sm:w-[300px] w-[250px]'
+              className='rounded-lg  w-[600px]'
               draggable="false"
               priority={true}
             />
           </motion.div>
 
           {/* Animated Badges */}
-          <motion.div
+          {/* <motion.div
             initial="hidden"
             animate={controls}
             className="absolute w-full h-full"
@@ -89,7 +89,7 @@ const CoolStuff = () => {
             <motion.div custom={4} variants={badgeVariants}>
               <Badge text="50+" subText={`Experts\nDriving Change`} position="bottom-[-17%] right-[20%]" bgColor="bg-[#D444F1] p-2" textColor="text-white" width="w-44 px-4 py-5" />
             </motion.div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
 
