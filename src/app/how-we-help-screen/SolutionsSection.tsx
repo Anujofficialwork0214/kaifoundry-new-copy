@@ -220,8 +220,11 @@ const SolutionsSection = () => {
         <span className="bg-color">Solutions </span>
         Built For <span className="bg-color">The Future</span>
       </h2>
-      <p className="text-[#666666] lg:text-[#333333] mt-2 text-center px-4 text-[14px] lg:text-[22px] font-[400]">
+      <p className="text-[#666666] lg:text-[#333333] mt-2 text-center hidden md:block px-4 text-[14px] lg:text-[22px] font-[400]">
         Blockchain solutions designed to power your business with security, <br /> efficiency, and scalability.
+      </p>
+      <p className="text-[#666666] lg:text-[#333333] block md:hidden mt-2 text-center px-4 text-[14px] lg:text-[22px] font-[400]">
+        Blockchain solutions designed to power your business with security, efficiency, and scalability.
       </p>
 
       <div className="mt-8 w-full  flex flex-col space-y-0 py-4">

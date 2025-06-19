@@ -166,8 +166,8 @@ const WhatWeProvide = () => {
           className="w-full mb-10 md:mb-0 md:pr-10 text-center md:text-left"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
         >
           <div className="mt-20 hidden  lg:block">
             <h2 className=" text-[24px] md:text-[52px] xl:text-[58px] font-bold text-gray-900 leading-tight">
@@ -226,7 +226,7 @@ const WhatWeProvide = () => {
           ) : (
             <div className="slider-container w-7xl overflow-hidden  flex space-x-0.5   ">
 
-              <Image src="/svg/Line134.svg" width={20} height={140} alt="line" className="w-20 h-140 z-20 bg-white ml-0 " />
+              <Image src="/svg/Line134.svg" width={20} height={140} alt="line" className="w-20 h-125 z-20 bg-white ml-0 " />
 
               <motion.div
                 className="flex items-center"

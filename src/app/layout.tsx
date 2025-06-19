@@ -103,6 +103,29 @@ export const metadata: Metadata = {
   },
 };
 
+const scrollToTopSlowly = () => {
+  const duration = 1000; 
+  const start = window.scrollY;
+  const startTime = performance.now();
+
+  const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+
+  const animateScroll = (currentTime: number) => {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const easedProgress = easeOutCubic(progress);
+
+    window.scrollTo(0, start * (1 - easedProgress));
+
+    if (progress < 1) {
+      requestAnimationFrame(animateScroll);
+    }
+  };
+
+  requestAnimationFrame(animateScroll);
+};
+
+
 export default function RootLayout({
   children,
 }: {
@@ -114,6 +137,12 @@ export default function RootLayout({
         <div className="container max-w-[1920px] overflow-x-hidden mx-auto">
           <ClientLayout>{children}</ClientLayout>
           <Footer />
+          {/* <button
+            onClick={scrollToTopSlowly}
+            className="fixed bottom-6 right-6 bg-[#BA24D5] cursor-pointer text-white p-3 rounded-full shadow-md transition"
+          >
+            <ImArrowUp />
+          </button> */}
         </div>
       </body>
     </html>

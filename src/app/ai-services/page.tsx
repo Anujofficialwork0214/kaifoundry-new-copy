@@ -9,7 +9,7 @@ import Contact from "../Reusable/Contact"
 import WhyChooseAi from "./WhyChooseAi"
 import WhatWeOfferAi from "./WhatWeOfferAi"
 import EcosystemMobile from '../Reusable/EcoSystemMobile';
-import { ImArrowUp } from "react-icons/im";
+
 const AIServicesPage: React.FC = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -34,12 +34,7 @@ const AIServicesPage: React.FC = () => {
       {isMobile ? <EcosystemMobile /> : <EcosystemSection />}
       <AiFaq />
       <Contact />
-      <button
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-6 right-6 bg-[#BA24D5] cursor-pointer text-white p-3 rounded-full shadow-md  transition"
-      >
-        <ImArrowUp />
-      </button>
+
 
     </div>
   );

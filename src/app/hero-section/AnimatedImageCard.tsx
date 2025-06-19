@@ -192,8 +192,7 @@ export default function AnimatedSection() {
                 animate={{ y: 30 * i, opacity: 1, x: 30 * i }}
                 viewport={{ once: true }}
                 transition={{ duration: 1 }}
-
-
+                
               />
             ))}
         </AnimatePresence>

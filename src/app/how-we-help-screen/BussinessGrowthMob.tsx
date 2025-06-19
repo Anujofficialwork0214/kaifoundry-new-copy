@@ -8,25 +8,25 @@ const steps = [
     title: "Understanding Your Business",
     description:
       "We listen to your goals and challenges to see how blockchain can help. Our team analyzes your needs to find the best way to integrate blockchain.",
-    icon: "/assets/HowWeHelp/icons/handshake.png",
+    icon: "/svg/book.svg",
   },
   {
     title: "Building The Right Solution",
     description:
       "We create a custom blockchain solution that fits your business needs.Every solution is designed to be scalable, secure, and easy to use.",
-    icon: "/assets/HowWeHelp/icons/doc.png",
+    icon: "/svg/office.svg",
   },
   {
     title: "Adding It To Your Business",
     description:
       "We integrate our solutions seamlessly, enhancing your existing processes and unlocking new opportunities for growth",
-    icon: "/assets/HowWeHelp/icons/bri.png",
+    icon: "/svg/stock.svg",
   },
   {
     title: "Supporting Your Growth",
     description:
       "We keep improving and updating your solution as your business grows. With ongoing support, we help you stay ahead in the blockchain world.",
-    icon: "/assets/HowWeHelp/icons/growth.png",
+    icon: "/svg/stockMarket.svg",
   },
 ];
 
