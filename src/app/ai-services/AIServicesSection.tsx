@@ -41,7 +41,7 @@ const features = [
 export default function AIServicesSection() {
   return (
     <section className="relative bg-gradient-to-b from-white to-[#FBE8FF] py-16 px-8 md:px-16 lg:px-12 md:py-20 ">
-      <div className="md:w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-4">
+      <div className="md:w-full mx-auto grid grid-cols-1 md:grid-cols-[55%_45%] items-center gap-4">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -55,7 +55,7 @@ export default function AIServicesSection() {
             </span>
           </h2> */}
           {/* Mobile Only (up to md) */}
-          <h2 className="block md:hidden text-2xl font-bold text-[#333333] ]  leading-tight -mt-8">
+          <h2 className="block md:hidden text-2xl font-bold text-[#333333] leading-tight -mt-8">
             Smarter <span className="bg-color font-bold">
               Solutions
             </span> with <span className="bg-color font-bold">
@@ -64,7 +64,7 @@ export default function AIServicesSection() {
           </h2>
 
           {/* Desktop Only (md and above) */}
-          <h2 className="hidden md:block md:text-xl lg:text-5xl 2xl:text-[55px] font-bold text-[#333333] leading-tight -mt-8">
+          <h2 className="hidden md:block md:text-xl lg:text-5xl 2xl:text-[55px] lg:p-2 font-semibold text-[#333333] leading-tight -mt-8">
             Smarter <span className="bg-color font-bold">
               Solutions
             </span> with <span className="bg-color font-bold">
@@ -72,14 +72,14 @@ export default function AIServicesSection() {
             </span>
           </h2>
 
-          <p className="mt-4 text-[12px] md:text-lg 2xl:text-[22px] font-[400] text-[#333333]">
+          <p className="mt-2 text-[12px] md:text-lg 2xl:text-[22px] lg:p-2 font-[400] text-[#333333]">
             Harness the power of Artificial Intelligence to automate, optimize,
             and innovate—making your business faster, smarter, and more
             efficient.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 gap-12  pt-4 lg:pt-0 ">
+        <div className="grid grid-cols-2 gap-12  pt-4 lg:pt-0 lg:px-10 ">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -94,10 +94,10 @@ export default function AIServicesSection() {
                 alt={feature.name}
                 width={6}
                 height={6}
-                className="w-6 h-6 md:w-12 h:w-12 lg:w-12 lg:h-12 object-contain"
+                className="w-6 h-6 md:w-10 h:w-10 lg:w-10 lg:h-10 object-contain"
                 priority={true}
               />
-              <span className="text-sm lg:text-xl sm:text-xs font-medium text-gray-900 whitespace-nowrap">
+              <span className="text-sm lg:text-[16px] sm:text-xs font-medium text-gray-900 whitespace-nowrap">
                 {feature.name}
               </span>
             </motion.div>

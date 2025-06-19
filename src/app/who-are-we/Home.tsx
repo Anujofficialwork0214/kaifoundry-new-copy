@@ -24,18 +24,13 @@ const Home = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
             transition={{ duration: 1.0, ease: "easeInOut" }}
-            className={`text-[24px] lg:text-[70px] font-[700] flex justify-center lg:justify-start ${roboto.className}`}
+            className={`md:text-[52px] lg:text-[55px] xl:text-[59px] text-[24px] font-[700] flex justify-center lg:justify-start ${roboto.className}`}
           >
             <span className="bg-color">
               Kai Foundry: 
             </span>
-      
-            {/* <span className="inline lg:hidden text-[24px]  font-[700] text-gray-900"> This Is</span> */}
-            {/* <span className="bg-color mr-1">
-  Kai Foundry:
-</span> */}
 <span className="mx-1"></span>
-<span className="inline lg:hidden text-[24px] font-[700] text-gray-900">
+<span className="inline lg:hidden text-[24px] font-[700] text-[#333333]">
   This Is
 </span>
 
@@ -45,7 +40,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 1.0, ease: "easeInOut" }}
-            className={`text-[24px] lg:text-[70px] font-[700] text-gray-900 lg:-mt-6 ${roboto.className}`}
+            className={`md:text-[52px] lg:text-[57px] xl:text-[59px] text-[24px] font-[700] text-[#333333] lg:-mt-6 ${roboto.className}`}
           >
             <span className="hidden lg:block">This Is</span>
             <span className="block lg:-mt-6">
@@ -60,8 +55,8 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, ease: "easeInOut", delay: 1.0 }}
-            className="font-[400] ml-2 mt-4 text-[14px] lg:text-[22px]"    
-          >{/* text-[#808080]  */}
+            className="font-[400] ml-2 mt-4 text-[14px] lg:text-[20px] text-[#333333]"    
+          >
             A team of innovators, creators, and problem-solvers shaping the
             future of blockchain.
           </motion.p>

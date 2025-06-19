@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex items-center py-60 w-full overflow-hidden px-2 md:px-6 ">
+    <section className="relative flex items-center py-40 w-full overflow-hidden px-2 md:px-6 ">
       {/* Background GIF */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -33,7 +33,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="relative z-20 w-full md:w-2/3 lg:w-1/2 flex flex-col items-center text-center md:items-start md:text-left p-8 rounded-lg"
         >
-          <h2 className="md:text-[52px] lg:text-[55px] xl:text-[58px]  text-[24px] font-bold text-[#333333] md:leading-20 ">
+          <h2 className="md:text-[52px] lg:text-[55px] xl:text-[55px]  text-[24px]  font-bold text-[#333333] leading-tight">
             Games That Keep <br />
 
             <span className="bg-color font-bold">Players</span> Hooked
@@ -51,7 +51,7 @@ const HeroSection = () => {
           </p>
 
           {/* Desktop version — With line breaks */}
-          <p className="text-[#333333] text-[12px] md:text-[20px] 2xl:text-[24px]  mt-4 hidden md:block">
+          <p className="text-[#333333] text-[12px] md:text-[18px] 2xl:text-[22px]  mt-4 hidden md:block">
             We create engaging, high-performance games <br />
             that players love — seamless, fun, and built for <br />
             the future of gaming.

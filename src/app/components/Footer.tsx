@@ -269,10 +269,10 @@ const navs = [
   {
     title: "Offerings",
     links: [
-      { label: "STO", href: "#services" },
-      { label: "Smart Contracts", href: "#services" },
-      { label: "White Label Exchange Platform", href: "#services" },
-      { label: "White Label Wallet", href: "#services" },
+      { label: "STO", href: "/" },
+      { label: "Smart Contracts", href: "/" },
+      { label: "White Label Exchange Platform", href: "/" },
+      { label: "White Label Wallet", href: "/" },
     ],
   },
   {
