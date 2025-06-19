@@ -8,7 +8,7 @@ const ContactUs = () => {
       <h2 className="text-[24px] lg:text-[42px]  xl:text-[45px] font-semibold text-center mb-10  md:mb-14 font-inter text-[#333333]">
         Let's Get <span className="bg-color">In Touch</span>
       </h2>
-      <section className="p-0 lg:p-4 flex items-center justify-center w-full">
+      <section className="p-2 lg:p-20 flex items-center justify-center w-full">
         {/* Main grid container for the three sections: Map, Form, Details */}
         <div className="grid grid-cols-1 md:grid-cols-2 md:gap-24 p-0 md:p-4 ">
           {/* Grid Item 1: Map */}

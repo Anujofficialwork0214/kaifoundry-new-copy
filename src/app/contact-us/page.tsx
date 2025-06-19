@@ -10,7 +10,7 @@ const ContactUs = () => {
     };
 
     return (
-        <section className="lg:p-20 p-4 mt-0  ">
+        <section className="lg:p-20 p-2 mt-0  ">
             {/* Back Button */}
             <button 
                 onClick={handleBackClick} 
