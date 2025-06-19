@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import { ImArrowUp } from "react-icons/im";
+
 const HeroSection = dynamic(() => import("./hero-section/Page"), {
   ssr: false,
 });
@@ -69,12 +69,7 @@ const Page = () => {
       {isMobile ? <CoolStuffMob /> : <CoolStuff />}
       <FaqHome />
       <Contact />
-      <button
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="fixed bottom-6 right-6 bg-[#BA24D5] cursor-pointer text-white p-3 rounded-full shadow-md  transition"
-      >
-        <ImArrowUp />
-      </button>
+      
     </>
   );
 };
