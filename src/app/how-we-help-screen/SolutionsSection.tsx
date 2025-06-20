@@ -227,15 +227,15 @@ const SolutionsSection = () => {
         Blockchain solutions designed to power your business with security, efficiency, and scalability.
       </p>
 
-      <div className="mt-8 w-full  flex flex-col space-y-0 py-4">
+      <div className="mt-8 w-full  flex flex-col space-y-0 py-2 lg:py-4">
         {solutions.map((solution, index) => {
           const isHovered = hoverIndex === index && selectedSolution !== index;
           const isSelected = selectedSolution === index;
           return (
             <div key={index} className="relative  w-full lg:max-w-5xl mx-auto ">
               <div
-                className="relative overflow-hidden text-2xl w-full  cursor-pointer md:text-3xl font-semibold"
-                style={{ color: '#BA24D5', padding: '2rem 0' }}
+                className="relative overflow-hidden text-2xl w-full py-4 lg:py-8  cursor-pointer md:text-3xl font-semibold"
+                style={{ color: '#BA24D5' }}
                 onMouseEnter={() => !isMobile && setHoverIndex(index)}
                 onMouseLeave={() => !isMobile && setHoverIndex(null)}
                 onClick={() => setSelectedSolution(isSelected ? null : index)}
@@ -296,8 +296,8 @@ const SolutionsSection = () => {
                   background: "linear-gradient(90deg,rgb(242, 222, 246) 0%,rgb(242, 222, 246) 100%)",
                 }}
               >
-                <div className="p-4 text-left">
-                  <p className="text-gray-700 mt-2 px-4 lg:px-6 text-base md:text-[22px]">
+                <div className="py-0 px-4 text-left mb-2">
+                  <p className="text-gray-700 mt-2 px-0 lg:px-4 text-base md:text-[22px]">
                     {solution.description}
                   </p>
                 </div>
