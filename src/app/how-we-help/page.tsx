@@ -29,7 +29,7 @@
 "use client";
 import React, { useCallback } from "react";
 import dynamic from "next/dynamic";
-import { ImArrowUp } from "react-icons/im";
+
 
 // Dynamically import components
 const HowWeHelp = dynamic(() => import("./HeroSection"));

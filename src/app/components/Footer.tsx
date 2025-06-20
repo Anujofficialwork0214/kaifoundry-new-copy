@@ -13,15 +13,15 @@ interface FooterColumnProps {
 
 const FooterColumn: FC<FooterColumnProps> = ({ title, links }) => {
   return (
-    <div>
-      <h3 className="font-[500] text-[14px] lg:text-[16.8px] mb-7 lg:mb-8">
+    <div className="lg:mt-2">
+      <h3 className="font-[500] text-[14px] lg:text-[12.8px] mb-7 lg:mb-8">
         {title}
       </h3>
       <ul className="flex flex-col gap-2">
         {links.map((link, index) => (
           <li
             key={index}
-            className="text-[#FFFFFF] font-light opacity-70 text-[14px] lg:text-[19.02px] hover:underline transition duration-200"
+            className="text-[#FFFFFF] font-light opacity-70 text-[14px] lg:text-[14.02px] hover:underline transition duration-200"
           >
             <Link href={link.href} prefetch={true}>
               {link.label}
@@ -51,8 +51,8 @@ const SocialIcons: FC = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M17.1984 0.199219H2.79844C1.47484 0.199219 0.398438 1.27562 0.398438 2.59922V16.9992C0.398438 18.3228 1.47484 19.3992 2.79844 19.3992H9.99844V12.7992H7.59844V9.79922H9.99844V7.39922C9.99844 6.44444 10.3777 5.52877 11.0529 4.85363C11.728 4.1785 12.6437 3.79922 13.5984 3.79922H15.9984V6.79922H14.7984C14.136 6.79922 13.5984 6.73682 13.5984 7.39922V9.79922H16.5984L15.3984 12.7992H13.5984V19.3992H17.1984C18.522 19.3992 19.5984 18.3228 19.5984 16.9992V2.59922C19.5984 1.27562 18.522 0.199219 17.1984 0.199219Z"
             fill="white"
           />
@@ -97,7 +97,7 @@ interface ContactInfoProps {
 
 const ContactInfo: FC<ContactInfoProps> = ({ phone, email }) => {
   return (
-    <div className="text-gray-300 flex flex-col items-start ">
+    <div className="text-gray-300 flex flex-col items-start text-[14px] lg:text-[14.02px] ">
       <hr className="border-t border-white lg:border-[#232841] block w-24 my-6 lg:-mt-8" />
       <p>{phone}</p>
       <p>
@@ -145,11 +145,11 @@ const Footer: FC = () => {
   const [footerVisible, setFooterVisible] = useState(false);
 
   useEffect(() => {
-   
+
     const timeout = setTimeout(() => {
       setFooterVisible(true);
-    }, 3000); 
-    
+    }, 3000);
+
     return () => clearTimeout(timeout);
   }, []);
 
@@ -159,16 +159,16 @@ const Footer: FC = () => {
       style={{
         fontFamily: "Inter, sans-serif",
         minHeight: "500px",
-        transition: "opacity 1s ease, visibility 1s ease", 
-        opacity: footerVisible ? 1 : 0, 
-        visibility: footerVisible ? "visible" : "hidden", 
+        transition: "opacity 1s ease, visibility 1s ease",
+        opacity: footerVisible ? 1 : 0,
+        visibility: footerVisible ? "visible" : "hidden",
       }}
     >
       <div className="flex justify-between items-center lg:hidden mb-5 ">
         <div>
           <Image
             width={150}
-            height={250}
+            height={150}
             alt="logo"
             src="/svg/Logo.svg"
             draggable="false"
@@ -185,8 +185,8 @@ const Footer: FC = () => {
       <div className="mx-auto grid grid-cols-12 lg:grid-cols-12 lg:gap-6 sm:grid-cols-2 gap-8">
         <div className="col-span-4 lg:flex justify-start order-1 lg:col-span-4 hidden ">
           <Image
-            width={250}
-            height={250}
+            width={150}
+            height={150}
             alt="logo"
             src="/svg/Logo.svg"
             className="w-[200px] h-[40px] lg:w-[250px] lg:h-[50px]"
@@ -208,18 +208,19 @@ const Footer: FC = () => {
 
         <div className="sm:col-span-2 lg:flex sm:order-6 justify-end order-2 col-span-6 hidden">
           <Button
-            className="bg-white py-1 mr-4 lg:mr-0 lg:py-3 text-[12px] lg:text-[16.8px] text-[#192D53] font-inter font-[500] cursor-pointer"
+            className="bg-white py-1 mr-4 lg:mr-0 lg:py-2 text-[12px] lg:text-[14.8px] text-[#192D53] font-inter font-[500] cursor-pointer"
             text="Get In Touch"
             href="/contact-us"
           />
         </div>
       </div>
 
-      <div className="mx-auto grid grid-cols-11 mt-30 items-start text-left pt-6">
-        <div className="lg:col-span-5 col-span-2 flex flex-col justify-between lg:flex-row items-start ">
-          <SocialIcons />
-          <ContactInfo phone="123-456-7890" email="kaifoundry@gmail.com" />
-        </div>
+   <div className="mx-auto flex flex-col lg:grid lg:grid-cols-12 mt-30 items-start text-left pt-6">
+        
+          <div className="lg:col-span-4"><SocialIcons /></div>
+          <div className="lg:col-span-2"><ContactInfo phone="123-456-7890" email="kaifoundry@gmail.com" /></div>
+          
+
       </div>
     </footer>
   );

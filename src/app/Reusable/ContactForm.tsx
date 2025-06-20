@@ -363,10 +363,10 @@ const ContactForm = () => {
   //     </div>
   //   );
 
-  console.log(formData);
+  // console.log(formData);
 
   return (
-    <div className="min-h-[670px] flex items-center justify-center">
+    <div className="min-h-[670px] lg:-mt-6 mt-4 flex items-center justify-center">
       {loading ? (
         <div className="flex justify-center  items-center h-full">
           <Loader />

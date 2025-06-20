@@ -174,6 +174,7 @@ const Navbar: React.FC = () => {
                 width={150}
                 height={40}
                 priority={true}
+                draggable="false"
               />
             </Link>
           </div>
