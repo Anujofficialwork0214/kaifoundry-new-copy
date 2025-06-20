@@ -8,10 +8,6 @@ export default function ClientLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-
-  // Log the current pathname (optional for debugging)
-  console.log("Current Pathname:", pathname);
-
   // Hide Navbar only on /CareersScreen/JobApplication
   const hideNavbarPaths = ["/careers-screen/job-application","/contact-us"];
 

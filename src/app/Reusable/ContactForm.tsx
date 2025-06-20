@@ -363,7 +363,7 @@ const ContactForm = () => {
   //     </div>
   //   );
 
-  console.log(formData);
+  // console.log(formData);
 
   return (
     <div className="min-h-[670px] flex items-center justify-center">
