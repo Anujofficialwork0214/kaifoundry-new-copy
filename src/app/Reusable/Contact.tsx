@@ -9,7 +9,7 @@ const ContactUs = () => {
       </h2>
       <section className="p-2 lg:p-20 flex items-center justify-center w-full">
         {/* Main grid container for the three sections: Map, Form, Details */}
-        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-24 p-0 md:p-4 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-24 p-0 md:p-4 w-full px-4 lg:px-0 ">
           {/* Grid Item 1: Map */}
           <div className="row-span-8 md:row-span-1 flex-col gap-10 md:gap-0 ">
             <h3 className="text-2xl md:text-[32px] lg:text-[32px] xl:text-[32px] text-[#333333] font-semibold mb-6 sm:mb-10 text-start">
