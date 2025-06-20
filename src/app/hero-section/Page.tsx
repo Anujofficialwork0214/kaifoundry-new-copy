@@ -68,7 +68,7 @@ export default function HeroSection() {
                 animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ delay: 1, duration: 1.5 }}
               >
-                <Link href="/how-we-help-screen" className="pr-3 lg:pr-0">
+                <Link href="/how-we-help" className="pr-3 lg:pr-0">
                   <button
                     className={`relative z-10 flex items-center px-4 py-2 lg:pl-3 lg:pr-8 lg:py-3  text-white text-[11px] lg:text-lg xl:text-[15px] transition-all duration-300 bg-[#BA24D5] `}
                   >

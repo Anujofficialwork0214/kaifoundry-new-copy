@@ -203,7 +203,7 @@ export default function HeroSectionMob() {
               className="absolute inset-y-0 left-1/2 lg:left-0 right-0  bg-[#D444F1] rounded-full w-42"
               // style={{ width: "calc(42% - 10px)" }}
             ></div>
-            <Link href="/how-we-help-screen">
+            <Link href="/how-we-help">
               <button
                 className={`relative z-10 flex items-center px-6 py-3 rounded-full text-white font-semibold text-lg transition-transform duration-1000 transform ${
                   isVisible

@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
   useEffect(() => {
     const prefetchRoutes = async () => {
       await Promise.all([
-        router.prefetch("/how-we-help-screen"),
+        router.prefetch("/how-we-help"),
         router.prefetch("/who-are-we"),
         router.prefetch("/careers-screen"),
         router.prefetch("/blockchain-service"),
@@ -182,9 +182,9 @@ const Navbar: React.FC = () => {
           <ul className="hidden md:flex space-x-6 text-gray-700 flex-1 justify-center transition-all duration-500 ease-in-out md:text-[14px] xl:text-[17px] lg:text-[17px] ">
             <li>
               <Link
-                href="/how-we-help-screen"
+                href="/how-we-help"
                 className={`${
-                  isActive("/how-we-help-screen")
+                  isActive("/how-we-help")
                     ? "text-[#821890]"
                     : "text-gray-700"
                 }`}
@@ -296,9 +296,9 @@ const Navbar: React.FC = () => {
             Home
           </Link>
           <Link
-            href="/how-we-help-screen"
+            href="/how-we-help"
             className={`${
-              isActive("/how-we-help-screen")
+              isActive("/how-we-help")
                 ? "text-[#821890] font-[500] bg-gradient-to-r from-white to-[#F6D0FE]"
                 : "text-[#4D4D4D] bg-transparent font-[400]"
             }  cursor-pointer text-[14px] px-6 py-3 w-full `}
