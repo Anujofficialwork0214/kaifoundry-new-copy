@@ -112,7 +112,7 @@ const Navbar: React.FC = () => {
         <nav
           className={`max-w-[1920px] mx-auto py-2 px-2 md:px-5 lg:px-5 flex items-center justify-between ${
             isScrolling ? "backdrop-blur-md" : ""
-          } lg:backdrop-blur-md md:border md:border-gray-300 md:rounded-full transition-all duration-500 ease-in-out `}
+          } lg:backdrop-blur-md md:border md:border-gray-300 rounded-full transition-all duration-500 ease-in-out `}
         >
           <button
             onClick={toggleMenu}
@@ -184,9 +184,7 @@ const Navbar: React.FC = () => {
               <Link
                 href="/how-we-help"
                 className={`${
-                  isActive("/how-we-help")
-                    ? "text-[#821890]"
-                    : "text-gray-700"
+                  isActive("/how-we-help") ? "text-[#821890]" : "text-gray-700"
                 }`}
                 prefetch={true}
               >
@@ -416,15 +414,15 @@ const Navbar: React.FC = () => {
                 </Link>
                 {isActive("/blockchain-service") && (
                   <svg
-                    width="19"
+                    width="18"
                     height="18"
-                    viewBox="0 0 19 18"
+                    viewBox="0 0 18 18"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M14.8776 6.7832L9.70052 11.9603L4.52344 6.7832"
-                      stroke="black"
+                      d="M3.75 9.64844L6.70833 12.6068L14.1042 5.21094"
+                      stroke="#D444F1"
                       strokeWidth="1.775"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -446,15 +444,15 @@ const Navbar: React.FC = () => {
                 {isActive("/game-development") && (
                   // <MdDone className="text-[#821890]" />
                   <svg
-                    width="19"
+                    width="18"
                     height="18"
-                    viewBox="0 0 19 18"
+                    viewBox="0 0 18 18"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M14.8776 6.7832L9.70052 11.9603L4.52344 6.7832"
-                      stroke="black"
+                      d="M3.75 9.64844L6.70833 12.6068L14.1042 5.21094"
+                      stroke="#D444F1"
                       strokeWidth="1.775"
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -477,15 +475,15 @@ const Navbar: React.FC = () => {
                 {isActive("/ai-services") && (
                   // <MdDone className="text-[#821890]" />
                   <svg
-                    width="19"
+                    width="18"
                     height="18"
-                    viewBox="0 0 19 18"
+                    viewBox="0 0 18 18"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M14.8776 6.7832L9.70052 11.9603L4.52344 6.7832"
-                      stroke="black"
+                      d="M3.75 9.64844L6.70833 12.6068L14.1042 5.21094"
+                      stroke="#D444F1"
                       strokeWidth="1.775"
                       strokeLinecap="round"
                       strokeLinejoin="round"
