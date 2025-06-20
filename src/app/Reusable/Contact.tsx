@@ -15,16 +15,21 @@ const ContactUs = () => {
             <h3 className="text-2xl md:text-[32px] lg:text-[32px] xl:text-[32px] text-[#333333] font-semibold mb-6 sm:mb-10 text-start">
               Where To Find Us
             </h3>
-            <iframe
+            {/* <iframe
               className="w-full lg:w-xl h-64  md:h-full"
+              src="https://maps.google.com/maps?q=Ludhiana&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+            ></iframe> */}
+              <iframe
+              className="w-full h-full"
               src="https://maps.google.com/maps?q=Ludhiana&t=&z=13&ie=UTF8&iwloc=&output=embed"
               loading="lazy"
             ></iframe>
           </div>
 
           {/* Grid Item 2: Form */}
-          <div className="md:col-start-2 row-span-2 flex-col mt-20 md:mt-0">
-            <h3 className="text-2xl md:text-[32px] lg:text-[32px] xl:text-[32px] text-[#333333] font-semibold mb-6 sm:mb-10 text-start">
+          <div className="md:col-start-2 row-span-2 flex-col mt-20 md:mt-0 ">
+            <h3 className="text-2xl md:text-[32px] lg:text-[32px] xl:text-[32px] text-[#333333] font-semibold mb-0 sm:mb-10 text-start">
               Leave A Message
             </h3>
             <ContactForm />

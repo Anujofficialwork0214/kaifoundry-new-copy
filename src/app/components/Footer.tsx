@@ -13,15 +13,15 @@ interface FooterColumnProps {
 
 const FooterColumn: FC<FooterColumnProps> = ({ title, links }) => {
   return (
-    <div>
-      <h3 className="font-[500] text-[14px] lg:text-[16.8px] mb-7 lg:mb-8">
+    <div className="lg:mt-2">
+      <h3 className="font-[500] text-[14px] lg:text-[12.8px] mb-7 lg:mb-8">
         {title}
       </h3>
       <ul className="flex flex-col gap-2">
         {links.map((link, index) => (
           <li
             key={index}
-            className="text-[#FFFFFF] font-light opacity-70 text-[14px] lg:text-[19.02px] hover:underline transition duration-200"
+            className="text-[#FFFFFF] font-light opacity-70 text-[14px] lg:text-[14.02px] hover:underline transition duration-200"
           >
             <Link href={link.href} prefetch={true}>
               {link.label}
@@ -97,7 +97,7 @@ interface ContactInfoProps {
 
 const ContactInfo: FC<ContactInfoProps> = ({ phone, email }) => {
   return (
-    <div className="text-gray-300 flex flex-col items-start ">
+    <div className="text-gray-300 flex flex-col items-start text-[14px] lg:text-[14.02px] ">
       <hr className="border-t border-white lg:border-[#232841] block w-24 my-6 lg:-mt-8" />
       <p>{phone}</p>
       <p>
@@ -145,11 +145,11 @@ const Footer: FC = () => {
   const [footerVisible, setFooterVisible] = useState(false);
 
   useEffect(() => {
-   
+
     const timeout = setTimeout(() => {
       setFooterVisible(true);
-    }, 3000); 
-    
+    }, 3000);
+
     return () => clearTimeout(timeout);
   }, []);
 
@@ -159,16 +159,16 @@ const Footer: FC = () => {
       style={{
         fontFamily: "Inter, sans-serif",
         minHeight: "500px",
-        transition: "opacity 1s ease, visibility 1s ease", 
-        opacity: footerVisible ? 1 : 0, 
-        visibility: footerVisible ? "visible" : "hidden", 
+        transition: "opacity 1s ease, visibility 1s ease",
+        opacity: footerVisible ? 1 : 0,
+        visibility: footerVisible ? "visible" : "hidden",
       }}
     >
       <div className="flex justify-between items-center lg:hidden mb-5 ">
         <div>
           <Image
             width={150}
-            height={250}
+            height={150}
             alt="logo"
             src="/svg/Logo.svg"
             draggable="false"
@@ -185,8 +185,8 @@ const Footer: FC = () => {
       <div className="mx-auto grid grid-cols-12 lg:grid-cols-12 lg:gap-6 sm:grid-cols-2 gap-8">
         <div className="col-span-4 lg:flex justify-start order-1 lg:col-span-4 hidden ">
           <Image
-            width={250}
-            height={250}
+            width={150}
+            height={150}
             alt="logo"
             src="/svg/Logo.svg"
             className="w-[200px] h-[40px] lg:w-[250px] lg:h-[50px]"
@@ -208,18 +208,19 @@ const Footer: FC = () => {
 
         <div className="sm:col-span-2 lg:flex sm:order-6 justify-end order-2 col-span-6 hidden">
           <Button
-            className="bg-white py-1 mr-4 lg:mr-0 lg:py-3 text-[12px] lg:text-[16.8px] text-[#192D53] font-inter font-[500] cursor-pointer"
+            className="bg-white py-1 mr-4 lg:mr-0 lg:py-2 text-[12px] lg:text-[14.8px] text-[#192D53] font-inter font-[500] cursor-pointer"
             text="Get In Touch"
             href="/contact-us"
           />
         </div>
       </div>
 
-      <div className="mx-auto grid grid-cols-11 mt-30 items-start text-left pt-6">
-        <div className="lg:col-span-5 col-span-2 flex flex-col justify-between lg:flex-row items-start ">
-          <SocialIcons />
-          <ContactInfo phone="123-456-7890" email="kaifoundry@gmail.com" />
-        </div>
+   <div className="mx-auto flex flex-col lg:grid lg:grid-cols-12 mt-30 items-start text-left pt-6">
+        
+          <div className="lg:col-span-4"><SocialIcons /></div>
+          <div className="lg:col-span-2"><ContactInfo phone="123-456-7890" email="kaifoundry@gmail.com" /></div>
+          
+
       </div>
     </footer>
   );
