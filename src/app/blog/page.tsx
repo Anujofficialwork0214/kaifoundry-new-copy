@@ -278,11 +278,11 @@ export default function BlogCarousel() {
   // const isScrolling = useRef(false);
   // const isHovering = useRef(false);
   // const hoverTimeout = useRef<NodeJS.Timeout>();
-  
-const animationFrameRef = useRef<number>(0);
-const isScrolling = useRef<boolean>(false);
-const isHovering = useRef<boolean>(false);
-const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
+
+  const animationFrameRef = useRef<number>(0);
+  const isScrolling = useRef<boolean>(false);
+  const isHovering = useRef<boolean>(false);
+  const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
 
 
   // Fetch blogs data
@@ -314,22 +314,22 @@ const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
     }
   }, [blogs]);
 
-  
+
   const autoScroll = useCallback(() => {
     if (!blogs.length) return;
 
     const totalWidth = cardWidth * blogs.length;
-    const scrollSpeed = 3; 
-    
+    const scrollSpeed = 3;
+
     const scroll = () => {
       if (isHovering.current) return;
       setScrollX((prev) => {
         const newScroll = prev + scrollSpeed;
         const visibleIndex = Math.floor(newScroll / cardWidth) % blogs.length;
         setActiveDotIndex(visibleIndex);
-        
+
         if (newScroll >= totalWidth) {
-          
+
           if (carouselRef.current) {
             carouselRef.current.style.transition = 'none';
           }
@@ -398,8 +398,8 @@ const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
       if (!startTime) startTime = currentTime;
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      const eased = progress < 0.5 
-        ? 2 * progress * progress 
+      const eased = progress < 0.5
+        ? 2 * progress * progress
         : 1 - Math.pow(-2 * progress + 2, 2) / 2; // easeInOutQuad
 
       setScrollX(start + distance * eased);
@@ -412,12 +412,12 @@ const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
           if (!isHovering.current) {
             autoScroll();
           }
-        }, 3000); 
+        }, 3000);
       }
     };
 
     animationFrameRef.current = requestAnimationFrame(animateScroll);
-  }, [scrollX,autoScroll]);
+  }, [scrollX, autoScroll]);
 
   // Navigation functions
   const goToSlide = useCallback((index: number) => {
@@ -430,14 +430,14 @@ const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
     const newIndex = (activeDotIndex + 1) % blogs.length;
     goToSlide(newIndex);
     isHovering.current = true;
-    
+
   }, [activeDotIndex, blogs.length, goToSlide]);
 
   const prevSlide = useCallback(() => {
     const newIndex = (activeDotIndex - 1 + blogs.length) % blogs.length;
     goToSlide(newIndex);
     isHovering.current = true;
-    
+
   }, [activeDotIndex, blogs.length, goToSlide]);
 
   const handleMouseEnter = () => {
@@ -481,7 +481,7 @@ const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
               style={{ backgroundColor: "#BA24D5" }}
 
               className="absolute left-0 top-1/2 hidden md:block transform -translate-y-1/2 p-3 rounded-lg cursor-pointer text-white z-10"
-              
+
             >
               <Image src="/svg/chevonArrow.svg" alt="prev" width={30} height={30} />
             </button>
@@ -490,7 +490,7 @@ const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
               onClick={nextSlide}
               style={{ backgroundColor: "#BA24D5" }}
               className="absolute right-0 top-1/2 hidden md:block transform -translate-y-1/2 p-3 rounded-lg cursor-pointer text-white z-10"
-              
+
             >
               <Image
                 src="/svg/chevonArrow.svg"
@@ -515,107 +515,106 @@ const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
           >
             {loading
               ? Array.from({ length: 5 }).map((_, i) => (
-                  <div key={i} className="w-[350px] h-[470px]">
-                    <Skeleton height={470} />
-                  </div>
-                ))
+                <div key={i} className="w-[350px] h-[470px]">
+                  <Skeleton height={470} />
+                </div>
+              ))
               : duplicatedBlogs.map((blog, index) => {
-                  const realIndex = index-1 % blogs.length;
-                  return (
-                    <div
-                      key={`${blog.id}-${index}`}
-                      className={`carousel-card  flex-shrink-0 w-[350px] h-[470px] cursor-pointer shadow-lg transition-transform duration-300 ease-in-out overflow-hidden ${
-                        realIndex === activeDotIndex ? "scale-105" : "scale-100"
+                const realIndex = index - 1 % blogs.length;
+                return (
+                  <div
+                    key={`${blog.id}-${index}`}
+                    className={`carousel-card  flex-shrink-0 w-[350px] h-[470px] cursor-pointer shadow-lg transition-transform duration-300 ease-in-out overflow-hidden ${realIndex === activeDotIndex ? "scale-105" : "scale-100"
                       }`}
-                      onMouseEnter={() => {
-                        handleMouseEnter();
-                        setActiveDotIndex(realIndex);
-                      }}
-                      onMouseLeave={handleMouseLeave}
-                    >
-                      <div className="relative w-full h-[246px] bg-gray-100">
-                        <Image
-                          src={blog.image}
-                          alt={blog.title}
-                          fill
-                          className="object-cover"
-                          quality={75}
-                          draggable={false}
-                          sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        />
-                      </div>
-                      <div className="p-6 flex flex-col gap-4 lg:gap-6">
-                        <p className="text-[12px] lg:text-[14px] font-[600] text-[#333333]">
-                          {blog.category}
-                        </p>
-                        <h3 className="text-[17px] font-[600] lg:text-[18px] text-[#333333] leading-tight">
-                          {blog.title}
-                        </h3>
-                        <Link
-                          href={`/blog/${blog.id}`}
-                          prefetch
-                          className="mt-auto text-[14px] cursor-pointer lg:text-[16px] font-[500] text-gray-900 underline underline-offset-2 hover:text-purple-600"
-                        >
-                          Read Blog
-                        </Link>
-                      </div>
-
+                    onMouseEnter={() => {
+                      handleMouseEnter();
+                      setActiveDotIndex(realIndex);
+                    }}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <div className="relative w-full h-[246px] bg-gray-100">
+                      <Image
+                        src={blog.image}
+                        alt={blog.title}
+                        fill
+                        className="object-cover"
+                        quality={75}
+                        draggable={false}
+                        sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
                     </div>
-                  );
-                })}
+                    <div className="p-6 flex flex-col gap-4 lg:gap-6">
+                      <p className="text-[12px] lg:text-[14px] font-[600] text-[#333333]">
+                        {blog.category}
+                      </p>
+                      <h3 className="text-[17px] font-[600] lg:text-[16px] text-[#333333] leading-tight">
+                        {blog.title}
+                      </h3>
+                      <Link
+                        href={`/blog/${blog.id}`}
+                        prefetch
+                        className="mt-auto text-[14px] cursor-pointer lg:text-[14px] font-[500] text-gray-900 underline underline-offset-2 hover:text-purple-600"
+                      >
+                        Read Blog
+                      </Link>
+                    </div>
+
+                  </div>
+                );
+              })}
           </div>
         </div>
         <div className="overflow-hidden flex justify-center py-6 w-full   lg:hidden">
           <div
-           
+
             className="flex flex-col  justify-center gap-8"
-            
+
           >
             {loading
               ? Array.from({ length: 5 }).map((_, i) => (
-                  <div key={i} className="w-[350px] h-[470px]">
-                    <Skeleton height={470} />
-                  </div>
-                ))
+                <div key={i} className="w-[350px] h-[470px]">
+                  <Skeleton height={470} />
+                </div>
+              ))
               : blogs.map((blog, index) => {
-                  
-                  return (
-                    <div
-                      key={`${blog.id}-${index}`}
-                      className={`carousel-card  flex-shrink-0 w-[330px] h-[420px]   shadow-lg justify-center bg-white   transition-transform duration-300 ease-in-out overflow-hidden `}
-                      // style={{
-                      //   boxShadow: 'rgba(0, 0, 0, 0.24) 10px 3px 8px'
-                      // }}
-                    >
-                      <div className="relative w-full h-[246px] bg-gray-100">
-                        <Image
-                          src={blog.image}
-                          alt={blog.title}
-                          fill
-                          className="object-cover"
-                          quality={75}
-                          draggable={false}
-                          sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        />
-                      </div>
-                      <div className="p-6 flex flex-col gap-4 lg:gap-6">
-                        <p className="text-[12px] lg:text-[14px] font-[600] text-[#333333]">
-                          {blog.category}
-                        </p>
-                        <h3 className="text-[17px] font-[600] lg:text-[17px] text-[#333333] leading-tight">
-                          {blog.title}
-                        </h3>
-                        <Link
-                          href={`/blog/${blog.id}`}
-                          prefetch
-                          className="mt-auto text-[14px] lg:text-[16px] font-[500] text-gray-900 underline underline-offset-2 hover:text-purple-600"
-                        >
-                          Read Blog
-                        </Link>
-                      </div>
+
+                return (
+                  <div
+                    key={`${blog.id}-${index}`}
+                    className={`carousel-card  flex-shrink-0 w-[330px] h-[420px]   shadow-lg justify-center bg-white   transition-transform duration-300 ease-in-out overflow-hidden `}
+                  // style={{
+                  //   boxShadow: 'rgba(0, 0, 0, 0.24) 10px 3px 8px'
+                  // }}
+                  >
+                    <div className="relative w-full h-[246px] bg-gray-100">
+                      <Image
+                        src={blog.image}
+                        alt={blog.title}
+                        fill
+                        className="object-cover"
+                        quality={75}
+                        draggable={false}
+                        sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
                     </div>
-                  );
-                })}
+                    <div className="p-6 flex flex-col gap-4 lg:gap-6">
+                      <p className="text-[12px] lg:text-[14px] font-[600] text-[#333333]">
+                        {blog.category}
+                      </p>
+                      <h3 className="text-[17px] font-[600] lg:text-[17px] text-[#333333] leading-tight">
+                        {blog.title}
+                      </h3>
+                      <Link
+                        href={`/blog/${blog.id}`}
+                        prefetch
+                        className="mt-auto text-[14px] lg:text-[16px] font-[500] text-gray-900 underline underline-offset-2 hover:text-purple-600"
+                      >
+                        Read Blog
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
           </div>
         </div>
 
@@ -625,10 +624,9 @@ const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
             {[...Array(blogs.length)].map((_, index) => (
               <div
                 key={index}
-                className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${
-                  index === activeDotIndex ? "w-4 h-4 bg-[#BA24D5]" : "bg-[#999999]"
+                className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${index === activeDotIndex ? "w-4 h-4 bg-[#BA24D5]" : "bg-[#999999]"
 
-                }`}
+                  }`}
                 onClick={() => goToSlide(index)}
               ></div>
             ))}
