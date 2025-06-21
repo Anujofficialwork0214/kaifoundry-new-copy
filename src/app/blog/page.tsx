@@ -274,10 +274,16 @@ export default function BlogCarousel() {
   const [cardWidth, setCardWidth] = useState(382);
   const scrollInterval = useRef<NodeJS.Timeout | null>(null);
   const [activeDotIndex, setActiveDotIndex] = useState(0);
-  const animationFrameRef = useRef<number>();
-  const isScrolling = useRef(false);
-  const isHovering = useRef(false);
-  const hoverTimeout = useRef<NodeJS.Timeout>();
+  // const animationFrameRef = useRef<number>();
+  // const isScrolling = useRef(false);
+  // const isHovering = useRef(false);
+  // const hoverTimeout = useRef<NodeJS.Timeout>();
+  
+const animationFrameRef = useRef<number>(0);
+const isScrolling = useRef<boolean>(false);
+const isHovering = useRef<boolean>(false);
+const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
+
 
   // Fetch blogs data
   useEffect(() => {
