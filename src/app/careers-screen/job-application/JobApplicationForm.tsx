@@ -587,6 +587,8 @@ const JobApplicationForm = () => {
     }
   };
 
+  console.log(formData)
+
   return (
     <div className="w-full mx-auto p-6 lg:px-12">
       {showPopup && (
@@ -622,13 +624,13 @@ const JobApplicationForm = () => {
               Email <span className="text-[#155EEF]">*</span>
             </label>
             <input
-              type="email"
+              type="text"
               name="email"
               placeholder="Enter your E-mail"
               className="w-full p-3 border border-[#999999] rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-[#D444F1] placeholder:text-[#697586] placeholder:text-[14px] lg:placeholder:text-[18px] text-[14px] lg:text-[18px] placeholder:font-[400] font-[400]"
               required
               value={formData.email}
-              onKeyDown={preventSpaces}
+             
               onChange={handleInputChange}
               onBlur={handleBlur}
             />
@@ -648,7 +650,7 @@ const JobApplicationForm = () => {
             className="w-full p-3 border border-[#999999] rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-[#D444F1] placeholder:text-[#697586] placeholder:text-[14px] lg:placeholder:text-[18px] text-[14px] lg:text-[18px] placeholder:font-[400] font-[400]"
             required
             value={formData.phone}
-            onKeyDown={preventNonNumericKeys} // Also blocks spaces
+           // onKeyDown={preventNonNumericKeys} // Also blocks spaces
             onChange={handleInputChange} // Sanitize pastes
             onBlur={handleBlur}
           />
@@ -726,3 +728,6 @@ const JobApplicationForm = () => {
 };
 
 export default JobApplicationForm;
+
+
+//  onKeyDown={preventSpaces}
