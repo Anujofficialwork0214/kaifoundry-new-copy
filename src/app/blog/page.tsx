@@ -248,13 +248,401 @@
 //   );
 // }
 
+// "use client";
+// import Link from "next/link";
+// import Skeleton from "react-loading-skeleton";
+// import "react-loading-skeleton/dist/skeleton.css";
+
+// import { useEffect, useState, useRef, useCallback } from "react";
+
+// import Image from "next/image";
+
+// export default function BlogCarousel() {
+//   interface Blog {
+//     id: number;
+//     image: string;
+//     title: string;
+//     category: string;
+//     link: string;
+//   }
+
+//   const [blogs, setBlogs] = useState<Blog[]>([]);
+//   const [loading, setLoading] = useState(true);
+//   const carouselRef = useRef<HTMLDivElement>(null);
+
+//   const [scrollX, setScrollX] = useState(0);
+//   const [cardWidth, setCardWidth] = useState(382);
+//   const scrollInterval = useRef<NodeJS.Timeout | null>(null);
+//   const [activeDotIndex, setActiveDotIndex] = useState(0);
+//   // const animationFrameRef = useRef<number>();
+//   // const isScrolling = useRef(false);
+//   // const isHovering = useRef(false);
+//   // const hoverTimeout = useRef<NodeJS.Timeout>();
+
+//   const animationFrameRef = useRef<number>(0);
+//   const isScrolling = useRef<boolean>(false);
+//   const isHovering = useRef<boolean>(false);
+//   const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
+
+
+//   // Fetch blogs data
+//   useEffect(() => {
+//     const fetchBlogs = async () => {
+//       setLoading(true);
+//       try {
+//         const response = await fetch("/assets/blogs/blogs.json");
+
+//         const data = await response.json();
+//         setBlogs(data);
+//       } catch (e) {
+//         console.error("Failed to fetch blogs", e);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+//     fetchBlogs();
+//   }, []);
+
+
+//   // Calculate card width including gap
+//   useEffect(() => {
+//     if (carouselRef.current) {
+//       const card = carouselRef.current.querySelector(".carousel-card");
+//       if (card instanceof HTMLElement) {
+//         setCardWidth(card.offsetWidth + 32); // card + gap
+//       }
+//     }
+//   }, [blogs]);
+
+
+//   const autoScroll = useCallback(() => {
+//     if (!blogs.length) return;
+
+//     const totalWidth = cardWidth * blogs.length;
+//     const scrollSpeed = 3;
+
+//     const scroll = () => {
+//       if (isHovering.current) return;
+//       setScrollX((prev) => {
+//         const newScroll = prev + scrollSpeed;
+//         const visibleIndex = Math.floor(newScroll / cardWidth) % blogs.length;
+//         setActiveDotIndex(visibleIndex);
+
+//         if (newScroll >= totalWidth) {
+
+//           if (carouselRef.current) {
+//             carouselRef.current.style.transition = 'none';
+//           }
+//           return 0;
+//         } else {
+//           if (carouselRef.current) {
+//             carouselRef.current.style.transition = 'transform 0.05s linear';
+//           }
+//           return newScroll;
+//         }
+//       });
+
+//       animationFrameRef.current = requestAnimationFrame(scroll);
+//     };
+
+//     animationFrameRef.current = requestAnimationFrame(scroll);
+
+//     return () => {
+//       if (animationFrameRef.current) {
+//         cancelAnimationFrame(animationFrameRef.current);
+//       }
+//     };
+//   }, [blogs.length, cardWidth]);
+
+//   // Start/stop auto-scroll on mount/unmount
+//   useEffect(() => {
+//     if (blogs.length && carouselRef.current) {
+//       autoScroll();
+//     }
+
+//     return () => {
+//       if (animationFrameRef.current) {
+//         cancelAnimationFrame(animationFrameRef.current);
+//       }
+//       // if (scrollInterval.current) {
+//       //   clearInterval(scrollInterval.current);
+//       // }
+//     };
+//   }, [autoScroll, blogs]);
+
+
+//   // Reset transition after instant snap
+//   useEffect(() => {
+
+//     if (scrollX === 0 && carouselRef.current) {
+//       const resetTransition = setTimeout(() => {
+//         if (carouselRef.current) {
+//           carouselRef.current.style.transition = 'transform 0.05s linear';
+//         }
+//       }, 80);
+//       return () => clearTimeout(resetTransition);
+//     }
+//   }, [scrollX]);
+
+//   // Smooth scroll to specific position
+//   const smoothScrollTo = useCallback((target: number) => {
+//     if (isScrolling.current) return;
+//     isScrolling.current = true;
+
+//     const start = scrollX;
+//     const distance = target - start;
+//     const duration = 1000; // milliseconds
+//     let startTime: number | null = null;
+
+//     const animateScroll = (currentTime: number) => {
+//       if (!startTime) startTime = currentTime;
+//       const elapsed = currentTime - startTime;
+//       const progress = Math.min(elapsed / duration, 1);
+//       const eased = progress < 0.5
+//         ? 2 * progress * progress
+//         : 1 - Math.pow(-2 * progress + 2, 2) / 2; // easeInOutQuad
+
+//       setScrollX(start + distance * eased);
+
+//       if (progress < 1) {
+//         animationFrameRef.current = requestAnimationFrame(animateScroll);
+//       } else {
+//         isScrolling.current = false;
+//         hoverTimeout.current = setTimeout(() => {
+//           if (!isHovering.current) {
+//             autoScroll();
+//           }
+//         }, 3000);
+//       }
+//     };
+
+//     animationFrameRef.current = requestAnimationFrame(animateScroll);
+//   }, [scrollX, autoScroll]);
+
+//   // Navigation functions
+//   const goToSlide = useCallback((index: number) => {
+//     const target = index * cardWidth;
+//     smoothScrollTo(target);
+//     setActiveDotIndex(index);
+//   }, [cardWidth, smoothScrollTo]);
+
+//   // const nextSlide = useCallback(() => {
+//   //   const newIndex = (activeDotIndex + 1) % blogs.length;
+//   //   goToSlide(newIndex);
+//   //   isHovering.current = true;
+
+//   // }, [activeDotIndex, blogs.length, goToSlide]);
+
+//   // const prevSlide = useCallback(() => {
+//   //   const newIndex = (activeDotIndex - 1 + blogs.length) % blogs.length;
+//   //   goToSlide(newIndex);
+//   //   isHovering.current = true;
+
+//   // }, [activeDotIndex, blogs.length, goToSlide]);
+
+//   const handleMouseEnter = () => {
+//     isHovering.current = true;
+//     if (animationFrameRef.current) {
+//       cancelAnimationFrame(animationFrameRef.current);
+//     }
+//   };
+
+//   const handleMouseLeave = () => {
+//     isHovering.current = false;
+//     // Restart auto-scroll after a delay
+//     hoverTimeout.current = setTimeout(() => {
+//       if (!isHovering.current) {
+//         autoScroll();
+//       }
+//     }, 500); // 1 second delay before restarting
+//   };
+
+
+//   // Duplicate blogs for infinite scroll effect
+//   const duplicatedBlogs = [...blogs, ...blogs];
+
+//   return (
+//     <div className="relative w-full overflow-hidden py-24 lg:px-10 px-4">
+//       <div className="text-[#414141] font-[500] mb-6">
+//         <div className="block lg:hidden text-[30px] text-left">Our Latest Blogs</div>
+//         <div className="hidden lg:flex flex-col text-[50px] text-left pl-22 mt-4 mb-16">
+//           <div>Our Latest</div>
+//           <div className="-mt-4">Blogs</div>
+//         </div>
+//       </div>
+
+
+//       <div className="relative overflow-hidden ">
+//         {/* {blogs.length > 0 && (
+
+//           <>
+//             <button
+//               onClick={prevSlide}
+//               style={{ backgroundColor: "#BA24D5" }}
+
+//               className="absolute left-0 top-1/2 hidden md:block transform -translate-y-1/2 p-3 rounded-lg cursor-pointer text-white z-10"
+
+//             >
+//               <Image src="/svg/chevonArrow.svg" alt="prev" width={30} height={30} />
+//             </button>
+
+//             <button
+//               onClick={nextSlide}
+//               style={{ backgroundColor: "#BA24D5" }}
+//               className="absolute right-0 top-1/2 hidden md:block transform -translate-y-1/2 p-3 rounded-lg cursor-pointer text-white z-10"
+
+//             >
+//               <Image
+//                 src="/svg/chevonArrow.svg"
+//                 className="rotate-180"
+//                 alt="next"
+//                 width={30}
+//                 height={30}
+//               />
+//             </button>
+//           </>
+//         )} */}
+
+//         <div className="overflow-hidden py-6 w-full ml-24 hidden lg:block">
+//           <div
+//             ref={carouselRef}
+//             className="flex flex-col lg:flex-row gap-8"
+//             style={{
+//               transform: `translateX(-${scrollX}px)`,
+//               transition: 'transform 0.05s linear',
+//               width: "max-content",
+//             }}
+//           >
+//             {loading
+//               ? Array.from({ length: 5 }).map((_, i) => (
+//                 <div key={i} className="w-[350px] h-[470px]">
+//                   <Skeleton height={470} />
+//                 </div>
+//               ))
+//               : duplicatedBlogs.map((blog, index) => {
+//                 const realIndex = index - 1 % blogs.length;
+//                 return (
+//                   <div
+//                     key={`${blog.id}-${index}`}
+//                     className={`carousel-card  flex-shrink-0 w-[350px] h-[470px] cursor-pointer shadow-lg transition-transform duration-300 ease-in-out overflow-hidden ${realIndex === activeDotIndex ? "scale-105" : "scale-100"
+//                       }`}
+//                     onMouseEnter={() => {
+//                       handleMouseEnter();
+//                       setActiveDotIndex(realIndex);
+//                     }}
+//                     onMouseLeave={handleMouseLeave}
+//                   >
+//                     <div className="relative w-full h-[246px] bg-gray-100">
+//                       <Image
+//                         src={blog.image}
+//                         alt={blog.title}
+//                         fill
+//                         className="object-cover"
+//                         quality={75}
+//                         draggable={false}
+//                         sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
+//                       />
+//                     </div>
+//                     <div className="p-6 flex flex-col gap-4 lg:gap-6">
+//                       <p className="text-[12px] lg:text-[14px] font-[600] text-[#333333]">
+//                         {blog.category}
+//                       </p>
+//                       <h3 className="text-[17px] font-[600] lg:text-[16px] text-[#333333] leading-tight">
+//                         {blog.title}
+//                       </h3>
+//                       <Link
+//                         href={`/blog/${blog.id}`}
+//                         prefetch
+//                         className="mt-auto text-[14px] cursor-pointer lg:text-[14px] font-[500] text-gray-900 underline underline-offset-2 hover:text-purple-600"
+//                       >
+//                         Read Blog
+//                       </Link>
+//                     </div>
+
+//                   </div>
+//                 );
+//               })}
+//           </div>
+//         </div>
+//         <div className="overflow-hidden flex justify-center py-6 w-full   lg:hidden">
+//           <div
+
+//             className="flex flex-col  justify-center gap-8"
+
+//           >
+//             {loading
+//               ? Array.from({ length: 5 }).map((_, i) => (
+//                 <div key={i} className="w-[350px] h-[470px]">
+//                   <Skeleton height={470} />
+//                 </div>
+//               ))
+//               : blogs.map((blog, index) => {
+
+//                 return (
+//                   <div
+//                     key={`${blog.id}-${index}`}
+//                     className={`carousel-card  flex-shrink-0 w-[330px] h-[420px]   shadow-lg justify-center bg-white   transition-transform duration-300 ease-in-out overflow-hidden `}
+//                   // style={{
+//                   //   boxShadow: 'rgba(0, 0, 0, 0.24) 10px 3px 8px'
+//                   // }}
+//                   >
+//                     <div className="relative w-full h-[246px] bg-gray-100">
+//                       <Image
+//                         src={blog.image}
+//                         alt={blog.title}
+//                         fill
+//                         className="object-cover"
+//                         quality={75}
+//                         draggable={false}
+//                         sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
+//                       />
+//                     </div>
+//                     <div className="p-6 flex flex-col gap-4 lg:gap-6">
+//                       <p className="text-[12px] lg:text-[14px] font-[600] text-[#333333]">
+//                         {blog.category}
+//                       </p>
+//                       <h3 className="text-[17px] font-[600] lg:text-[17px] text-[#333333] leading-tight">
+//                         {blog.title}
+//                       </h3>
+//                       <Link
+//                         href={`/blog/${blog.id}`}
+//                         prefetch
+//                         className="mt-auto text-[14px] lg:text-[16px] font-[500] text-gray-900 underline underline-offset-2 hover:text-purple-600"
+//                       >
+//                         Read Blog
+//                       </Link>
+//                     </div>
+//                   </div>
+//                 );
+//               })}
+//           </div>
+//         </div>
+
+
+//         {blogs.length > 0 && (
+//           <div className="lg:flex md:flex hidden items-center overflow-hidden h-[30px] justify-center mt-10 space-x-4">
+//             {[...Array(blogs.length)].map((_, index) => (
+//               <div
+//                 key={index}
+//                 className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${index === activeDotIndex ? "w-4 h-4 bg-[#BA24D5]" : "bg-[#999999]"
+
+//                   }`}
+//                 onClick={() => goToSlide(index)}
+//               ></div>
+//             ))}
+//           </div>
+//         )}
+//       </div>
+//     </div>
+//   );
+// }
+
 "use client";
 import Link from "next/link";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 import { useEffect, useState, useRef, useCallback } from "react";
-
 import Image from "next/image";
 
 export default function BlogCarousel() {
@@ -272,26 +660,18 @@ export default function BlogCarousel() {
 
   const [scrollX, setScrollX] = useState(0);
   const [cardWidth, setCardWidth] = useState(382);
-  const scrollInterval = useRef<NodeJS.Timeout | null>(null);
   const [activeDotIndex, setActiveDotIndex] = useState(0);
-  // const animationFrameRef = useRef<number>();
-  // const isScrolling = useRef(false);
-  // const isHovering = useRef(false);
-  // const hoverTimeout = useRef<NodeJS.Timeout>();
 
   const animationFrameRef = useRef<number>(0);
-  const isScrolling = useRef<boolean>(false);
   const isHovering = useRef<boolean>(false);
-  const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
+  const isInteracting = useRef<boolean>(false);
+  const interactionTimeout = useRef<NodeJS.Timeout | null>(null);
 
-
-  // Fetch blogs data
   useEffect(() => {
     const fetchBlogs = async () => {
       setLoading(true);
       try {
         const response = await fetch("/assets/blogs/blogs.json");
-
         const data = await response.json();
         setBlogs(data);
       } catch (e) {
@@ -303,43 +683,52 @@ export default function BlogCarousel() {
     fetchBlogs();
   }, []);
 
-
-  // Calculate card width including gap
   useEffect(() => {
-    if (carouselRef.current) {
-      const card = carouselRef.current.querySelector(".carousel-card");
-      if (card instanceof HTMLElement) {
-        setCardWidth(card.offsetWidth + 32); // card + gap
+    const calculateCardWidth = () => {
+      if (carouselRef.current) {
+        const card = carouselRef.current.querySelector(".carousel-card");
+        if (card instanceof HTMLElement) {
+          const gap = 32;
+          setCardWidth(card.offsetWidth + gap);
+        }
       }
-    }
+    };
+    calculateCardWidth();
+    window.addEventListener("resize", calculateCardWidth);
+    return () => window.removeEventListener("resize", calculateCardWidth);
   }, [blogs]);
 
-
   const autoScroll = useCallback(() => {
-    if (!blogs.length) return;
+    if (
+      !blogs.length ||
+      !cardWidth ||
+      isHovering.current ||
+      isInteracting.current
+    )
+      return;
 
-    const totalWidth = cardWidth * blogs.length;
-    const scrollSpeed = 3;
+    const loopPoint = cardWidth * blogs.length;
+    const scrollSpeed = 5;
 
     const scroll = () => {
-      if (isHovering.current) return;
-      setScrollX((prev) => {
-        const newScroll = prev + scrollSpeed;
-        const visibleIndex = Math.floor(newScroll / cardWidth) % blogs.length;
-        setActiveDotIndex(visibleIndex);
+      setScrollX((prevScrollX) => {
+        const newScrollX = prevScrollX + scrollSpeed;
 
-        if (newScroll >= totalWidth) {
-
+        if (newScrollX >= loopPoint) {
           if (carouselRef.current) {
-            carouselRef.current.style.transition = 'none';
+            carouselRef.current.style.transition = "none";
           }
-          return 0;
-        } else {
-          if (carouselRef.current) {
-            carouselRef.current.style.transition = 'transform 0.05s linear';
-          }
-          return newScroll;
+          return newScrollX % loopPoint;
         }
+
+        if (
+          carouselRef.current &&
+          carouselRef.current.style.transition === "none"
+        ) {
+          carouselRef.current.style.transition = "transform 0.05s linear";
+        }
+
+        return newScrollX;
       });
 
       animationFrameRef.current = requestAnimationFrame(scroll);
@@ -354,91 +743,40 @@ export default function BlogCarousel() {
     };
   }, [blogs.length, cardWidth]);
 
-  // Start/stop auto-scroll on mount/unmount
   useEffect(() => {
-    if (blogs.length && carouselRef.current) {
+    if (!loading && blogs.length > 0 && cardWidth > 0) {
       autoScroll();
     }
-
     return () => {
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
-      // if (scrollInterval.current) {
-      //   clearInterval(scrollInterval.current);
-      // }
-    };
-  }, [autoScroll, blogs]);
-
-
-  // Reset transition after instant snap
-  useEffect(() => {
-
-    if (scrollX === 0 && carouselRef.current) {
-      const resetTransition = setTimeout(() => {
-        if (carouselRef.current) {
-          carouselRef.current.style.transition = 'transform 0.05s linear';
-        }
-      }, 80);
-      return () => clearTimeout(resetTransition);
-    }
-  }, [scrollX]);
-
-  // Smooth scroll to specific position
-  const smoothScrollTo = useCallback((target: number) => {
-    if (isScrolling.current) return;
-    isScrolling.current = true;
-
-    const start = scrollX;
-    const distance = target - start;
-    const duration = 700; // milliseconds
-    let startTime: number | null = null;
-
-    const animateScroll = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = progress < 0.5
-        ? 2 * progress * progress
-        : 1 - Math.pow(-2 * progress + 2, 2) / 2; // easeInOutQuad
-
-      setScrollX(start + distance * eased);
-
-      if (progress < 1) {
-        animationFrameRef.current = requestAnimationFrame(animateScroll);
-      } else {
-        isScrolling.current = false;
-        hoverTimeout.current = setTimeout(() => {
-          if (!isHovering.current) {
-            autoScroll();
-          }
-        }, 3000);
+      if (interactionTimeout.current) {
+        clearTimeout(interactionTimeout.current);
       }
     };
+  }, [loading, blogs, cardWidth, autoScroll]);
 
-    animationFrameRef.current = requestAnimationFrame(animateScroll);
-  }, [scrollX, autoScroll]);
+  useEffect(() => {
+    if (blogs.length > 0) {
+      const newActiveIndex = Math.round(scrollX / cardWidth) % blogs.length;
+      setActiveDotIndex(newActiveIndex);
+    }
+  }, [scrollX, cardWidth, blogs.length]);
 
-  // Navigation functions
-  const goToSlide = useCallback((index: number) => {
-    const target = index * cardWidth;
-    smoothScrollTo(target);
-    setActiveDotIndex(index);
-  }, [cardWidth, smoothScrollTo]);
-
-  const nextSlide = useCallback(() => {
-    const newIndex = (activeDotIndex + 1) % blogs.length;
-    goToSlide(newIndex);
-    isHovering.current = true;
-
-  }, [activeDotIndex, blogs.length, goToSlide]);
-
-  const prevSlide = useCallback(() => {
-    const newIndex = (activeDotIndex - 1 + blogs.length) % blogs.length;
-    goToSlide(newIndex);
-    isHovering.current = true;
-
-  }, [activeDotIndex, blogs.length, goToSlide]);
+  const pauseInteraction = () => {
+    isInteracting.current = true;
+    if (animationFrameRef.current) {
+      cancelAnimationFrame(animationFrameRef.current);
+    }
+    if (interactionTimeout.current) {
+      clearTimeout(interactionTimeout.current);
+    }
+    interactionTimeout.current = setTimeout(() => {
+      isInteracting.current = false;
+      autoScroll();
+    }, 5000);
+  };
 
   const handleMouseEnter = () => {
     isHovering.current = true;
@@ -449,48 +787,88 @@ export default function BlogCarousel() {
 
   const handleMouseLeave = () => {
     isHovering.current = false;
-    // Restart auto-scroll after a delay
-    hoverTimeout.current = setTimeout(() => {
-      if (!isHovering.current) {
-        autoScroll();
-      }
-    }, 500); // 1 second delay before restarting
+    if (!isInteracting.current) {
+      autoScroll();
+    }
   };
 
+  const goToSlide = useCallback(
+    (index: number) => {
+      if (!blogs.length || !cardWidth) return;
+      pauseInteraction();
 
-  // Duplicate blogs for infinite scroll effect
-  const duplicatedBlogs = [...blogs, ...blogs];
+      const currentCycle = Math.floor(scrollX / (cardWidth * blogs.length));
+      const currentScrollInCycle = scrollX % (cardWidth * blogs.length);
+
+      const target1 =
+        currentCycle * (cardWidth * blogs.length) + index * cardWidth;
+      const target2 =
+        (currentCycle + 1) * (cardWidth * blogs.length) + index * cardWidth;
+
+      const target =
+        Math.abs(target1 - currentScrollInCycle) <
+        Math.abs(target2 - currentScrollInCycle)
+          ? target1
+          : target2;
+
+      if (carouselRef.current) {
+        carouselRef.current.style.transition = "transform 0.8s ease-in-out";
+        setScrollX(target);
+      }
+    },
+    [scrollX, cardWidth, blogs.length]
+  );
+
+  // const nextSlide = useCallback(() => {
+  //   if (!blogs.length) return;
+  //   const newIndex = (activeDotIndex + 1) % blogs.length;
+  //   goToSlide(newIndex);
+  // }, [activeDotIndex, blogs.length, goToSlide]);
+
+  // const prevSlide = useCallback(() => {
+  //   if (!blogs.length) return;
+  //   const newIndex = (activeDotIndex - 1 + blogs.length) % blogs.length;
+  //   goToSlide(newIndex);
+  // }, [activeDotIndex, blogs.length, goToSlide]);
+
+  const duplicatedBlogs =
+    blogs.length > 0 ? [...blogs, ...blogs, ...blogs] : [];
 
   return (
     <div className="relative w-full overflow-hidden py-24 lg:px-10 px-4">
       <div className="text-[#414141] font-[500] mb-6">
-        <div className="block lg:hidden text-[30px] text-left">Our Latest Blogs</div>
+        <div className="block lg:hidden text-[30px] text-left">
+          Our Latest Blogs
+        </div>
         <div className="hidden lg:flex flex-col text-[50px] text-left pl-22 mt-4 mb-16">
           <div>Our Latest</div>
           <div className="-mt-4">Blogs</div>
         </div>
       </div>
 
-
-      <div className="relative overflow-hidden ">
-        {blogs.length > 0 && (
-
+      <div
+        className="relative"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        {/* {blogs.length > 0 && (
           <>
             <button
               onClick={prevSlide}
               style={{ backgroundColor: "#BA24D5" }}
-
-              className="absolute left-0 top-1/2 hidden md:block transform -translate-y-1/2 p-3 rounded-lg cursor-pointer text-white z-10"
-
+              className="absolute left-0 top-1/2 hidden md:block transform -translate-y-1/2 p-3 rounded-lg cursor-pointer text-white z-20"
             >
-              <Image src="/svg/chevonArrow.svg" alt="prev" width={30} height={30} />
+              <Image
+                src="/svg/chevonArrow.svg"
+                alt="prev"
+                width={30}
+                height={30}
+              />
             </button>
-
             <button
               onClick={nextSlide}
               style={{ backgroundColor: "#BA24D5" }}
-              className="absolute right-0 top-1/2 hidden md:block transform -translate-y-1/2 p-3 rounded-lg cursor-pointer text-white z-10"
-
+              className="absolute right-0 top-1/2 hidden md:block transform -translate-y-1/2 p-3 rounded-lg cursor-pointer text-white z-20"
             >
               <Image
                 src="/svg/chevonArrow.svg"
@@ -501,134 +879,112 @@ export default function BlogCarousel() {
               />
             </button>
           </>
-        )}
+        )} */}
 
         <div className="overflow-hidden py-6 w-full ml-24 hidden lg:block">
           <div
             ref={carouselRef}
-            className="flex flex-col lg:flex-row gap-8"
+            className="flex flex-row gap-8"
             style={{
               transform: `translateX(-${scrollX}px)`,
-              transition: 'transform 0.05s linear',
+              transition: "transform 0.05s linear",
               width: "max-content",
             }}
           >
             {loading
               ? Array.from({ length: 5 }).map((_, i) => (
-                <div key={i} className="w-[350px] h-[470px]">
-                  <Skeleton height={470} />
-                </div>
-              ))
-              : duplicatedBlogs.map((blog, index) => {
-                const realIndex = index - 1 % blogs.length;
-                return (
+                  <div key={i} className="carousel-card w-[350px] h-[470px]">
+                    <Skeleton height={470} />
+                  </div>
+                ))
+              : duplicatedBlogs.map((blog, index) => (
                   <div
                     key={`${blog.id}-${index}`}
-                    className={`carousel-card  flex-shrink-0 w-[350px] h-[470px] cursor-pointer shadow-lg transition-transform duration-300 ease-in-out overflow-hidden ${realIndex === activeDotIndex ? "scale-105" : "scale-100"
-                      }`}
-                    onMouseEnter={() => {
-                      handleMouseEnter();
-                      setActiveDotIndex(realIndex);
-                    }}
-                    onMouseLeave={handleMouseLeave}
+                    className="carousel-card flex-shrink-0 w-[350px] h-[470px] cursor-pointer bg-white shadow-lg transition-transform duration-300 ease-in-out overflow-hidden hover:scale-105"
                   >
-                    <div className="relative w-full h-[246px] bg-gray-100">
+                    <div className="relative w-full h-[246px]">
                       <Image
                         src={blog.image}
                         alt={blog.title}
                         fill
                         className="object-cover"
-                        quality={75}
-                        draggable={false}
-                        sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        sizes="(max-width: 1024px) 50vw, 33vw"
+                        priority={index < 5}
                       />
                     </div>
-                    <div className="p-6 flex flex-col gap-4 lg:gap-6">
-                      <p className="text-[12px] lg:text-[14px] font-[600] text-[#333333]">
+                    <div className="p-6 flex flex-col gap-4">
+                      <p className="text-[14px] font-[600] text-[#333333]">
                         {blog.category}
                       </p>
-                      <h3 className="text-[17px] font-[600] lg:text-[16px] text-[#333333] leading-tight">
+                      <h3 className="text-[16px] font-[600] text-[#333333] leading-tight">
                         {blog.title}
                       </h3>
                       <Link
                         href={`/blog/${blog.id}`}
-                        prefetch
-                        className="mt-auto text-[14px] cursor-pointer lg:text-[14px] font-[500] text-gray-900 underline underline-offset-2 hover:text-purple-600"
+                        prefetch={false}
+                        className="mt-auto text-[14px] font-[500] text-gray-900 underline underline-offset-2 hover:text-purple-600"
                       >
                         Read Blog
                       </Link>
                     </div>
-
                   </div>
-                );
-              })}
+                ))}
           </div>
         </div>
-        <div className="overflow-hidden flex justify-center py-6 w-full   lg:hidden">
-          <div
 
-            className="flex flex-col  justify-center gap-8"
-
-          >
+        <div className="flex justify-center lg:hidden">
+          <div className="flex flex-col items-center justify-center gap-8">
             {loading
-              ? Array.from({ length: 5 }).map((_, i) => (
-                <div key={i} className="w-[350px] h-[470px]">
-                  <Skeleton height={470} />
-                </div>
-              ))
-              : blogs.map((blog, index) => {
-
-                return (
+              ? Array.from({ length: 3 }).map((_, i) => (
+                  <div key={i} className="w-[330px] h-[420px]">
+                    <Skeleton height={420} />
+                  </div>
+                ))
+              : blogs.map((blog) => (
                   <div
-                    key={`${blog.id}-${index}`}
-                    className={`carousel-card  flex-shrink-0 w-[330px] h-[420px]   shadow-lg justify-center bg-white   transition-transform duration-300 ease-in-out overflow-hidden `}
-                  // style={{
-                  //   boxShadow: 'rgba(0, 0, 0, 0.24) 10px 3px 8px'
-                  // }}
+                    key={blog.id}
+                    className="w-[330px] h-[420px] bg-white shadow-lg overflow-hidden"
                   >
-                    <div className="relative w-full h-[246px] bg-gray-100">
+                    <div className="relative w-full h-[246px]">
                       <Image
                         src={blog.image}
                         alt={blog.title}
                         fill
                         className="object-cover"
-                        quality={75}
-                        draggable={false}
-                        sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       />
                     </div>
-                    <div className="p-6 flex flex-col gap-4 lg:gap-6">
-                      <p className="text-[12px] lg:text-[14px] font-[600] text-[#333333]">
+                    <div className="p-6 flex flex-col gap-4">
+                      <p className="text-[12px] font-[600] text-[#333333]">
                         {blog.category}
                       </p>
-                      <h3 className="text-[17px] font-[600] lg:text-[17px] text-[#333333] leading-tight">
+                      <h3 className="text-[17px] font-[600] text-[#333333] leading-tight">
                         {blog.title}
                       </h3>
                       <Link
                         href={`/blog/${blog.id}`}
-                        prefetch
-                        className="mt-auto text-[14px] lg:text-[16px] font-[500] text-gray-900 underline underline-offset-2 hover:text-purple-600"
+                        className="mt-auto text-[14px] font-[500] text-gray-900 underline underline-offset-2 hover:text-purple-600"
                       >
                         Read Blog
                       </Link>
                     </div>
                   </div>
-                );
-              })}
+                ))}
           </div>
         </div>
-
 
         {blogs.length > 0 && (
-          <div className="lg:flex md:flex hidden items-center overflow-hidden h-[30px] justify-center mt-10 space-x-4">
+          <div className="absolute hidden  -bottom-10 left-1/2 -translate-x-1/2 lg:flex items-center justify-center mt-10 space-x-3">
             {[...Array(blogs.length)].map((_, index) => (
-              <div
+              <button
                 key={index}
-                className={`w-2 h-2 rounded-full cursor-pointer transition-all duration-300 ${index === activeDotIndex ? "w-4 h-4 bg-[#BA24D5]" : "bg-[#999999]"
-
-                  }`}
+                aria-label={`Go to slide ${index + 1}`}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  index === activeDotIndex
+                    ? "bg-[#BA24D5] scale-150"
+                    : "bg-[#999999]"
+                }`}
                 onClick={() => goToSlide(index)}
-              ></div>
+              />
             ))}
           </div>
         )}
