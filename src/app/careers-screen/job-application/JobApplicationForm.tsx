@@ -628,8 +628,8 @@ const JobApplicationForm = () => {
               className="w-full p-3 border border-[#999999] rounded-lg mt-2 focus:outline-none focus:ring-2 focus:ring-[#D444F1] placeholder:text-[#697586] placeholder:text-[14px] lg:placeholder:text-[18px] text-[14px] lg:text-[18px] placeholder:font-[400] font-[400]"
               required
               value={formData.email}
-              onKeyDown={preventSpaces} // Defense 1: Block spacebar press
-              onChange={handleInputChange} // Defense 2: Sanitize pastes and autocorrect (most effective)
+              onKeyDown={preventSpaces}
+              onChange={handleInputChange}
               onBlur={handleBlur}
             />
           </div>
