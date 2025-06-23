@@ -68,7 +68,7 @@ const CareersPage: React.FC = () => {
   }, [handleResize]);
 
   const scrollToTopSlowly = () => {
-    const duration = 1000;
+    const duration = 4000;
     const start = window.scrollY;
     const startTime = performance.now();
 

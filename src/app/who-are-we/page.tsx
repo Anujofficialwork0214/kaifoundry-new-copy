@@ -37,7 +37,7 @@ const CoreValuesSection = dynamic(() => import("./Core"));
 const FounderSection = dynamic(() => import("./Founder"));
 
 const scrollToTopSlowly = () => {
-  const duration = 1000;
+  const duration = 4000;
   const start = window.scrollY;
   const startTime = performance.now();
 
