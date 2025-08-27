@@ -93,7 +93,7 @@ const CareersPage: React.FC = () => {
     <div>
       {isMobile ? <CareerSectionMob /> : <CareersSection />}
       {isMobile ? <WhyWorkWithUsMob /> : <WhyWorkWithUs />}
-      <JobListings />
+      {/* <JobListings /> */}
 
       <button
         onClick={scrollToTopSlowly}

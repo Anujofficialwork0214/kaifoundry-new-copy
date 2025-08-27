@@ -33,7 +33,7 @@ const JobApplicationScreen: React.FC = () => {
   return (
     <div>
       <JobApplication />
-      <JobApplicationForm />
+      {/* <JobApplicationForm /> */}
 
       <button
         onClick={scrollToTopSlowly}

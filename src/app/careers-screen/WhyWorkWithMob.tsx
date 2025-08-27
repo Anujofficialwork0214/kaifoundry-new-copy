@@ -31,7 +31,7 @@ const benefits = [
 
 const WhyWorkWithUs = () => {
   return (
-    <section className="py-2 lg:py-20 bg-white text-center">
+    <section className="py-2 lg:py-20 bg-white text-center mb-5">
       <div className="container mx-auto px-6">
         {/* Title */}
         <motion.h2 
