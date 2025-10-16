@@ -1,4 +1,3 @@
-
 import ContactForm from "./ContactForm";
 
 const ContactUs = () => {
@@ -20,9 +19,9 @@ const ContactUs = () => {
               src="https://maps.google.com/maps?q=Ludhiana&t=&z=13&ie=UTF8&iwloc=&output=embed"
               loading="lazy"
             ></iframe> */}
-              <iframe
+            <iframe
               className="w-full h-full"
-              src="https://maps.google.com/maps?q=Ludhiana&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13758.998066236475!2d75.91159709999999!3d30.8919973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a9d004dcd5121%3A0x149835e1bfd4449c!2sQB%20Tower!5e0!3m2!1sen!2sin!4v1722230728966!5m2!1sen!2sin"
               loading="lazy"
             ></iframe>
           </div>
@@ -40,15 +39,18 @@ const ContactUs = () => {
             {/* Sub-item: Contact Details */}
             <div className="mt-10">
               <div className="text-black">
-                <h3 className="font-semibold text-2xl md:text-[29px] lg:text-[29px] xl:text-[32px] text-[#333333] mb-4">Contact Details</h3>
+                <h3 className="font-semibold text-2xl md:text-[29px] lg:text-[29px] xl:text-[32px] text-[#333333] mb-4">
+                  Contact Details
+                </h3>
                 <div className="grid grid-cols-2 gap-4 text-[#4D4D4D] lg:text-[#666666] text-[10px] lg:text-base">
                   <p>
-                    Akshya Nagar 1st Block 1st <br /> Cross, Rammurthy Nagar,
-                    <br /> Bangalore-560016
+                    SCF 14, Market, Urban Estate <br /> Phase II <br /> Jamalpur,
+                    Ludhiana, Punjab,
+                    <br /> 141010
                   </p>
                   <div>
-                    <p>Ph No: +1234567890</p>
-                    <p>E-Mail: sodnn@gmail.com</p>
+                    {/* <p>Ph No: +1234567890</p> */}
+                    <p>E-Mail: kaifoundry@gmail.com</p>
                   </div>
                 </div>
               </div>

@@ -99,7 +99,7 @@ const ContactInfo: FC<ContactInfoProps> = ({ phone, email }) => {
   return (
     <div className="text-gray-300 flex flex-col items-start text-[14px] lg:text-[14.02px] ">
       <hr className="border-t border-white lg:border-[#232841] block w-24 my-6 lg:-mt-8" />
-      <p>{phone}</p>
+      {/* <p>{phone}</p> */}
       <p>
         <a href={`mailto:${email}`} className="hover:text-white">
           {email}

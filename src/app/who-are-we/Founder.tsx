@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import img from "./../../../public/assets/WhoAreWe/FounderImg.svg";
+import img from "./../../../public/assets/WhoAreWe/founderimage.jpeg";
 
 const FounderSection = () => {
   const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 });
