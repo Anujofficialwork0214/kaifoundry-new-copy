@@ -67,12 +67,11 @@ const FounderSection = () => {
             </p>
             <div className="w-10 border-b-3 border-[#D444F1] my-3"></div>
             <p className="text-[#4D4D4D] text-[12px] lg:text-[16px] font-[400] leading-relaxed">
-              Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do
-              Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut
-              Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris
-              Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor In
-              Reprehenderit In Voluptate Velit Esse Cillum Dolore Eu Fugiat
-              Nulla Pariatur.
+              Vinayak Kalra is a visionary entrepreneur driven by innovation,
+              excellence, and client success. With strategic insight and
+              empathy, he builds solutions that transform ideas into impactful
+              realities, fostering creativity, collaboration, and lasting
+              partnerships that deliver remarkable results.
             </p>
 
             <motion.div
