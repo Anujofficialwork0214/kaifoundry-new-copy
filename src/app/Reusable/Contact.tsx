@@ -44,13 +44,21 @@ const ContactUs = () => {
                 </h3>
                 <div className="grid grid-cols-2 gap-4 text-[#4D4D4D] lg:text-[#666666] text-[10px] lg:text-base">
                   <p>
-                    SCF 14, Market, Urban Estate <br /> Phase II <br /> Jamalpur,
-                    Ludhiana, Punjab,
+                    SCF 14, Market, Urban Estate <br /> Phase II <br />{" "}
+                    Jamalpur, Ludhiana, Punjab,
                     <br /> 141010
                   </p>
                   <div>
                     {/* <p>Ph No: +1234567890</p> */}
-                    <p>E-Mail: Associations@kaifoundry.com</p>
+                    <p>
+                      E-Mail:{" "}
+                      <a
+                        href="mailto:Associations@kaifoundry.com"
+                        className=" hover:underline"
+                      >
+                        Associations@kaifoundry.com
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
