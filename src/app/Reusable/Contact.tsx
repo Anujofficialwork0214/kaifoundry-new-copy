@@ -50,7 +50,7 @@ const ContactUs = () => {
                   </p>
                   <div>
                     {/* <p>Ph No: +1234567890</p> */}
-                    <p>E-Mail: kaifoundry@gmail.com</p>
+                    <p>E-Mail: Associations@kaifoundry.com</p>
                   </div>
                 </div>
               </div>

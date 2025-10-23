@@ -218,7 +218,7 @@ const Footer: FC = () => {
    <div className="mx-auto flex flex-col lg:grid lg:grid-cols-12 mt-30 items-start text-left pt-6">
         
           <div className="lg:col-span-4"><SocialIcons /></div>
-          <div className="lg:col-span-2"><ContactInfo phone="123-456-7890" email="kaifoundry@gmail.com" /></div>
+          <div className="lg:col-span-2"><ContactInfo phone="123-456-7890" email="Associations@kaifoundry.com" /></div>
           
 
       </div>
